@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body unresolved>
+
+	<core-header-panel >
+    {% include header.html %}
+
+	
+	<div class="page-content">
+		<div class="wrapper">
+			<div class="content" id="blog-content">
+				{{ content }}
+			</div>
+			<div class="content" id="about-content">
+				{% include about.html %}
+			</div>
+			<div class="content" id="projects-content">
+				{% include projects.html %}
+			</div>
+			<div class="content" id="others-content">
+				{% include others.html %}
+			</div>
+		</div>
+	</div>
+
+    {% include footer.html %}
+	</core-header-panel >
+	
+	<script>
+var blog_content = document.getElementById("blog-content");
+var about_content = document.getElementById("about-content");
+var project_content = document.getElementById("projects-content");
+var others_content = document.getElementById("others-content");
+var contents = {
+	"blog_content" : blog_content,
+	"about_content" : about_content,
+	"projects_content" : project_content,
+	"others_content": others_content
+}
+function show_one(section) {
+	for (var i in contents) {
+		if (i != section) {
+			contents[i].style.display = "none";
+		}
+		else {
+			contents[i].style.display = "block";
+		}
+	}
+}
+	var tabs = document.querySelector('#tabs-t');
+	tabs.addEventListener('core-select', function() {
+		console.log(tabs.selected);
+		show_one(tabs.selected.toLowerCase()+"_content");
+	});
+	</script>
+
+  </body>
+
+</html>

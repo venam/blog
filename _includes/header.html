@@ -1,0 +1,39 @@
+
+		<core-toolbar>
+			<div  class="wrapper">
+
+			<paper-tabs class="tabs-title" id="tabs-t" selected="blog" self-end>
+				<paper-tab name="about" >About</paper-tab>
+				<!--
+				<paper-tab name="contact">contact</paper-tab>
+				<paper-tab name="cv">CV</paper-tab>
+				<paper-tab name="quotes">quotes</paper-tab>
+				-->
+				<paper-tab name="blog">Blog</paper-tab>
+				<paper-tab name="projects">Projects</paper-tab>
+				<!--
+				<paper-tab name="presentations">presentations</paper-tab>
+				-->
+				<paper-tab name="Others">Others</paper-tab>
+				<!--
+				<paper-tab name="poems">poems</paper-tab>
+				<paper-tab name="scrots">scrots</paper-tab>
+				<paper-tab name="links">links</paper-tab>
+				-->
+			</paper-tabs>
+
+				<!--
+				{% for page in site.pages %}
+					{% if page.title %}
+						<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+					{% endif %}
+				{% endfor %}
+				-->
+			</div>
+
+		</core-toolbar>
+		<div class="wrapper">
+			<h2> <a href="{{ site.url }}" id="blog_title">Venam's Blog</a></h2>
+		</div>
+
+

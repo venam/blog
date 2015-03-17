@@ -1,0 +1,26 @@
+core-header-panel {
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+#blog_title {
+	display: inline-block;
+	margin-top: 2ex;
+}
+.tabs-title {
+	width: 100%;
+}
+core-toolbar {
+	background: #03a9f4;
+	color: white;
+}
+paper-shadow {
+	padding: 1em;
+}
+pre {
+	overflow: auto !important;
+}
+.content {
+	transition: display 1.0s ease;
+	transition: all 0.5s ease-out;
+}
+
