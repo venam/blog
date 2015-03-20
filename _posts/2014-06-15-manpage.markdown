@@ -1,0 +1,283 @@
+---
+layout: post
+title:  "How to write a simple Manpage"
+date:   2014-06-15
+categories: unix
+---
+
+Hello nixers,
+In this thread you'll learn how to write a very simple man page for your programs.
+
+##Disclaimer##
+I won't go into the details of what and where are Manpages. If you want more information refer to the followings:
+
+ * man man
+ * man 7 mdoc
+ * man 7 man-pages
+ * man 1 manpath
+
+##Sections of a manpage##
+A manpage normally contains those sections (__taken from the man 7 mdoc__)
+
+ *	NAME          
+Name section, should include the ‘.Nm’ or ‘.Fn’ and the ‘.Nd’ macros.
+ *	SYNOPSIS      
+Usage.
+ *	DESCRIPTION   
+General description, should include options and parameters.
+ *	RETURN VALUE  
+Sections two and three function calls.
+ *	ENVIRONMENT   
+Describe environment variables.
+ *	FILES         
+Files associated with the subject.
+ *	EXAMPLES      
+Examples and suggestions.
+ *	DIAGNOSTICS   
+Normally used for section four device interface diagnostics.
+ *	ERRORS        
+Sections two and three error and signal handling.
+ *	SEE ALSO      
+Cross references and citations.
+ *	CONFORMING TO
+Conformance to standards if applicable.
+ *	HISTORY       
+If a standard is not applicable, the history of the subject should be given.
+ *	BUGS          
+Gotchas and caveats.
+
+
+However, you can ommit or add any sections depending on the program usage.
+For example, you might want to ommit the RETURN VALUE but add a COMMANDS section if the program
+has a shell interface that accepts a set of commands.
+
+##Groff##
+Manpages follow a format code called Groff (or Troff).
+As with any markup you'll use some code to change the appearance of the text.
+The main format macros well use are the followings:
+<pre>
+.SH            
+Section Header
+.B             
+Bold text
+\fBtext\fR     
+Make only "text" bold
+.I             
+Italic
+\fItext\fR     
+Make only "text" italic
+.Sp            
+Start a new paragraph
+.TP            
+Use to align text
+.IP            
+Use to indent text
+.RS text .RE   
+"text" will be in it's own block
+\(bu 2         
+It's the code for a bullet number 2
+</pre>
+
+##Writing the manpage##
+The empty Manpage should look similar to this:
+<pre>
+.TH name_of_program 1 "Jun 15, 2014" "" "NIXERS COMMUNITY"
+
+.SH NAME
+
+.SH SYNOPSIS
+
+.SH DESCRIPTION
+
+.SH OPTIONS
+
+.SH RETURN VALUE
+
+.SH ENVIRONMENT
+
+.SH ERRORS
+
+.SH SEE ALSO
+
+.SH AUTHOR
+</pre>
+
+Let's fill it up section by section but first let's explain the first line.
+<pre>
+.TH name_of_program 1 "Jun 15, 2014" "" "NIXERS COMMUNITY"
+</pre>
+This line describes the manpage, it's the decoration at the top and bottom of the page.
+Replace __name_of_program__ with the name of the program.
+Replace __1__ by the section the program belongs to. (1   Executable programs or shell commands)
+Replace "Jun 15, 2014" by the current date.
+The last 2 strings are other decorations.
+
+The NAME section:
+This section contains a one-liner with the name of the program and the simplest description.
+Example:
+<pre>
+nixers - One line description of the nixers program
+</pre>
+
+The SYNOPSIS section:
+This section contains (for CLI) all the short-hand arguments regrouped together **without** any explanation.
+Example:
+<pre>
+\fBnixers\fR [\fB-hv\fR]  [\fB-r\fR \fIrice-max-mode\fR]
+</pre>
+Here we've made, for easier reading, the "nixers" bold, the "-hv" bold and the "rice-max-mode" italic.
+
+The DESCRIPTION section:
+This section contains a big description of what the program purpose is.
+<pre>
+.B nixers\fR is just a sample manpage.
+.PP
+Here's another paragraph in the description.
+</pre>
+We've made the "nixers" word bold and separated the first paragraph from the other (.PP).
+
+The OPTIONS section:
+In this section every command line arguments are explained.
+<pre>
+.TP
+.B \-h
+prints a help message.
+.TP
+.B \-v
+prints version.
+.TP
+.B \-r \fIrice-max-mode\fR
+Turn the program into ricing [1],beaning [2], or milking[3].
+.PP
+Note: about options. 
+
+Never use like that on Windows:
+.sp
+.IP
+nixers -r 3 ;
+</pre>
+The .TP let's you align everything after the shorthand option.
+We've made the shorthands bold using ".B" and the arguments of shorthand italic "\fI \fR"
+You don't usually have to escape "-" but it's sometimes better to do so.
+
+The RETURN VALUE section:
+Here's the part where you explain what the program will return in multiple cases. (echo $?)
+<pre>
+Here are the possible return values for nixers:
+.RS
+.IP \(bu 2
+.B 0 \fR Everything went fine.
+.IP \(bu 2
+.B -1 \fR An error occured.
+.IP \(bu 2
+.B 1337 \fR A skid is using this program.
+.RE
+</pre>
+Everything that is inside ".RS" ".RE" will be considered as it's own block following the format that
+was used just before ".RS".
+".IP" is used to indent the bullet "\(bu 2" and ".B" with ".\fR" to format the return value to bold.
+
+The ENVIRONMENT section:
+In this section you mention what environment variable the program follows.
+<pre>
+nixers doesn't follow any environment variables.
+</pre>
+It's an example of a section that could've been ommited.
+
+The ERRORS section:
+It regroups well known errors that might happen while using the program.
+<pre>
+You might get some errors if you run this program along \fBGNOME(1)\fR, \fBKDE(1)\fR, or \fBCINAMON(1)\fR.
+</pre>
+When refering to an external command or manpage you need to put inside parenthesis to which section it belongs.
+It's also a good idea to format them to bold.
+
+The SEE ALSO section:
+This section regroups all the manpages that are related or mentioned in the manpage.
+<pre>
+.B rice(1)
+.B bean(1)
+.B milk(1)
+</pre>
+
+The AUTHOR section:
+It is an example of a custom section.
+<pre>
+nixers community  (http://nixers.net)
+</pre>
+
+##Whole Sample##
+<pre>
+.TH nixers 1 "Jun 15, 2014" "" "NIXERS COMMUNITY"
+.SH NAME
+nixers - One line description of the nixers program
+.SH SYNOPSIS
+\fBnixers\fR [\fB-hv\fR]  [\fB-r\fR \fIrice-max-mode\fR]
+
+.SH DESCRIPTION
+.B nixers\fR is just a sample manpage.
+.PP
+Here's another paragraph in the description.
+
+.SH OPTIONS
+.TP
+.B \-h
+prints a help message.
+.TP
+.B \-v
+prints version.
+.TP
+.B \-r \fIrice-max-mode\fR
+Turn the program into ricing [1],beaning [2], or milking[3].
+.PP
+Note: about options. 
+
+Never use like that on Windows:
+.sp
+.IP
+nixers -r 3 ;
+
+.SH RETURN VALUE
+
+Here are the possible return values for nixers:
+
+.RS
+.IP \(bu 2
+.B 0 \fR Everything went fine.
+.IP \(bu 2
+.B -1 \fR An error occured.
+.IP \(bu 2
+.B 1337 \fR A skid is using this program.
+.RE
+
+.SH ENVIRONMENT
+
+nixers doesn't follow any environment variables.
+
+.SH ERRORS
+You might get some errors if you run this program along \fBGNOME(1)\fR, \fBKDE(1)\fR, or \fBCINAMON(1)\fR.
+
+.SH SEE ALSO
+.B rice(1)
+.B bean(1)
+.B milk(1)
+
+.SH AUTHOR
+nixers community  (http://nixers.net)
+</pre>
+
+##Testing the Manpage##
+To see what the Manpage will look like execute:
+<pre>
+man ./nixers.1
+</pre>
+Note: If a manpage belongs to the section 1 (Executable programs or shell commands) it should have the extension ".1".
+I won't go into the details of putting the manpage in the manpath.
+
+##Conclusion##
+This is how a simple Manpage is written. Once you get the idea it's really easy. I haven't walked through all the format macros but those are the simpliest ones.
+
+
+More to read from one of our fellow users:
+[here](http://kaashif.co.uk/2014/01/08/writing-unix-manual-pages/)
+

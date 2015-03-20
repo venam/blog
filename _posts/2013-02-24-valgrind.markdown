@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "[C/C++] Valgrind to find memory leaks"
+date:   2013-02-24
+categories: programming
+---
+
+Hello readers,
+
+
+valgrind, from the man page, is a suite of tools for debugging and profiling programs.
+I'll introduce you to the memory leak finder feature of valgrind.
+(note: valgrind only works on posix compliant OS)
+
+First of all install valgrind [url](http://valgrind.org/downloads.html)
+It's the default way of installing any software.
+
+cd to the dir of the program you want to test and run the following:
+
+<pre>
+valgrind --tool=memcheck --leak-check=yes ./the_so_called_program
+</pre>
+
+It will output some infos while the program is running.
+Once the program has finish its procedure you should take a look at those outputs (normally at the end) and if you see something that ressembles this it means you have memory leaks:
+<pre>
+==4156== 8 bytes in 2 blocks are definitely lost in loss record 1 of 4
+</pre>
+
+valgrind will also output infos about invalid pointers, not initialized variables, double free, etc...
+
+Sometimes you might want to have more verbose outputs and running this will be more convenient:
+<pre>
+valgrind --tool=memcheck --show-reachable=yes --log-file="logs" --leak-check=yes -v ./the_so_called_program
+</pre>
+-v makes it more verbose and "logs" is the logs output that can be analyzed later.
+
+A little end note:
+when compiling with gcc you should not use stripping flags and should produce debugging symbols so valgrind can help you detect the lines of codes where there are leaks.
+
+
+You can find more infos about valgrind on the `man 1 valgrind`.
+
+ (PS: you can use gdb later to debug the program if you found where the leak was but are not really sure)

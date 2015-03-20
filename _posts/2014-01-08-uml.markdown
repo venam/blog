@@ -1,0 +1,183 @@
+---
+layout: post
+title:  "UML Editor/Designer on Unix"
+date:   2014-01-08
+categories: programming
+---
+
+Hello fellow Unixer,
+
+This thread is about a must have software engineer tool called an 
+UML(Unified Modeling Language) designer.
+
+More precisely, it's about finding the open source UML Editor/Designer that you need.
+
+I've been doing a lot of UML editing and design patterns lately. 
+It is a must for software engineers and developpers to know how 
+to design and understand UML. With my current workflow I had to switch
+from UML designing on paper to UML designing on the computer.
+And thus the unevitable question came to my mind: "What editor are available 
+and which one should I choose?". I didn't find any useful comparison online, 
+all of that I found was people praising their own tool for their own benifits.
+
+What I was looking for was something simple without too much dependencies, 
+simple as in that only knowing UML I could simply put what was in my mind 
+directly in the software, and something that could construct a UML from some source files.
+
+From a lot of __searches__, __downloads__, __trials__, and __errors__, I present my software review.
+
+##gaphor - An easy to use modeling environment for UML design##
+
+![gaphor](/assets/gaphor.png)
+
+Gaphor is straight forward and easy to use. It was the first UML Designer I installed.
+I was directly shocked by its simplicity it made the work so much easier. It also let you
+save/export the project as an image which is useful.
+The only drawbacks are that it doesn't look good, or hides parts of the GUI, 
+if you use a dark gtk2 theme, and that the class boxes don't let you add attributes nor methods. 
+It's also missing the composition relation.
+The binary of Gaphor is around 23MB with some python libraries dependencies on the side.
+
+##kdesdk-umbrello - UML Modeller##
+I had to pull around 70MB of package that weren't related to the software to get umbrello installed.
+...and finally the program was installed. BUT, umbrello wouldn't want to start, I was
+getting the following error:
+[code]
+<pre>
+umbrello(11497)/kdeui (kdelibs): Attempt to use QAction "edit_undo" with KXMLGUIFactory! 
+umbrello(11497)/kdeui (kdelibs): Attempt to use QAction "edit_redo" with KXMLGUIFactory! 
+umbrello(11497) UMLListView::findView: could not find  "class diagram"  in  UMLListViewItem: "Logical View", type="lvt_Logical_View", id="Logical View", children=1 
+umbrello(11497) UMLListView::findView: could not find  "class diagram"  in  UMLListViewItem: "Logical View", type="lvt_Logical_View", id="Logical View", children=1
+</pre>
+However, I didn't give up and tried the program on a friends computer. I can say that Umbrello is
+pretty impressive. It has all the features needed, all the UML schema (from use case to class diagram),
+ and you can export/import class diagrams in multiple languages.
+
+##umleditor - UML/INTERLIS-Editor##
+Umleditor was very light, around 7MB.
+When starting it I was presented with a cheap splash screen and then a white window popped-up.
+The interface of umleditor is not friendly at all, I couldn't even figure out how to create a class.
+The buttons icons don't even have text equivalent so it got me completely lost.
+![umleditor](/assets/umleditor.png)
+
+##umlet - Free UML Tool for Fast UML Diagrams (stand-alone version)##
+Umlet is also, like umleditor, very light (around 6MB).
+The idea with umlet is that you have all the available elements on the top-right corner and you drag them
+in the empty window on the left.
+You can't directly edit the class attributes you have to change the properties in the bottom-right box which can get very annoying.
+<pre>
+    My tool of choice is UMLet, I have used it for a whole year now, and I must say that it works perfectly !
+    The best points are CLI conversion of UMLet files (.uxf) to other format (.pdf, .jpg, .eps). I use it via a Makefile to integrate diagrams in my LaTeX documents, that awesome :
+uxf.eps:
+	@echo "EPS  $<"
+	@umlet -action=convert -format=eps -filename=$< >/dev/null
+</pre>
+
+<pre>
+It's available on the officials archlinux repos, for those interested (in [community]).
+</pre>
+![umlet](/assets/umlet.png)
+
+##bouml - A free UML 2 modeler with C++, Idl, Java, PHP and Python code generation##
+It turned out that bouml isn't free:
+<pre>
+You don't have a licence, closing this message box a file dialog will appear proposing you to save a 'licence request file', please refer to http://www.bouml.fr/pricing.html to know how to use it to get a license
+</pre>
+
+##violet - A UML editor for quickly producing simple UML diagrams (also an Eclipse plugin)##
+Violet has a prety interface but the controls are sluggish.
+I tried dragging the elements in vain.
+![violet](/assets/violet.png)
+
+##argouml - A UML design tool with cognitive support##
+This thing was huge (60MB) and also greeted me with a blank window.
+
+##tinyuml - A tool for creation of UML 2 diagrams with a focus on easy use and a small & stable feature set##
+![tinyuml](/assets/tinyuml.png)
+Tinyuml is indeed tiny with a size of 600KB. 
+It has everything needed to do a complete class diagram, but it has only that and nothing else.
+It can export the project as an image.
+Let's note that the GUI is a pain to use.
+
+##astah_community - Lightweight, easy-to-use, and free UML2.x modeler##
+![astah](/assets/astah.png)
+Astah is pretty big (30MB), slow, ugly, hard to use and written in java.
+It also isn't opensource but still has some free features.
+
+
+##modelio-open - Modelio is an Open Source UML tool developed by Modeliosoft. It supports the UML2 and BPMN2 standards.##
+This program is 200MB so I didn't bother downloading it.
+
+##qtumleditor - Qt5 UML Editor is a MOF/UML editor based on QtMof Qt5 add-on##
+I wasn't even able to install this UML editor.
+
+##astade - A UML tool for the complete C or C++ development process##
+I couldn't even understand how to use this software.
+
+##Web-Based UML Designer##
+Web-based UML designer aren't the best thing in the world.
+First of all, none, or most of them aren't open source.
+Most of the ones I found were slow or didn't work correctly.
+The main reason someone might want to use one of those might be for collaboration.
+If you want to try some here's a list with review:
+
+ * [gliffy](https://www.gliffy.com/)
+
+Apparently gliffy can be used on the desktop as a chrome app which is good.
+<pre>
+Thought I'd chip in on gliffy, as that's basically what I've been using and I hate it.
+The interface is pretty slow and really buggy (accidently made a mistake on a textbox?
+Trying to edit it crashes everything!).
+And of course you can't save anything without paying up (or at least making an account).
+
+It's good enough for small quick stuff.
+</pre>
+
+It's not open source but seems like working almost flawlessly.
+
+ * [lucidchart](https://www.lucidchart.com/)
+  Lucichart.com is filled with content, there are literally buttons everywhere.
+  It has all the diagrams components you'll need and even more. I tested the class diagram and my overall view is that
+  the interface gets very annoying after some time. There's always a pop-up jumping in your face.
+  You can save and export diagrams on your disk, and you can also share and collaborate on 
+  diagrams but you can't do any of those until you have registered (not for free).
+
+ * [yuml](http://www.yuml.me/)
+You need to write the UML diagram using yuml language.
+
+ * [codeuml](http://www.codeuml.com/)
+You'll need to learn an intermediary language and actually code your uml instead of designing it, which I'd rather not waste time doing.
+
+ * [draw.io](https://www.draw.io/)
+It isn't very easy to use as an UML diagram editor. All the UML diagrams components are messed up together
+in the same category. It's more of a web-application to draw diagrams in general, it's not specialized for UML.
+The good thing is that it lets you save the diagrams.
+
+ * [creately](http://creately.com/)
+
+ * [genmymodel](http://genmymodel.com)
+I had a good time with this one.
+It has a great user-friendly interface with an integrated html5 context menu so that it feels
+like a desktop program. You can create public or private projects to share or open only to your co-workers.
+You can export your projects in multiple formats, namely svg, xml, jpeg, pdf. You can even directly generate it into
+java or sql which is pretty neat. Upon Generation in java it gives you tips like "class name should start with uppercase letter".
+The only drawbacks are that it's not open source and that it's only specialized for class diagram.
+
+
+It's an excellent free class diagram tool that I recommend.
+
+
+##Moral of the story##
+I spent **all** day installing one after the other all the UML editors I could find in the Arch repo
+and in the end almost none of them were satisfying or even working as expected.
+Only two of them caught my attention:
+
+gaphor, which worked perfectly although missing some features, and
+
+tinyuml, which is extremely small and has all I need for class diagrams.
+
+I'll personally stick with gaphor.
+
+What do you think?
+
+Share your experience with UML editors on Unix.

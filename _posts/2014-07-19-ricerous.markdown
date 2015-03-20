@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Ricerous"
+date:   2014-10-03
+categories: unix
+---
+
+Hello fellow readers,
+
+This post is simply to link to the ricerous project threads.
+
+[Project thread](http://nixers.net/showthread.php?tid=1518)
+
+[How-To thread](http://nixers.net/showthread.php?tid=1579)
+
+[GH Page](https://github.com/nixers-projects/ricerous)
+
+
+See you around! 

@@ -1,0 +1,67 @@
+---
+layout: post
+title:  "Running X programs on another machine"
+date:   2013-04-29
+categories: unix
+---
+
+Hello fellow readers,
+
+
+In this tutorial I'm going to explain how to run X programs from a remote computer.
+
+This is an already well known subject for most `*nix` users, however this might be useful for reference purposes.
+
+If you want to run remote X applications, like GUI, on your local machine, this means running them inside your current X session, you'll need to follow the following steps.
+
+
+Make sure that SSH on the remote machine, the one you are not currently sitting on, allows X forwarding (Obviously the ssh deamon should be running also).
+Open `/etc/ssh/sshd_config`, on the remote box, and make sure that this line is not commented.
+
+<pre>X11Forwarding yes</pre>
+Then all you have to do is to start a new ssh session from your machine with the -X option.
+If you run into problems here just restart the sshd.
+<pre>ssh -X -c blowfish user_on_the_remote_machine@remote_machine_address </pre>
+The -c option allows you to choose the encryption. blowfish is said to be fast, but remember that this doesn't mean that it is safer.
+The last step is to simply run the X program from the ssh session you just opened, as if it was a local terminal.
+You'll notice that the programs will open inside your current X session as if they were running locally.
+
+On the other hand, if you want to run a nested X session inside your current X session, then you'll need to proceed as follow.
+
+Install Xephyr from your favourite package manager.
+
+Xephyr is an extension to the X server that allows you to run an X display inside the one you are running, which is exactly what you need.
+
+You'll also need to be able to forward the X session so check the previous method to see how to do that.
+A little parenthesis about the $DISPLAY environment variable.
+
+This variable represent the current display the X session outputs on.
+
+<pre>raptor ~ $ echo $DISPLAY                                          <
+:0
+</pre>
+This means that the current X session is using the display :0.
+
+What you need to accomplish is to be able to redirect the output from the ssh X program into Xephyr nested X session.
+
+Thus, run the following command to start Xephyr and make it listen for programs that needs to be displayed on the :1 .
+
+<pre>Xephyr -ac -screen 1266x768 -br -reset -terminate 2> /dev/null :1 &</pre>
+This will also make it run in the background and throw error messages into /dev/null/.
+You can change the definition, in the screen parameter, according to your preferences.
+Now, in the same terminal run the following command to be able to use the :1 display for the next commands. (This might differ depending on the shell you are using)
+<pre>DISPLAY=:1.0</pre>
+
+Finally, simply run the ssh session.
+
+<pre>ssh -XfC -c blowfish user_on_the_remote_machine@remote_machine_address window_manager</pre>
+
+Change the window_manager to any program you want to run inside the nested X session.
+
+
+This should cover most of the remote usage of X programs.
+
+I hope this is now as clear as water for people that were looking for an answer on the subject.
+
+
+That's all folks!
