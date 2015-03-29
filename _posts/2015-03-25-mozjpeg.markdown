@@ -5,7 +5,7 @@ date:   2015-03-25
 categories: programming
 ---
 
-Hello fello readers,
+Hello fellow readers,
 
 I've wanted to try [mozjpeg](https://github.com/mozilla/mozjpeg) since it came out.
 After getting it installed I was surprised by how awesome the compression is.
