@@ -34,8 +34,8 @@ and compress the next image with a higher ratio until the user is unsatisfied.
 At this point it stores the last best compression used and also keeps the last best image.
 
 
-I' hoping that after gathering a lot of inputs the program will be able to guess,
-if there's a co-relation between the size of the image and the compression ratio,
+I'm hoping that after gathering a lot of inputs the program will be able to guess,
+if there's a correlation between the size of the image and the compression ratio,
 what compression is best to use.
 
 
