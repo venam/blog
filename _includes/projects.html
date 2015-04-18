@@ -1,10 +1,35 @@
 
 <paper-shadow>
-<h1>Projects</h1>
+	<!--
+	 Those presentations were loads of fun to make
+	-->
+	<h1 class="page-heading">Presentations</h1>
 
-<div id="my-github-projects" />
+	<paper-shadow style="margin-bottom:3ex !important;">
+		<a class="post-link" href="http://venam.nixers.net/presentation/">Internship</a>
+		<dd style="padding:1ex;">
+			A Summary of what I worked on for my Internship at <a href="http://invigo.com.lb">Invigo</a>
+		</dd>
+	</paper-shadow>
+
+	<paper-shadow style="margin-bottom:3ex !important;">
+		<a class="post-link" href="http://venam.nixers.net/beirut_beer/">Marketing Project</a>
+		<dd style="padding:1ex;">
+			Slides for a marketing project made about Beirut Beer
+		</dd>
+	</paper-shadow>
+	<h1 class="page-heading">Projects</h1>
+
+	<!--
+	 So many projects and none ever was good.
+	 Hek, I can't even remember how I came up with all those ideas.
+	-->
+	<div id="my-github-projects" />
+
 </paper-shadow>
-
+<!--
+This loads all my shitty stuff from GH
+-->
 <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script src="/assets/git.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -12,4 +37,5 @@
 		$("#my-github-projects").loadRepositories("venam");
 	});
 </script>
+
 

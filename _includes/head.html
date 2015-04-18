@@ -1,12 +1,27 @@
 <head>
+	<!--
+	 It's 2015 faggot, everyone should support utf-8
+	-->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
+	<!-- a bit of responsiveness,
+	 not in the sense that it'll make you sandwishes on orders but it's still
+	 as satisfying
+	-->
 	<meta name="viewport"
 		content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-	<meta charset='utf-8'>
 
+	<!--
+	 Now it's time to include all the poop I can think about
+
+	 JS has ruined a lot of people
+
+	 When I wrote my previous website I had no idea what I was writing but it
+	 still worked in the end. In the current situation I know exactly what is
+	 happening and let's say that it's not pretty.
+	-->
 	<script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
 	<link rel="import" href="/bower_components/font-roboto/roboto.html">
 	<link rel="import" href="/bower_components/core-header-panel/core-header-panel.html">
@@ -17,14 +32,19 @@
 	<link rel="import" href="/bower_components/paper-button/paper-button.html">
 	<link rel="import" href="/bower_components/paper-shadow/paper-shadow.html">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 	<link rel="stylesheet" href="{{ "/css/material.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
+	<!--
+	 Some overriding styles
+	 so fashionable you'll feel like a fucking neck-beard when comparing
+	 yourself to it
+	-->
 	<style>
 	html,body {
 		color: #212121;
