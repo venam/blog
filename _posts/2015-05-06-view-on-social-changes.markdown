@@ -19,7 +19,7 @@ the first persons who capt the _wave_ before others are the elders, the old
 schoolers of their times. Our parents used to tell us that it wasn't  like
 that in their time, that we're totally wrong. 
 
-![No it wasn't like that](/assets/back_in_my_day.png)
+![No it wasn't like that]({{site.baseurl}}/assets/back_in_my_day.png)
 
 We might have been wrong in some sense but who can stop a movement made slowly
 and unconsciously by a huge group. A revolution that is probably for the
@@ -69,7 +69,7 @@ was full of things that looked like they were made by people high LSD. We just
 loved the shows, at least for the short amount of time we were allowed to sit
 in front of the television.
 
-![LSD Cartoons](/assets/ren_stimpy.gif)
+![LSD Cartoons]({{site.baseurl}}/assets/ren_stimpy.gif)
 
 
 I won't dig in it too much but all lot of the artistic movements were
@@ -126,7 +126,7 @@ casuals talks. The worst we get out of this are lazy bums with no guts to go
 out and meet others. A generation that finds all their pleasures in a virtual
 world that merge with themselves.
 
-![crazy new gen](/assets/oh_those_crazy_kids.jpg)
+![crazy new gen]({{site.baseurl}}/assets/oh_those_crazy_kids.jpg)
 
 All the human knowledge is available online but with a mindset of laziness it's
 hard to overcome the step needed for brighter days. It's undeniable that this

@@ -44,7 +44,7 @@ acts as your second memory.
 By second memory I mean an extension of your thoughts, thinking, and physical
 brain memory.
 
-![extension of the brain hack that shit](/assets/hack_it.png)
+![extension of the brain hack that shit]({{site.baseurl}}/assets/hack_it.png)
 
 Let's start with a simple exercise, for those of you that have been on Unix
 for more than a year. Close your eyes and remember the last time you had to

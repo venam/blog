@@ -22,15 +22,15 @@
 	 still worked in the end. In the current situation I know exactly what is
 	 happening and let's say that it's not pretty.
 	-->
-	<script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
-	<link rel="import" href="/bower_components/font-roboto/roboto.html">
-	<link rel="import" href="/bower_components/core-header-panel/core-header-panel.html">
-	<link rel="import" href="/bower_components/core-selector/core-selector.html">
-	<link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
-	<link rel="import" href="/bower_components/paper-input/paper-input.html">
-	<link rel="import" href="/bower_components/paper-item/paper-item.html">
-	<link rel="import" href="/bower_components/paper-button/paper-button.html">
-	<link rel="import" href="/bower_components/paper-shadow/paper-shadow.html">
+	<script src="{{site.baseurl}}/bower_components/webcomponentsjs/webcomponents.js"></script>
+	<link rel="import" href="{{site.baseurl}}/bower_components/font-roboto/roboto.html">
+	<link rel="import" href="{{site.baseurl}}/bower_components/core-header-panel/core-header-panel.html">
+	<link rel="import" href="{{site.baseurl}}/bower_components/core-selector/core-selector.html">
+	<link rel="import" href="{{site.baseurl}}/bower_components/paper-tabs/paper-tabs.html">
+	<link rel="import" href="{{site.baseurl}}/bower_components/paper-input/paper-input.html">
+	<link rel="import" href="{{site.baseurl}}/bower_components/paper-item/paper-item.html">
+	<link rel="import" href="{{site.baseurl}}/bower_components/paper-button/paper-button.html">
+	<link rel="import" href="{{site.baseurl}}/bower_components/paper-shadow/paper-shadow.html">
 
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">

@@ -89,7 +89,7 @@ tabs.addEventListener("click", function() {
 		console.log(tabs.selected);
 		console.log(current_tab);
 		if (current_tab == "blog" && tabs.selected == "blog") {
-			document.location = "{{ site.url }}";
+			document.location = "{{ site.url }}{{site.baseurl}}";
 		}
 		current_tab = tabs.selected;
 	}, 700);
