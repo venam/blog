@@ -1,12 +1,73 @@
 <paper-shadow>
 	<h1 class="page-heading">Some Other things</h1>
-	<!-- I'm gonna fill those up soon...
-	 fill it like I filled your momma's belly
+	<!-- 
+	 Other weird stuffs I do
 	-->
 	<ul>
-		<li>poems</li>
-		<li>quotes</li>
-		<li>scrots</li>
-		<li>links</li>
+		<li>
+			<span class="clickable" onClick="showOther('poems')" href="">poems</span>
+			<div id="other_poems"   class="hidden">
+				<ul>
+					<li>
+						<a href="http://venam.nixers.net/poems/la_mort.txt" target="_blank">la mort</a>
+					</li>
+					<li>
+						<a href="http://venam.nixers.net/poems/summer.txt" target="_blank">summer</a>
+					</li>
+					<li>
+						<a href="http://venam.nixers.net/poems/mystery_of_moonfog.txt" target="_blank">mystery of moonfog</a>
+					</li>
+					<li>
+						<a href="http://venam.nixers.net/poems/lullabie.txt" target="_blank">lullabie</a>
+					</li>
+					<li>
+						<a href="http://venam.nixers.net/poems/destinee_ou_coincidence.txt" target="_blank">destinee ou coincidence</a>
+					</li>
+					<li>
+						<a href="http://venam.nixers.net/poems/christ.txt" target="_blank">Christy</a>
+					</li>
+
+					<li>
+						<a href="http://venam.nixers.net/poems/a_day_in_the_mind_of_the_new_tecnology.txt" target="_blank">a day in the mind of the new tecnology</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<span  class="clickable" onClick="showOther('quotes')" href="">quotes</span>
+			<div id="other_quotes"   class="hidden">
+				<ul>
+					<li>
+						<a href="http://venam.nixers.net/quotes.txt" target="_blank">quotes</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<span class="clickable" onClick="showOther('scrots')" href="">scrots</span>
+			<div id="other_scrots"  class="hidden">
+				TODO
+			</div>
+		</li>
+		<li>
+			<span  class="clickable" onClick="showOther('links')" href="">links</span>
+			<div id="other_links" class="hidden">
+				TODO
+			</div>
+		</li>
 	</ul>
 </paper-shadow>
+<script>
+function showOther (elem) {
+	console.log(elem);
+	var what_to_show_hide = document.getElementById("other_"+elem);
+	console.log(what_to_show_hide);
+	console.log(what_to_show_hide.style.display);
+	if (what_to_show_hide.style.display != "block") {
+		what_to_show_hide.style.display = "block";
+	}
+	else {
+		what_to_show_hide.style.display = "none";
+	}
+}
+</script>
