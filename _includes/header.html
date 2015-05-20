@@ -1,25 +1,30 @@
 
+<!--
+	Once upon a time there was a little girl who got lost in the forest
+	She didn't know how to come back.
+	She might have died, no one ever knew where she went.
+	The truth is that she discovered webcomponents and didn't want to use
+	peasants simple HTML tags again.
+	She died 'cause they are fucking lagging and she got fired from her
+	workplace, she had no money, turned into a hobbo, and went living in the
+	forest to think back at the time when she could use gopher to browse
+	directories on the spiderweb.
+-->
 		<core-toolbar>
 			<div  class="wrapper">
 
+			<!--
+			Tell me a thing about you.
+			Send me an email: patrick [at] iotek.org
+			Or you can come entertain me on IRC
+
+			Come and nag about how horrible my code is
+			-->
 			<paper-tabs class="tabs-title" id="tabs-t" selected="blog" self-end>
 				<paper-tab name="about" >About</paper-tab>
-				<!--
-				<paper-tab name="contact">contact</paper-tab>
-				<paper-tab name="cv">CV</paper-tab>
-				<paper-tab name="quotes">quotes</paper-tab>
-				-->
 				<paper-tab id="blog_tab" name="blog">Blog</paper-tab>
 				<paper-tab name="projects">Projects</paper-tab>
-				<!--
-				<paper-tab name="presentations">presentations</paper-tab>
-				-->
-				<paper-tab name="Others">Others</paper-tab>
-				<!--
-				<paper-tab name="poems">poems</paper-tab>
-				<paper-tab name="scrots">scrots</paper-tab>
-				<paper-tab name="links">links</paper-tab>
-				-->
+				<paper-tab name="others">Others</paper-tab>
 			</paper-tabs>
 
 				<!--
@@ -32,8 +37,13 @@
 			</div>
 
 		</core-toolbar>
+		<!--
+			That's the biggest text of this page.
+			It's rrreally big.
+			Girls dig that font (eyes problem maybe).
+		-->
 		<div class="wrapper">
-			<h2> <a href="{{ site.url }}" id="blog_title">Venam's Blog</a></h2>
+			<h2> <a href="{{ site.url }}{{site.baseurl}}" id="blog_title">{{site.title}}</a></h2>
 		</div>
 
 
