@@ -34,10 +34,6 @@ var blog_content = document.getElementById("blog-content");
 var about_content = document.getElementById("about-content");
 var project_content = document.getElementById("projects-content");
 var others_content = document.getElementById("others-content");
-
-var blog_tab = document.getElementById("blog_tab");
-var current_tab = "";
-
 var contents = {
 	"blog_content" : blog_content,
 	"about_content" : about_content,
@@ -54,22 +50,11 @@ function show_one(section) {
 		}
 	}
 }
-var tabs = document.querySelector('#tabs-t');
-tabs.addEventListener('core-select', function(e) {
-	if (e.detail.isSelected) {
-		show_one(tabs.selected.toLowerCase()+"_content");
-	}
-});
-tabs.addEventListener("click", function() {
-	setTimeout(function() {
+	var tabs = document.querySelector('#tabs-t');
+	tabs.addEventListener('core-select', function() {
 		console.log(tabs.selected);
-		console.log(current_tab);
-		if (current_tab == "blog" && tabs.selected == "blog") {
-			document.location = "{{ site.url }}";
-		}
-		current_tab = tabs.selected;
-	}, 700);
-});
+		show_one(tabs.selected.toLowerCase()+"_content");
+	});
 	</script>
 
   </body>
