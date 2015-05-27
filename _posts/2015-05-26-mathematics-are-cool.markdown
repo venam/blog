@@ -46,6 +46,8 @@ I quickly wrote a small prototype using an engine I extracted from my old game
 
 
 ![Attempt start](http://pub.iotek.org/p/c0YGkoX.png)
+
+
 ![Attempt end](http://pub.iotek.org/p/1KlMPXO.png)
 
 
@@ -69,6 +71,8 @@ The beans are then randomly put at the highest part of the opening.
 
 Here are some results with a really big bean machine.
 ![insanely big start](http://pub.iotek.org/p/RLs5fsc.png)
+
+
 ![insanely big result](http://pub.iotek.org/p/aun8zff.png)
 
 
@@ -80,6 +84,6 @@ See it [live](http://venam.nixers.net/bean_machine)
 
 
 
-Overall I'm extremely impressed. One thing leading to another, curiosity is the
+Overall, I'm extremely impressed. One thing leading to another, curiosity is the
 fire of our hearts. Maths guides our world and it's cool to write
 physical simulations to see it.
