@@ -255,6 +255,7 @@ on and on.
 
 
 A very simple implementation of interspecies interaction is the [Bask Sneppen model](https://en.wikipedia.org/wiki/Bak–Sneppen_model for interspecies interaction).
+
 >The model dynamics repeatedly eliminates the least adapted species and mutates it and its neighbors to recreate the interaction between species.
 
 
