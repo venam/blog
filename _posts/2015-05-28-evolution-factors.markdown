@@ -5,6 +5,7 @@ date:   2015-05-28
 categories: psychology
 ---
 
+
 Hello fellow readers,  
 
 The last two months I've been extremely interested by evolutionary programming
@@ -27,7 +28,7 @@ Scientists already tried their luck at reproducing the early state with
 arguable luck. However, it is still practically impossible to guess if what is
 tested in the labs is relevant or not.
 You can do your own online search about those experiments, for example [this](http://www.wired.com/2009/05/ribonucleotides/) one.
-
+They are also doing amazing researches in the [evolutionary biology](https://en.wikipedia.org/wiki/Evolutionary_biology) field.
 
 
 In no particular order of appreciation, the next few points are what I think
@@ -38,6 +39,8 @@ the rock pillows of evolution.
 
 
 ### Randomness, Mutations, & Crossovers ###
+
+
 
 Randomness is beautiful, but the die of nature is unbalanced.
 
@@ -60,6 +63,10 @@ the being. The genotype contains the genetic code of the being,
 `the combination of alleles on homologous chromosomes`. This is the only change
 that can be transmitted from one generation to another. It's the code making up
 what the being is.
+
+Let's note that the mutation on the genotype level that is transmitted should take place in
+the gonads (germinal cells). If the change doesn't happen there, it might be
+expressed in the phenotype but not transmitted to the children.
 
 
 The mutation happens randomly on the current law of distribution of nature at
@@ -103,6 +110,19 @@ For further understanding of this topic there's a [superb paper](http://groups.c
 ![crash](http://pub.iotek.org/p/5ux28ux.png)
 
 
+There exist a mechanism to instantly correct the mutations happening to the
+cells. Only a minimal part of those mutation will stick and be transmitted.
+Moreover, in most cases the mutation are not expressed in the phenotype. For instance, in
+the human genome there is a whole section of the DNA that does not code for
+any specific behavior, at least we do not know its purpose. Being parts that don't affect
+the phenotype there is a higher chance of a mutation happening on there. Its surface
+is larger than the one which codes for something.
+
+We can consider it as the protector for the rest of the DNA reducing the
+factor of mutations sent to the children. Slowing down the cooling.
+
+
+
 ### Pool Of Solutions ###
 
 Robustness is also achievable at a genotype level.
@@ -113,6 +133,8 @@ make a huge differences in the phenotype but big changes might give similar resu
 
 This means that the phenotype is dependent on the combination of genes rather
 than the genes themselves.
+
+
 
 A [recent article](http://nautil.us/issue/20/creativity/the-strange-inevitability-of-evolution)
 of the nautilus magazine developed on this subject.
@@ -137,7 +159,7 @@ is part of the [synthetic biology](https://en.wikipedia.org/wiki/Synthetic_biolo
 
 
 
-### Tournament/Ranking System ###
+### Natural Selection ###
 
 Only the chosen ones have priorities in the survival game. Their phenotypes
 being superior affects the probability of their genotype surviving for another
@@ -209,6 +231,10 @@ and the ranking system might resemble more an [Eigen Morality](http://www.scotta
 political system than the simple tournament.
 
 
+You can find two example of algorithms implementing group behaviors in the
+`cleveralgorithm` book, [cultural algorithm](http://www.cleveralgorithms.com/nature-inspired/physical/cultural_algorithm.html) and [memetic algorithm](http://www.cleveralgorithms.com/nature-inspired/physical/memetic_algorithm.html).
+
+
 One thing to keep from this paragraph is that the global meta-mind of the
 group is more powerful than a single individual behavior and that a group big
 enough can live alone and diverge from the main branch of its specie.
@@ -226,6 +252,10 @@ Be it beneficial or not, any interactions from one specie to another creates a
 snowball effect.
 Food chains, infections, viruses, relationships, climate change, etc.. It goes
 on and on.
+
+
+A very simple implementation of interspecies interaction is the [Bask Sneppen model](https://en.wikipedia.org/wiki/Bak–Sneppen_model for interspecies interaction).
+>The model dynamics repeatedly eliminates the least adapted species and mutates it and its neighbors to recreate the interaction between species.
 
 
 
@@ -249,6 +279,10 @@ of life I recommend: [What is life? How chemistry becomes biology](http://www.rs
 
 I might be wrong on a lot of points but writing this was a lot of fun and I
 hope it'll be as fun to read it!
+
+
+Thanks a lot to my best buddy Francois Boulos for the proof reading and new ideas.
+You're going to be a great doctor (°∀°)b
 
 
  ヽ(^。^)丿
