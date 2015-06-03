@@ -66,7 +66,7 @@ what the being is.
 
 Let's note that the mutation on the genotype level that is transmitted should take place in
 the gonads (germinal cells). If the change doesn't happen there, it might be
-expressed in the phenotype but not transmitted to the children.
+expressed in the phenotype but not transmitted to the descendant.
 
 
 The mutation happens randomly on the current law of distribution of nature at
@@ -118,7 +118,7 @@ any specific behavior, at least we do not know its purpose. Being parts that don
 the phenotype there is a higher chance of a mutation happening on there. Its surface
 is larger than the one which codes for something.
 
-We can consider it as the protector for the rest of the DNA reducing the
+We can consider it as a protector for the rest of the DNA reducing the
 factor of mutations sent to the children. Slowing down the cooling.
 
 
@@ -127,11 +127,11 @@ factor of mutations sent to the children. Slowing down the cooling.
 
 Robustness is also achievable at a genotype level.
 With Respect to the current distribution law, multiple variants of the genotype
-should be able to produce similar functional phenotypes, which we refer to as
+should be able to produce similar functional phenotypes that solve the same problem, which we refer to as
 a pool of solutions. Small changes in the genotype might
-make a huge differences in the phenotype but big changes might give similar results.
+make a huge differences in the overall fitness but big changes might give similar results.
 
-This means that the phenotype is dependent on the combination of genes rather
+This means that the fitness of the phenotype is dependent on the combination of genes rather
 than the genes themselves.
 
 
