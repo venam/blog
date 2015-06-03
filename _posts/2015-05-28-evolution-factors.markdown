@@ -78,6 +78,8 @@ genotypes of the parents. The probability of one attribute of the parent taking
 over the attribute of the other parent follows the randomness we talked about
 and that we'll discuss more later on.
 
+For the technical aspects of the crossover refer to the [wikipedia page](https://en.wikipedia.org/wiki/Chromosomal_crossover) on chromosomal crossover and the [crossover genetic algorithm](https://en.wikipedia.org/wiki/Crossover_(genetic_algorithm)) page.
+
 
 
 ### Robustness Against Small Changes ###
