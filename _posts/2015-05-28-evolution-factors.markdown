@@ -119,7 +119,7 @@ the phenotype there is a higher chance of a mutation happening on there. Its sur
 is larger than the one which codes for something.
 
 We can consider it as a protector for the rest of the DNA reducing the
-factor of mutations sent to the children. Slowing down the cooling.
+factor of mutations sent to the descendant. Slowing down the cooling.
 
 
 
