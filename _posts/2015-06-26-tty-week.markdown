@@ -10,9 +10,9 @@ Hello fellow readers,
 
 This week is TTY week at `nixers.net`.
 
-Last summer we did the same challenge and it turned out a pretty enjoyable and great learning experience.
+Last summer we did the same challenge and it turned out a pretty enjoyable and a great learning experience.
 
-I'm going to post logs in this post and hopefully it'll render beautifully (because I can't check my blog from the TTY.)
+I'm going to add logs in this post and hopefully it'll render beautifully (because I can't check my blog from the TTY.)
 
 
 ##Day 1
@@ -23,7 +23,7 @@ The script is simple, it kills any graphical session it finds open and updates t
 
 
 Last summer everyone had their bit of entertainment finding console games, for me it was vitetris.
-I played it a bit and tried to get an efficient my tty workflow.
+I played it a bit and tried to get back an efficient tty workflow.
 
 I'm using dvtm for multiplexing, the framebuffer for images, links -g for browsing the web,
 and the rest stays the same as in X. Pretty easy when you are a minimalist.
@@ -34,7 +34,7 @@ and the rest stays the same as in X. Pretty easy when you are a minimalist.
 
 
 
-One annoying thing is copy/pasting text from places to places.
+One annoying thing is copying text.
 
 I installed `gpm` which stands for general purpose mouse.
 
@@ -42,7 +42,7 @@ I installed `gpm` which stands for general purpose mouse.
 > gpm - a cut and paste utility and mouse server for virtual consoles
 
 
-It's not exactly a mouse but a cursor in the console that helps copying text around.
+It's not exactly a mouse but a cursor that helps copying text around.
 It fills the most recent selection buffer (middle click).
 
 
@@ -50,11 +50,11 @@ It fills the most recent selection buffer (middle click).
 
 
 I ssh into my work box, at my job, and do whatever I have to do from my home machine that I brought with me.
-It's the simplest way to stick true to the TTY week without the hassle of setting up my work machine correctly.
+It's the simplest way to stick true to the TTY week without the hassle of setting up another box.
 
 
-Also, it's fun to be able to work with the `love of my life`.
+It's fun to be able to work with the `love of my life` (the first box I bought).
 
 
-Last year I used my own custom Perl script to check my mails but this time I wanted to have a go with new programs.
+Last year I used my own custom Perl script to check my mails but this time I want to have a go with new programs.
 Thus, I've got alpine setup. The only drawback is that you cannot have multiple accounts.
