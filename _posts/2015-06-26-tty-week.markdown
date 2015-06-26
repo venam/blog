@@ -58,3 +58,11 @@ It's fun to be able to work with the `love of my life` (the first box I bought).
 
 Last year I used my own custom Perl script to check my mails but this time I want to have a go with new programs.
 Thus, I've got alpine setup. The only drawback is that you cannot have multiple accounts.
+
+
+
+![my workspace]({{site.baseurl}}/assets/tty_week/tty_week_day2.png)
+
+
+
+Using `fswebcam` and `Imagemagick` I was able to take a stupid selfie and edit it.
