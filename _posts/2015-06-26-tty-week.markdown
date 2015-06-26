@@ -29,6 +29,11 @@ I'm using dvtm for multiplexing, the framebuffer for images, links -g for browsi
 and the rest stays the same as in X. Pretty easy when you are a minimalist.
 
 
+
+![my workspace]({{site.baseurl}}/assets/tty_week/tty_week_day1.png)
+
+
+
 One annoying thing is copy/pasting text from places to places.
 
 I installed `gpm` which stands for general purpose mouse.
