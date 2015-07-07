@@ -24,7 +24,7 @@ incubated the start of life. Then, with those in hands, the field of AI will
 flourish and grow!
 
 
-Scientists already tried their luck at reproducing the early state with
+Scientists already tried reproducing the early state with
 arguable luck. However, it is still practically impossible to guess if what is
 tested in the labs is relevant or not.
 You can do your own online search about those experiments, for example [this](http://www.wired.com/2009/05/ribonucleotides/) one.
