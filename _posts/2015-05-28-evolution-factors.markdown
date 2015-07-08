@@ -261,6 +261,136 @@ A very simple implementation of interspecies interaction is the [Bask Sneppen mo
 >The model dynamics repeatedly eliminates the least adapted species and mutates it and its neighbors to recreate the interaction between species.
 
 
+### Issues With Implementation ###
+
+I sent an email to a specialist in EV (Evolutionary programming), Peter Grogono
+and got some nice insights on the problems faced when implementing evolutionary
+programming. I'll introduce some of them in this paragraph.
+If you want to read more about it he has written some excellent papers on the subject
+such as [Laws and Life](http://users.encs.concordia.ca/~grogono/Writings/lawsandlife.pdf).
+
+
+Evolutionary programming is mainly used in optimization problems where you have
+a function F (fitness function) and want to assign the best value to the parameters.
+
+The problem arise when the developers are choosing those parameters and on what
+space they can evolve on.
+
+I quote:
+
+> The parameter space may be very large.  In fact EP is used precisely
+> because it provides an efficient way of searching large spaces.  But the
+> parameter space may also be too small in the sense that it restricts
+> the solution to possibilities imagined by the designer.
+> 
+> For example, I recall a fascinating paper about simulating the evolution of an 
+> eye: good vision was achieved in only 800000 generations.  The
+> parameters of the simulation included tissue transparency light
+> sensitivity refractive index etc.  Clearly this simulation could not
+> produce an ear!
+> 
+> Nature has no such restrictions.  At some time a mutation produced by chance
+> one of the opsin proteins.  These proteins have the interesting
+> property that a photon can cause a change in structure that can be
+> detected chemically.  From there it's only a few million years to an
+> eye.  Bottom-up not top-down.
+
+
+Defining the genome itself in a program is a huge problem in itself. It means
+defining genes parameters, what compose them. Peter Grogono's solution was
+to ignore the genes and instead use some sort of meta-program which evolve
+itself through generations. However, this approach leads to more complications.
+
+
+> This replaces the genome by an evolving program which is open-ended but leads to
+> The robustness problem.  How do you design a programming language in
+> which small changes to the source code yield small changes in the
+> behaviour?  How do you avoid programs evolving to exploit freaks of the
+> specification?  Many problems here!
+>
+> The stability problem.  Why are some features more stable than others?
+> I find it comforting that dinosaurs had five fingers just as I do.  But
+> why is the number of fingers more stable than say the function of the
+> small bones in my ear which dinosaurs used to eat with?
+
+
+It's extremely complex to approach the implementation of real evolution in a
+programming language. Programming is meant to have strict mathematical rules.
+As we said earlier in this paragraph, EP is used to optimize a function but
+what are we optimizing in the case of a life form?
+
+> The fitness function problem.  Practical EP works by evolving organisms
+> that achieve high (or low) values of the fitness function.  But what is
+> the fitness function of a sparrow?  To fly high and fast?  To see well?
+>   To avoid being eaten by a hawk?  No: the only thing that evolution can
+>   do for a sparrow is to help it produce more sparrows.  The "fitness
+> function" becomes a tautology.
+
+
+It becomes even more complex when the environmental factors are introduced,
+preys and predators for instance.
+
+> The adaptation problem.  Consider the following taken from your blog:
+>
+>
+> "Lets say for example that a certain animal has white fur. Someday
+> one of the male grows black fur and coincidently from a mutation turns
+> out to be a bit stronger. He is lucky and mate with multiple females.
+> This might give rise to a new generation where females are more
+> attracted to black fur and males with black fur are more resistant."
+>
+>
+> There are three immediate assumptions:
+> 1. strength (whatever that is!) is under genetic control
+> 2. fur colour is under genetic control
+> 3. the same gene or cluster of genes affects both strength and fur colour.
+>
+>
+> Next it is not as simple as "this might give rise to a new generation
+> where females are more attracted to black fur".  What might actually
+> happen is:
+>
+>
+> 4. black animals mate more than white animals because they are stronger
+> 5. they pass their genes onto their offspring who therefore may be
+> stronger and may have black fur
+> 7. the offspring also mate more than white animals because of their
+> inheritance.
+> 8. animals of either colour will be more successful if they have one or
+> more parents with black fur
+> 11. consequently animals who prefer black fur in other will become more successful.
+>
+>
+> However in order for step 11 to occur we require first:
+>
+>
+> 9. animals have the sense organs required to distinguish black and white
+> fur
+> 10. there must be a link between an observation ("that animal has black
+> fur") and an action ("mate with that animal").
+>
+>
+> Continuing:
+>
+>
+> 12. an animal with black fur but no extra strength will have an
+> advantage: the black fur will help it to mate but it doesn't require
+> extra resources for strength.
+>
+>
+> Thus weak animals with black fur will tend to dominate the population
+> there will be no advantage to having black fur and we start all over
+> again ...
+>
+
+This last examples shows how evolutionary programming is sometime really
+unsuspected. Weak individuals can get a better chance of survival because of
+a correlated trait that is seen as strong from an environmental perspective,
+even though it isn't. Correlation in the environment is a very strong factor.
+
+
+The big question is, how to map all those relations in a program.
+
 
 ### Conclusion ###
 
@@ -286,6 +416,8 @@ hope it'll be as fun to read it!
 
 Thanks a lot to my best buddy Francois Boulos for the proof reading and new ideas.
 You're going to be a great doctor (°∀°)b
+
+Thanks to Peter Grogono, you seem like a super cool guy!
 
 
  ヽ(^。^)丿
