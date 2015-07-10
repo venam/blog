@@ -1,0 +1,140 @@
+---
+layout: post
+title:  "TTY Week"
+date:   2015-06-26
+categories: unix
+---
+
+
+Hello fellow readers,
+
+This week is TTY week at `nixers.net`.
+
+Last summer we did the same challenge and it turned out a pretty enjoyable and a great learning experience.
+
+I'm going to add logs in this post and hopefully it'll render beautifully (because I can't check my blog from the TTY.)
+
+
+##Day 1
+
+
+I started the [timer clock](https://github.com/nixers-projects/tty-week-timer) on my server so that anyone can keep track of how much time is left for the challenge.
+The script is simple, it kills any graphical session it finds open and updates the counter.
+
+
+Last summer everyone had their bit of entertainment finding console games, for me it was vitetris.
+I played it a bit and tried to get back an efficient tty workflow.
+
+I'm using dvtm for multiplexing, the framebuffer for images, links -g for browsing the web,
+and the rest stays the same as in X. Pretty easy when you are a minimalist.
+
+
+
+![my workspace]({{site.baseurl}}/assets/tty_week/tty_week_day1.png)
+
+
+
+One annoying thing is copying text.
+
+I installed `gpm` which stands for general purpose mouse.
+
+
+> gpm - a cut and paste utility and mouse server for virtual consoles
+
+
+It's not exactly a mouse but a cursor that helps copying text around.
+It fills the most recent selection buffer (middle click).
+
+
+##Day 2
+
+
+I ssh into my work box, at my job, and do whatever I have to do from my home machine that I brought with me.
+It's the simplest way to stick true to the TTY week without the hassle of setting up another box.
+
+
+It's fun to be able to work with the `love of my life` (the first box I bought).
+
+
+Last year I used my own custom Perl script to check my mails but this time I want to have a go with new programs.
+Thus, I've got alpine setup. The only drawback is that you cannot have multiple accounts.
+
+
+
+![my workspace]({{site.baseurl}}/assets/tty_week/tty_week_day2.png)
+
+
+
+Using `fswebcam` and `Imagemagick` I was able to take a stupid selfie and edit it.
+
+
+
+![my workspace]({{site.baseurl}}/assets/tty_week/tty_week_day2_pam_captcha.png)
+
+
+
+I found out that with my tty workflow, where I'm using multiple TTYs as workspaces, the [pam captcha patch](git@github.com:venam/pam_captcha_patch.git)
+I wrote is quite annoying. Most of the time I miss the captcha or the password and I have to redo the procedure all over again.
+I bet that if an attacker would want to force his way into my box he'll certainly give up.
+
+
+#Day 3
+
+
+I didn't spend that day working on my machine, I simply played music remotely using mpd.
+Actually, that's one of the thing I enjoy the most on the TTY, even the music visualizer in ncmpcpp (mpd client) looks great.
+
+
+
+![music]({{site.baseurl}}/assets/tty_week/tty_week_zik.png)
+
+
+
+* A note on how I take screenshots in the TTY:
+
+
+{% highlight bash %}
+sleep 3 && fbdump > myimage.dump
+convert myimage.dump myimage.png
+# insert command to upload image somewhere
+{% endhighlight %}
+
+The advantage of adding a sleep before the framebuffer dump is that it gives you enough time
+to switch between TTYs. This is especially nice because it lets you
+take screenshots when you normally couldn't. For example, the login screen, when playing a video with `mplayer -vo fbdev2`,
+while having any application open that uses the whole pixmap of the frambuffer, etc..
+
+
+#Day 4
+
+
+I spent the morning programming for the urnn (Unix Ricing Neural Network) project.
+
+`links -g` features multiple tabs which is doesn't clobber browsing multiple pages at the same time.
+You can switch through them using ALT+num and open them via the ESC main menu.
+
+Multiplexing with dvtm is certainly one of my main key to keep the flow in my TTY.
+I open the documentation next to my code with a single keybind.
+
+
+#Day 5
+
+
+The timer I wrote went crazy and told me that the week was already over. By thinking
+simply I've made some huge designs failures. Next time I'll think of something else.
+
+I'm using fbgs `Poor man's PostScript/pdf viewer for the linux framebuffer console.` to read pdf books.
+My current readings are about group dynamics psychology.
+
+
+#Day 6
+
+
+I didn't bring my home laptop at work today.
+When I got back home I started working on a generic Lindenmayer System in Perl.
+
+
+#Day 7
+
+
+The TTY week is over. It passed faster then I thought.

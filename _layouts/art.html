@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+	This is my artistic page
+	I'll try to make it look good
+-->
+
+<!--
+	Here comes the head
+	prepare yourself
+-->
+  {% include head.html %}
+<!--
+	Nah, it's not the best head I've ever received.
+	!! Nasty Ψ(｀▽´)Ψ !!
+-->
+
+<!--
+	Here comes the sexy body
+-->
+  <body unresolved>
+
+	<core-header-panel >
+	{% include header_arts.html %}
+
+	<!--
+	 For the plant of the subject (not meat 'cause I'm vegetarian)
+	-->
+	<div class="page-content">
+		<div class="wrapper">
+			<div class="content" id="blog-content">
+				{% include all_arts.html %}
+			</div>
+		</div>
+	</div>
+
+	{% include footer.html %}
+	</core-header-panel >
+	
+  </body>
+
+</html>

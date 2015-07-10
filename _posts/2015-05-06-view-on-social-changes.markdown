@@ -279,3 +279,17 @@ train we are in.
 
 Wake up people and maintain the future.  
  ☆\*･゜ﾟ･\*\(^O^)/\*･゜ﾟ･\*☆
+
+
+EDIT: After reading [this](http://aeon.co/magazine/psychology/we-need-to-ditch-generational-labels/) article by the aeon magazine I feel like I have the need to clarify some things.
+
+
+I'm a strong proponent of the fact that you can't have movements without a specific generation mindset.
+If by puting labels it means categorizing a single individual then no, it's not appropriate.
+Dividing generations isn't what I was trying to view in this article. Generations are more of a gradual thing, we should look at the movements instead. I apologize if I swapped the terms freely here.
+
+The focus was on the *overview*, the step back that people make to look at their achievements. Many tothers do the same and try to predict changes, for instance economist, sociologist.
+It would be equivalent to people talking about totalitarian regimes in the Europe of pre-world war II.
+You can't label that generation as the "totalitarian" generation but the fact is that the whole society was moving towards it.
+
+I had to point out the extremes that moves the current world.
