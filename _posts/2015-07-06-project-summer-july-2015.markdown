@@ -157,7 +157,7 @@ _Language: Shell, C, Perl, Go_
 _Explanation_: On the IOtek Telegram group there was a conversation about AI
 and it drifted towards what we like doing, unix ricing. We began brainstorming
 what a Unix ricing AI would do. A bit later we started considering building one.
-Jmbi (Karl McGuire) and I put real ideas together.
+Jmbi and I put real ideas together.
 We settled to use the FANN (Fast Artificial Neural Network) library and a
 simpler idea than the brainstormed ones.
 
