@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Harden The Fuck Up Post!"
-date:   2015-07-13
+date:   2015-07-15
 categories: philosophy
 ---
 
