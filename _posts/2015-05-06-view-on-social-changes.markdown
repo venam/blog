@@ -19,7 +19,7 @@ the first persons who capt the _wave_ before others are the elders, the old
 schoolers of their times. Our parents used to tell us that it wasn't  like
 that in their time, that we're totally wrong. 
 
-![No it wasn't like that]({{site.baseurl}}/assets/back_in_my_day.png)
+![No it wasn't like that]({{site.baseurl}}/assets/back_in_my_day.jpg)
 
 We might have been wrong in some sense but who can stop a movement made slowly
 and unconsciously by a huge group. A revolution that is probably for the

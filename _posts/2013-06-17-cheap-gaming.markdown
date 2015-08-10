@@ -30,7 +30,7 @@ Getting a joypad:
 It's ok to play without a joypad/joystick but it's way more entertaining to play with one. I emphasize on that.
 You can get a joypad for a really small price. I got mine, a year ago, for 12 Lebanese Pounds which is around $8.
 Here's a picture:
-![gaphor]({{site.baseurl}}/assets/joystick.png)
+![gaphor]({{site.baseurl}}/assets/joystick.jpg)
 
 You might need the driver for it if the emulator needs it. It's normally available in most distribution repositories as "xf86-input-joystick".
 Note that sometimes, when you install "xf86-input-joystick", plugin in the joystick and moving the axis might move the mouse around the screen.
@@ -57,11 +57,11 @@ The best ps1 emulators are pcsx and pcsxr. [pcsxr](https://pcsxr.codeplex.com/) 
 You can get pcsx from the official website: [pcsx](http://pcsx.net/) but unfortunately pcsx is harder to setup than pcsxr because you have to get the bios and the plugins yourself.
 pcsxr comes with all the plugins and most of the games will work out of the box.
 Shots of PCSX and PCSXR:
-![gaphor]({{site.baseurl}}/assets/pcsx_r.png)
+![gaphor]({{site.baseurl}}/assets/pcsx_r.jpg)
 
 pcsx and pcsxr have almost the same interface and settings.
 Configuration > Graphics :
-![gaphor]({{site.baseurl}}/assets/pcsx_r_config_graph.png)
+![gaphor]({{site.baseurl}}/assets/pcsx_r_config_graph.jpg)
 The dithering option is about the graphic rendering noise. If you let it off the game will run faster but the graphics will be more squary.(I left it off)
 
 The Stretching option is about the little adjustment the graphic engine does to make the picture look better. Playing around with different option won't really affect the game speed and can make the game look a lot better.
@@ -84,11 +84,11 @@ SNES,NES:
 My favorite SNES/NES emulator is [zsnes](http://zsnes.com/). It's a really cool emulator, it's written mostly in x86 asm and the UI itself looks like a NES game.
 I never had any problem running a game with zsnes.
 Shot of ZSNES:
-![gaphor]({{site.baseurl}}/assets/zsnes.png)
+![gaphor]({{site.baseurl}}/assets/zsnes.jpg)
 
 zsnes setting are accessible via the keyboard (ESC) or via the mouse (but not while playing, you need to press ESC before).
 CONFIG > VIDEO :
-![gaphor]({{site.baseurl}}/assets/zsnes_graph.png)
+![gaphor]({{site.baseurl}}/assets/zsnes_graph.jpg)
 You are presented with choices of aspect ratio. The legend on the right helps you understand the little characters on the right of the aspects.
 "ODS" would be the most preferable settings. Use openGL, allow filters, and allow stretching.
 
@@ -105,7 +105,7 @@ ENABLE STEREO SOUND but don't SIMULATE SURROUND SOUND. The surround sound change
 CONFIG > INPUT :
 
 You can set the key one by one or just press the SET KEY and zsnes will ask for each key while telling you where this key should be on the real NES controller.
-[spoiler][img]http://venam.1.ai/gamin/zsnes_conf.png[/img][/spoiler]
+![conf](http://venam.1.ai/gamin/zsnes_conf.jpg)
 
 
 MISC > GUI OPTS:
@@ -118,7 +118,7 @@ While in the game, press the ESC key. Go to GAME > PICK STATE, now choose on whi
 The states are independent from game to game which means that saving on state1 for zelda won't save over the state1 of kirby or mario.
 
 The best nintendo64 emulator I used is project64 but unfortunately it only runs in wine, but even in wine it runs flawlessly.
-![gaphor]({{site.baseurl}}/assets/p64.png)
+![gaphor]({{site.baseurl}}/assets/p64.jpg)
 Here are some options I always set up in it:
 
 Options > Configure Graphics Plugin:

@@ -28,7 +28,7 @@ From a lot of __searches__, __downloads__, __trials__, and __errors__, I present
 
 ##gaphor - An easy to use modeling environment for UML design##
 
-![gaphor]({{site.baseurl}}/assets/gaphor.png)
+![gaphor]({{site.baseurl}}/assets/gaphor.jpg)
 
 Gaphor is straight forward and easy to use. It was the first UML Designer I installed.
 I was directly shocked by its simplicity it made the work so much easier. It also let you
@@ -58,7 +58,7 @@ Umleditor was very light, around 7MB.
 When starting it I was presented with a cheap splash screen and then a white window popped-up.
 The interface of umleditor is not friendly at all, I couldn't even figure out how to create a class.
 The buttons icons don't even have text equivalent so it got me completely lost.
-![umleditor]({{site.baseurl}}/assets/umleditor.png)
+![umleditor]({{site.baseurl}}/assets/umleditor.jpg)
 
 ##umlet - Free UML Tool for Fast UML Diagrams (stand-alone version)##
 Umlet is also, like umleditor, very light (around 6MB).
@@ -76,7 +76,7 @@ uxf.eps:
 <pre>
 It's available on the officials archlinux repos, for those interested (in [community]).
 </pre>
-![umlet]({{site.baseurl}}/assets/umlet.png)
+![umlet]({{site.baseurl}}/assets/umlet.jpg)
 
 ##bouml - A free UML 2 modeler with C++, Idl, Java, PHP and Python code generation##
 It turned out that bouml isn't free:
@@ -87,20 +87,20 @@ You don't have a licence, closing this message box a file dialog will appear pro
 ##violet - A UML editor for quickly producing simple UML diagrams (also an Eclipse plugin)##
 Violet has a prety interface but the controls are sluggish.
 I tried dragging the elements in vain.
-![violet]({{site.baseurl}}/assets/violet.png)
+![violet]({{site.baseurl}}/assets/violet.jpg)
 
 ##argouml - A UML design tool with cognitive support##
 This thing was huge (60MB) and also greeted me with a blank window.
 
 ##tinyuml - A tool for creation of UML 2 diagrams with a focus on easy use and a small & stable feature set##
-![tinyuml]({{site.baseurl}}/assets/tinyuml.png)
+![tinyuml]({{site.baseurl}}/assets/tinyuml.jpg)
 Tinyuml is indeed tiny with a size of 600KB. 
 It has everything needed to do a complete class diagram, but it has only that and nothing else.
 It can export the project as an image.
 Let's note that the GUI is a pain to use.
 
 ##astah_community - Lightweight, easy-to-use, and free UML2.x modeler##
-![astah]({{site.baseurl}}/assets/astah.png)
+![astah]({{site.baseurl}}/assets/astah.jpg)
 Astah is pretty big (30MB), slow, ugly, hard to use and written in java.
 It also isn't opensource but still has some free features.
 
