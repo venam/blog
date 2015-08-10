@@ -45,7 +45,7 @@ relationships. It repels the _gatherer_ in oneself.
 
 
 
-![my workspace]({{site.baseurl}}/assets/minimalism.png)
+![my workspace]({{site.baseurl}}/assets/minimalism.jpg)
 
 
 

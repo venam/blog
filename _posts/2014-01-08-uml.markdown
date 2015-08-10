@@ -100,7 +100,7 @@ It can export the project as an image.
 Let's note that the GUI is a pain to use.
 
 ##astah_community - Lightweight, easy-to-use, and free UML2.x modeler##
-![astah]({{site.baseurl}}/assets/astah.png)
+![astah]({{site.baseurl}}/assets/astah.jpg)
 Astah is pretty big (30MB), slow, ugly, hard to use and written in java.
 It also isn't opensource but still has some free features.
 
