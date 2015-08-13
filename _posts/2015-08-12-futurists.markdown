@@ -17,7 +17,7 @@ They are predictable beings, following a well known path. We draw them
 dots on their maps and all they have to do is join the lines.
 
 
-> monkey say, monkey do!
+> monkey see, monkey do!
 
 
 A true no-brainer. Why look further, it's the easy solution.
