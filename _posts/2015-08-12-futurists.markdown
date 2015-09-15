@@ -398,3 +398,25 @@ You might think that you did but did not. We cannot know.
 
 
 Cheers!
+
+
+_UPDATE (2015-09-13)_: The web-magazine [Nautilus](nautil.us) just released [an article](http://nautil.us/issue/28/2050/why-futurism-has-a-cultural-blindspot) called "Why Futurism Has a Cultural Blindspot
+"
+which discusses why cultural blindspots.
+It gives a general overview of the commoners' perspective of the future and not the futurists'.
+It emphases how personal preferences and opinions, which are subjectives,
+distort our view of the future.
+
+
+I quote:
+
+> This over- and under-predicting is embedded into how we conceive of the future. “Futurology is almost always wrong,” the historian Judith Flanders suggested to me, “because it rarely takes into account behavioral changes.” And, she says, we look at the wrong things: “Transport to work, rather than the shape of work; technology itself, rather than how our behavior is changed by the very changes that technology brings.” It turns out that predicting who we will be is harder than predicting what we will be able to do.
+
+
+They bring an excellent argument demonstrating the effect of culture:
+
+> As the theorist Nassim Nicholas Taleb writes in Antifragile, “we notice what varies and changes more than what plays a larger role but doesn’t change. We rely more on water than on cell phones, but because water does not change and cell phones do, we are prone to thinking that cell phones play a larger role than they do.”
+
+
+However that's exactly what futurist deal with, cultural and behavioral changes.
+Futurists are above the simple-minded opinions which are brought in the article.
