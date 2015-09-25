@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Group And Community Projects"
-date:   2015-09-11
+date:   2015-09-25
 categories: programming
 ---
 
