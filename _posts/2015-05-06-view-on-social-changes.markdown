@@ -246,7 +246,27 @@ common denominators of likings.
 This has been discussed before in the movement section.
 Let's add to this that with social networks we get the black sheep effect that
 we find in groups.
+
 > In the English language, black sheep is an idiom used to describe an odd or disreputable member of a group, especially within a family. The term stems from the genetic effect in sheep whereby a recessive gene occasionally manifests in the birth of a sheep with black rather than white coloring; these sheep stand out in the flock. 
+
+
+Furthermore, when this is accompanied by the movements mentioned above we notice
+a rise of epidemic pro and con movement participants. They echo and complete
+each others. Hilariously, by doing this they contribute to the other part of the
+balance.
+
+There are examples for every single thing mentioned above.
+
+The big topics have been the "battle of the sexes" with "feminism" and
+"red pillers" (as usual throughout history), and the "trigger" or "over
+politically correct" movement.
+
+
+Both have big brainwash networks and followers that are drawn towards them.
+One should realize that none of those movement is highly beneficial and that is
+why there is a raging equilibrium that is automatically created by the creation
+of another counter group. Society itself has it's own healing system.
+
 
 * Detachment From Reality
 
@@ -273,7 +293,7 @@ Depending on how we handle the big movements we might have a comeback of the
 unexpected.
 
 As far as politic is concerned we might get more green movements and alerters
-of global warmings taking power or we might continue on the same brainwash
+of climate change taking power or we might continue on the same brainwash
 train we are in.  
 
 
