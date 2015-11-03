@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <!-- 
-	This is my artistic page
-	I'll try to make it look good
+	Food is good
 -->
 
 <!--
 	Here comes the head
 	prepare yourself
 -->
-  {% include head.html %}
+  {% include food_head.html %}
 <!--
 	Nah, it's not the best head I've ever received.
 	!! Nasty Ψ(｀▽´)Ψ !!
@@ -19,24 +18,26 @@
 	Here comes the sexy body
 -->
   <body unresolved>
-
-	<core-header-panel >
-	{% include header_arts.html %}
-
+	{% include header_food.html %}
 	<!--
 	 For the plant of the subject (not meat 'cause I'm vegetarian)
 	-->
 	<div class="page-content">
 		<div class="wrapper">
-			<div class="content" id="blog-content">
-				{% include all_arts.html %}
-				{% include comments.html %}
+			<div class="post">
+				<header>
+					<div class="post-header">
+						This section regroups images of recipes I cooked.<br/>
+						For more information please fill a comment below.
+					</div>
+				</header>
+				<article class="post-content">
+					{% include all_foods.html %}
+					{% include comments.html %}
+				</article>
 			</div>
 		</div>
 	</div>
 	{% include footer.html %}
-	</core-header-panel >
-	
   </body>
-
 </html>
