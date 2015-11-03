@@ -143,6 +143,10 @@ footer {
 	.wrapper {
 		width: 95%;
 	}
+	.recipe_image {
+		max-width: 14em;
+		max-height: 14em;
+	}
 }
 @media (max-width: 480px) {
 	.recipe_description {
@@ -152,6 +156,8 @@ footer {
 	.recipe_image {
 		margin-left: 1ex;
 		margin-right: 1ex;
+		max-width: 13em;
+		max-height: 13em;
 	}
 	.recipe_fieldset {
 		padding: 1ex;
