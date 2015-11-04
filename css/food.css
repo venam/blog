@@ -154,10 +154,10 @@ footer {
 		padding: 1ex;
 	}
 	.recipe_image {
-		margin-left: 1ex;
-		margin-right: 1ex;
-		max-width: 13em;
-		max-height: 13em;
+		margin-left: 0.5ex;
+		margin-right: 0.5ex;
+		max-width: 12.5em;
+		max-height: 12.5em;
 	}
 	.recipe_fieldset {
 		padding: 1ex;
