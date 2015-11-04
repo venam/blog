@@ -6,7 +6,7 @@ categories: programming
 ---
 
 
-Hello fellow readers,
+Hello fellow readers,  
 In this post I'll discuss what programming and computing are for me.
 
 
