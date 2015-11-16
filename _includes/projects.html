@@ -1,75 +1,16 @@
-<paper-shadow>
+<header>
+	<h1 class="title">Projects</h1>
+</header>
 
-
-	<!--
-	 Those presentations were loads of fun to make
-	-->
-	<h1 class="page-heading">Presentations</h1>
-
-	<paper-shadow style="margin-bottom:3ex !important;">
-		<a class="post-link" href="http://venam.nixers.net/presentation/">Internship</a>
-		<dd style="padding:1ex;">
-			A Summary of what I worked on for my Internship at <a href="http://invigo.com.lb">Invigo</a>
-		</dd>
-	</paper-shadow>
-
-	<paper-shadow style="margin-bottom:3ex !important;">
-		<a class="post-link" href="http://venam.nixers.net/beirut_beer/">Marketing Project</a>
-		<dd style="padding:1ex;">
-			Slides for a marketing project made about Beirut Beer
-		</dd>
-	</paper-shadow>
-
-	<!--
-	Some projects that you can directly load
-	Not everyone want to look at my GH code
-	-->
-	<h1 class="page-heading">Hosted Projects (Also on GH)</h1>
-	<paper-shadow style="margin-bottom:3ex !important;">
-		<a class="post-link" href="http://venam.nixers.net/gravity_guy">Gravity Guy</a></li>
-		<dd style="padding:1ex;">
-			A stupid game where you control gravity to fight aliens
-		</dd>
-	</paper-shadow>
-	<paper-shadow style="margin-bottom:3ex !important;">
-		<a class="post-link" href="http://venam.nixers.net/potato/">Potato Rage</a></li>
-		<dd style="padding:1ex;">
-			A stupid game where you but potatoes and hit cocroaches
-		</dd>
-	</paper-shadow>
-	<paper-shadow style="margin-bottom:3ex !important;">
-		<a class="post-link" href="http://venam.nixers.net/unicoder.apk">Unicoder</a></li>
-		<dd style="padding:1ex;">
-			A stupid Android app where you convert text to special unicode forms
-		</dd>
-	</paper-shadow>
-	<paper-shadow style="margin-bottom:3ex !important;">
-		<a class="post-link" href="http://venam.nixers.net/emoji.apk">Emoji</a></li>
-		<dd style="padding:1ex;">
-			A stupid Android app where you copy japanese emoji
-		</dd>
-	</paper-shadow>
-
-
-
-	<h1 class="page-heading">Projects</h1>
-
-	<!--
-	 So many projects and none ever was good.
-	 Hek, I can't even remember how I came up with all those ideas.
-	-->
-	<div id="my-github-projects" />
-
-</paper-shadow>
-<!--
-This loads all my shitty stuff from GH
--->
-<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
-<script src="{{ site.baseurl }}/assets/git.js" type="text/javascript"></script>
-<script type="text/javascript" async="async" data-turbolinks-track="true">
-	$(function() {
-		$("#my-github-projects").loadRepositories("venam");
-	});
-</script>
-
-
+<div class="about_section">
+	{% include projects_presentations.html %}
+</div>
+<div class="about_section">
+	{% include projects_hosted.html %}
+</div>
+<div class="about_section">
+	{% include projects_all.html %}
+</div>
+<div class="about_section">
+	{% include projects_others.html %}
+</div>

@@ -1,0 +1,16 @@
+/* Those are just some fancy fonts, 
+ * I wouldn't dare use those for a real projet 
+ * as it would slow down the page load*/
+
+@font-face {
+	font-family: 'Aller';
+	src: url('Aller.eot?') format('eot'), 
+	     url('Aller.woff') format('woff'), 
+	     url('Aller.ttf')  format('truetype'),
+	     url('Aller.svg#Aller') format('svg');
+}
+
+@font-face{
+	font-family:"Deja Vu Sans";
+	src:url("DejaVuSans.ttf") format("truetype");
+}

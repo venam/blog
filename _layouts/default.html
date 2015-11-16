@@ -1,101 +1,27 @@
+<!-- default layout -->
 <!DOCTYPE html>
 <html>
-<!-- Jekyll kicks asses, you should try it
-	Ruby is cool too, totally crazy language
--->
 
-<!--
-	Here comes the head
-	prepare yourself
--->
-  {% include head.html %}
-<!--
-	Nah, it's not the best head I've ever received.
-	!! Nasty Ψ(｀▽´)Ψ !!
--->
+	<!-- _include/head.html -->
+	{% include head.html %}
+	<!-- end _include/head.html -->
 
-<!--
-	They say girls sometime have problems with their appearances
-	I guess that's what we can refer to as "body unresolved"
--->
-  <body unresolved>
-
-	<!--
-	 eye down on your paper chief!
-	-->
-	<core-header-panel >
+	<body>
+	<!-- _include/header.html -->
     {% include header.html %}
+	<!-- end _include/header.html -->
 
-	
-	<!--
-	 For the plant of the subject (not meat 'cause I'm vegetarian)
-	-->
-	<div class="page-content">
-		<div class="wrapper">
-			<div class="content" id="blog-content">
-				{{ content }}
-			</div>
-			<div class="content" id="about-content">
-				{% include about.html %}
-			</div>
-			<div class="content" id="others-content">
-				{% include others.html %}
-			</div>
-			<div class="content" id="projects-content">
-				{% include projects.html %}
-			</div>
+	<div class="container">
+		<div class="content">
+			<!-- start content -->
+			{{ content }}
+			<!-- end content -->
 		</div>
 	</div>
 
+	<!-- _include/footer.html -->
     {% include footer.html %}
-	</core-header-panel >
-	
-	<!--
-	 the stupidest js script ever
-	-->
-	<script>
-var blog_content = document.getElementById("blog-content");
-var about_content = document.getElementById("about-content");
-var project_content = document.getElementById("projects-content");
-var others_content = document.getElementById("others-content");
-
-var blog_tab = document.getElementById("blog_tab");
-var current_tab = "";
-
-var contents = {
-	"blog_content" : blog_content,
-	"about_content" : about_content,
-	"projects_content" : project_content,
-	"others_content": others_content
-}
-function show_one(section) {
-	for (var i in contents) {
-		if (i != section) {
-			contents[i].style.display = "none";
-		}
-		else {
-			contents[i].style.display = "block";
-		}
-	}
-}
-var tabs = document.querySelector('#tabs-t');
-tabs.addEventListener('core-select', function(e) {
-	if (e.detail.isSelected) {
-		show_one(tabs.selected.toLowerCase()+"_content");
-	}
-});
-tabs.addEventListener("click", function() {
-	setTimeout(function() {
-		console.log(tabs.selected);
-		console.log(current_tab);
-		if (current_tab == "blog" && tabs.selected == "blog") {
-			document.location = "{{ site.url }}{{site.baseurl}}";
-		}
-		current_tab = tabs.selected;
-	}, 700);
-});
-	</script>
-
+	<!-- end _include/footer.html -->
   </body>
-
 </html>
+<!-- end default layout -->

@@ -1,93 +1,82 @@
-<paper-shadow>
-	<h1 class="page-heading">Some Other things</h1>
-	<!-- 
-	 Other weird stuffs I do
-	-->
-	<ul>
-		<li>
-			<span  class="clickable" onClick="showOther('arts')" href="">arts</span>
-			<div id="other_arts"   class="hidden">
-				<ul>
-					<li>
-						find some of my arts 
-						<a href="{{site.baseurl}}/arts.html" >here</a>
-					</li>
-				</ul>
-			</div>
-		</li>
-		<li>
-			<span  class="clickable" onClick="showOther('cooking')" href="">Cooking</span>
-			<div id="other_cooking"   class="hidden">
-				<ul>
-					<li>
-						Checkout a page about my cooking skills.
-						<a href="{{site.baseurl}}/food.html" >here</a>
-					</li>
-				</ul>
-			</div>
-		</li>
+<header>
+	<h1 class="title">Others</h1>
+</header>
 
-		<li>
-			<span class="clickable" onClick="showOther('poems')" href="">poems</span>
-			<div id="other_poems"   class="hidden">
-				<ul>
-					<li>
-						<a href="http://venam.nixers.net/poems/la_mort.txt" target="_blank">la mort</a>
-					</li>
-					<li>
-						<a href="http://venam.nixers.net/poems/summer.txt" target="_blank">summer</a>
-					</li>
-					<li>
-						<a href="http://venam.nixers.net/poems/mystery_of_moonfog.txt" target="_blank">mystery of moonfog</a>
-					</li>
-					<li>
-						<a href="http://venam.nixers.net/poems/lullabie.txt" target="_blank">lullabie</a>
-					</li>
-					<li>
-						<a href="http://venam.nixers.net/poems/destinee_ou_coincidence.txt" target="_blank">destinee ou coincidence</a>
-					</li>
-					<li>
-						<a href="http://venam.nixers.net/poems/christ.txt" target="_blank">Christy</a>
-					</li>
+<div class="about_section">
+	<span  class="clickable colored big" onClick="showOther('arts')" href="">Arts</span>
+	<span id="other_arts"  class="hidden"> find some of my arts  <a href="{{site.baseurl}}/arts.html" >here</a>
+	</span>
+</div>
+<div class="about_section">
+	<span  class="clickable colored big" onClick="showOther('cooking')" href="">Cooking</span>
+	<span id="other_cooking"   class="hidden">
+				Checkout a page about my cooking skills.
+				<a href="{{site.baseurl}}/food.html" >here</a>
+	</span>
+</div>
+<div class="about_section">
+	<span class="clickable colored big" onClick="showOther('poems')" href="">Poems</span>
+	<div id="other_poems"   class="hidden">
+		<ul>
+			<li>
+				<a href="http://venam.nixers.net/poems/la_mort.txt" target="_blank">la mort</a>
+			</li>
+			<li>
+				<a href="http://venam.nixers.net/poems/summer.txt" target="_blank">summer</a>
+			</li>
+			<li>
+				<a href="http://venam.nixers.net/poems/mystery_of_moonfog.txt" target="_blank">mystery of moonfog</a>
+			</li>
+			<li>
+				<a href="http://venam.nixers.net/poems/lullabie.txt" target="_blank">lullabie</a>
+			</li>
+			<li>
+				<a href="http://venam.nixers.net/poems/destinee_ou_coincidence.txt" target="_blank">destinee ou coincidence</a>
+			</li>
+			<li>
+				<a href="http://venam.nixers.net/poems/christ.txt" target="_blank">Christy</a>
+			</li>
 
-					<li>
-						<a href="http://venam.nixers.net/poems/a_day_in_the_mind_of_the_new_tecnology.txt" target="_blank">a day in the mind of the new tecnology</a>
-					</li>
-				</ul>
-			</div>
-		</li>
-		<li>
-			<span  class="clickable" onClick="showOther('quotes')" href="">quotes</span>
-			<div id="other_quotes"   class="hidden">
-				<ul>
-					<li>
-						<a href="http://venam.nixers.net/quotes.txt" target="_blank">quotes</a>
-					</li>
-				</ul>
-			</div>
-		</li>
-		<li>
-			<span class="clickable" onClick="showOther('scrots')" href="">scrots</span>
-			<div id="other_scrots"  class="hidden">
-				TODO
-			</div>
-		</li>
-		<li>
-			<span  class="clickable" onClick="showOther('links')" href="">links</span>
-			<div id="other_links" class="hidden">
-				TODO
-			</div>
-		</li>
-	</ul>
-</paper-shadow>
+			<li>
+				<a href="http://venam.nixers.net/poems/a_day_in_the_mind_of_the_new_tecnology.txt" target="_blank">a day in the mind of the new tecnology</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="about_section">
+	<span  class="clickable colored big" onClick="showOther('quotes')" href="">Quotes</span>
+	<span id="other_quotes"   class="hidden">
+		Find them <a href="http://venam.nixers.net/quotes.txt" target="_blank">here</a>
+	</span>
+</div>
+<div class="about_section">
+	<span class="clickable colored big" onClick="showOther('scrots')" href="">Screenshots</span>
+	<span id="other_scrots"  class="hidden">
+		TODO
+	</span>
+</div>
+<div class="about_section">
+	<span  class="clickable colored big" onClick="showOther('links')" href="">Links</span>
+	<span id="other_links" class="hidden">
+		TODO
+	</span>
+</div>
+<div class="about_section">
+	<span  class="clickable colored big" onClick="showOther('ascii-arts')" href="">Ascii-Arts</span>
+	<span id="other_ascii-arts" class="hidden">
+		TODO
+	</span>
+</div>
+
+
 <script>
 function showOther (elem) {
 	console.log(elem);
 	var what_to_show_hide = document.getElementById("other_"+elem);
 	console.log(what_to_show_hide);
 	console.log(what_to_show_hide.style.display);
-	if (what_to_show_hide.style.display != "block") {
-		what_to_show_hide.style.display = "block";
+	if (what_to_show_hide.style.display != "inline") {
+		what_to_show_hide.style.display = "inline";
 	}
 	else {
 		what_to_show_hide.style.display = "none";

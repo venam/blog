@@ -1,27 +1,24 @@
-<!--
-	I don't get why some weirdos have foot fetish
-	So yeah, feet aren't that turn on for me!
-	They are still very important, we put our full weight on them all day long
-	(minus fat Americans that use those minicar to move around)
--->
-<footer class="site-footer">
+	<footer>
+		<div id="foot_content">
+			<p class="text">{{ site.description }}</p>
 
-  <div class="wrapper">
+			<a href="{{ site.url}}{{site.baseurl}}">Blog</a><br/>
+			<a href="{{site.baseurl}}/about.html">About</a><br/>
+			<a href="{{site.baseurl}}/projects.html">Projects</a><br/>
+			<a href="{{site.baseurl}}/others.html">Others</a>
+			<ul class="foot_other">
+				<li><a href="{{site.baseurl}}/arts.html" >Arts</a></li>
+				<li><a href="{{site.baseurl}}/food.html" >Cooking</a></li>
+				<li><a href="{{site.baseurl}}/asciiart.html" >Ascii-Art</a></li>
+				<li><a href="{{site.baseurl}}/poems.html" >Poems</a></li>
+				<li><a href="{{site.baseurl}}/quotes.html" >Quotes</a></li>
+				<li><a href="{{site.baseurl}}/Scrots.html" >Screenshots</a></li>
+				<li><a href="{{site.baseurl}}/Links.html" >Links</a></li>
+			</ul>
+			<hr/>
+			<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+			<hr/>
 
-	<hr/>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-      </div>
-      <div class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
-      </div>
-    </div>
-
-  </div>
-
-</footer>
-<!--
-	Thanks for checking me out but I'm not on that side of the fence...
--->
+			<div id="credits">&copy; <a href="mailto: patrick [at] iotek.org">Patrick Louis aka venam.</a></div>
+		</div>
+	</footer>

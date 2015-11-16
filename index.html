@@ -2,26 +2,24 @@
 layout: default
 ---
 
+
+<!-- home content -->
 <div class="home">
 
-	<paper-shadow >
-  <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
+	<!-- start list posts -->
     {% for post in site.posts %}
       <li>
-	  <paper-shadow>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-		</paper-shadow>
+        <span class="post-meta post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
       </li>
     {% endfor %}
+	<!-- end list posts -->
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-  </paper-shadow>
 
 </div>
+<!-- end home content -->
