@@ -33,11 +33,16 @@
 				</header>
 				<article class="post-content">
 					{% include all_foods.html %}
-					{% include comments.html %}
 				</article>
 			</div>
 		</div>
+		<div style='height:2ex' class='fancy_header_color2'></div>
+		<div  style='height:2ex' class='fancy_header_color'></div>
+		<div class="wrapper">
+			{% include comments.html %}
+			<hr/>
+			{% include footer.html %}
+		</div>
 	</div>
-	{% include footer.html %}
   </body>
 </html>

@@ -14,6 +14,7 @@
 		content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon.ico">
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
@@ -40,6 +41,15 @@ html,body {
 	background: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgb(255, 255, 255) 75%); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(255, 255, 255) 75%); /* Standard syntax */
 }
+.fancy_header_color2 {
+	background: transparent linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5) 75%) repeat scroll 0% 0%;
+	height: 3em;
+	background: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5) 75%); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5) 75%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5) 75%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5) 75%); /* Standard syntax */
+}
+
 
 .top_header {
 	height: 0.5em;
@@ -67,6 +77,13 @@ html,body {
 	padding-top: 0.5em;
 	font-size: 0.9em;
 	font-family: monospace;
+}
+
+#foot_content a {
+	color: #555555;
+	font-size: 0.9em;
+	font-family: monospace;
+	text-decoration: none;
 }
 
 #cooking_title {

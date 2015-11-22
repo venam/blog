@@ -1,127 +1,119 @@
 <head>
-	<!--
-	 It's 2015 faggot, everyone should support utf-8
-	-->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-	<!-- a bit of responsiveness,
-	 not in the sense that it'll make you sandwishes on orders but it's still
-	 as satisfying
-	-->
 	<meta name="viewport"
 		content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 	<title>Venam's Arts</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-	<link rel="stylesheet" href="{{ "/css/art.css" | prepend: site.baseurl }}">
+	<link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon.ico">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
 	<style>
-	@font-face {
-		font-family: 'a_font_with_serifs.disordered';
-			{{ "/css/art.css" | prepend: site.baseurl }}
-			src: url('{{ "/assets/art_fonts/a_font_with_serifs._disordered-webfont.eot" | prepend: site.baseurl}}');
-			src: url('{{ "/assets/art_fonts/a_font_with_serifs._disordered-webfont.eot?#iefix" | prepend: site.baseurl }}') format('embedded-opentype'),
-				url('{{ "/assets/art_fonts/a_font_with_serifs._disordered-webfont.woff2"| prepend: site.baseurl}}') format('woff2'),
-				url('{{ "/assets/art_fonts/a_font_with_serifs._disordered-webfont.woff" | prepend: site.baseurl}}') format('woff'),
-				url('{{ "/assets/art_fonts/a_font_with_serifs._disordered-webfont.ttf" | prepend: site.baseurl}}') format('truetype'),
-				url('{{ "/assets/art_fonts/a_font_with_serifs._disordered-webfont.svg#a_font_with_serifs.disordered"  | prepend: site.baseurl}}') format('svg');
-			font-weight: normal;
-			font-style: normal;
-
-	}
 	html,body {
 		margin: 0px auto;
 		color: #303030;
-		font-family: Arial;
+		font-family: 'Arial';
+		font-size: 12px;
 		height: 100%;
-		background: url('{{ "/assets/black_twill.png" | prepend: site.baseurl }}');
+		color: #CA2F23;
+		text-shadow: 0ex 0ex 1ex #DDB7B3;
+	}
+
+	.page-content {
+		box-shadow: 0em -0.5em 2em #986C80;
+		border-top: 2ex solid rgba(135, 48, 51, 0.85);
+		background: -webkit-linear-gradient(rgba(135, 48, 51, 0.8) 0%, rgba(129, 113, 128,0.5) 3%)
+			, url('{{site.baseurl}}/assets/arts/arty_back.png') repeat;
+		background: -o-linear-gradient(rgba(135, 48, 51, 0.8)  0%, rgba(129, 113, 128,0.5) 3%)
+			, url('{{site.baseurl}}/assets/arts/arty_back.png') repeat;
+		background: -moz-linear-gradient(rgba(135, 48, 51, 0.8)  0%, rgba(129, 113, 128,0.5) 3%)
+			, url('{{site.baseurl}}/assets/arts/arty_back.png') repeat;
+		background: linear-gradient(rgba(135, 48, 51, 0.8)  0%, rgba(129, 113, 128,0.5) 3%)
+			, url('{{site.baseurl}}/assets/arts/arty_back.png') repeat;
+	}
+	#art_title {
+		height: 20em;
+		position: relative;
+		left: -5em;
+		text-align: center;
+		background: none;
+	}
+	#art_title_img {
+		position: relative;
+		bottom: -1em;
+		height: 25em;
+		z-index: 1;
+	}
+	#top-border-left img{
+		height: 4em;
+	}
+	#top-border-right img{
+		height: 4em;
+	}
+	#top-border-left {
+		float: left;
+		position: relative;
+		top: -9em;
+		left: -1.8em;
+		-moz-transform: scaleX(-1);
+		-webkit-transform: scaleX(-1);
+		-o-transform: scaleX(-1);
+		transform: scaleX(-1);
+	}
+	#top-border-right {
+		float: right;
+		position: relative;
+		right: -1.8em;
+		top: -9em;
+	}
+	#back_to_blog_img {
+		position: relative;
+		top: -5em;
+		margin-left: 9em;
+		padding: 0em;
+		z-index: 3;
+		height: 4.7em;
+	}
+
+	.post-content {
+		padding-top: 3em;
+	}
+	.content {
+		position: relative;
+		top: -2em;
+		padding-top: 5em;
+		border: 1em solid rgb(80, 53, 45);
+		background: -webkit-linear-gradient(rgba(115, 78, 62, 0.9) 0%, rgba(214, 197, 186,0.3) 2%)
+			, url('{{site.baseurl}}/assets/arts/art_middle.png') repeat;
+		background: -o-linear-gradient(rgba(115, 78, 62, 0.9)  0%, rgba(214, 197, 186,0.3) 2%)
+			, url('{{site.baseurl}}/assets/arts/art_middle.png') repeat;
+		background: -moz-linear-gradient(rgba(115, 78, 62, 0.9)  0%, rgba(214, 197, 186,0.3) 2%)
+			, url('{{site.baseurl}}/assets/arts/art_middle.png') repeat;
+		background: linear-gradient(rgba(115, 78, 62, 0.9)  0%, rgba(214, 197, 186,0.3) 2%)
+			, url('{{site.baseurl}}/assets/arts/art_middle.png') repeat;
+		box-shadow: 0em -0.3em 2em #583C32;
+		text-align: center;
+		vertical-align: middle;
+		horizontal-align: middle;
 	}
 
 	.wrapper {
 		text-align: center;
-		background-color: #FFF;
-		box-shadow: 2px 2px 4px #444;
 		margin: 0px auto;
-		width: 70%;
+		width: 60%;
+		padding-bottom: 5em;
 	}
-	h2 {
+	.wrapper_head {
+		width: 100%:
 		text-align: center;
-	}
-
-
-
-	#blog_title {
-		text-align: center;
-		font-family: 'a_font_with_serifs.disordered'; 
-		font-size: 5em;
-		font-style: none;
-		font-weight: 100;
-		color: #545454 !important;
-		text-decoration:none;
-	}
-	#blog_title:hover {
-		color: #121212 !important;
-		text-decoration:none;
-		font-style: none;
-	}
-	core-header-panel {
-		height: 100%;
-		overflow: auto;
-		-webkit-overflow-scrolling: touch;
-	}
-	core-toolbar {
-		background: #03a9f4;
-		color: white;
-	}
-	#tabs {
-		width: 100%;
-		margin: 0;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		text-transform: uppercase;
-	}
-	.container {
-		width: 90%;
-		margin: 50px auto;
-	}
-	paper-input{
-		width: 90%;
-		font-size: 2.5ex;
-	}
-	paper-item {
-		color: #121212;
-	}
-	#clearButton {
-		background-color: #F44336;
-		color: #FFF;
-		padding: 1ex;
-		margin: 2ex;
-		font-size: 1.8ex;
-	}
-	#submitButton {
-		background-color: #4CAF50;
-		color: #FFF;
-		padding: 1ex;
-		margin: 2ex;
-		font-size: 1.8ex;
-	}
-	.resulting {
-		padding: 1ex;
-		margin: 1ex;
-		font-size: 2ex;
-	}
-	@media (min-width: 481px) {
-		#tabs {
-			width: 200px;
-		}
-		.container {
-			width: 500px;
-		}
+		background-color: #e6e3c6;
+		background: -webkit-radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(230, 227, 198, 0.3) 50%)
+			, url('{{site.baseurl}}/assets/arts/top_back.png') repeat;
+		background: -moz-radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(230, 227, 198, 0.3) 50%)
+			, url('{{site.baseurl}}/assets/arts/top_back.png') repeat;
+		background: -ms-radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(230, 227, 198, 0.3) 50%)
+			, url('{{site.baseurl}}/assets/arts/top_back.png') repeat;
 	}
 	.art_center {
 		text-align: center;
@@ -137,25 +129,107 @@
 		vertical-align: middle;
 		horizontal-align: middle;
 	}
-	.post-content {
-		text-align: center;
-		vertical-align: middle;
-		horizontal-align: middle;
-	}
 	.artImage {
 		vertical-align: middle;
 		horizontal-align: middle;
 		text-align: center;
 		display: inline-block;
-		box-shadow: 2ex 2ex #303030;
-		border-radius: 0.5em;
+		border: 0.7ex solid #212121;
 		max-width: 300px;
+		box-shadow: 0ex 0ex 4em #DDB7B3;
 		max-height: 300px;
-		margin-bottom: 2em;
+		margin-top: 1em;
+		margin-bottom: 4em;
 		margin-right: 2em;
 	}
 	#disqus_thread {
-		padding-top: 2ex;
+		margin: 3ex;
+	}
+	@media(max-width: 1080px) {
+		#back_to_blog_img {
+			position: relative;
+			top: -9em;
+			margin-left: 9em;
+			padding: 0em;
+			z-index: 3;
+			height: 4.7em;
+		}
+	}
+
+
+	@media (max-width: 850px) {
+		.wrapper {
+			width: 80%;
+		}
+		#back_to_blog_img {
+			position: relative;
+			top: -5em;
+			margin-left: 9em;
+			padding: 0em;
+			z-index: 3;
+			height: 4.7em;
+		}
+	}
+	@media (max-width: 810px) {
+		#back_to_blog_img {
+			position: relative;
+			top: -9em;
+			margin-left: 9em;
+			padding: 0em;
+			z-index: 3;
+			height: 4.7em;
+		}
+
+	}
+
+	@media (max-width: 700px) {
+		html,body {
+			font-size: 0.95em;
+		}
+		.wrapper {
+			width: 84%;
+		}
+	}
+	@media (max-width: 550px) {
+		html,body {
+			font-size: 0.90em;
+		}
+		.wrapper {
+			width: 80%;
+		}
+	}
+	@media (max-width: 480px) {
+		html,body {
+			font-size: 0.85em;
+		}
+		.artImage {
+			max-height: 250px;
+			max-width: 250px;
+			margin-right: 0.5em;
+		}
+		.wrapper {
+			width: 85%;
+		}
+	}
+	@media (max-width: 420px) {
+		#art_title {
+			left: -2em;
+		}
+		#back_to_blog_img {
+			margin-left: 12em;
+		}
+
+		html,body {
+			font-size: 0.76em;
+		}
+		.artImage {
+			max-height: 220px;
+			max-width: 220px;
+			margin-right: 0.5em;
+		}
+		.wrapper {
+			width: 87%;
+		}
 	}
 	</style>
 </head>

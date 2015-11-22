@@ -20,7 +20,6 @@
 -->
   <body unresolved>
 
-	<core-header-panel >
 	{% include header_arts.html %}
 
 	<!--
@@ -29,14 +28,12 @@
 	<div class="page-content">
 		<div class="wrapper">
 			<div class="content" id="blog-content">
+				{% include art_back_to.html %}
 				{% include all_arts.html %}
 				{% include comments.html %}
 			</div>
 		</div>
 	</div>
-	{% include footer.html %}
-	</core-header-panel >
-	
   </body>
 
 </html>
