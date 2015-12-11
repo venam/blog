@@ -306,6 +306,10 @@ blockquote {
 }
 
 @media (max-width: 580px) {
+	body {
+		font-size: 0.95em;
+	}
+
 	#logo {
 		font-size: 2.5em;
 	}
