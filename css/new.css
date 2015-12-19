@@ -32,6 +32,10 @@ body {
 	word-wrap: break-word;
 }
 
+strong {
+	font-weight: bold;
+}
+
 ::selection {
 	color: #000;
 	background: #ffb7b7;
