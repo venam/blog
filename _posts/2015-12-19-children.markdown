@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "If I had to teach a child"
-date:   2015-12-14
+date:   2015-12-19
 categories: philosophy
 ---
 
@@ -567,3 +567,5 @@ contribute because they can spare without worry.
 ![14]({{site.baseurl}}/assets/chosen/14.jpg)
 
 Go on little ones!
+
+(PS: Thank you Reine for the image choices)
