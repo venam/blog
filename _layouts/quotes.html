@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+	This is my quotes page
+	Fancy brainies
+-->
+
+<!--
+	Here comes the head
+	prepare yourself
+-->
+  {% include quotes_head.html %}
+<!--
+	Nah, it's not the best head I've ever received.
+	!! Nasty Ψ(｀▽´)Ψ !!
+-->
+
+<!--
+	Here comes the sexy body
+-->
+  <body unresolved>
+
+	{% include header_quotes.html %}
+
+	<!--
+	 For the plant of the subject (not meat 'cause I'm vegetarian)
+	-->
+	<div class="page-content">
+		<div class="wrapper">
+			<div class="content" id="blog-content">
+				<div id="back_to_top">
+					<a href="{{ site.url }}{{site.baseurl}}" >Back To Blog</a>
+				</div>
+
+				<div class="all_quotes">
+					{% include all_quotes.html %}
+				</div>
+
+				{% include comments.html %}
+			</div>
+		</div>
+	</div>
+  </body>
+
+</html>

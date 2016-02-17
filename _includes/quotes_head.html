@@ -1,0 +1,187 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<title>Venam's Arts</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon.ico">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+	<style>
+	html,body {
+		margin: 0px auto;
+		font-family: 'Arial';
+		font-size: 12px;
+		height: 100%;
+		color: #404040;
+	}
+
+	.content {
+		text-align: center;
+	}
+	.page-content {
+	}
+	.wrapper {
+		text-align: center;
+		margin: 0px auto;
+		width: 60%;
+		padding-bottom: 5em;
+	}
+
+	#back_to_top {
+		z-index: 100;
+		position:fixed;
+		right: 30px;
+		bottom:0px;
+		width: 50px;
+		height: 40px;
+		padding:3px;
+		padding-top: 10px;
+		margin-bottom: 10px;
+		text-align:center;
+		display: block;
+		border: 1px solid #404040;
+	}
+
+	#back_to_top a {
+		color: #404040;
+		text-decoration: none;
+	}
+
+	p {
+		text-align: left;
+		font-family: Arial;
+		font-size: 13px;
+	}
+
+	p:first-letter {
+		float: left;
+		color: #404040;
+		font-size: 75px;
+		line-height: 60px;
+		padding-top: 4px;
+		padding-right: 8px;
+		padding-left: 3px;
+		font-family: 'squareboxnormal', 'Arial';
+	}
+	.quote {
+		margin-bottom: 8em;
+	}
+	.start_quote, .end_quote {
+		font-size: 30px;
+		font-family: 'squareboxnormal', 'Arial';
+	}
+	.deco_left, .start_quote {
+		float: left;
+	}
+	.deco_right, .end_quote {
+		float: right;
+	}
+	h2 {
+		text-align: center;
+		margin-bottom: 4em;
+	}
+	.header_line_deco {
+		height: 1px;
+		border-top: 1px solid #303030;
+		width: 40%;
+		margin-top: 25px;
+		display: block;
+	}
+
+
+	@font-face {
+		font-family: 'squareboxnormal';
+		src: url('./assets/fonts/squarebox-webfont.eot');
+		src: url('./assets/fonts/squarebox-webfont.eot?#iefix') format('embedded-opentype'),
+			url('./assets/fonts/squarebox-webfont.woff2') format('woff2'),
+			url('./assets/fonts/squarebox-webfont.woff') format('woff'),
+			url('./assets/fonts/squarebox-webfont.ttf') format('truetype'),
+			url('./assets/fonts/squarebox-webfont.svg#squareboxnormal') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	#section_title {
+		text-decoration: none;
+		color: #505050;
+		font-family: 'squareboxnormal', Arial;
+		font-size: 2.5em;
+	}
+
+	.all_quotes {
+		margin-bottom: 50px;
+	}
+
+	.author {
+		text-align: left;
+		margin: 30px;
+		font-size: 13px;
+		text-decoration: underline;
+		font-weight: 100;
+		font-family: monospace;
+	}
+
+	@media(max-width: 820px) {
+		#section_title {
+			text-decoration: none;
+			color: #505050;
+			font-family: 'squareboxnormal', Arial;
+			font-size: 2.3em;
+		}
+
+		.header_line_deco {
+			width: 38%;
+		}
+
+		.wrapper {
+			width: 70%;
+			padding-bottom: 5em;
+		}
+	}
+
+
+	@media(max-width: 680px) {
+		#section_title {
+			text-decoration: none;
+			color: #505050;
+			font-family: 'squareboxnormal', Arial;
+			font-size: 2.3em;
+		}
+
+		.header_line_deco {
+			width: 30%;
+		}
+
+		.wrapper {
+			width: 80%;
+			padding-bottom: 5em;
+		}
+	}
+
+
+	@media(max-width: 420px) {
+		#section_title {
+			text-decoration: none;
+			color: #505050;
+			font-family: 'squareboxnormal', Arial;
+			font-size: 2.0em;
+		}
+
+		.header_line_deco {
+			width: 30%;
+		}
+
+		.wrapper {
+			width: 92%;
+			padding-bottom: 5em;
+		}
+	}
+
+
+
+
+	</style>
+</head>

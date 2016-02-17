@@ -420,3 +420,21 @@ They bring an excellent argument demonstrating the effect of culture:
 
 However that's exactly what futurist deal with, cultural and behavioral changes.
 Futurists are above the simple-minded opinions which are brought in the article.
+
+_UPDATE (2016-01-26)_: I noticed that I forgot to mention [DARPA](https://en.wikipedia.org/wiki/DARPA) as a think tank.
+
+Darpa has some really huge and innovative projects going on such as the auto cyber-counter attack AI game they'll do next year at defcon. Ideas that reminds you of movies such as the [Mind's Eye](https://en.wikipedia.org/wiki/Mind's_Eye_(US_military)).
+
+One thing that reminded me of this article is how DARPA gets its first funding.
+They used [Policy Analysis Market](https://en.wikipedia.org/wiki/Policy_Analysis_Market), market analysis to raise their money. It consists of predicting things that will happen in the trade market.
+
+> Surowiecki is a very strong advocate of the benefits of decision markets and regrets the failure of DARPA's controversial Policy Analysis Market to get off the ground. He points to the success of public and internal corporate markets as evidence that a collection of people with varying points of view but the same motivation (to make a good guess) can produce an accurate aggregate prediction. According to Surowiecki, the aggregate predictions have been shown to be more reliable than the output of any think tank. He advocates extensions of the existing futures markets even into areas such as terrorist activity and prediction markets within companies.
+
+Another thing I should've mentioned and that is quite interesting is the
+[Wisdom of the Crowd](https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds) theory.
+It shouldn't be something new after reading this article but still has its spicy part.
+[Here's](http://blog.asmartbear.com/ignoring-the-wisdom-of-crowds.html) a link with more indepth talk.
+
+
+
+
