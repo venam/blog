@@ -436,5 +436,20 @@ It shouldn't be something new after reading this article but still has its spicy
 [Here's](http://blog.asmartbear.com/ignoring-the-wisdom-of-crowds.html) a link with more indepth talk.
 
 
+_UPDATE (2016-03-01)_: I've found new articles, researches, and data on certain subjects related to this article.
+
+About the prediction market, there's an ongoing project called [augur](http://www.augur.net/) which relies on the wisdom of the crowd principle and runs on a peer to peer network called [etherreum](https://www.ethereum.org/).  
+This is very interesting, I'll keep up-to-date on the progress.
+
+[Here](https://www.youtube.com/watch?v=Zbz_U3KrN2Y)'s a technical video about it.
 
 
+A member of the IEEE fondation wrote an article listing everything that could be used to predict the futur using the wisdom of the crowd: [here](http://ieet.org/index.php/IEET/more/hrenka20151010). He mentions a lot of social media as asyncrhonous methods, and using game-like play to make people interact.
+
+
+On social interaction, I've just discovered the [British Cohort Study](http://www.cls.ioe.ac.uk/MicrositeHome.aspx?m=1&sitesectionid=46&sitesectiontitle=BCS+Microsite&code=000160010001),
+which is a study of people over a very long period of time. This shows a lot of social trends that have been moving us around the last few years.
+
+
+On futurist in the work field, an interview with a futurist at Ford came out ([here](http://arstechnica.com/cars/2016/02/qa-fords-futurist-knows-kids-today-see-status-in-their-smartphones-not-cars/)).
+It's interesting to see the value of a futurist in such a big corporation. She has to see the big picture!
