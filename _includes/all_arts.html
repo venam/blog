@@ -1,14 +1,14 @@
-<article class="post-content">
+<div class="post-content">
 	{% for i in (1..55) %}
 	<div class="art_center">
 		<a href="{{site.baseurl}}/assets/arts/art{{ i }}.jpg">
-			<img class="artImage" src="{{site.baseurl}}/assets/arts/small/art{{ i }}.jpg"></img>
+			<img class="artImage" src="{{site.baseurl}}/assets/arts/small/art{{ i }}.jpg" alt={{i}}  />
 		</a>
 	</div>
 	{% endfor %}
 
 	<a href="{{site.baseurl}}/assets/arts/art_new_animation.gif">
-		<img class="artImage" src="{{site.baseurl}}/assets/arts/small/art_new_animation.gif"></img>
+		<img class="artImage" src="{{site.baseurl}}/assets/arts/small/art_new_animation.gif" alt='gif' />
 	</a>
 
 	<div id="disqus_thread"></div>
@@ -24,4 +24,4 @@ var disqus_shortname = 'venamsblog';
 })();
 	</script>
 	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</article>
+</div>
