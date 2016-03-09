@@ -453,3 +453,34 @@ which is a study of people over a very long period of time. This shows a lot of 
 
 On futurist in the work field, an interview with a futurist at Ford came out ([here](http://arstechnica.com/cars/2016/02/qa-fords-futurist-knows-kids-today-see-status-in-their-smartphones-not-cars/)).
 It's interesting to see the value of a futurist in such a big corporation. She has to see the big picture!
+
+
+_UPDATE (2016-03-09)_: I realized something crucial while listening to multimedia (by mistake); 
+Marketing campaigns are deployed based on factors related to the fields of the futurist.  
+
+The campaign I heard was about baby milk. We are currently in March, Spring season.
+It's the only time of the year they do such campaign. I made the link between
+multiple factors: The time is well chosen, they analyzed
+the birth dates of the babies, deduced the *high* months, and subtracted 9 months to get today.  
+
+This is a great example of how statistical analysis of a population is used to
+predict events. On average people conceive their babies in Spring, in this case, 
+thus by manipulating the minds using [preloading](http://www.social-engineer.org/framework/influencing-others/elicitation/preloading/) is one of the best marketing tactic one can use.
+
+> Preloading is influencing subjects before the event. Think about a movie’s pre-release trailers. They use desired outcome words such as “The best film you have ever seen!”  This technique works great when introducing anything. Preloading is a component of a social engineer attack.
+
+On a side note, breast milk is *always* better than fake milk.
+
+I'm updating this post with a link to a study that should help people start in
+the game theory and social study. Just to get the grasp and the immensity of it.
+[Here](http://imprific.com/budkowski/does-calhoun-experiment-reveal-the-condition-of-our-society/)'s the link to the Calhoun experiment aka the "utopia experiment".
+
+It talk about the [r/K](https://en.wikipedia.org/wiki/R/K_selection_theory) theory but that's not directly mentioned in the article.
+
+> One of most shocking experiments performed by the behavioral researcher is known as the Mouse Utopia Experiment.
+>
+> During the experiment, a group of eight mice were living in ideal environmental conditions. The utopian universe provided rodents with unlimited access to everything necessary for the animals to survive. The mice were provided with food, water, and nesting material. Everything was available at their paw tips.
+> 
+> Although the beginning of the experiment seems ordinary, the course of the study, as well as the results, are quite astonishing.
+>
+> What exactly did the experiment look like?
