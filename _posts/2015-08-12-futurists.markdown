@@ -484,3 +484,24 @@ It talk about the [r/K](https://en.wikipedia.org/wiki/R/K_selection_theory) theo
 > Although the beginning of the experiment seems ordinary, the course of the study, as well as the results, are quite astonishing.
 >
 > What exactly did the experiment look like?
+
+
+_UPDATE (2016-03-11)_: The last update can be generalized.  
+"The baby season" is actually an effect of how the environment, namely, the
+weather and sun affects human behavior. Just like with plenty of other animals.<
+
+
+A fun example is how they affect the sleep pattern of people. The more sunny
+it is the earlier people will wake up, same for warmth.
+
+And this applies on a grand scale. No need to gather [huge statistics]("https://medium.com/life-tips/how-you-can-use-facebook-to-track-your-friends-sleeping-habits-505ace7fffb6#.33ktvvqoy)
+on the subject.  
+Down the road we're no different than cats, dogs, and many other animals.
+
+
+I used to like a columnist called Jann Burner. He wrote some posts a long time
+ago that are philosophical but reflect changes happening today. Many other
+writers have done the same.
+
+Here are some of the interesting ones:
+[one](http://www.unexplained-mysteries.com/column.php?id=93734) [two](http://www.unexplained-mysteries.com/column.php?id=143352) [three](http://www.unexplained-mysteries.com/column.php?id=186379)
