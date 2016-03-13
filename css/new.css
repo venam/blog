@@ -319,3 +319,6 @@ blockquote {
 	}
 }
 
+iframe {
+	border: 0px;
+}

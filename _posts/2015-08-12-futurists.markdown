@@ -488,7 +488,7 @@ It talk about the [r/K](https://en.wikipedia.org/wiki/R/K_selection_theory) theo
 
 _UPDATE (2016-03-11)_: The last update can be generalized.  
 "The baby season" is actually an effect of how the environment, namely, the
-weather and sun affects human behavior. Just like with plenty of other animals.<
+weather and sun affects human behavior. Just like with plenty of other animals.
 
 
 A fun example is how they affect the sleep pattern of people. The more sunny
