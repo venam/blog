@@ -1,0 +1,154 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<title>Venam's Ascii-Arts</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon.ico">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+	<style>
+	html,body {
+		margin: 0px auto;
+		font-family: 'monospace';
+		font-size: 12px;
+		height: 100%;
+		color: #91874f;
+		background-color: #1c1c1a;
+		line-height: 12px;
+	}
+
+	.content {
+		text-align: center;
+	}
+	.page-content {
+	}
+	.wrapper {
+		text-align: center;
+		margin: 0px auto;
+		width: 60%;
+		padding-bottom: 5em;
+	}
+
+	.ascii {
+		margin-bottom: 50px;
+	}
+
+	#back_to_top {
+		z-index: 100;
+		position:fixed;
+		text-align: center;
+		bottom:0px;
+		left: 0px;
+		width: 100%;
+		height: 40px;
+		padding: 0px;
+		padding-top: 10px;
+		margin: 0px;
+		display: block;
+	}
+
+	#back_to_top a {
+		color: #91874f;
+		text-decoration: none;
+		position: relative;
+		left: -20px;
+	}
+
+	.all_ascii {
+		width: 100%;
+	}
+
+	.h2 {
+		text-align: center;
+		margin: 0px auto;
+		width: 60%;
+	}
+
+	#section_title {
+		position: relative;
+		left: -10px;
+	}
+
+	.wrapper_head {
+		z-index: 100;
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		margin-top: 2em;
+	}
+
+	.deco_left {
+		float: left;
+		margin-left: 0px;
+	}
+	.deco_right {
+		float: right;
+		position: relative;
+		top: -75px;
+	}
+
+	.bottom_deco.deco_left {
+		position: relative;
+		top: -30px;
+		left: -20px;
+		margin: 0px;
+	}
+
+	.bottom_deco.deco_right {
+		text-align: left;
+		top: -30px;
+		margin: 0px;
+	}
+
+
+
+	.page-content {
+		margin-top: 150px;
+	}
+
+	.header_line_deco {
+		text-align: left;
+	}
+
+	#section_title {
+	}
+
+	
+	@media(max-width: 860px) {
+		.h2 {
+			text-align: center;
+			margin: 0px auto;
+			width: 75%;
+		}
+		.wrapper {
+			width: 75%;
+		}
+	}
+
+	@media(max-width: 600px) {
+		.h2 {
+			text-align: center;
+			margin: 0px auto;
+			width: 90%;
+			font-size: 10px;
+			line-height: 10px;
+		}
+		.wrapper {
+			width: 100%;
+		}
+		.ascii_image {
+			max-width: 320px;
+		}
+
+		.header_line_deco {
+			font-size: 9px;
+			line-height: 9px;
+		}
+	}
+
+
+	</style>
+</head>
