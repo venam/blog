@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Society, Hacking, Anonymity, Mystification, and Hysteria"
-date:   2016-03-16
+date:   2016-03-22
 categories: psychology
 ---
 
