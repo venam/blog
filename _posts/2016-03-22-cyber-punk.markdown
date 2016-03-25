@@ -28,7 +28,7 @@ Recommended, but not mandatory, before reading this article:
 2015 was a year with phenomenal hacks and password leaks.  
 Let's list some of those:
 
-- We continue to have our minds blown by new data brought by whistle-blowers like [Richard
+- We continue to have our minds blown by new data brought by whistle-blowers like [Edward
 Snowden](https://en.wikipedia.org/wiki/Snowden_leaks). Since 2013 the astonishing
 content reveals and confirms assumptions we had about worldwide surveillance.
 
@@ -83,7 +83,7 @@ for the first time (even if it [doesn't seem like](http://www.scottaaronson.com/
 
 - Virtual Reality sets are there: [Valve HTC Vive](http://www.htcvive.com/us/), [Sony VR](https://www.playstation.com/en-us/explore/playstation-vr/), [Microsoft HoloLens](https://www.microsoft.com/microsoft-hololens/en-us/development-edition?icid=Homepage_LeftNav_07_Hololens_en_US), [Oculus Rift](https://www.oculus.com/en-us/rift/).
 
-- Drones, miniature computers ([Rasberry pie](https://www.raspberrypi.org/) for instance), and embedded devices are now cheap and common.
+- Drones, miniature computers ([Rasberry pi](https://www.raspberrypi.org/) for instance), and embedded devices are now cheap and common.
 It's the beginning of the internet of things ([IoT](https://en.wikipedia.org/wiki/Internet_of_things)).
 
 
@@ -532,4 +532,4 @@ No, you aren't anonymous!
 A song by Rockwell and Michael Jackson: [I always feel like... Somebody's watching me!](https://www.youtube.com/watch?v=7YvAYIJSSZY)
 
 
-Thanks [xero](http://xero.nu) for the proof reading, the [fonts](https://github.com/xero/figlet-fonts), and the awesome [glitches images](http://x-ero.tumblr.com/) foung in this post.
+Thanks [xero](http://xero.nu) for the proof reading, the [fonts](https://github.com/xero/figlet-fonts), and the awesome [glitches images](http://x-ero.tumblr.com/) found in this post.
