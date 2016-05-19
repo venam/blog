@@ -10,17 +10,17 @@ In this post I'll talk about group and community projects.
 
 
 Everyone has been part of multiple group projects throughout their life.
-From school researches, to university presentations, to work projects.
+From school researches, to university presentations, to work.
 
 
-It's only by sharing ideas and finding common grounds that a goal can be achieved.
-However, it's extremely hard to maintain the cohesion and investment of the
-group. There's a multitude of problems that arise, the reader can certainly
+It's only by sharing ideas and finding common grounds that goals can be achieved.
+However, it's hard to maintain cohesion and investment in a group.
+There's a multitude of problems that arise, the reader can certainly
 assert it.
 
 
-With the examples of community and group projects I've worked on as guides, I'll
-try to find rational explanations for different kinds of situations.
+With, as guide, the community and group projects I've worked on, I'll
+try to find a rational explanation for the different kind of situations.
 I'll sparkle them with mentions of researches on evolutionary psychology
 ,group behaviors, and game theory that can be supportive of my claims.
 
@@ -31,9 +31,9 @@ I'll sparkle them with mentions of researches on evolutionary psychology
 ###High School###
 
 
-Since I was a kid I've always had a passionate curiosity about subjects I
+Since I was a kid, I've always had a passionate curiosity on subjects I
 found intriguing.
-Once I have my mind on something I can't get it off. I have to go down the
+Once I set my mind on something I can't get it off. I have to go down the
 information hole.
 
 
@@ -45,10 +45,10 @@ unpleasant to learn and be curious.
 > Education is the process of facilitating learning. Knowledge, skills, values, beliefs, and habits of a group of people are transferred to other people, through storytelling, discussion, teaching, training, or research. Education frequently takes place under the guidance of educators, but learners may also educate themselves in a process called autodidactic learning. Any experience that has a formative effect on the way one thinks, feels, or acts may be considered educational.
 
 
-I doesn't incite students to put efforts in their studies.
-They only do because an authority figure told them to do so.
+It doesn't incite students to put efforts in their studies.
+They only do because an authority figure told them to.
 
-Children's brains absorb what adults tell them to, even the most horrid lies.
+A child's brain absorbs what adults tell it to, even the most horrid lies.
 
 
 Here's an extract from the wikipedia article about [evolutionary psychology of parenting](https://en.wikipedia.org/wiki/Evolutionary_psychology_of_parenting).
@@ -72,7 +72,7 @@ Children are burdened by the grading system and pressured by their parents.
 
 Humans are curious by nature and kids want to satisfy that need.
 Their minds wander captivated by the wonders around them.
-Their interests can be related to their current courses or not.
+Their interest can be related to their current courses or not.
 
 
 Meanwhile, schools offer small opportunities for group work in the form of mini
@@ -81,16 +81,16 @@ projects and presentations.
 
 Schools aim to initiate students to cooperation in society.
 The problem with that approach is that the subjects they force on children
-isn't motivating for the majority of them.
+isn't motivating, at least for the majority of them.
 
 Hence, they are brought to believe that it's the same in society; being forced
 to do things you don't like for the greatest overall achievement.
 
 
-Students are glued to their chairs during the extremely boring presentations of
+Students are glued to their chairs during the boring presentations of
 their peers.
 They don't care about the content that is being vomit and the slides
-filled with text that no one can read from their place.
+filled with text that no one can read.
 It's all irrelevant.
 
 Most of us can recall such events.
@@ -104,20 +104,19 @@ specificities and abilities that are more enhanced than others. We have inherite
 through our lineage certain faculties that might not be present in others.
 
 
-We are the most recent being of our lineage.
+We are the most recent beings of our lineage.
 
 
 Screw all the bullshit about equality, we aren't by nature. It's diversity that
-makes the world run. Some persons will never be intellectual thoughout their
-lifetime.
+makes the world run. Some persons will never be intellectual in the way we
+imagine it.
 
 
-In my school days, when I was confronted with the choice of
-choosing team partners I preferred being alone.
+In my school days, when I had to choose team partners I preferred being alone.
 
 
-The uncertainty of how enthusiast others are to work strengthened my decision.
-I develop my own energy fuel that helps me continue putting efforts in my projects.
+The uncertainty of how enthusiast others are strengthened my decision.
+I develop my own energy that helps me put efforts in my projects.
 
 
 Alone it feels personal and I can work at my own pace. A failure or
@@ -129,7 +128,7 @@ I've made fabulous projects alone in school but it's not the place to mention
 them.
 
 
-It was like that until my final year project.
+Until my final year project.
 
 The project was worth a significant amount of the final grades, grades
 that were going to be filled by university applicants. All students were
@@ -153,7 +152,7 @@ frequently arise. The "what if"s never end.
 
 People are good at speculations, they can do it for hours on end.
 Nagging about the goals, the obstacles, the things they'll do after reaching it,
-the coworkers, what others have achieve, the long path they'll have to take.
+the coworkers, what others have achieved, the long path they'll have to take.
 
 
 > Individual behavior is influenced by the presence of others. For example, studies have found that individuals work harder and faster when others are present, and that an individual's performance is reduced when others in the situation create distraction or conflict. Groups also influence individual's decision-making processes.
@@ -170,30 +169,28 @@ It's bullshit poetic philosophy that leads nowhere.
 Everyone wants their own grain of salt in the process.
 
 
-For this reason, fixing an agenda, with easy tasks relieve the team of a burden.
+For this reason, fixing an agenda, with easy tasks relieves the burden.
 It boosts the project success.
 
 By embracing a bottom up approach, using dichotomy to split hard problems
 into multiple simple ones, the achievement is almost certain.
 
 
-If the requirements and goals are fixed straight from the beginning there's no
+If the requirements and goals are fixed from the start there's no
 reasons to divert from them at any moment in the execution.
 
 
-This is project management at its best. I won't discuss it here because
-the purpose of this article is not to teach how to manage a team. I'm not the
-next corporate manager person, on the contrary, I dislike corporate environments.
+This is project management at its best.
 
 
 We chose to work on the matter of sea shore and water pollution of the Lebanese region.
 
 
-Our research was extensive. We used to gather large amount of information and
-regroup every weekends to summarize.
+Our research was extensive. We gathered a large amount of information and
+regrouped every weekends to summarize.
 
 We came up with the whole water cycle and auto-cleaning process of the sea of the
-Lebanese shore in deep details.
+Lebanese shore.
 
 We even had interviews with different persons. The water
 quality researcher, the maritime researcher, the environmentalists, the sailors,
@@ -218,9 +215,9 @@ our personal involvement, how everyone achieved the task they
 were assigned to, and the team management.
 
 
-_Conclusion_: High school was full of boring projects and working with other
-persons wasn't the most productive task. However, it was only until we grasped
-the importance of group work and final results that we started to put ourselves
+_Conclusion_: High school was full of boring projects and working with others
+wasn't the most productive task. However, it was only until we grasped
+the importance of group work and final results that we put ourselves
 into it.
 
 
@@ -255,7 +252,7 @@ No one can understand him better than me and no one can understand me better
 than him. Sometimes we don't even need to talk to transfer thoughts.
 
 
-It could be his idea or my idea, it doesn't matter, we're passionate about it.
+It could be his idea or mine, it doesn't matter, we're passionate about it.
 We enjoy reflecting on solutions together, we enjoy the critical and skeptical
 conversations. We're not ashamed of being wrong, we accept it.
 
@@ -312,7 +309,7 @@ _Conclusion_: If I had to choose a teammate, I'll choose my brother over any str
 
 The university environment differs from high school, or so I thought...
 
-I envisioned that it would be a place where all the smartest persons come together to
+I envisioned that it would be a place where the smartest come together to
 study what they love.
 
 
@@ -327,14 +324,14 @@ The same process that applied to high school applies to university. The students
 still have the mentality of obedience to higher authority, they feel compelled by
 society.
 
-Nevertheless, there's a fraction of people willing to take a lead of their life,
+Nevertheless, there's a fraction of people willing to lead their lives,
 the passionates, which is greater than in schools. Considering that it is not
 everyone that has the chance to higher education and that those willing to have
 education will do anything to enter, it is expected.
 
 
-The main difference is that university students are young adults and there's no
-one to guide them.
+The main difference is that university students are young adults and no one is
+there to guide them.
 
 
 For this reason, the majority doesn't care about grades, they care about
@@ -343,23 +340,23 @@ are studying, they're boulders rolling down a hill.
 
 
 If there's one thing that those young think about it is easiness and pleasure.
-Thus, they only care about money and how their studies can help them achieve that.
+They only care about money or fame and how their studies can help them achieve that.
 
 
-Consequently, when it's time to do team work people slack off. They don't give
+Consequently, when team work time, people slack off. They don't give
 a damn until the last minute.
 It's the same for exams.
 
 
-They also frequently dump their jobs unto others, counting on the kindness of
+They frequently dump their jobs unto others, counting on the kindness of
 the ones that are investing themselves.
 
 
 The fakers are another category. Individuals that want to give the
-impression that they know what they are doing, to get a good reputation, but
+impression they know what they are doing, to get a good reputation, but
 that don't actually.
 
-This is the worth kind. Once they've gained trust they wait for the real smart
+This is the worse kind. Once they've gained trust they wait for the "real" smart
 people to join them and abuse their work.
 
 
@@ -368,7 +365,7 @@ your teammates, even the ones you think you know. If you've never worked with
 them on a projects you cannot assume their qualities.
 
 
-It's not even a "group conflict", they are just sitting on the spectator bench,
+It's not even a "group conflict", they are just sitting on the spectator's bench,
 not part of the team, looking at the achievements of others, and standing up at
 the end of the match for the applause.
 It's not even a conflict of interests, it's an apathetic conflict.
@@ -380,7 +377,7 @@ It's not even a conflict of interests, it's an apathetic conflict.
 Hence, I did most of my university projects alone.
 
 
-In the small numbers that I did with someone else I would take the lead, check
+In the small numbers that I did with others I would take the lead, check
 if they followed, and if they did not I would ditch them and work alone.
 
 
@@ -407,7 +404,7 @@ and indifference.
 I entered the online world as soon as I got an internet connection.
 Not soon after my brother and I started our web adventures.
 
-We then got into programming and we both began to work on our ideas. We always
+We got into programming and we both began to work on our ideas. We always
 have ideas.
 
 
@@ -422,8 +419,8 @@ The internet is an idea generator. The information wave never stops.
 In 2011 I joined a fresh community called `Unixhub`, which regrouped people that
 had interest in [Unix OSs](https://en.wikipedia.org/wiki/Unix-like) and [Ricing](https://wiki.installgentoo.com/index.php/GNU/Linux_ricing) (Desktop customization).
 
-We parted from forums we didn't like the atmosphere to join our own little haven.
-It was a response to our disagreement to how things were run in the other
+We parted from forums we didn't like to join our own little haven.
+It was a response to our disagreement on how things were run in the other
 community, we both agreed on that.
 
 
@@ -434,18 +431,17 @@ Simple things can bind strangers into groups.
 
 
 Over a small period of time we attracted many amazing persons that shared the
-same interest. Intellectual people and specialists in their
-field.
+same interest. Intellectuals and specialists in their field.
 
 
-The group cohesion was based on that simple factor; we love something that not
-a lot of people can even dream of grasping in their lifetime, something technical.
+The group cohesion was based on that simple factor: we love something that only
+a few can even dream of grasping, something technical.
 
 
 > The social group is a critical source of information about individual identity. An individual’s identity (or self-concept) has two components: personal identity and social identity (or collective self). One’s personal identity is defined by more idiosyncratic, individual qualities and attributes. In contrast, one’s social identity is defined by his or her group membership, and the general characteristics (or prototypes) that define the group and differentiate it from others. We naturally make comparisons between our own group and other groups, but we do not necessarily make objective comparisons. Instead, we make evaluations that are self-enhancing, emphasizing the positive qualities of our own group (see ingroup bias). In this way, these comparisons give us a distinct and valued social identity that benefits our self-esteem. Our social identity and group membership also satisfies a need to belong. Of course, individuals belong to multiple groups. Therefore, one’s social identity can have several, qualitatively distinct parts (for example, one’s ethnic identity, religious identity, and political identity).
 
 
-And because of the technical aspect of the group, not everyone can access it.
+And because of the technical aspect, not everyone can access it.
 It drives back those who are afraid of trying the unexpected.
 
 
@@ -463,13 +459,13 @@ Human beings can join forces on a whim and they can also generate drama on
 a whim.
 
 
-A lot of rogues members broke hell into the community and destroyed it. It was
+A lot of rogue members broke hell into the community and destroyed it. It was
 a management fault, the way things were run were not stable.
 
 
-The pride of some grew beyond control, a pride in themselves and not of the
+The pride of some grew beyond control, a pride in themselves and not in the
 community. A non-constructive pride. It was accompanied by a huge distrust
-against some people in charge and attacks against their reputation and personal
+against the people in charge and attacks against their reputation and personal
 life. Even if the accusations were false, the people claiming it tainted them
 so much that it couldn't have continued this way.
 
@@ -486,7 +482,7 @@ some stupid people trying to ruin it. I truly want that community to live on
 for its best.
 
 
-Consequently, I always try, indirectly, to remind other members of the values
+Consequently, I always try, indirectly, to remind members of the values
 we have, of how they fit in, of our joy and pride.
 
 
@@ -494,7 +490,7 @@ we have, of how they fit in, of our joy and pride.
 
 
 
-I administer it in a very democratic and loose manner.
+I administer in a very democratic and loose manner.
 It's a small group so it's easy to ask everyone's opinion before taking
 decisions. A small group creates strong bonds.
 
@@ -521,9 +517,8 @@ Almost everyday, we all hang out and chat. We know each others pretty well.
 
 
 
-The only thing I do as an administrator is put coals in the fire inciting
-people to contribute and bring the best of themselves without shame. I mostly
-do that by starting new activities and projects.
+The only thing I do as an administrator is put coals in the fire to incite
+contribution and bring the best without shame. I do that by starting new activities and projects.
 
 
 The group norms are built by themselves over time.
@@ -590,12 +585,12 @@ I added patches for everything that was on the todo and continued adding more
 and more customization until the wm was not recognizable.
 
 
-I sent an email to MC to know if it was ok to fork the project and continue it
-under a new name. We then spent the whole day throwing names on IRC and chose
+I sent an email to MC asking if it was ok to fork the project and continue it
+under a new name. We then spent a day brainstorming names on IRC, and set on
 2bwm.
 
 
-2bwm has gained a lot of support and reputation since it was created.
+2bwm has gained a lot of support and reputation since it's creation.
 
 
 _Conclusion_: If it wasn't for the ideas from the community this project wouldn't
@@ -622,7 +617,7 @@ operating system built by our members and a Unix game.
 We tried a few times to open threads to discuss those projects without much
 luck.
 
-Once the discussion starts it never ends, the main topic gets flooded by based
+Once the discussion starts it never ends, the main topic gets flooded by biased
 opinions.
 
 
@@ -635,7 +630,7 @@ They have zero involvement in the projects.
 
 
 This pattern keeps reproducing itself in mostly all the projects I've seen.
-Though, I can't nag about those particular two because I didn't involve myself
+I can't nag about those particular two because I didn't get involve 
 either.
 
 
@@ -664,7 +659,7 @@ would help keep track of everything that can be riced in a Unix system.
 
 
 
-As we know, it starts like that; ideas flying in the air and no one there to
+As we know, it starts like that; ideas flying and no one there to
 catch the useful ones and make order out of them.
 
 
@@ -718,9 +713,9 @@ be done, and what skills was required to accomplish the tasks.
 
 As expected the contributions across the project gradually decreased.
 
-The twenty or so users that were blabbering about their opinions became 5 when it
+The twenty or so users that were blabbering their opinions became 5 when it
 was time to draw mockups, 3 when it was time to draw the class diagram, and 2
-when it was time to implement it (I counted myself in).
+when it was time to implement it (myself counted).
 
 
 It's not surprising, once you set the goals and requirement in the
@@ -740,13 +735,13 @@ That's how it goes
 
 
 _Conclusion_: You can't keep people interested in a project if they don't feel
-enough involvement in it. Their return on investment is not good enough.
+involved. Their return on investment is not high enough.
 The contributions are always going to lower over a long period of time if the
 project looses its "hype".
 
 
 However, you can bring back some of the contributions by creating easier tasks
-that people can contribute to without loosing their time.
+that people can contribute to without loosing time.
 In this case it was writing the wiki.
 
 
@@ -770,8 +765,8 @@ We got the sudden user impulse, more than thirty agreed on buying the stickers.
 With such agreement we went straight to the design phase and received around 10 different ones.
 
 
-After the time to vote expired and the sticker with the most vote was chosen we
-still got people nagging about the design and talking about their abstract idea of
+After the vote ultimatum and the sticker with the most vote was chosen we
+still had people nag about the design and talking about their abstract idea of
 what the sticker should be like.
 
 
@@ -827,7 +822,7 @@ I ask them for their opinions and ideas on what I'm working on or for
 proofreading.
 
 
-In the end, the projects are still my own and so it's not really group work.
+In the end, the projects are still my own and it's not really group work.
 
 
 I just recently tried to organize real projects with them.
@@ -851,7 +846,7 @@ The same'o pattern repeated itself and I couldn't bring anyone to work on it
 with me, it was an utter failure as a group.
 
 
-Thus, I worked with my brother on it and the productivity went up.
+Thus, I worked with my brother and the productivity went up.
 
 
 _Conclusion_: Here again, the same pattern repeats itself, you can't get people
@@ -895,7 +890,7 @@ the ones you do in a work environment. The ones at work are uglier project wise
 but are sweeter human interaction wise.
 
 
-There has been many writings about how "free" doesn't attract effort.
+There have been many writings about how "free" doesn't attract effort.
 
 In the HN (HackerNews) [comments](https://news.ycombinator.com/item?id=10234287) on the [The toxic side of free – how I lost the love for my side project](https://remysharp.com/2015/09/17/jsbin-toxic-part-4) article mentions that:
 
@@ -941,15 +936,14 @@ reasons why it's pleasant to work in the industry versus working alone in academ
 
 
 _Conclusion_: At work you'll find that people are interacting in a different way
-than when working for free on side projects. They are deeply involve and it makes
+than when working on side projects. They are deeply involve and it makes
 the group cohesion raise. The "we are in this together" mindset takes over, one
 mistake can cost a lot to others and so we do all we can to minimize them.
 
 
-On the other hand, this generalization doesn't mean that it's all butterfly and
-flower. If the people working with you have no experience it turn your job into
-hell. To gain experience you need side-projects or years of working in the
-industry field.
+On the other hand, this generalization doesn't mean that it's all butterflies and
+flowers. If the people working with you have no experience it turns your job into
+hell. To gain experience you need side-projects or years of work in the field.
 
 
 
