@@ -173,11 +173,6 @@ It has been proven to be the prime determinant of adult mental health.
 A video named [The Bomb in the Brain (Part 4) - The Death of Reason - The Effects of Child Abuse ](https://www.youtube.com/watch?v=S16EHfKRLfc)
 by Stefan Molyneux explains how mentality builds up and affects the brain.
 
-
-(NB: Stefan Molyneux has [more videos](http://www.youtube.com/user/stefbot/videos) on
-his Youtube channel. He's a fabulous orator, philosopher, and knows his share of psychology.)
-
-
 He refers to the "Death of Reason" which comes from amygdala damage caused by hormones produced by
 fear.
 
