@@ -5,39 +5,60 @@ date:   2012-08-28
 categories: security
 ---
 
-Hello Dear blog followers,
+Hello blog followers,
 
 
-I have been watching a lot of video conferences about security lately and I have
-been wondering what will happen in the next years.
+I have been watching a lot of video conferences on security and I'm
+wondering what will happen in the next years.
 
-Little help with reference and info:  
-Abyss of Cybersecurity-John Bumgarner  
-Testing enterprise systems advance data ex filtration techniques - Albert School  
-Business Ramifications of the internet's Unclean Conflicts - Rockie Brockway  
-All available on irongeek.com  
 
 Do you think security is like an organism and will adapt itself to threats?   
-I mean, instead of some surface defense like IDS, firewall, ID protection, AVs, etc. 
-Everyone can see that those methods are not real future solutions, they are only patches.
+Instead of surface defenses like IDS, firewall, ID protection, AVs, etc. 
+It's evident those methods are not durable solutions, they are patches.
 
-Moreover, do you think that security should move into irreplaceable data protection 
-instead of replaceable data protection? irreplaceables, meaning things that you 
-could not redo another time or that will never be the same, never taken back. 
-Namely, IP, personal infos, codes, research,etc. Replaceables, are things that could be replaced, like credit cards, accounts, websites, etc..
+Moreover, do you think security should move it's focus to _irreplaceable
+data protection_? To care about things that aren't redoable or would never be
+the same, or never taken back.
+Namely, IP, personal information, source codes, researches, etc. And to name
+a few replaceable things: credit cards, accounts, websites, etc..
 
-Furthermore, will developers & engineer design technologies with the notion of security in mind or will it always be the work of someone else and they should link the bridge between them. This is important because no hardware of any kind can be secure if they are not made this way. Tons of stories comes out about pieces of hardware like microwave or bread-machine (as seen in the conference) or even extremely sophisticated and costly hardware machine that can be hacked so easily.
-Can we imagine a future where everything is controlled by technology but none is made in a secure way.
-Some would say "Even imperfection itself may have its ideal or perfect state"
+Are developers and engineers finally going to design technologies with security
+notions in mind or will it always be pushed on someone else's shoulder; to
+link the bridge between them. No hardware can be secure if it is not made this
+way. Many stories are told about pieces of hardware, such as microwaves or
+bread-machines, and even sophisticated - and costly - machineries
+that can easily be hacked. (see references)
+
+Is it possible to imagine a future where everything is controlled by technology
+but none of it is created in a secure manner.
 
 
-Another issue is the data itself, nowadays it's harder and harder to keep information secret, or at least keep it for a long period of time. Thus, Passwords could not be considerate means of proving one-self anymore. They are just words or characters that can be cracked or that has a pattern. We might also think of RSA key instead of passwords.
-We can also add the fact that people are not really aware of how easy it is to crack/brute their password.
+> Even imperfection itself may have its ideal or perfect state.
+
+
+The data is another issue. It's getting harder and harder to keep information
+secret, or at least keep it for a long period.
+
+Passwords aren't considered proof of identify anymore. They are characters that
+can be cracked, they have a pattern.
+RSA keys are viable alternative to passwords; the two way encryption and public
+and private keys mechanism.
+
+The average person is not aware of how easy it is to crack/brute a password.
 What will be the way of proving that an account belongs to someone in the future?
 
 What do you think readers, will the world really change that much in the next 3-5 years? 
 
 Link to thread on nixers.net: [here](http://nixers.net/showthread.php?tid=145)
+
+References and further reading/watching:
+
+* Abyss of Cybersecurity-John Bumgarner  
+* Testing enterprise systems advance data ex filtration techniques - Albert School  
+* Business Ramifications of the internet's Unclean Conflicts - Rockie Brockway  
+
+All available on irongeek.com  
+
 
 Update: Interesting comments have been posted since the article has been written.
 
@@ -50,5 +71,7 @@ More [here](https://www.youtube.com/watch?time_continue=1&v=OVV_k73z3E0)
 
 The internet of things has taken place and is growing, security is now a must.  
 The object of the *real world* I talked about in 2012 are now everywhere, the
-self-driving car are at the door. It's extremely dangerous to not be aware of
+self-driving car are at the door. It's dangerous to not be aware of
 basic security practices when building all those new interconnected devices!
+
+
