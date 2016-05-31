@@ -163,3 +163,7 @@ I'm best at what I do worse and I'm happy with it.
 See you around folks!
 
 Thanks again Oday!
+
+
+_UPDATE (2016-05-31)_: I gave a talk with this post as subject, you can watch
+it [here](https://www.youtube.com/watch?v=QTXUc7nECq0&list=PLfY4XZjn9M2Hp9RKfk_YdCysZ1ZClHK7X&index=4).
