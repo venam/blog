@@ -3,6 +3,7 @@ layout: post
 title:  "The People I can't Stand"
 date:   2016-01-27
 categories: psychology
+audio: api.soundcloud.com/tracks/268753502
 ---
 
 This post is an explanation of why I don't deal with certain people, or act
