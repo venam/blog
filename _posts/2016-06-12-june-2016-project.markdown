@@ -46,7 +46,7 @@ To paraphrase, it's about removing the non-stop narration usually happening
 in your head.  
 Redirecting the third eye unto your body and environment, not on thoughts.
 
-Aside from relaxation and focus, meditation is a way to reflect one self place
+Aside from relaxation and focus, meditation is a way to reflect on one self place
 in the world.  
 What are we?
 
@@ -69,7 +69,7 @@ It is galling to install... And I do not dare to mention upgrades and the
 non-backward compatibility.
 
 Sometimes it randomly hangs or tells you that it ran out of memory when
-it's actually not. Restarting the daemon fixes it.  
+actually it's not. Restarting the daemon fixes it.  
 
 When it works it's cool.
 
@@ -139,7 +139,7 @@ I'm now a "local guide" according to Google map.
 
 This is a good initiative!
 
-I'll keep this going and encourages anyone to do so.
+I'll keep this going and encourage anyone to do so.
 
 Someone mentioned a game called Ingress, that turns this into an adventure.
 I haven't tried it yet so I can't give my verdict on it.
@@ -157,14 +157,14 @@ The last weeks I kept bringing the idea of organizing talks.
 
 A few days later it was on!
 
-AltCity, be the host of the event.
+AltCity, would be the host of the event.
 
 I prepared a presentation called "A 'fake' project".
 However, one hour before the venue the host, which normally only give
 entrepreneurial events, asked to review the presentation slides.
 
 They didn't agree to "sponsor" the sort of talk I wanted to give and cancelled
-my presentation, with the presumption that it give them a bad reputation.
+my presentation, with the presumption that it would give them a bad reputation.
 
 I raged for a while and came up with a new presentation in the minimal
 amount of time I had left.
@@ -220,7 +220,7 @@ _Language:ASCII char set+TTY escape codes_
 
 _Explanation_: Since my last post I really got into the Ascii art movement.
 
-I'm slowly getting better at building my robots army.
+I'm slowly getting better at building my army of robots.
 
 Brace yourself, soon I'll be able to conquer the universe.
 
@@ -232,7 +232,7 @@ doing ascii arts since they started to be called ascii arts.
 Hellbeard, the administrator of the group, liked my work and invited me to be
 part of their next release: Impure61.
 
-Ironically, I had never heard of the ascii art scene just a week before.
+Ironically, I had never heard of the ascii art scene before.
 Now I'm part of Impure!ascii.
 
 It's very cool!
@@ -248,17 +248,17 @@ _Language:PHP/Postgres_
 _Explanation_: My [podcast project](http://nixers.net/showthread.php?tid=1656)
 for nixers is going well.
 
-I Built an interface to manage everyone's schedule.
+I built an interface to manage everyone's schedule.
 
-Sometimes no one joins which at first was awkward, I'm starting to get the
+Sometimes no one joins. At first it was awkward but I'm starting to get the
 hang of it.
 
 I hope it's an enjoyable learning experience for the listeners.
 
-I also extend every episode in forums threads so that people can comment on
+I extend every episode in forums threads so that people can comment on
 them afterwards.
 
-We're also having an [introduction song contest](https://nixers.net/showthread.php?tid=1906)
+We're currently having an [introduction song contest](https://nixers.net/showthread.php?tid=1906)
 instead of having to come up with different intro at the beginning of the episode.
 
 
@@ -297,9 +297,9 @@ _Language:Xresources_
 _Explanation_: We had a [light colorscheme contest](https://nixers.net/showthread.php?tid=1853)
 at nixers.
 
-It was a phenomenal way to learn about new color theory.
+It was a phenomenal way to learn about a new color theory.
 
-Tired of the ol' white on black.
+> Tired of the ol' white on black.
 
 I didn't win but I sure learned.
 
@@ -375,7 +375,7 @@ _Explanation_: I'm gardening!
 I planted vegetables and we have fruits.
 
 
-This projects I've always wanted to do.
+This is a project I've always wanted to do.
 I'll start small and little by little I'll make bigger plots.
 
 
@@ -409,7 +409,7 @@ _Language:Kindness_
 
 _Explanation_: This is my weekend project.
 
-When my girlfriend and I went to the beach we appalled and shocked
+When my girlfriend and I went to the beach we were appalled and shocked
 because of the garbage around.
 
 Thus, in the same fashion as the [the ugly indian](http://www.theuglyindian.com/menu.html)
@@ -420,9 +420,9 @@ So I did this for my local community out of good will.
 We went to a beach with the goal of removing all plastic bottles and garbage.
 
 At first we brought 4 huge bags but after 30 min they were filled.
-We went to a supermarket near to buy gloves and new degradable plastic bag.
+We went to the supermarket to buy gloves and new degradable plastic bags.
 
-When the sun went out, we had filled 9 huge bags: 4 for recycling and 5 or pure garbage.
+When the sun went out, we had filled 9 huge bags: 4 for recycling and 5 of pure garbage.
 
 They were heavy but it was fulfilling to throw them in the recycling and garbage
 dumps.
