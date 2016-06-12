@@ -15,7 +15,7 @@ Last summer we did the same challenge and it turned out a pretty enjoyable and a
 I'm going to add logs in this post and hopefully it'll render beautifully (because I can't check my blog from the TTY.)
 
 
-##Day 1
+## Day 1
 
 
 I started the [timer clock](https://github.com/nixers-projects/tty-week-timer) on my server so that anyone can keep track of how much time is left for the challenge.
@@ -46,7 +46,7 @@ It's not exactly a mouse but a cursor that helps copying text around.
 It fills the most recent selection buffer (middle click).
 
 
-##Day 2
+## Day 2
 
 
 I ssh into my work box, at my job, and do whatever I have to do from my home machine that I brought with me.
@@ -78,7 +78,7 @@ I wrote is quite annoying. Most of the time I miss the captcha or the password a
 I bet that if an attacker would want to force his way into my box he'll certainly give up.
 
 
-#Day 3
+# Day 3
 
 
 I didn't spend that day working on my machine, I simply played music remotely using mpd.
@@ -105,7 +105,7 @@ take screenshots when you normally couldn't. For example, the login screen, when
 while having any application open that uses the whole pixmap of the frambuffer, etc..
 
 
-#Day 4
+# Day 4
 
 
 I spent the morning programming for the urnn (Unix Ricing Neural Network) project.
@@ -117,7 +117,7 @@ Multiplexing with dvtm is certainly one of my main key to keep the flow in my TT
 I open the documentation next to my code with a single keybind.
 
 
-#Day 5
+# Day 5
 
 
 The timer I wrote went crazy and told me that the week was already over. By thinking
@@ -127,14 +127,14 @@ I'm using fbgs `Poor man's PostScript/pdf viewer for the linux framebuffer conso
 My current readings are about group dynamics psychology.
 
 
-#Day 6
+# Day 6
 
 
 I didn't bring my home laptop at work today.
 When I got back home I started working on a generic Lindenmayer System in Perl.
 
 
-#Day 7
+# Day 7
 
 
 The TTY week is over. It passed faster then I thought.

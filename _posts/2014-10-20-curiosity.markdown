@@ -5,7 +5,7 @@ date:   2014-10-20
 categories: philosophy
 ---
 
-###How  & why some people have better aptitudes
+### How  & why some people have better aptitudes
 
 
 About a week ago an instructor at university was asking why most students did

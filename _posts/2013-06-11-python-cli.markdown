@@ -8,7 +8,7 @@ categories: programming
 Hello fellow Unixer,
 In this thread I'll give some tips for doing a python cli program. Feedbacks and comments are highly appreciated. 
 
-##Taking program arguments##
+## Taking program arguments##
 Users normally expect to be able to directly give the program arguments from the command line and to receive help when adding the -h or --help argument.
 
 One way of doing that would be to parse the argc and argv. To do that you'll need to import sys. This method is more of a waste of time then anything else.
@@ -39,7 +39,7 @@ Options:
   -p PERSON, --person=PERSON
 </pre>
 
-##Tab completion##
+## Tab completion##
 Tab completion can be really nifty and adds a Unix feel to the program.
 
 If you search around the internet you won't find a lot of answers on how to do it.
@@ -54,12 +54,12 @@ readline.parse_and_bind("tab:complete")
 readline.set_completer(self.comp.complete)
 {% endhighlight %}
 
-##Creating a prompt/terminal-like/interpreter##
+## Creating a prompt/terminal-like/interpreter##
 Some people might want to take things a step forward and create a prompt/terminal-like environment in their program.
 I mean something similar to the python interpreter, meterpreter, gdb, etc.. 
 It is fairly easy to accomplish. All you have to do is play around with the tab completion and make it change how it completes depending of which part of the program the user is in. (State Pattern)
 
-##Adding a choice between cli and curses##
+## Adding a choice between cli and curses##
 Curses interfaces are not cli but they can give the program a feeling of completeness. There's many hard way of creating curses interfaces like using the curses module. To not loose some neurons along the way use the urwid module [url](http://excess.org/urwid/tutorial.html). It helps creating curses as if the components were like the one of a GUI-like (text-box,button,label,etc..).
 
 

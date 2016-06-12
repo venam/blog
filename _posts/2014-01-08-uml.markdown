@@ -26,7 +26,7 @@ directly in the software, and something that could construct a UML from some sou
 
 From a lot of __searches__, __downloads__, __trials__, and __errors__, I present my software review.
 
-##gaphor - An easy to use modeling environment for UML design##
+## gaphor - An easy to use modeling environment for UML design##
 
 ![gaphor]({{site.baseurl}}/assets/gaphor.jpg)
 
@@ -38,7 +38,7 @@ if you use a dark gtk2 theme, and that the class boxes don't let you add attribu
 It's also missing the composition relation.
 The binary of Gaphor is around 23MB with some python libraries dependencies on the side.
 
-##kdesdk-umbrello - UML Modeller##
+## kdesdk-umbrello - UML Modeller##
 I had to pull around 70MB of package that weren't related to the software to get umbrello installed.
 ...and finally the program was installed. BUT, umbrello wouldn't want to start, I was
 getting the following error:
@@ -53,14 +53,14 @@ However, I didn't give up and tried the program on a friends computer. I can say
 pretty impressive. It has all the features needed, all the UML schema (from use case to class diagram),
  and you can export/import class diagrams in multiple languages.
 
-##umleditor - UML/INTERLIS-Editor##
+## umleditor - UML/INTERLIS-Editor##
 Umleditor was very light, around 7MB.
 When starting it I was presented with a cheap splash screen and then a white window popped-up.
 The interface of umleditor is not friendly at all, I couldn't even figure out how to create a class.
 The buttons icons don't even have text equivalent so it got me completely lost.
 ![umleditor]({{site.baseurl}}/assets/umleditor.jpg)
 
-##umlet - Free UML Tool for Fast UML Diagrams (stand-alone version)##
+## umlet - Free UML Tool for Fast UML Diagrams (stand-alone version)##
 Umlet is also, like umleditor, very light (around 6MB).
 The idea with umlet is that you have all the available elements on the top-right corner and you drag them
 in the empty window on the left.
@@ -78,43 +78,43 @@ It's available on the officials archlinux repos, for those interested (in [commu
 </pre>
 ![umlet]({{site.baseurl}}/assets/umlet.jpg)
 
-##bouml - A free UML 2 modeler with C++, Idl, Java, PHP and Python code generation##
+## bouml - A free UML 2 modeler with C++, Idl, Java, PHP and Python code generation##
 It turned out that bouml isn't free:
 <pre>
 You don't have a licence, closing this message box a file dialog will appear proposing you to save a 'licence request file', please refer to http://www.bouml.fr/pricing.html to know how to use it to get a license
 </pre>
 
-##violet - A UML editor for quickly producing simple UML diagrams (also an Eclipse plugin)##
+## violet - A UML editor for quickly producing simple UML diagrams (also an Eclipse plugin)##
 Violet has a prety interface but the controls are sluggish.
 I tried dragging the elements in vain.
 ![violet]({{site.baseurl}}/assets/violet.jpg)
 
-##argouml - A UML design tool with cognitive support##
+## argouml - A UML design tool with cognitive support##
 This thing was huge (60MB) and also greeted me with a blank window.
 
-##tinyuml - A tool for creation of UML 2 diagrams with a focus on easy use and a small & stable feature set##
+## tinyuml - A tool for creation of UML 2 diagrams with a focus on easy use and a small & stable feature set##
 ![tinyuml]({{site.baseurl}}/assets/tinyuml.jpg)
 Tinyuml is indeed tiny with a size of 600KB. 
 It has everything needed to do a complete class diagram, but it has only that and nothing else.
 It can export the project as an image.
 Let's note that the GUI is a pain to use.
 
-##astah_community - Lightweight, easy-to-use, and free UML2.x modeler##
+## astah_community - Lightweight, easy-to-use, and free UML2.x modeler##
 ![astah]({{site.baseurl}}/assets/astah.jpg)
 Astah is pretty big (30MB), slow, ugly, hard to use and written in java.
 It also isn't opensource but still has some free features.
 
 
-##modelio-open - Modelio is an Open Source UML tool developed by Modeliosoft. It supports the UML2 and BPMN2 standards.##
+## modelio-open - Modelio is an Open Source UML tool developed by Modeliosoft. It supports the UML2 and BPMN2 standards.##
 This program is 200MB so I didn't bother downloading it.
 
-##qtumleditor - Qt5 UML Editor is a MOF/UML editor based on QtMof Qt5 add-on##
+## qtumleditor - Qt5 UML Editor is a MOF/UML editor based on QtMof Qt5 add-on##
 I wasn't even able to install this UML editor.
 
-##astade - A UML tool for the complete C or C++ development process##
+## astade - A UML tool for the complete C or C++ development process##
 I couldn't even understand how to use this software.
 
-##Web-Based UML Designer##
+## Web-Based UML Designer##
 Web-based UML designer aren't the best thing in the world.
 First of all, none, or most of them aren't open source.
 Most of the ones I found were slow or didn't work correctly.
@@ -167,7 +167,7 @@ The only drawbacks are that it's not open source and that it's only specialized 
 It's an excellent free class diagram tool that I recommend.
 
 
-##Moral of the story##
+## Moral of the story##
 I spent **all** day installing one after the other all the UML editors I could find in the Arch repo
 and in the end almost none of them were satisfying or even working as expected.
 Only two of them caught my attention:

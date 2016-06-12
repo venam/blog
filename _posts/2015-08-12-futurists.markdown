@@ -57,7 +57,7 @@ That's what the brain waves of some of the smartest persons on earth do,
 the futurists.
 
 
-###Futurists###
+### Futurists###
 
 
 Take a step back.  
@@ -91,7 +91,7 @@ The range where it can be applied is extremely wide, it opens a lot of
 opportunities.
 
 
-####Where and who are futurists?####
+#### Where and who are futurists?####
 
 
 We could say that by joining the results of the researches that everyone that
@@ -140,7 +140,7 @@ You can also find them in organisations that do long running bets, which I'll
 discuss later in this article. Or, simply scattered around the internet.
 
 
-####Well Known Futurists####
+#### Well Known Futurists####
 
 
 The most notable futurists are probably [John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann), the father of computing and [John Forbes Nash](https://en.wikipedia.org/wiki/John_Forbes_Nash,_Jr.), the inventor of the game theory (who died recently on May 23, 2015).
@@ -150,7 +150,7 @@ Both of them worked for the RAND organisation and both of them have worked on
 extraordinaries and revolutionaries theories.
 
 
-#What Is Needed To Be A Futurist
+# What Is Needed To Be A Futurist
 
 
 Being a futurist is not easy. It's not about lying down with burning incense
@@ -178,7 +178,7 @@ coming from fields such as psychology, mathematics, computer science,
 economics, sociology, history, and biology.
 
 
-#History
+# History
 
 
 If there's one thing we can learn from human history it's that it always
@@ -189,7 +189,7 @@ There are explanations anchored deep inside our brain for that, we'll discuss so
 of them.
 
 
-#Psychology
+# Psychology
 
 
 > Psychology is the study of mind and behavior.
@@ -207,7 +207,7 @@ The branches of psychology that interest the futurist are not the ones applied
 to single individuals but the ones applied to big populations.
 
 
-#Group Dynamics
+# Group Dynamics
 
 
 > [Group dynamics](https://en.wikipedia.org/wiki/Group_dynamics) is a system of behaviors and psychological processes occurring within a social group (intragroup dynamics), or between social groups (intergroup dynamics). The study of group dynamics can be useful in understanding decision-making behavior, tracking the spread of diseases in society, creating effective therapy techniques, and following the emergence and popularity of new ideas and technologies. Group dynamics are at the core of understanding racism, sexism, and other forms of social prejudice and discrimination. These applications of the field are studied in psychology, sociology, anthropology, political science, epidemiology, education, social work, business, and communication studies.
@@ -238,7 +238,7 @@ Here's a list of topics that are good reads to get started with sociology:
 This is the tip of the iceberg.
 
 
-#Game theory
+# Game theory
 
 > [Game theory](https://en.wikipedia.org/wiki/Game_theory) is the study of strategic decision making. Specifically, it is "the study of mathematical models of conflict and cooperation between intelligent rational decision-makers."
 
@@ -281,7 +281,7 @@ is the best introduction book to game theory.
 Plenty of research papers on game theory are available on the [rand website](http://www.rand.org/topics/game-theory.html).
 
 
-#Probability, Predictions, and Bets
+# Probability, Predictions, and Bets
 
 
 Information about previous events and history, theories of anticipation, and
@@ -332,7 +332,7 @@ Futurists simply use that technique as a mean to an end. It's not statistics
 that'll give them the idea of the century.
 
 
-#Evolutionary Psychology
+# Evolutionary Psychology
 
 
 Evolution is the Pandora box to human secrets. It's the root of all causes.
@@ -350,7 +350,7 @@ is the best resource available on the subject.
 
 
 
-#Rulers Of The World
+# Rulers Of The World
 
 
 Now that you've got a bit of an idea of what futurists know about, you
@@ -387,7 +387,7 @@ the path chosen by millenniums of history.
 If only that was possible...
 
 
-#Conclusion
+# Conclusion
 
 
 I hope that after reading this article you've taken a liking to those fabulous

@@ -99,7 +99,7 @@ It needs to be said without euphemism for the sake of change.
 > Lebanese have a rotting and destructive mentality.
 
 
-###The Lebanese mentality
+### The Lebanese mentality
 
 
 In a virtual hunter-gatherer society there would come a time when hunters
@@ -115,7 +115,7 @@ but the majority are here to stay as "Impatient opportunistic exploiter".
 This is characterized throughout the interaction with their environment.
 
 
-#####Superiority Complex
+##### Superiority Complex
 
 
 In the presumptuous superiority of their attitudes they find fulfilment. Their
@@ -181,7 +181,7 @@ However this is insanity when the group is chaotic.
 Insane to do those things when you are slave to your own dementia.
 
 
-#####Do or Die
+##### Do or Die
 
 
 From birth and onward they are brought into dysfunctional adults.
@@ -228,7 +228,7 @@ A fear that they could be wrong, that alternatives exist.
 As soon as options rise they'll want to counteract.
 
 
-#####Outside
+##### Outside
 
 
 Lebanese are fierce entrepreneurs.
@@ -250,7 +250,7 @@ Nothing left to extract from their homeland.
 All values have been stolen: a failure.
 
 
-#####Segregation
+##### Segregation
 
 
 We've managed to build imaginary and, more importantly, real walls between
@@ -294,7 +294,7 @@ You bring the matter to the eyes and are looked at as arrogant. Are you
 condescending or is it their reflections on the moon of the darkest of nights.
 
 
-#####The Situation
+##### The Situation
 
 
 Consumed by a whirlwind of politico-military carnages, juggling with
@@ -315,7 +315,7 @@ Stinking garbages have been piling up on our streets. For months, the
 citizens have shown their displease, finally raising activists.
 
 
-#####Change
+##### Change
 
 
 > Spending time with crazy and dangerous people. Their personality are socially transmited diseases. Most of us turn into or remain whoever we surround ourselves with. We can change our tribe but we cannot change that our tribe is our destiny.

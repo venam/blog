@@ -10,7 +10,7 @@ Hello fellow readers,
 This thread is about obfuscating the content of a webpage.
 This might not be so useful, security wise, because all the sensitive information should be kept server side.
 However, for the ones trying to reverse engineer the page this is a huge obstacle.
-####JS Obfuscation
+#### JS Obfuscation
 I found two nifty tools on the internet that are heavily used to obfuscate js.
 [jsobfuscator](http://javascriptobfuscator.com/) by CuteSoft.net 
 and the extremely popular [packer](http://dean.edwards.name/packer/) by Dean Edwards.
@@ -21,7 +21,7 @@ eval(function(p,a,c,k,e,r){....
 [/code]
 The packer is also ported to multiple other languages.
 
-####Deobfuscating JS
+#### Deobfuscating JS
 A little story on the side now. After finding the packer in the html of the website I was working on, I started to search around the internet how to decrypt it. Some people said to use the **decode** button on the packer site and to unlock it by changing the attributes in the page source but this wasn't a smart solution.  
 Then, I found an amazing website. The [js beautifier](http://jsbeautifier.org/).
 This website de-obfuscate js and makes it look good by rearranging the syntax.
@@ -29,7 +29,7 @@ Now, the question is _Can it de-obfuscate consecutive encryptions?_. It's known 
 The results show that after doing the obfuscation three times the jsbeautifier page cannot de-obfuscate it.  
 The jsbeautifier is also ported to multiple other languages.
 
-####Obfuscating html
+#### Obfuscating html
 This one is just plain stupid but for the sake of it I'll just leave some words about it.
 You can obfuscate a page by encrypting it with a password and let js decrypt it with the password key at login.
 That's a huge hassle for something of that importance and it makes the website unmaintainable.
@@ -41,7 +41,7 @@ This also makes the page extremely hard to maintain.
 On the other hand, it prevents bots from spidering your websites and it also prevents login automation via scripts (considering you also post a salt key or another dynamic element in the page at login). It also makes sure that the user have js enabled.
 So if you can turn that into an easy to maintain process you will have a pretty obscured website  and might never appear in search engines.
 
-####Obfuscating Text
+#### Obfuscating Text
 Obfuscating text isn't meant to hide it. It stops search engines that crawl your website and seek for keywords on it.
 [This](http://www.textobfuscator.com/) amazing website let you do that.
 However, this might make the people reading your website really angry.

@@ -73,7 +73,7 @@ broken](http://www.irongeek.com/i.php?page=videos/bsidescleveland2015/gs04-why-t
 This post is about tips I've experienced and that could help you getting started.
 
 
-##Tip1
+## Tip1
 
 
 > Choose the appropriate language for the task
@@ -116,7 +116,7 @@ Get to know it before using it!
 Personally, I use a mix of Perl and Python.
 
 
-##Tip2
+## Tip2
 
 
 > Read the documentation
@@ -152,7 +152,7 @@ You should know your way around.
 And as time goes on you'll develop a sense for finding those logic bugs.
 
 
-##Tip3
+## Tip3
 
 
 > What could possibly go wrong
@@ -185,7 +185,7 @@ hierarchy (for example, in webapps, it could be from the JS, the PHP code, the C
 the Apache configs, the server configs, etc..)
 
 
-##Tip4
+## Tip4
 
 
 > When you don't know, you don't know
@@ -213,7 +213,7 @@ Don't give up and cheat by searching for someone else's solution.
 This goes against the idea of playing wargames, this is hypocrisy.
 
 
-##Tip5
+## Tip5
 
 
 > History
@@ -237,7 +237,7 @@ Don't forget that this is closely related to tip 3. Only focus on what manipulat
 your inputs.
 
 
-##Tip6
+## Tip6
 
 
 > When in doubt use bruteforce
@@ -282,7 +282,7 @@ NB: If you are using Perl and don't know about [Memoize](http://perldoc.perl.org
 ["Higher-Order Perl"](http://hop.perl.plover.com/) book (which is great by the ways).
 
 
-##Tip7
+## Tip7
 
 
 > Don't reinvent the wheel
@@ -324,7 +324,7 @@ What tools you could use:
 * Your programming language libraries
 
 
-##Tip8
+## Tip8
 
 
 > Build your own little helpers
@@ -348,7 +348,7 @@ create specific solutions in minutes.
 Automating and minimizing the time of exploit reconnaissance should be your goal.
 
 
-#Conclusion
+# Conclusion
 
 
 I'm no expert in wargames but I'm sure those tips will help.

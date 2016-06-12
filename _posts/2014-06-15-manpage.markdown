@@ -8,7 +8,7 @@ categories: unix
 Hello nixers,
 In this thread you'll learn how to write a very simple man page for your programs.
 
-##Disclaimer##
+## Disclaimer##
 I won't go into the details of what and where are Manpages. If you want more information refer to the followings:
 
  * man man
@@ -16,7 +16,7 @@ I won't go into the details of what and where are Manpages. If you want more inf
  * man 7 man-pages
  * man 1 manpath
 
-##Sections of a manpage##
+## Sections of a manpage##
 A manpage normally contains those sections (__taken from the man 7 mdoc__)
 
  *	NAME          
@@ -51,7 +51,7 @@ However, you can ommit or add any sections depending on the program usage.
 For example, you might want to ommit the RETURN VALUE but add a COMMANDS section if the program
 has a shell interface that accepts a set of commands.
 
-##Groff##
+## Groff##
 Manpages follow a format code called Groff (or Troff).
 As with any markup you'll use some code to change the appearance of the text.
 The main format macros well use are the followings:
@@ -78,7 +78,7 @@ Use to indent text
 It's the code for a bullet number 2
 </pre>
 
-##Writing the manpage##
+## Writing the manpage##
 The empty Manpage should look similar to this:
 <pre>
 .TH name_of_program 1 "Jun 15, 2014" "" "NIXERS COMMUNITY"
@@ -206,7 +206,7 @@ It is an example of a custom section.
 nixers community  (http://nixers.net)
 </pre>
 
-##Whole Sample##
+## Whole Sample##
 <pre>
 .TH nixers 1 "Jun 15, 2014" "" "NIXERS COMMUNITY"
 .SH NAME
@@ -266,7 +266,7 @@ You might get some errors if you run this program along \fBGNOME(1)\fR, \fBKDE(1
 nixers community  (http://nixers.net)
 </pre>
 
-##Testing the Manpage##
+## Testing the Manpage##
 To see what the Manpage will look like execute:
 <pre>
 man ./nixers.1
@@ -274,7 +274,7 @@ man ./nixers.1
 Note: If a manpage belongs to the section 1 (Executable programs or shell commands) it should have the extension ".1".
 I won't go into the details of putting the manpage in the manpath.
 
-##Conclusion##
+## Conclusion##
 This is how a simple Manpage is written. Once you get the idea it's really easy. I haven't walked through all the format macros but those are the simpliest ones.
 
 

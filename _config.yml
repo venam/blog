@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://venam.nixers.net" # the base hostname & protocol for your site
 github_username:  venam
-highlighter: pygments
+highlighter: rouge
 
 # Build settings
 markdown: kramdown

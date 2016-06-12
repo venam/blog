@@ -18,7 +18,7 @@ Great lyrics, but the real thing is even better.
 In this post you'll learn easy and safe ways to tie up someone.
 
 
-####Getting The Material
+#### Getting The Material
 
 
 For it to be fun the material should be something casual, your everyday item.
@@ -33,7 +33,7 @@ I advice the followings:
 * Shoelace
 
 
-####Easy & Safe knots
+#### Easy & Safe knots
 
 
 The easiest way to do a knot is when you are tying someone to a solid place such
@@ -107,7 +107,7 @@ the wrist and the middle knot.
 This knot works better with a longer chord.
 
 
-####Know Where To Stop
+#### Know Where To Stop
 
 
 Being dominant is a big turn on but remember that all parties should consent on

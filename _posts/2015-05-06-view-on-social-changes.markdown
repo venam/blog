@@ -10,7 +10,7 @@ Hello fellow readers,
 This post is about an analysis of social changes in 2015.
 
 
-####Introduction####
+#### Introduction####
 
 
 Social movements are usually noticed after their effects due to the fact that
@@ -41,7 +41,7 @@ that we're going in the wrong direction as a whole population, or are they
 engraved to stay.
 
 
-####The Background of a *90s* kid####
+#### The Background of a *90s* kid####
 
 
 It is an important step to do a little flash back because the 90s kids are now
@@ -99,7 +99,7 @@ Then came the teenage crisis which is, in every generations, a revolt against
 the current movement. We created gamers, goth, and others from the un-transition.
 
 
-####Kids in 2015####
+#### Kids in 2015####
 
 
 How do kids grow nowadays. We might not have the same technology as in
@@ -153,7 +153,7 @@ In conclusion, if we want to extract the dirt from the next generation it's
 going to be the self satisfaction by technology instead of dream for a future.
 
 
-####Big Movements in 2015####
+#### Big Movements in 2015####
 
 
 Let's put some light on some of the other big movements that are currently in
@@ -215,7 +215,7 @@ them are gone, or some of our norms have slowly shifted towards them. Spice
 that up by the speed of nowadays life and you get a nice recipe.
 
 
-####Social Networks####
+#### Social Networks####
 
 
 We've reached the generation of social networks. As far as they are concerned
@@ -275,7 +275,7 @@ their life. This creates a detachment from reality and a detachment from their
 own personality. Delusional persons are found more frequently.
 
 
-####What's Next####
+#### What's Next####
 
 
 If we follow the second law of thermodynamic, entropy should increase with time

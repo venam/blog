@@ -3,6 +3,7 @@ layout: post
 title:  "The Harden The Fuck Up Post!"
 date:   2015-07-15
 categories: philosophy
+audio:  api.soundcloud.com/tracks/268704461
 ---
 
 

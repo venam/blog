@@ -10,7 +10,7 @@ Hello fellow readers,
 In this post I'll list some of the projects I'm currently working on.
 
 
-###Anchor System - Monster Builder###
+### Anchor System - Monster Builder###
 
 
 _Language: JS_
@@ -79,7 +79,7 @@ A demo of how it looks when debug is off and the parts are dragged into one anot
 _Link To Project Source_: [Monster Builder](https://github.com/venam/monster-builder)
 
 
-###LindenMayer System###
+### LindenMayer System###
 
 
 _Language: Perl_
@@ -148,7 +148,7 @@ That one took some time to implement and the output wasn't what I expected.
 _Link To Project Source_: [Lindenmayer System](https://github.com/venam/Lindenmayer-System)
 
 
-###Unix Ricing Neural Network aka URNN###
+### Unix Ricing Neural Network aka URNN###
 
 
 _Language: Shell, C, Perl, Go_
@@ -200,7 +200,7 @@ They are more or less satisfying for a start.
 _Link To Project Source_: [URNN](https://github.com/iotek/urnn)
 
 
-##Conclusion##
+## Conclusion##
 
 
 If you have any inquiries, inputs, or tips, please contact me.

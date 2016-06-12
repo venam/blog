@@ -332,7 +332,7 @@ Childhood influences the rest of life.
 I'm going to list some interesting paragraphs.
 
 
-####Stress, Reproductive Strategy, and Abuse####
+#### Stress, Reproductive Strategy, and Abuse####
 
 _Summary_:
 
@@ -466,7 +466,7 @@ laterborn children desiring a greater variety of sexual partners in the future.
 ![13]({{site.baseurl}}/assets/chosen/13.jpg)
 
 
-####Hierarchies###
+#### Hierarchies###
 
 _Summary_:
 Children learn their place in the social hierarchy at a young age.
@@ -502,7 +502,7 @@ only their own position in such hierarchies but also those of other children.
 ![16]({{site.baseurl}}/assets/chosen/16.jpg)
 
 
-####Learning####
+#### Learning####
 
 _Summary_:
 It's well known today that children learn faster and better than adults.

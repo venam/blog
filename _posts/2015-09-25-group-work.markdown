@@ -28,7 +28,7 @@ I'll sparkle them with mentions of researches on evolutionary psychology
 ![time pass by]({{site.baseurl}}/assets/book_time.jpg)
 
 
-###High School###
+### High School###
 
 
 Since I was a kid, I've always had a passionate curiosity on subjects I
@@ -226,7 +226,7 @@ anything from it and that in society we are forced to work on things we don't
 enjoy.
 
 
-###Home###
+### Home###
 
 
 We have exploratory minds in our family.
@@ -301,7 +301,7 @@ Our projects are a continuation of our kids games.
 _Conclusion_: If I had to choose a teammate, I'll choose my brother over any stranger, any day.
 
 
-###University###
+### University###
 
 
 ![on our lawn]({{site.baseurl}}/assets/lawn.jpg)
@@ -398,7 +398,7 @@ without passion making group projects a pain. It adds great amount of laziness
 and indifference.
 
 
-###Online###
+### Online###
 
 
 I entered the online world as soon as I got an internet connection.
@@ -805,7 +805,7 @@ I'm still glad about my online projects. The online world brings so many ideas
 and amazing people together.
 
 
-###Friends###
+### Friends###
 
 
 I don't usually ask my friends to help with my personal projects.
@@ -854,7 +854,7 @@ to work with you, you can just get them to nag and give random ideas, even your
 close friends. Remember that.
 
 
-###Work###
+### Work###
 
 
 At work, the group cohesion is fabulous..It's impressive!
@@ -947,7 +947,7 @@ hell. To gain experience you need side-projects or years of work in the field.
 
 
 
-#Conclusion#
+# Conclusion#
 
 
 Overall it all comes down to one thing; do your partner gain as much as you do

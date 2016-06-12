@@ -8,7 +8,7 @@ categories: programming
 Hello fellow readers,
 This post is about the recent projects I've been working on and planning.
 
-###GF Birthday Gift###
+### GF Birthday Gift###
 
 I don't like material gifts, they are throwaway and normally shitty.  
 
@@ -38,7 +38,7 @@ The end result is sweet and she loved it.
 [Here](http://venam.nixers.net/a_gift) it is. The source code is also on Github.
 
 
-###JS Encryption###
+### JS Encryption###
 
 Someone requested that I create a one of a kind javascript obfuscation.
 
@@ -50,7 +50,7 @@ You can check some of the things on [GH](https://github.com/venam/JS-Encrypt).
 Mixing the techniques will give pretty good results, but again, this is useless.
 
 
-###Socks Rotator###
+### Socks Rotator###
 
 I have a bunch of servers laying around... A lot of them.  
 Some are just jump points, others are VPS, microwaves, or home machines.
@@ -75,7 +75,7 @@ I used the program `delegate` to tunnel the socks5 to http proxy.
 You can find the code on [GH](https://github.com/venam/SSH-Tunnel-Password-Based-Auto-Reconnect)
 
 
-###Telnet Transference###
+### Telnet Transference###
 
 How to upload a binary on many small embedded devices that have
 busybox installed and nothing else.
@@ -103,7 +103,7 @@ It works, that's not bad.
 [Check it out!](https://github.com/venam/Telnet-Transference)
 
 
-###Reddit Unixporn Theme###
+### Reddit Unixporn Theme###
 There's a [contest](https://www.reddit.com/r/unixporn/comments/43g60f/its_finally_here_announcing_the_unixporn_css/) running on /r/unixporn subreddit.
 
 I'm participating, here's my [entry](https://www.reddit.com/r/unixporn/comments/43g60f/its_finally_here_announcing_the_unixporn_css/czs0zo4), and this is what it looks like:
@@ -121,7 +121,7 @@ The best css minifying I've found is [cssnano](http://cssnano.co/).
 The next step is to write a script that can change the "fake-terminal" colors to match the X11 terminal colors of the user.
 
 
-###Blog Sections Designs###
+### Blog Sections Designs###
 
 I redesigned my whole blog.
 
@@ -133,7 +133,7 @@ The quotes section was designed by my girlfriend and the upcoming "ascii-arts an
 screenshots" section will also be designed by her.
 
 
-###Secret projects NB 0, 1, 2, & 3###
+### Secret projects NB 0, 1, 2, & 3###
 
 Those are projects I can't mention directly.
 
@@ -164,7 +164,7 @@ This was less of a hassle than to work with node.
 However, I've found a library that wrapped the manipulation and it was even easier to implement.
 
 
-###EP Project###
+### EP Project###
 
 The Evolutionary Psychology simplified explanation of life project...  
 
@@ -178,7 +178,7 @@ I've also chosen the way I'm going to represent the information, it's going to b
 an explorable explanation.
 
 
-###A Message I want To Transmit###
+### A Message I want To Transmit###
 
 This project is actually my upcoming post. A post that was suppose to come before this one.
 
@@ -188,14 +188,14 @@ I'm gonna turn it into an explorable explanation test-bed to see if people can l
 
 This should be done in a week or two as I just got the idea. (very fresh :D !)
 
-###Ascii Art Projects###
+### Ascii Art Projects###
 
 This isn't really a programming-related project but I started to research about it.
 
 I'm gonna learn new ascii-arts techniques with [the nixers](https://nixers.net/showthread.php?tid=1849)!
 That's also related to the upcoming ascii-art section.
 
-###Gantt Chart For Planning###
+### Gantt Chart For Planning###
 I need a software to plan the relaunch of the podcast.  
 This project is not started yet either.
 

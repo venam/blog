@@ -1,0 +1,456 @@
+---
+layout: post
+title:  "June 2016 Project List"
+date:   2016-06-05
+categories: programming
+audio: api.soundcloud.com/tracks/268705150
+---
+
+Hello fellow readers,
+In this post I’ll list some of the projects and experiments I’m working on or
+just finished.
+
+My [last projects update](http://venam.nixers.net/blog/programming/2016/02/28/february-projects.html) was in February.
+
+
+### 4.3XP###
+
+![4-3XP]({{site.baseurl}}/assets/4-3XP.png)
+
+_Language:Human_ 
+
+_Explanation_: Check under the post title, there's a surprise.
+
+This is the 4-3XP (pronounced the "A" Experiment - 1337 mode activated).
+
+It's simply a narration of my posts.  
+So look around maybe the posts you didn't read yet might have their audio version
+available and you'll be able to listen to them instead of reading.
+
+Everytime you see the 4-3XP you can listen to the audio version.
+
+There's also the [soundcloud channel](https://soundcloud.com/4-3xp/).
+
+
+### Meditation###
+
+
+![Sammy]({{site.baseurl}}/assets/waking_up.jpg)
+
+_Language: Mind_
+
+_Explanation_: I've started daily meditation: A simple 5 minutes session.  
+I'm using a beginner technique that Sam Harris discusses [here](https://www.samharris.org/blog/item/how-to-meditate).
+
+To paraphrase, it's about removing the non-stop narration usually happening
+in your head.  
+Redirecting the third eye unto your body and environment, not on thoughts.
+
+Aside from relaxation and focus, meditation is a way to reflect one self place
+in the world.  
+What are we?
+
+
+### Data mining projects###
+
+
+![Elast]({{site.baseurl}}/assets/elast.png)
+
+_Language: Multiple_
+
+_Explanation_: I'm building a huge bank of data.  
+The new project goal is to incorporate the info in a fast search engine.
+
+In the process, I'm switching from postgresql to elasticsearch.
+
+Elasticsearch has many issues.
+
+It is galling to install... And I do not dare to mention upgrades and the
+non-backward compatibility.
+
+Sometimes it randomly hangs or tells you that it ran out of memory when
+it's actually not. Restarting the daemon fixes it.  
+
+When it works it's cool.
+
+You interact with it is through a REST api.  
+
+The best, and maybe only, feature of elasticsearch is that it's easy to create
+a full text search engine that goes through any property of the data.  
+
+It does it by default and that's what I need.
+
+
+### One Word a day###
+
+
+![Minim]({{site.baseurl}}/assets/mini.jpg)
+
+_Language: English_
+
+_Explanation_: Learning a new word everyday, it's a fun idea I've taken from a
+[theminimalist](http://www.theminimalists.com/) podcast episode.
+
+I have difficulties expressing myself. It's hard for me to find the best
+combination of words to transfer my ideas.
+
+I want to get better and this project is a good way to do so.
+
+I might forget a lot of the words that happened to be in this project but I'm
+training my mind into going out of it's way to focus on them.
+
+
+### Shadi###
+
+
+![shadi]({{site.baseurl}}/assets/shadi.gif)
+
+_Language:shell_ 
+
+_Explanation_: This is a project inspired by [dbag](https://github.com/iotek/dbag/),
+an aglomeration of irc quotes of one of the nixers member.
+
+It has also been inspired by a [forums post](https://nixers.net/showthread.php?tid=1872)
+by pranomostro where he pipes all the nixers intro into a markov chain to
+generate new introduction posts.
+
+The shadi knowledge generator regroups the two ideas, it takes quotes from
+shadi and generate sentences he could have said.
+
+> many ways this can be done in 2 weeks read it somewhere.
+
+See it [here](https://github.com/venam/shadi).
+
+
+### Mapping The Unmapped###
+
+
+![Hidden]({{site.baseurl}}/assets/history.jpg)
+
+_Language:Progress_ 
+
+_Explanation_: There are many places in my region that aren't shown on Google
+maps.
+
+I took the matter in my own hands, made a trip around the popular places and
+historical sites, took pictures, and mapped them.
+
+I'm now a "local guide" according to Google map.
+
+This is a good initiative!
+
+I'll keep this going and encourages anyone to do so.
+
+Someone mentioned a game called Ingress, that turns this into an adventure.
+I haven't tried it yet so I can't give my verdict on it.
+
+
+### Fake/MENA Presentation###
+
+
+![Fake?]({{site.baseurl}}/assets/mena.png)
+
+_Language:JS/HTML_ 
+
+_Explanation_: I'm part of a group called the MENA developers.
+The last weeks I kept bringing the idea of organizing talks.
+
+A few days later it was on!
+
+AltCity, be the host of the event.
+
+I prepared a presentation called "A 'fake' project".
+However, one hour before the venue the host, which normally only give
+entrepreneurial events, asked to review the presentation slides.
+
+They didn't agree to "sponsor" the sort of talk I wanted to give and cancelled
+my presentation, with the presumption that it give them a bad reputation.
+
+I raged for a while and came up with a new presentation in the minimal
+amount of time I had left.
+
+I presented one of my blog post about [what computing and programming represents](http://venam.nixers.net/blog/programming/2015/11/04/what-is-programming.html).
+
+
+### Driving in LB###
+
+
+![ba bad driving]({{site.baseurl}}/assets/driving.png)
+
+_Language:JS/HTML_ 
+
+_Explanation_: In my last post I mentioned  "A Message I want To Transmit" and
+it was this project.
+
+You can find it [here](http://venam.nixers.net/blog/psychology/2016/03/13/driving.html).
+
+I'm satisfied with it, it was well done.
+
+I even wrote a library for simulating driving using [d3js](https://d3js.org/) and made
+animations for every annoying road behavior the Lebanese have.
+
+I hope that I have released the tension of the people who have been thinking
+the same for years.
+
+Laughters are bonus points.
+
+
+### Arts###
+
+
+![Arts](http://venam.nixers.net/blog/assets/arts/art65.jpg)
+
+_Language: Left Brain_
+
+_Explanation_: My girlfriend has a better phone camera than mine.
+
+She insisted on re-taking the photos of my arts section.
+
+You can now enjoy them in high quality.
+
+[Check the page out](http://venam.nixers.net/blog/arts.html)
+
+
+### Ascii Arts###
+
+
+![chrono](http://venam.nixers.net/blog/assets/ascii/as16.png)
+
+_Language:ASCII char set+TTY escape codes_ 
+
+_Explanation_: Since my last post I really got into the Ascii art movement.
+
+I'm slowly getting better at building my robots army.
+
+Brace yourself, soon I'll be able to conquer the universe.
+
+Xero mentioned a BBS and an ascii art group called [Impure](http://bbs.ninja/pack/impure60/).
+
+I got curious, joined their IRC and had a chat with the people who have been
+doing ascii arts since they started to be called ascii arts.
+
+Hellbeard, the administrator of the group, liked my work and invited me to be
+part of their next release: Impure61.
+
+Ironically, I had never heard of the ascii art scene just a week before.
+Now I'm part of Impure!ascii.
+
+It's very cool!
+
+
+### Nixers Podcast###
+
+
+![nix bad driving]({{site.baseurl}}/assets/nix.png)
+
+_Language:PHP/Postgres_ 
+
+_Explanation_: My [podcast project](http://nixers.net/showthread.php?tid=1656)
+for nixers is going well.
+
+I Built an interface to manage everyone's schedule.
+
+Sometimes no one joins which at first was awkward, I'm starting to get the
+hang of it.
+
+I hope it's an enjoyable learning experience for the listeners.
+
+I also extend every episode in forums threads so that people can comment on
+them afterwards.
+
+We're also having an [introduction song contest](https://nixers.net/showthread.php?tid=1906)
+instead of having to come up with different intro at the beginning of the episode.
+
+
+### EP Notes UI###
+
+
+![evol]({{site.baseurl}}/assets/ep_.png)
+
+_Language:PHP/Postgres/reactjs_ 
+
+_Explanation_: The quest of dynamic evolutionary psychology continues.
+
+I designed an interface to browse the data available.
+
+I built everything using [reactjs](https://facebook.github.io/react/), PHP, and
+postgresql.
+
+We're now in the process of linking them, finding the cycles, and preparing
+a youtube channel.
+
+In the future we might even write a book.
+
+If you have experience with video editing or hand drawn video explanation
+contact me.
+
+I want this to be a society changing project.
+
+
+### Light colorscheme###
+
+
+![light theme](http://i.imgur.com/z99KfA0.png)
+
+_Language:Xresources_
+
+_Explanation_: We had a [light colorscheme contest](https://nixers.net/showthread.php?tid=1853)
+at nixers.
+
+It was a phenomenal way to learn about new color theory.
+
+Tired of the ol' white on black.
+
+I didn't win but I sure learned.
+
+The theme can be found on my GH: [here](https://github.com/venam/Light-theme)
+
+
+### Wargames###
+
+
+![wechall]({{site.baseurl}}/assets/wechall.png)
+
+_Language:brain_ 
+
+_Explanation_: I still play wargames in my spare time.
+Not as much as before but I still love it.
+
+This week I introduced [my own](https://nixers.net/showthread.php?tid=1909)
+"Internet Scavenger Hunt" on nixers.net using
+ideas I took from those wargames.
+
+It's not a big complicated one.
+
+It touches encryption and steganography.
+
+
+### Xhost###
+
+
+![xhost]({{site.baseurl}}/assets/xhost.png)
+
+_Language: PHP_
+
+_Explanation_: This is a lost project.
+
+I built it, and burned it.
+
+The idea was to create an upload page that returns direct download links and
+would always rotate through multiple hosts in the backend.
+
+
+### URNN###
+
+
+![xhost]({{site.baseurl}}/assets/urnn_.png)
+
+_Language: C/Perl/Shell scripts_
+
+_Explanation_: URNN is still alive!
+
+Neeasade is contributing, he made an easy wrapper script and is adding
+C versions of the scripts in a new branch instead of the Perl.
+
+We're in the process of solving the issue with images that don't have 10 colors.
+
+
+### Garden###
+
+![garden]({{site.baseurl}}/assets/garden/1.jpg)
+![garden]({{site.baseurl}}/assets/garden/2.jpg)
+![garden]({{site.baseurl}}/assets/garden/3.jpg)
+![garden]({{site.baseurl}}/assets/garden/4.jpg)
+![garden]({{site.baseurl}}/assets/garden/5.jpg)
+![garden]({{site.baseurl}}/assets/garden/6.jpg)
+![garden]({{site.baseurl}}/assets/garden/7.jpg)
+![garden]({{site.baseurl}}/assets/garden/8.jpg)
+
+I couldn't photograph everything.
+
+_Language:Nature_
+
+_Explanation_: I'm gardening!
+
+I planted vegetables and we have fruits.
+
+
+This projects I've always wanted to do.
+I'll start small and little by little I'll make bigger plots.
+
+
+### June Nixers Projects###
+
+
+![zip it](http://podcast.nixers.net/zipper.gif)
+
+_Language: Fun_
+
+_Explanation_: I'm shaking up the nixers community in june by introducing
+multiple projects:
+
+Here's the list:
+
+* Internet scavenger hunt
+* Intro/outro podcast song contest
+* A week in the TTY
+* Ascii Art Contest
+* Webcasts threads
+
+Be sure to check the forums for update.
+
+
+### Cleaning Beaches###
+
+
+![ugly indian](http://www.theuglyindian.com/images/header.gif)
+
+_Language:Kindness_ 
+
+_Explanation_: This is my weekend project.
+
+When my girlfriend and I went to the beach we appalled and shocked
+because of the garbage around.
+
+Thus, in the same fashion as the [the ugly indian](http://www.theuglyindian.com/menu.html)
+we're gonna do it ourselves.
+
+So I did this for my local community out of good will.
+
+We went to a beach with the goal of removing all plastic bottles and garbage.
+
+At first we brought 4 huge bags but after 30 min they were filled.
+We went to a supermarket near to buy gloves and new degradable plastic bag.
+
+When the sun went out, we had filled 9 huge bags: 4 for recycling and 5 or pure garbage.
+
+They were heavy but it was fulfilling to throw them in the recycling and garbage
+dumps.
+
+The plastic bottle caps, which we also filtered from the pile of rubbish, are
+going to go to an association for handicapped persons.
+
+Some asked us "are you with some organisation", and we replied "Nope, we're just humans".
+
+They retorted with "God bless you" or "May God make you strong", and I kept myself
+from replying "I'm not a believer, you should take the matter in your own damn
+hands not wait for a God".
+
+I was too focused on what I was doing to reply.
+
+
+Shame on us, we couldn't finish completely before there was no light anymore,
+we were also extremely tired.
+
+Let's hope the [broken window theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
+will work and keep people from throwing stuffs.
+
+Another good initiative!
+
+
+# Conclusion#
+
+Yep, I've grown, and I'm happy of where I'm going.
+
+These days I want to contribute to the community around me.  
+If you want something done, no one's gonna do it for you, use your own hands.

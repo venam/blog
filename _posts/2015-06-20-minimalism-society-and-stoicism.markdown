@@ -18,7 +18,7 @@ find yourself in a weak corner it'll strike hard.
 In this article I'll refresh the essence of my being.
 
 
-##I stand for
+## I stand for
 
 
 `Life is enjoyable and simple.`
@@ -28,7 +28,7 @@ The motto of my whole life is simplicity. Consequently, I adhere well with the
 minimalist and stoicism philosophies.
 
 
-####Minimalism
+#### Minimalism
 
 
 The minimalist way of life states that by letting go of anything that doesn't have a real
@@ -70,7 +70,7 @@ The reason might be that most instant gratifications are related to
 materialistic instincts and long term ones to better being as an individual.
 
 
-####Stoicism
+#### Stoicism
 
 
 Stoicism philosophy, blatantly explained, rotates around the thought that
@@ -106,7 +106,7 @@ NB: I used to laugh about it and call it the IDGAF (I don't give a fuck) mentali
 but stoicism is more than that.
 
 
-####Guidance
+#### Guidance
 
 
 My interests in sociology and evolution guided me in becoming a
@@ -118,7 +118,7 @@ I stand for a lot of other things like privacy, environmentalism, and freedom
 but I won't mention them in this article.
 
 
-##The vices of society
+## The vices of society
 
 
 
@@ -127,7 +127,7 @@ but I won't mention them in this article.
 
 
 
-####Work & Time
+#### Work & Time
 
 
 I started a full time job around 5 months ago and it drastically changed my
@@ -163,7 +163,7 @@ As far as the commute is concerned, it's now dedicated to reading, watching hack
 I am now pleased with my time management, it has brought me new perspectives.
 
 
-####Others
+#### Others
 
 
 
@@ -201,7 +201,7 @@ acting contrarily to this even though I can still understand why they act the wa
 Thanks to all the fabulous strangers I shared precious minutes with, I've learned so much.
 
 
-####The Fine line
+#### The Fine line
 
 
 When time runs low you get to feel like you shouldn't waste the free time you've got.
@@ -235,7 +235,7 @@ inside my circle you get to gain everything from me. Until now, I quite like wha
 it's giving. No one *fucks around* with me anymore.
 
 
-####Risks
+#### Risks
 
 
 I try to go on my quest for discoveries, thrills, and risks.
@@ -275,7 +275,7 @@ What differentiate a leader from the pack is the ability to take risky but
 decisive actions and the ability to keep a culture alive.
 
 
-####Consumer Market
+#### Consumer Market
 
 
 
@@ -334,7 +334,7 @@ When it's time to live the good life it's time to live the good life.
 Spend wisely!
 
 
-####A note on instant gratification
+#### A note on instant gratification
 
 
 This paragraph is going to be two quotes.
@@ -371,7 +371,7 @@ This paragraph is going to be two quotes.
 >"We’re the middle children of history, man. No purpose or place. We have no Great War. No Great Depression. Our Great War’s a spiritual war… our Great Depression is our lives. We’ve all been raised on television to believe that one day we’d all be millionaires, and movie gods, and rock stars. But we won’t. And we’re slowly learning that fact. And we’re very, very pissed off."
 
 
-#Conclusion
+# Conclusion
 
 
 If you enjoyed reading this buzz me and we'll have a beer together someday.

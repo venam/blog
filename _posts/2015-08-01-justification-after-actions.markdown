@@ -74,7 +74,7 @@ We'll then develop each one separately and explain how the justification comes i
 * Recurrent Hidden Thinking Aka Effect Of Child Abuse
 
 
-####Instinct####
+#### Instinct####
 
 
 We are animals and have basic needs.  
@@ -108,7 +108,7 @@ what we see today is faked and plays with our instincts, and I'm not only
 talking about food.
 
 
-####Objective Thoughts####
+#### Objective Thoughts####
 
 
 The "objective thoughts" is what we see in books.  
@@ -127,12 +127,12 @@ Then the justification is just about summarizing the analyze.
 
 For example, We ask a person to choose between two different meals.
 
-After analyze of the components of each meals the candidate chooses meal #1.
+After analyze of the components of each meals the candidate chooses meal # 1.
 
 ...This doesn't sound like a real scenario doesn't it?
 
 
-####Social Pressure & Group Behavior####
+#### Social Pressure & Group Behavior####
 
 
 Group behavior is higher than personal behavior.  
@@ -154,11 +154,11 @@ Your single actions is insignificant.
 
 For example, We ask a person to choose between two different meals.
 
-Adding to that that ten of his friends already took meal #2 and liked it.
+Adding to that that ten of his friends already took meal # 2 and liked it.
 The person is more inclined to choose it.
 
 
-####Recurrent Hidden Thinking Aka Effect Of Child Abuse####
+#### Recurrent Hidden Thinking Aka Effect Of Child Abuse####
 
 
 You are your ideologies.  
@@ -215,12 +215,12 @@ This is just the tip of the iceberg. You can watch the video I linked for deeper
 
 For example, We ask a person to choose between two different meals.
 
-The person instantly chooses meal #1.
+The person instantly chooses meal # 1.
 
 He then explains that he really likes the restaurant that prepared it, that
 it tastes so great.
 
-He never tasted meal #2 before but was drawn towards meal #1 because of insecurity,
+He never tasted meal # 2 before but was drawn towards meal # 1 because of insecurity,
 
 
 --------------------------
