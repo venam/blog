@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "June 2016 Project List"
-date:   2016-06-05
+date:   2016-06-12
 categories: programming
 audio: api.soundcloud.com/tracks/268705150
 ---
