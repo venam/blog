@@ -3,6 +3,7 @@ layout: post
 title:  "What Programming And Computing Represent"
 date:   2015-11-04
 categories: programming
+audio: api.soundcloud.com/tracks/268900949
 ---
 
 
