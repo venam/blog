@@ -3,6 +3,7 @@ layout: post
 title:  "Keeping track of your things"
 date:   2015-04-25
 categories: unix
+audio: api.soundcloud.com/tracks/269249444
 ---
 
 Hello fellow nixers,
