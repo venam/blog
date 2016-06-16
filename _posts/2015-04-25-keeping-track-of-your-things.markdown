@@ -142,3 +142,17 @@ through "The Internet of Things", and "Wearable Computers".
 
 
 [link](http://nixers.net/showthread.php?tid=1637) to thread on Nixers.net.
+
+Update _2016-06-16_:  
+
+Colin Wight in his podcast [Let's Know Things](http://colin.io/letsknowthings/)
+has an interesting episode about Automation and AI.
+
+He endorses the idea that we as human should see our technology as our creation,
+not fear it, but instead embrace it.
+
+Embrace it to such extent that we become one with it, that it enables us to
+combine the best of both the computer world and the human world.
+
+Technology would just be our new way of evolving and dealing with the world
+around us.

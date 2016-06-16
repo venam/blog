@@ -3,6 +3,7 @@ layout: post
 title:  "Learning and Curiosity"
 date:   2014-10-20
 categories: philosophy
+audio: api.soundcloud.com/tracks/269455373
 ---
 
 ### How  & why some people have better aptitudes

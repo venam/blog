@@ -58,3 +58,6 @@ I've talked a bit about its effect in a more recent post. Unfortunately it has
 become the gameplay of many recruitment agencies and the plebs are
 moving their real life issues on their walls. Now, if you write anything online you can
 be sued in real life for it!
+
+[Stallman view on that](https://stallman.org/facebook.html)  
+[A good video explaining that](https://www.youtube.com/watch?v=58YaQQYmmpo)  
