@@ -3,6 +3,7 @@ layout: post
 title:  "Futurists"
 date:   2015-08-12
 categories: philosophy
+audio: api.soundcloud.com/tracks/270035549
 ---
 
 Hello fellow readers,  
