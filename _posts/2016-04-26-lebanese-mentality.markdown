@@ -3,6 +3,7 @@ layout: post
 title:  "What Needs To Change In The Lebanese Mentality"
 date:   2016-04-26
 categories: philosophy
+audio: api.soundcloud.com/tracks/270918275
 ---
 
 Ten years ago we moved to Lebanon.  
