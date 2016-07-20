@@ -314,3 +314,5 @@ It would be equivalent to people talking about totalitarian regimes in the Europ
 You can't label that generation as the "totalitarian" generation but the fact is that the whole society was moving towards it.
 
 I had to point out the extremes that moves the current world.
+
+https://en.wikipedia.org/wiki/Generation_gap
