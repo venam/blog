@@ -35,8 +35,8 @@ Yet they nag about their own rotten and putrid food.
 
 
 You keep feeling urged and discontent;   
-Urge to close that chapter - a simple and plausible solution.  
-Discontentment about yourself giving up - for being an hypocrite.
+Urged to close that chapter - a simple and plausible solution.  
+Discontent about yourself giving up - for being an hypocrite.
 
 
 Satisfaction isn't something achievable, this idea is anchored in your mind.
@@ -57,3 +57,5 @@ Degenerated retarded apes.
 
 
 As if!   
+
+![three]({{site.baseurl}}/assets/arts/art71.jpg)
