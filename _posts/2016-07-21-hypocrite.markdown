@@ -29,13 +29,16 @@ no one listens.
 Is anyone ever going to listen?
 ![two]({{site.baseurl}}/assets/arts/art21.jpg)
 
+
 They crave what you've been working on and will eat and destroy it before maturity.
 
 Yet they nag about their own rotten and putrid food.
 
+You've given up the explanation - why explain if no one listens.  
+Acting is better; whoever listens listens.
 
 
-You keep feeling urged and discontent;   
+But you keep feeling urged and discontent;   
 Urged to close that chapter - a simple and plausible solution.  
 Discontent about yourself giving up - for being an hypocrite.
 
@@ -60,3 +63,7 @@ Degenerated retarded apes.
 As if!   
 
 ![three]({{site.baseurl}}/assets/arts/art71.jpg)
+
+> All you can do is leave a trail of breadcrumbs and hope that somebody follows them.
+
+It's hard to work from the shadows but it's the only viable work.
