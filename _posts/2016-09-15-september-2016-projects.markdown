@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "September 2016 Projects"
-date:   2016-09-06
+date:   2016-09-15
 categories: programming
 ---
 
