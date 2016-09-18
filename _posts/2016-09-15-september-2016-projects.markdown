@@ -213,7 +213,7 @@ consumed these days.
 Behind every episode there's a deep research I have to do and between
 episodes there's a shift of mind that needs to happen.
 
-The research nudges me to actively research about a particular subject,
+This nudges me to actively dig a particular subject,
 piercing through the top thin layer.
 
 Most of the subjects I choose are ones I've been meaning to discover and
@@ -224,7 +224,7 @@ give a generic, cohesive, ordered, and understandable overview of it so
 that others can also pinpoint the important aspects of the topic.
 
 I'm trying hard to achieve this.
-It's true that I'm the administering forums related to Unix but that
+It's true that I'm administering forums related to Unix but that
 doesn't mean I'm the most knowledgeable person.
 I want to transmit clear ideas and avoid confusions that the listeners
 might have.
