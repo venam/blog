@@ -1,0 +1,72 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<title>venam's scrots</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon.ico">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+	<style>
+
+body {
+	margin: 0px;
+	padding: 0px;
+
+	background: #e6e3c6; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, red , yellow); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #909090 3%, #e6e3c6 15%, #e6e3c6 85%, #909090 97%, #909090 100%); /* Standard syntax */
+}
+
+.header_scrot {
+	margin-top: 3em;
+	padding: 1ex;
+	text-align: center;
+	background-color: #e6e3c6;
+	border-top: 1px solid #303030;
+	border-bottom: 1px solid #303030;
+	/*box-shadow: 0px 0px 10px #212121;*/
+	position: relative;
+	z-index: 100;
+}
+
+.header_venam {
+	text-align: center;
+	position: relative;
+	background-color: #e6e3c6;
+	margin: auto;
+	width: 7.6ex;
+	padding-left: 7em;
+	top: -2ex;
+	z-index: 1;
+}
+
+.svg_images {
+	width: 8em;
+	-ms-transform: rotate(-20deg); /* IE 9 */
+	-webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+	transform: rotate(-20deg);
+	position: relative;
+	top: -4em;
+	left: -3em;
+	z-index: 2;
+}
+
+.header_logo {
+	z-index: 0;
+	position: relative;
+	margin-top: -10em;
+	left: 2em;
+}
+
+.header_big {
+	font-size: 10em;
+}
+
+	</style>
+
+</head>
