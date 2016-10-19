@@ -1,0 +1,3 @@
+#!/bin/sh
+
+convert $1 -gaussian-blur 0x4 blurred/$1

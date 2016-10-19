@@ -20,6 +20,28 @@ body {
 	background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(to right, #909090 3%, #e6e3c6 15%, #e6e3c6 85%, #909090 97%, #909090 100%); /* Standard syntax */
+	font-family: "DejaVu Sans";
+}
+
+
+@font-face {
+	font-family: 'hammer';
+	src: url('./assets/fonts/HAMMERHEAD.otf');
+	src: url('./assets/fonts/HAMMERHEAD.eot?#iefix') format('embedded-opentype'),
+		url('./assets/fonts/HAMMERHEAD.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.header_small {
+	font-family: hammer;
+	top: -6em;
+	position: relative;
+	display: block;
+	width: 5em;
+	margin: auto;
+	left: 3em;
+	z-index: -1;
 }
 
 .header_scrot {
@@ -41,6 +63,7 @@ body {
 	margin: auto;
 	width: 7.6ex;
 	padding-left: 7em;
+	left: -2em;
 	top: -2ex;
 	z-index: 1;
 }
@@ -52,19 +75,77 @@ body {
 	transform: rotate(-20deg);
 	position: relative;
 	top: -4em;
-	left: -3em;
+	left: -5em;
 	z-index: 2;
 }
 
 .header_logo {
 	z-index: 0;
 	position: relative;
-	margin-top: -10em;
-	left: 2em;
+	left: 0em;
+	width: 90%;
+	margin: auto;
+	margin-top: -9em;
+	color: #303030;
 }
 
 .header_big {
-	font-size: 10em;
+	font-size: 8em;
+	color: #e6e3c6;
+	position: relative;
+	left: -0.4ex;
+	text-shadow:
+		-3px -3px 0 #303030,
+		3px -3px 0 #303030,
+		-3px 3px 0 #303030,
+		3px 3px 0 #303030;
+	font-family: hammer;
+}
+
+
+
+.header_links {
+	position: relative;
+	top: -5em;
+	left: 5.6em;
+	width: 10em;
+	margin: auto;
+	margin-bottom: -5em;
+}
+.header_links a:not(:last-child)::after {
+	content: " |";
+}
+.links a, .header_links a {
+	color: black;
+	text-decoration: none;
+}
+.links a:hover, .header_links a:hover {
+	text-decoration: underline;
+}
+
+.links {
+	font-size: 3ex;
+}
+
+.page-content {
+	margin-top: 4em;
+}
+
+.scrot_container {
+	text-align: center;
+	padding: 2.5em;
+	background-repeat: no-repeat;
+	margin-bottom: 3em;
+}
+
+.scrot_img {
+	opacity: 1;
+}
+
+.scrot_img img {
+	opacity: 1;
+	max-width: 80%;
+	box-shadow: 0px 0px 3ex #303030;
 }
 
 	</style>
