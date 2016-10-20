@@ -3,6 +3,7 @@ layout: post
 title:  "Pass Time"
 date:   2016-10-18
 categories: programming
+audio: api.soundcloud.com/tracks/289176391
 ---
 
 ## Hobbies, pastime, consciousness ##
@@ -117,7 +118,7 @@ it's a waste of time, inserting unconsciousness where consciousness
 could be.  You could make deliberate moves in your life, self reflections,
 improvements.
 
-Ant instead you replace those with unconscious, un-malleable, propagandish
+And instead you replace those with unconscious, un-malleable, propagandish
 moments where you're completely numb.
 
 That's it, choose: pass your time or use your free time.
