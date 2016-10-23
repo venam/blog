@@ -19,6 +19,24 @@ layout: default
 		</iframe>
     </div>
     {% endif %}
+
+    {% if page.podcast_mp3 %}
+    <p class="post-meta" style="margin:0px;">
+    (<a
+        onclick="document.getElementById('audio_hidden2').style.display='block';"
+        href="#">PLAY Nixers Podcast
+    </a>)
+    </p>
+
+    <div style="text-align:center;width: 300px;margin: 0 auto;">
+        <audio controls id='audio_hidden2' style='display:none;' height='300'>
+            <source src="{{page.podcast_ogg}}" type="audio/ogg">
+            <source src="{{page.podcast_mp3}}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio> 
+    </div>
+    {% endif %}
+
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
   </header>
 

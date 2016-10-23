@@ -506,3 +506,10 @@ writers have done the same.
 
 Here are some of the interesting ones:
 [one](http://www.unexplained-mysteries.com/column.php?id=93734) [two](http://www.unexplained-mysteries.com/column.php?id=143352) [three](http://www.unexplained-mysteries.com/column.php?id=186379)
+
+_UPDATE (2016-10-23)_: Some links related to prediction market.
+
+* [https://news.ycombinator.com/item?id=12745578]()
+* [http://www.nature.com/news/the-power-of-prediction-markets-1.20820]()
+* [https://blog.ethereum.org/2014/08/21/introduction-futarchy/]()
+* [http://mason.gmu.edu/~rhanson/futarchy.html]()
