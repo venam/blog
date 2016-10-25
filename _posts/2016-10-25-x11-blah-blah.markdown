@@ -1,0 +1,550 @@
+---
+layout: post
+title:  "Xcb, X11, Xlib, Wayland?"
+date:   2016-10-25
+categories: unix
+podcast_mp3: http://podcast.nixers.net/feed/download.php?filename=nixers-podcast-2016-08-141.mp3
+podcast_ogg: https://raw.githubusercontent.com/nixers-projects/podcast/ogg/nixers-podcast-2016-08-14.ogg
+---
+
+(Transcript of the [podcast](https://nixers.net/showthread.php?tid=1958))
+
+xcb, X11, wayland  
+What's happening here!
+
+# xcb, X11, wayland #
+
+# Intro
+
+What's happening here!
+
+This isn't a podcast about window managers and the ways to make one.
+(Though we might record one in the future)
+It's about the architectural differences between the different ways of
+interacting with the system to display graphics.
+Be it by interacting with other layers such as X11 or higher or by directly
+drawing them on the screen.
+
+It's really not about how to use the functions, and the technicalities and
+intricacies of everyone of the softwares we're gonna mention.
+We might do that, but again, it will be the subject of another episode.
+
+This one will only be and introduction.
+In this podcast you'll get a general overview of x11, xlib, xcb, and wayland.
+
+What are they?
+What are the differences between them and what is there to know?
+Why this matters?
+
+# What are they
+
+Let's go over what is what, and what they do.
+
+Unlike many other operating systems, in the free Unix realm, there is
+something called a display server that is separate from the graphical
+environment the user usually interact with.
+
+This is something that surprises many of the new comers to Unix, that
+there's a layer that communicates with the display and that it doesn't
+draw the widgets on the screen at the same time.
+
+It only defines protocol and graphics primitive, it has no specification
+for application user-interface design.
+
+This premise implies that the graphical environment isn't enforced on
+the user it's malleable and customizable.
+
+So what's this display server thing.
+What's its purpose?
+
+Let's go through the boring wiki definition:
+
+> A display server or window server is a program whose primary task is
+> to coordinate the input and output of its clients to and from the rest
+> of the operating system, the hardware, and each other. The display
+> server communicates with its clients over the display server protocol,
+> a communications protocol, which can be network-transparent or simply
+> network-capable.
+> 
+> The display server is a key component in any graphical user interface,
+> specifically the windowing system.
+
+
+As a simple definition the display server is the layer that sits between
+the kernel and the graphical interface.
+The kernel communicate with the hardware through the drivers for the specific
+graphic cards.
+The window manager communicates with the display server and tells it how and
+what to draw on the screen and let the user interact with them.
+
+With that in mind we can define what each software is.
+
+X11, Wayland, and Mir are implementations of display servers.
+Xlib and XCB are libraries implementing the client-side  of the X11 display
+server protocol.
+
+> At the bottom level of the X client library stack are Xlib and XCB, two
+> helper libraries (really sets of libraries) that provide API for talking
+> to the X server. Xlib and XCB have different design goals, and were
+> developed in different periods in the evolution of the X Window System.
+
+
+Because we're talking about a server we need clients that interface with it
+and that's what those are. Xlib and XCB.
+
+There is even a higher abstraction layer, which we won't discuss here, that
+specializes in the widgets: They give a bunch of building blocks such as
+buttons and text inputs in a cohesive and coherent manner.
+
+Let's name a few of those as reference: GTK+, FLTK, Tk, SDL, Qt.
+
+Now you know what is what but what's the difference between them.
+Why so many?
+
+
+# Differences and Must Know
+
+
+Now what are the big differences, why are there many of those?
+What are the advantages of one against the other.
+
+
+### X11 or X or also called X window system is a display server or "graphical
+server", as we've said.
+So what's particular about it.
+
+It's the oldest display manager that is still alive today.
+All its predecessors are deprecated.
+The first versions were made in 1984 at MIT.
+
+X provides a framework for drawing and moving windows on the screen and
+also, and it's important to note, interact with the mouse, touchscreens,
+and keyboard.
+
+
+
+> X provides no native support for audio; several projects exist to fill
+> this niche, some also providing transparent network support.
+
+
+
+The big idea behind X11 is the following:
+
+> X is an architecture-independent system for remote graphical user
+> interfaces and input device capabilities. Each person using a networked
+> terminal has the ability to interact with the display with any type of
+> user input device.
+
+So sorta' like the Unix system is multiuser and can be accessed throughout the
+network, just like terminals connecting to the mainframe, the X11 is a server
+that clients connect to to be able to display graphics on their screen.
+
+It doesn't matter if the program is local or not.
+And it made sense at a time where computing power was scarce, and it mostly
+still does.
+
+X was made with that in mind, it has network transparency, and it's made to be
+used over the network.
+
+What are thin clients anyway.
+
+However by default the connection between the client and the X server is not
+encrypted, but fortunately if you run it through an ssh session it becomes
+wrapped inside encrypted packets.
+
+With that you obviously have the network overhead.
+To counter that X uses Unix domain sockets for efficient connections that are
+on the same host.
+
+
+Now let's go into a bit more details about the architecture.
+
+Clients connect to the X server.
+The X server communicated and interface with the OS kernel to get events from
+the hardware, the keyboards, mouse, etc.. (evdev) and to tell the screen what
+to display.
+The window manager communicate with the X server to manipulate windows, it's
+always the X server that moves the windows.
+
+Now this is pretty much straight forward but the big thing to remember here
+is that the communication between X and the hardware isn't direct, it goes
+through the kernel to be able to act on the hardware.
+
+
+You can get both 2D and through extensions like GLX 3D operations on the
+client applications.
+The X server has to handle those with the kernel in the middle.
+It obviously knows how to accelerate operations if the kernel has a driver
+for the GPU and can accelere it.
+
+
+Now what's the deal with Wayland?
+
+
+### Wayland:
+
+
+Wayland: Wayland is a protocol. It essentially is a standardized way in
+which a compositor (the thing that draws the windows, handles the input,
+etc) can speak to individual programs, and vice-versa.
+
+There are many implementation of that protocol and they are called Wayland
+compositor.
+
+The most popular, or reference implementation of this protocol is the
+weston compositor.
+
+When you hear someone say that they switched to wayland it probably means
+that they switched to a wayland compositor.
+
+The protocol is a decription of "asynchronous object oriented" actions.
+There are objects living inside the compositor and the client interact with
+them by doing requests.
+Each client is assigned a different ID and cannot interact with other clients.
+
+Let's note that the protocol doesn't specify, at all, the rendering API.
+It does something called "direct rendering", in which the client must render
+the window contents to a buffer shareable with the compositor.
+The client chooses how to render itself with the help of high level libraries
+such as GTK,Qt, Cairo for font, and all the freetype for font rendering.
+
+So basically, you need to understand here that there's a delegation of role.
+It's the role of the widget library to adhere to the wayland protocol and
+for the applications to use those widgets libraries.
+
+
+>  Isolation
+>  
+>  One reason is that Wayland is designed from the ground up to isolate
+>  clients from each other.  There is no shared coordinate space. Wayland
+>  clients cannot snoop on each others input or inject fake input
+>  events. They can’t draw on each others windows or cover up windows
+>  with fake replicas.
+>  
+>  All of these things and many other exploits are possible for malicious
+>  X clients, because the X protocol wasn’t designed for untrusted clients.
+>  
+>  This makes Wayland a much better choice of display protocol when
+>  sandboxing untrusted applications, like xdg-app does.
+
+
+So why the need to move to something other than the X server?
+What's the difference and the critics.
+
+
+The motivation for building Wayland:
+
+>  A lot of infrastructure has moved from
+>  the X server into the kernel (memory management, command scheduling,
+>  mode setting) or libraries (cairo, pixman, freetype, fontconfig, pango,
+>  etc.), and there is very little left that has to happen in a central
+>  server process. ... [An X server has] a tremendous amount of functionality
+>  that you must support to claim to speak the X protocol, yet nobody will
+>  ever use this. ... This includes code tables, glyph rasterization and
+>  caching, XLFDs (seriously, XLFDs!), and the entire core rendering API
+>  that lets you draw stippled lines, polygons, wide arcs and many more
+>  state-of-the-1980s style graphics primitives. For many things we've
+>  been able to keep the X.org server modern by adding extension such as
+>  XRandR, XRender and COMPOSITE ... With Wayland we can move the X server
+>  and all its legacy technology to an optional code path. Getting to a
+>  point where the X server is a compatibility option instead of the core
+>  rendering system will take a while, but we'll never get there if [we]
+>  don’t plan for it.
+
+
+
+>  Most Linux and Unix-based systems rely on the X Window System (or simply
+>  X ) as the low-level protocol for building bitmap graphics interfaces. On
+>  these systems, the X stack has grown to encompass functionality arguably
+>  belonging in client libraries, helper libraries, or the host operating
+>  system kernel. Support for things like PCI resource management, display
+>  configuration management, direct rendering, and memory management has been
+>  integrated into the X stack, imposing limitations like limited support for
+>  standalone applications, duplication in other projects (e.g. the Linux fb
+>  layer or the DirectFB project), and high levels of complexity for systems
+>  combining multiple elements (for example radeon memory map handling
+>  between the fb driver and X driver, or VT switching).  Moreover, X has
+>  grown to incorporate modern features like offscreen rendering and scene
+>  composition, but subject to the limitations of the X architecture. For
+>  example, the X implementation of composition adds additional context
+>  switches and makes things like input redirection difficult.
+
+
+
+The focus on graphic device drivers, EGL, OpenGL, OpenVG, etc..
+Mesa3D, it's all about composition.
+In X it's done by an extension.
+
+Removing all the baggage that X took over the years and let the clients handle
+the rest.
+
+Unlike X, Wayland is not build with network transparency in mind, it's not
+made for the network.
+
+It's more towards segregation and security.
+Clients cannot snoop each others, they all have a separate process space, ID.
+
+X implements the ICCCMP for interprocess communication, Wayland doesn't.
+
+Unlike X, wayland compositors are at the same time the display server and the
+compositor, and the role of window manager. In X, if you remember they all are
+separate.
+
+However, the compositor implementation can have this feature if the devs
+decide to implement it.
+
+
+Another thing to keep in mind is that wayland doesn't handle inputs.
+It's the role of the compositor to do so.
+X does handle the inputs.
+The compositors can use libraries such as libinput to provide generic input
+driver.
+
+
+
+Let's note that there's something called XWayland, it's an X11 server running
+right inside a wayland compositor. It lets application that aren't able to
+be rendered on wayland to work.
+
+
+### Mir:
+
+The canonical thing...
+
+
+>  Mir is a computer display server for the Linux operating system currently
+>  in development by Canonical Ltd. It is planned to replace the currently
+>  used X Window System for Ubuntu
+
+
+They always want to do their own stuff
+Also built with EGL layer/composition in mind.
+Uses Xwayland for the X11 compatibility layer. uses Jolla's libhybris too for
+the EGL implementionat.
+Other parts of the architecture are based on Android input stack.
+
+Let's say it again, the only desktop environment with native support for Mir
+is Canonical's Unity 8.
+
+First in 2010 Canonical announced that it would use Wayland instead of X.org.
+However, they stated it could not meet their "needs" because there was a lot
+of objections and clarifications by the developers leading projects around
+wayland.
+
+Because people didn't agree with their views of wayland they made their own.
+
+The main argument was about inputs. Canonical wanted to include input event
+hadling inside the display server protocol.
+
+They are now using the Android input stack, as I mentioned.
+
+Mir was criticized a lot for its licensing.
+Unlike Wayland and X11 which are under the MIT license, Mir is licensed under
+GPLv3.
+
+>  Contributors are required to sign an agreement that "grants Canonical the
+>  right to relicense your contribution under their choice of license. This
+>  means that, despite not being the sole copyright holder, Canonical are
+>  free to relicense your code under a proprietary license."
+
+
+"you end up with a situation that
+looks awfully like Canonical wanting to squash competition by making
+it impossible for anyone else to sell modified versions of Canonical's
+software in the same market".
+
+## Client side
+
+Let's get over with the client side of the wayland stuffs.
+The clients windows don't interact with the compositor directly, the
+widget library they use do.
+That's it, you're pretty much forced to use the widgets or to have to
+reimplement the protocol for yourself, rendering of font and everything.
+However, remember that wayland is a protocol, all the compositors implement
+so once a widget library supports the protocol it'll work with all wayland
+compositors.
+
+
+Xlib and xcb are both libraries to write code that interfaces with the
+x11 server.
+They are the helper layer that clients use instead of implementing all the
+specifications and communication of the X11 server. They just include the
+library and call the functions.
+It would be awkward for applications to spit raw X protocol.
+
+
+Most graphical applications don't use those libraries directly, they use a
+widget library such as TK, Qt, FLTK, and GTK, and those have the job or
+handling the lower layer of communication and rendering.
+
+Let's dig a bit into those libraries.
+
+
+Xlib is the classical client library that comes with X11.
+As we've said those libraries help interface with X without having to know
+the protocol.
+Xlib first appeared in 1985, and let's remember here that X was created
+somewhere around 1984. So it's about the same time.
+
+
+It has a lot of helper features so as complex internationalized input and
+output, accessibility, and integration with desktop environment.
+
+Xlib contains an abstraction object or structure called the Display.
+It's a sort of virtual display where graphical operations are done.
+
+Xlib doesn't send all the requests the client does directly to the server but
+stores them in a request buffer instead.
+They are flushed/requested when the one in the queue before them has received
+the response.
+
+We say they are blocking.
+
+Xlib is mostly synchronous but the Xserver replies to the requests
+asynchronously.
+
+This has caused some issues with certain people, especially in the case of
+error handling.
+
+And this is where we are going to introduce XCB because this is the
+major point that the creators focused on.
+
+XCB is pretty recent, it was released in 2001.
+It stands for X protocol C-language Binding.
+
+The library aims to replace Xlib by modernizing, simplifying and
+optimizing it.
+
+The main goal of this project is to:
+Reduce the library size and complexity and provide direct access to the X11
+protocol.
+
+They achieved that by doing multiple things.
+One of the main was to restricting how xcb handles the X protocol omitting
+some extra functionality of Xlib.
+
+They also made xcb asynchronous, just like the X server is, so why not make
+the library too.
+Following that, it goes without saying that this makes it better at handling
+multithreaded applications.
+
+
+Also they minized the complexity of the X extension libraries.
+In Xlib those were moved appart from the main code into their own library,
+a library for every extentsion, for example libXrender and libXcomposite.
+The same was done with XCB, creating libxcb-prefix type of library. However,
+the extension protocols are not hardcoded, they are instead specified with
+an XML description.
+
+XCB is not only lighter, it's also faster.
+
+XCB has a slightly lower-level API than Xlib, its function are generated
+directly from the X protocol descriptions, it maps directly.
+There are separate functions to put the requests into the outgoing buffer
+and one to read the result back from the buffer asynchronously.
+
+This means that there's no queue, and thus allow more flexibility, you are
+not forced to wait for a response anymore, no overhead.
+
+That also means that there are less system calls being made when using XCB
+instead of Xlib, and less packets being sent when running over the network.
+
+I've linked an example in the show notes about the conversion of the xdpyinfo
+tool from Xlib to xcb.
+
+There was a total of 237 system calls with Xlib and only 62 with XCB.
+11554 Bytes being sent over the network with Xlib and 7726 with XCB.
+
+That's quite the difference.
+
+Now how would you make your application faster knowing this fact.
+
+The truth is, you might just need to update your Xlib because 
+
+> Xlib appeared around 1985[citation needed], and is currently used in
+> GUIs for many Unix-like operating systems. The XCB library is an attempt
+> to replace Xlib. While Xlib is still used in some environments, modern
+> versions of the X.org server implement Xlib on top of XCB
+
+> Xlib and XCB compatibility was achieved by rebuilding libX11 as a layer on
+> top of libxcb. Xlib and XCB share the same X server connection and pass
+> control of it back and forth. That option was introduced in libX11 1.2,
+> and is now always present (no longer optional) since the 2010 release
+> of libX11 1.4.
+
+That means that Xlib is compatible with xcb because Xlib is written using
+xcb.
+
+> Calls to Xlib and XCB can be mixed, so Xlib applications can be
+> converted partially or incrementally if desired.
+
+If you want to optimize a slow asynchronous section of your graphical
+application that was using Xlib you can find the hotspot and switch to
+xcb without much hassle.
+
+With this you'll have the perfomance benefit while having the easiness
+of Xlib.
+
+So, all the new window managers using XCB are indeed faster, but in
+theory you could make the others just as light and fast if you pinpoint
+the slow parts and convert them to XCB.
+
+I'm rather interested in doing a benchmark of system calls for all the
+window managers.
+
+----
+
+Both libraries are under the same license, namely MIT license, so they're
+also compatible on that level.
+
+However, the only caveat is that XCB documentation is sparse, there aren't
+many docs and tutorials. The explanation behind this is that it assumes that
+every XCB function is self explanatory and reflext the X protocol.
+
+
+Let's add a note here.
+All of the projects mentioned here are supported by the X.Org foundation and
+the freedesktop.org.
+
+They are all in the same boat: They want to make the Unix desktop better.
+
+They aren't fighting each others.
+Most of the people working on Wayland are also working on X, and same for the
+Xlib and XCB people.
+
+The only exception in the list is with Mir which is a canonical only thing.
+
+
+# Why?
+
+
+Why should this matter?
+
+It's confusing for newcomers to understand the flexibility of the free Unix
+graphical environment.  
+By listening to this podcast you've got the general overview of what fills
+what purpose and all the possible ways to do the same thing.
+
+Now you can make your mind about whether you like something or not and
+you know what to use in what situation.
+
+
+
+
+--(Show Notes)--  
+[Display Server](https://en.wikipedia.org/wiki/Display_server)  
+[X Window System](https://en.wikipedia.org/wiki/X_Window_System)  
+[Xlib](https://en.wikipedia.org/wiki/Xlib)  
+[XCB](https://en.wikipedia.org/wiki/XCB)  
+[Xlib and xcb](https://www.x.org/wiki/guide/xlib-and-xcb/)  
+[Wayland](https://en.wikipedia.org/wiki/Wayland_(display_server_protocol))  
+[why wayland anyway](https://blogs.gnome.org/mclasen/2016/03/04/why-wayland-anyway/)  
+[pdf on graphics](https://events.linuxfoundation.org/images/stories/pdf/lfcs2012_packard.pdf)  
+[pdf on wayland](https://wayland.freedesktop.org/docs/pdf/Documentation-1.3-Wayland-en-US.pdf)  
+[Tuto on learning libxcb](https://www.x.org/releases/X11R7.6/doc/libxcb/tutorial/index.html)  
+[Mir](https://en.wikipedia.org/wiki/Mir_(software))  
+[Mixing calls](https://xcb.freedesktop.org/MixingCalls/)  
+[Nice tools](http://xpt.sourceforge.net/techdocs/nix/x/general/xwin20-XToolsApps/index.html)  
+
+
+Music: bensound.com - Happiness  

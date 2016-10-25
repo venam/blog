@@ -2,7 +2,7 @@
 layout: post
 title:  "Pass Time"
 date:   2016-10-18
-categories: programming
+categories: philosophy
 audio: api.soundcloud.com/tracks/289176391
 ---
 
