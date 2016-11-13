@@ -1,0 +1,227 @@
+---
+layout: post
+title:  "Mind Map Creators On Unix"
+date:   2016-11-13
+categories: unix
+---
+
+
+Mind maps are, from wikipedia:
+
+> A mind map is a diagram used to visually organize information. A mind
+> map is hierarchical and shows relationships among pieces of the whole.
+> It is often created around a single concept, drawn as an image in the
+> center of a blank page, to which associated representations of ideas such
+> as images, words and parts of words are added. Major ideas are connected
+> directly to the central concept, and other ideas branch out from those.
+> 
+> Mind maps can be drawn by hand, either as "rough notes" during a lecture,
+> meeting or planning session, for example, or as higher quality pictures
+> when more time is available. Mind maps are considered to be a type of
+> spider diagram. A similar concept in the 1970s was "idea sun bursting".
+
+
+In Layman's terms, that's just the kind of brainstorm you do on a paper:
+Linking ideas together, creating relations between them.
+
+I'm currently working on a project that requires me to find cycles
+between researches that have correlations that may link them together
+and that is the perfect solution.
+
+I was already doing mind maps but had no clue softwares existed for this
+specific purpose until stark, a nixers forum member, pointed this to me.
+
+So here we go, what are the available mind map softwares on Unix and
+what is there to know about them.
+
+
+-----
+
+
+# labyrinth
+
+![labyrinth]({{site.baseurl}}/assets/mind_map/labyrinth.png)
+
+### Usage:
+
+Let's start with the most lightweight mind map software.  It has a very
+simple gtk interface.
+
+When it opens it presents a list of the previously worked on mind maps.
+There are no other options than opening an old one or creating a new.
+
+The UI is straightforward, nothing fancy.
+
+You only have boxes linked together by lines.
+
+To add a box/idea linked to another one you have to select the box you
+want it linked to then click anywhere and it'll let you input a name
+for it, ESC, and that's it.
+
+You have the choice between text boxes, boxes which you can draw in,
+and images.
+
+You can link and unlink thoughts using ctrl-L.
+
+### Export:
+
+You can only export the project as a PNG image or as a labyrinth project.
+
+### Issues:
+
+It's missing exporting in other formats and the designing part is too
+shallow, it looks blunt.
+
+### Recommendation:
+
+It does the job and only that, moreover it's super small.  If you have
+a small project where you want to instantly brainstorm then that's a
+great option even though it may be confusing for bigger mind maps as
+all the box don't seem to have any hierarchy built-in.
+
+# vym
+
+![vym]({{site.baseurl}}/assets/mind_map/vym.png)
+
+### Usage:
+
+vym has a complex but straightforward UI.
+
+It opens with a map editor, a single yellow node in the middle.  You can
+right click anywhere and choose in the context menu to add nodes that
+are related to the currently selected node; That is a child branch or
+a node on the same branch.
+
+It follow a tree structure and this shows by the way everything is presented.
+The node in the middle is larger than the rest and the lines connecting them
+are thiner as you go deeper within the tree.
+
+The software also has the concept of tasks, that is you can assign status to
+nodes: NotStarted, WIP, Finished. It has a view dedicated for this purpose.
+
+### Export:
+
+There are multiple format to export the mind map to, most notably:
+
+- SVG
+- Text (markdown)
+- Orgmode (the task organizer of emacs)
+- pdf
+- image (all formats)
+- HTML
+
+### Issues:
+
+The one that thing got on my nerves while using it was that my mind maps were
+not necessarily in a tree based structure. Things that come out of your mind
+might not follow the parent children relationship that a tree has it may have
+inner cycles in it - And that's what I was looking for.
+
+Another thing that is to note is that the styling, while being better
+than labyrinth is still blunt.
+
+### Recommendation:
+
+vym is good for organizing tasks, that's what I would recommend it for.
+
+# XMind
+
+![XMind]({{site.baseurl}}/assets/mind_map/XMind.png)
+
+### Usage:
+
+XMind is a proprietary software.
+
+> This software is not licensed. Enter License Key to activate XMind Pro/Plus.
+
+It bugs you about signing up and entering license keys.
+
+Nothing seems to work without it.
+
+### Recommendation:
+
+I wouldn't recommend a non-free software.
+
+# freemind
+
+![freemind]({{site.baseurl}}/assets/mind_map/freemind.png)
+
+### Usage:
+
+Freemind begins by exposing you with the biggest part of the screen
+dedicated to drawing you mind map, a big wide canvas with only a central
+node to stain it.
+
+It is surrounded by the tools that will help you, in the same way that
+gimp does.
+
+You can right click node to edit them or left click to select.
+
+If a node is selected you can press "insert" to add a new node as a child or
+as a node on the same branch. In the same manner vym did.
+
+Also, just like vym, it automatically gives a different style to
+children nodes. However here you got more flexibility with styling.
+
+It's also easier than vym to move the nodes around.
+
+### Export:
+
+One thing that is particularly nice with freemind is the export to HTML.
+There's the flexibility to change the html styling that is going to be
+applied directly from the software.
+
+One thing that should have been mentioned, that is also present in vym,
+is that you can add an anchor url to the nodes.
+
+It supports most formats, multiple HTML ones that you need to try on your own
+to understand the difference.
+Unlike vym, it doesn't support exporting to a text format such as markdown.
+
+### Issues:
+
+Just like all previous programs, freemind doesn't allow to add free-roaming
+nodes and link them to others.
+It doesn't let you have cycles within the graph.
+
+### Recommendation:
+
+freemind is a nice option for mind mapping, if you are sure that your
+ideas are tree-shaped then this is the absolute goto.
+
+# freeplane
+
+![freeplane]({{site.baseurl}}/assets/mind_map/freeplane.png)
+
+### Usage:
+
+Freeplane is my personal favorite between the previous alternatives.
+
+It starts with a clutter free UI, even more than freemind.  
+It actually started as a fork of freemind.
+
+And thus it works in the same spirit, only that it also allows to insert
+floating nodes and linking nodes from different parents.
+
+The styling is also more advanced letting you run wild with your imagination.
+
+And just like freemind, it let's you edit the HTML parts.
+
+### Export:
+
+Every format possible, from pdf, html, to dynamic html, to svg, to ascii.
+
+### Issues:
+
+The only issue I've encountered is that when there are too many children to
+a node moving them will also move other children so that they don't overlap.
+
+### Recommendation:
+
+I would highly recommend it as it's the only one, other than labyrinth, that
+allow floating nodes and doesn't restrict the tree hierarchy.
+
+
+-----
+
+This is it folks, give mind maps a try!
