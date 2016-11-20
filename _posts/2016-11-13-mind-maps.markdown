@@ -223,7 +223,7 @@ allow floating nodes and doesn't restrict the tree hierarchy.
 
 #More
 
-You can finf a full list of mind map softwares on [this wikipedia page](https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software).
+You can find a full list of mind map softwares on [this wikipedia page](https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software).
 
 -----
 
