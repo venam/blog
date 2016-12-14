@@ -40,6 +40,10 @@ strong {
 	font-weight: bold;
 }
 
+[alt='world'] {
+	width: 100%;
+}
+
 ::selection {
 	color: #000;
 	background: #ffb7b7;
