@@ -51,7 +51,7 @@ locally is.
 The frequency factor also accounts for most of the originality, the more an
 idea is well known the less it is original.
 
-Content creation is and additive or combinatory process.  
+Content creation is an additive or combinatory process.  
 Multiple objects are mixed together into a new one.
 
 Those objects can come from anywhere and can be anything, from abstract
