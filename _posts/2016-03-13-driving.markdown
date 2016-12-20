@@ -268,13 +268,20 @@ _Test:_ (tap to play)
 <iframe width='320px' height='468px' src="/blog/driving_beyond.html"></iframe>
 
 _What Can I Do About It:_  
-Don't let them pass, stay relaxed. You are in the right, the limit is 100Km/H.
+Don't let them pass, if there's no place, stay relaxed. You are in the
+right, the limit is 100Km/H.
+
 Nothing's wrong with fighting stupidity.
 
-_EDIT_: It seems to be a law or courtesy on the highway (at least 3 lanes) to
-leave the outermost lane empty and only use it to overtake. The best solution
-would be to leave it empty however we rarely have 3 lanes and when we have
-people don't use it *only* to overtake, they just drive normally on it.
+But by law, on the highway (at least 3 lanes), it's preferable to
+leave the outermost lane (the passing lane) empty and only use it to
+overtake. The best solution would be to leave it empty however we rarely
+have 3 lanes and when we have people don't use it *only* to overtake,
+they just drive normally on it.
+
+We also have no police to deter dangerous behavior.
+
+[Here](http://kunhadi.org/kunhadi/tips_article.php?idtip=28)'s more.
 
 
 * Ant Theory
@@ -335,10 +342,14 @@ _Update 13-12-2016_:
 
 I thought why not linked to more articles:  
 
+[kundhadi trying to save the lives of Lebanese](https://stateofmind13.com/2016/12/17/flugen-rides-kunhadi-trying-to-save-the-lives-mentalities-of-lebanese-youth-who-drink-and-drive/)
 [10 pieces of advice for driving in Lebanon](https://now.mmedia.me/lb/en/blogs/564919-10-pieces-of-advice-for-driving-in-lebanon)  
 [Driving in Lebanon - A Guide](http://www.escapeartistes.com/2012/06/13/driving-in-lebanon/)  
 [Roadtripping Lebanon: It's Grand Theft Auto!](http://www.escapeartistes.com/2012/05/30/roadtripping-lebanon-its-grand-theft-auto/)  
 [Highway to Hell - Traffic in Lebanon is an extreme sport](http://www.peetersooms.com/single-post/2016/11/15/Highway-to-Hell-©-ACDC---1979-Traffic-in-Lebanon-is-an-extreme-sport)  
 [Enquiete Exclusive - Special dangerous driving featuring Lebanon](http://replay-streaming.com/2016/10/03/enquete-exclusive-vitesse-alcool-accidents-sur-les-routes-les-plus-dangereuses-du-monde-en-replay/)  
-According to new statistics Lebanon is second worse country for the death toll of traffic related death ( 1500 deaths in 2015 .)
+According to new statistics Lebanon is second worse
+country for the death toll of traffic related death  and
+it's even more staggering when we look at the number of
+accidents. ([Source](http://kunhadi.org/kunhadi/numbers1.php?lang=1))
 
