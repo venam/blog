@@ -1,0 +1,164 @@
+---
+layout: post
+title:  "Dynamic Evolutionary Psychology Project"
+date:   2016-12-31
+categories: psychology
+---
+
+Hello fellow readers,  
+It is finally up!
+
+### Dynamic Evolutionsy Psychology ###
+
+![scrot_dynep]({{site.baseurl}}/assets/dyn_ep.png)
+
+_Language:Psychology_ 
+
+_Explanation_: My marathon project is finally published.
+
+You can find it at [psychology.wtf](http://psychology.wtf).  
+
+The core of the website is found in the "Data Bank" and "Cycles" sections.
+
+The data bank is a database of easily understandable researches on
+evolutionary psychology, all backed up by references. They are miniature
+summaries of research papers.
+
+The cycles section is an attempt at finding links between correlations,
+to see the big picture of dynamicity in our built-in biases.
+
+> This project aims at people who are interested in evolution and psychology
+> and who are seeking answers to questions related to universalilty in
+> human psychology.
+> 
+> It introduces the field of dynamic evolutionary psychology, a mix
+> of evolutionary psychology and social movements.
+> 
+> However, as a social science, it isn't an exact science.
+> The field is full of theories but even without being fully accurate the
+> project is a way to peak into basic human nature and to ask questions
+> about mundane daily behaviors.
+> 
+> The other goal is to have the explanation as clean, concise, and direct as
+> possible, without concealing anything and without scientific jargon.
+> Anyone should be able to understand those theories and claims without having
+> to go through research papers.
+> 
+> Nevertheless, this is at the cost of sounding wrong in some places.
+
+### I wrote a book ###
+
+![out loud 1]({{site.baseurl}}/assets/out_loud/1.png)
+
+_Language: English_ 
+
+_Explanation_: I mentioned at the end of an [earlier
+post](https://venam.nixers.net/blog/programming/2016/09/15/september-2016-projects.html)
+that I wanted to write more about psychology and philosophy.
+
+There has been a recent event going under the name of
+[nanowrimo](http://nanowrimo.org/) which consisted of writing a novel
+in a month. I wasn't able to fulfil the goal of fifty thousand words but
+I'm satisfied with the product I've got in the end.
+
+It's called "Out Loud", and you can find it [here](https://venam.nixers.net/blog/psychology/2016/11/20/out-loud.html).
+
+It's a small book about deep thinking and monologue exploration.
+
+### Screenshot section ###
+
+![scrot]({{site.baseurl}}/assets/scrots/19.png)
+
+_Language: Unix Ricing_ 
+
+_Explanation_:  In the same [earlier
+post](https://venam.nixers.net/blog/programming/2016/09/15/september-2016-projects.html)
+I also mentioned that I was missing a screenshot section on my blog.
+
+Well, I stayed true to my words:
+
+[Here are my screenshots](https://venam.nixers.net/blog/scrot.html)
+
+# Ascii art new release
+
+![abstract]({{site.baseurl}}/assets/ascii/as29.png)
+
+_Language: ASCII_ 
+
+_Explanation_:  The ascii art quest continues.  
+The latest pack of "impure!ascii" has been released today:  
+[http://pc.textmod.es/pack/impure63/](http://pc.textmod.es/pack/impure63/)
+
+I'm newly exploring abstract art using ascii and it's surprisingly cool.
+
+As usual you can find all my work on github and on [this page](https://venam.nixers.net/blog/asciiart.html).
+
+### Podcast & The newsletter ###
+
+![nixers]({{site.baseurl}}/assets/nixers_activities.png)
+
+_Language: Unix_ 
+
+_Explanation_: I'm pushing the activities on nixers.net.  
+The podcast had 30 episodes in 2016 and I'm planning on continuing in 2017.  
+
+In 2017 I will try to bring more interview-like episodes.
+
+We also started a newsletter at
+[nixers.net/newsletter](https://nixers.net/newsletter).  The aim
+of the newsletter is to aggregate 10 interesting links every week.
+
+So far so good, I hope I'm bringing some value to everyone.
+
+# 2bwm updates
+
+![2bwm](https://raw.githubusercontent.com/venam/2bwm/master/2bWM.png)
+
+_Language: C_ 
+
+_Explanation_: We recently updated many simple details in 2bwm.
+The signal handling is more stable, a restart mechanism using signals is
+now available, and you can finally change the colors using Xresources,
+without recompiling the window manager.
+
+All those are great improvements and they wouldn't have happened without
+the help of the people supporting me.
+
+# Patreon Page
+
+On the subject of support, I've setup a Patreon page.
+
+[patreon.com/venam](https://patreon.com/venam)
+
+I've always been looking for a way to receive donations but none were
+valid medium for the miniature country of Lebanon.
+
+Patreon with the help of Payoneer makes this possible.
+
+The only drawback is that Payoneer takes a $3 fee per transaction.
+
+Thus, if you ever feel like contributing and can't think of anything else,
+or simply feel like it, you can send some cash in my direction.
+
+It'll probably be used to pay for the servers.
+
+
+# What's Next #
+
+
+I recently received an email from the past, one year ago.
+It was sent from the website [futureme.org](http://futureme.org).
+
+It was a striking rememberance of what I've achieved during the year
+and how I've stayed true to myself.
+
+Let's continue on this path and increment on what I've already done.
+
+Thanks for following my blog!
+
+If you want something done, no one's gonna do it for you, use your
+own hands.
+
+And let's go for a beer together sometime, or just chill.
+
+Happy new year!
