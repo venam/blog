@@ -3,6 +3,7 @@ layout: post
 title:  "Originality & Creativity"
 date:   2016-12-14
 categories: psychology
+audio: api.soundcloud.com/tracks/300441122
 ---
 
 
@@ -113,6 +114,7 @@ of combinations.
 
 -----
 
+[How do people get new ideas](https://www.technologyreview.com/s/531911/isaac-asimov-asks-how-do-people-get-new-ideas/)
 [Connecting Things](https://hackernoon.com/connecting-things-3b9f5f79e134#.gblpw2qgk)  
 [The Millenial Whoop](http://qz.com/767812/millennial-whoop/)  
 [Everything is a remix](http://www.youtube.com/watch?v=coGpmA4saEk)  
