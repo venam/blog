@@ -27,6 +27,16 @@
 	<link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon.ico">
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+	<meta name="keywords" content="venam food recipe cooking deliberate psychology philosophy unix blog" />
+    <meta property="og:title" content="venam's cooking"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:image" content="https://venam.nixers.net/blog/assets/recipes/recipe45.jpg"/>
+    <meta property="og:description" content="{{ site.description }}"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="venam's cooking">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="https://venam.nixers.net/blog/assets/recipes/recipe45.jpg">
+
 	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
