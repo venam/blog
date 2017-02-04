@@ -10,12 +10,12 @@
 
     <meta property="og:title" content="venam's blog"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:image" content="https://venam.nixers.net/blog/assets/world.png"/>
-    <meta property="og:description" content="{{ site.description }}"/>
+    <meta property="og:image" content="https://venam.nixers.net/blog/assets/arts/art2.jpg"/>
+	<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="venam's blog">
-    <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:image" content="https://venam.nixers.net/blog/assets/world.png">
+	<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="https://venam.nixers.net/blog/assets/arts/art2.jpg">
 
 	<link rel="shortcut icon" href="{{site.baseurl}}/assets/favicon.ico">
 
