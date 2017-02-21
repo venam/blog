@@ -123,5 +123,6 @@ of combinations.
 [The century of the self](https://en.wikipedia.org/wiki/The_Century_Of_The_Self)  
 [Connections](https://en.wikipedia.org/wiki/Connections_(TV_series))  
 [James Burke](https://en.wikipedia.org/wiki/James_Burke_(science_historian))  
+[Focused and Diffused Thinking](https://youtu.be/WTr12dK2Se0)
 
 -----
