@@ -513,3 +513,11 @@ _UPDATE (2016-10-23)_: Some links related to prediction market.
 * [http://www.nature.com/news/the-power-of-prediction-markets-1.20820]()
 * [https://blog.ethereum.org/2014/08/21/introduction-futarchy/]()
 * [http://mason.gmu.edu/~rhanson/futarchy.html]()
+
+
+_UPDATE (2017-02-27)_: Facebook released a forecast platform.
+
+It is called
+[prophet](https://research.fb.com/prophet-forecasting-at-scale/?) and
+we have yet to see what it's capable of with the amount of resources
+avaible to facebook.
