@@ -1,0 +1,267 @@
+---
+layout: post
+title:  "March 2017 Projects"
+date:   2017-03-06
+categories: psychology
+---
+
+Hello fellow readers,  
+This is the first post of 2017, let's recap what I've been up to since
+the start of the year.
+
+> Show me how you spend your day and I'll tell you what you care about
+
+
+### Newsletter & Podcast ###
+
+![nix]({{site.baseurl}}/assets/nix.png)
+
+_Language:Unix_  
+
+_Explanation_: The newsletter and podcast have been going really
+well. I've received a lot of encouraging, positive, and constructive
+feedbacks.
+
+As of today there have been **12** issues of the newsletter and **8** new episodes
+of the podcast in 2017.
+
+Namely:
+
+* [Unix Shells](https://nixers.net/showthread.php?tid=2047)
+* [WMs and DEs](https://nixers.net/showthread.php?tid=2048)
+* [Unix Ricing](https://nixers.net/showthread.php?tid=2050)
+* [Special Files](https://nixers.net/showthread.php?tid=2052)
+* [Unix Horror Stories](https://nixers.net/showthread.php?tid=2055)
+* [Less Ties](https://nixers.net/showthread.php?tid=2051)
+* [Fonts On Unix](https://nixers.net/showthread.php?tid=2065)
+* [Bits and Words](https://nixers.net/showthread.php?tid=2071)
+
+I'm particularly proud and fond of the "Less Ties" and "Fonts On Unix"
+ones. The first because it got me thinking about a subject that is not
+always discussed in the computing world and the second because I was
+able to clarify an ambiguous topic.
+
+So if you haven't already you can sign up to the newsletter and RSS feed
+of the podcast on those links:
+
+[The newsletter sign up](https://nixers.net/newsletter/)  
+[The newsletter feed](https://nixers.net/newsletter/feed.xml) updated one week after the newsletter is sent  
+[The podcast list on the forums](https://podcast.nixers.net/what)  
+[The podcast feed](https://podcast.nixers.net/feed/)  
+
+
+### EP Cycles ###
+
+![scrot_dynep]({{site.baseurl}}/assets/dyn_ep.png)
+
+_Language:Psychology_  
+
+_Explanation_: My side project on [evolutionary psychology researches
+correlations](http://psychology.wtf) continues. I've added two new cycles
+to the list.
+
+Here they are:
+
+
+* [The Mapping Of What Triggers Aggression](http://psychology.wtf/aggresssion.php)  
+    Which deals with everything I could find that is scientifically correlated with aggression.
+* [The Mapping Of The Influences On Mate Choice](http://psychology.wtf/mate.php)
+    Which deals with everything I could find that is scientifically correlated with mate choice.
+
+As I keep saying and will soon publish in an article, those correlations
+are patterns in human life and the mappings I'm doing are to shed light
+on our nature so that we can take control of our lives and become more
+accepting.
+
+Too many are the ones that misunderstand or even dare to throw erroneous
+ideas thinking they are justified by evolutionary psychology studies while
+in fact they aren't. Those persons are just confirming what happens in
+their own bubble.
+
+More on this soon...
+
+### Attention & Focus ###
+
+![focus]({{site.baseurl}}/assets/arts/art78.jpg)
+
+_Language:Psychology_  
+
+_Explanation_: I sometimes stumble over a question and can't keep myself
+from digging deep into it.
+
+This time I'm interested by scientifically proven ways to increase
+attention while computing.
+
+I'm a skeptical person and not really into the "get more productive now
+in 5 steps" kind of articles. But I got intrigued by this question:
+
+> We say that blurred or tiled wallpapers help focus, but is it proven?
+
+I've opened a brainstorm session for anyone to contribute on a
+[public pad](https://titanpad.com/digital-focus-scientifically-proven-wiki)
+and started [a thread](https://nixers.net/showthread.php?tid=2070)
+for ampler discussion.
+
+I've limited it to whatever is computer related, I'm not a fan of "super
+food that make you focus" and even more skeptical about it.
+
+Though I'm open and currently running anecdotal tests on myself such as:
+
+
+* Monotasking, force myself to one window per workspace
+* Non distracting ambient music
+* Using the `at` for time management of tasks
+* Added a gap at the left and right of the window to allow to view the background color, which is a shade of blue (#5686AA)
+* xflux to avoid the bad effect of the blue shade at night and sleep well
+* Moving text to the top of the page as I read (we read in F shape focusing on the top)
+* Doing my most strenuous tasks between 9am-1pm as it's when we have the most focus
+
+This is a truly fascinating subject.
+
+### New Machine & Less Ties ###
+
+![scrot]({{site.baseurl}}/assets/scrots/20.png)
+
+_Language:Unix_  
+
+_Explanation_: I've recently switched my main work machine and during
+the process I've done a research on computing with less ties.
+
+I've compiled all my research inside a podcast episode you can find
+[here](https://nixers.net/showthread.php?tid=2051).
+
+Be sure to check the thought inducing contributions people have made on
+the forums discussion.
+
+### Books ###
+
+![benedict](http://www.mysteriousbenedictsociety.com/images/book1.gif)
+
+_Language:Language_  
+
+_Explanation_: Most books you read to learn, be it direct or indirect.
+
+Here are the ones I've recently finished or almost finished:
+
+* [Advanced Bash-Scripting Guide](http://www.tldp.org/LDP/abs/html)
+* [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com)
+* [The blank slate - Steven Pinker](https://en.wikipedia.org/wiki/The_Blank_Slate)
+* [Lord Of The Flies - William Golding](https://en.wikipedia.org/wiki/Lord_of_the_Flies)
+* [1984 - George Orwell](https://en.wikipedia.org/wiki/Nineteen_Eighty-Four) (Yeah, I only read extracts before and not the full book)
+* [The Mysterious Benedict Society - Trenton Lee Stewart](https://en.wikipedia.org/wiki/The_Mysterious_Benedict_Society)
+* [Miningness](https://meaningness.com/)
+
+Some of those books are programming books, others are informative and
+scientific, others are sci-fi, others are philosophical/logical, others
+are simply fun.
+
+### Ascii Art ###
+
+![notebook](https://ih1.redbubble.net/image.336940985.1702/sn,x1313-bg,ffffff.jpg)
+
+_Language:ASCII_  
+
+_Explanation_: The ascii [adventure
+continues](http://venam.nixers.net/blog/asciiart.html).
+
+Other than the usual stuffs I've recently built a mini ascii2svg converter
+so that I could get high quality versions of my ascii arts.
+
+[Here it is on Github](https://github.com/venam/ascii2svg/)
+
+With this tool I was finally able to create products
+with my ascii arts on them.  I've pushed my robot army on
+[redbubble](https://www.redbubble.com/people/venam1/collections/665202-ascii-robots?asc=u).
+
+### Horrible Website ###
+
+![Horrible]({{site.baseurl}}/assets/scrots/21.png)
+
+_Language:ASCII_  
+
+_Explanation_: We had a hackaton with the MENA devs group and during
+the night I developed a "horrible website"
+
+It was so much fun, beer, pizza, and code.
+
+You can find the page
+[here](https://rawgit.com/venam/mena_devs_night_horrible_website/master/index.html)
+and the code
+[here](https://github.com/venam/mena_devs_night_horrible_website). It's
+simply an mashup of multiple horrible things.
+
+### Patreon ###
+
+![patreon]({{site.baseurl}}/assets/patreon.png)
+
+_Language:Value_  
+
+_Explanation_: I've wondered for a long time if people would pay for the
+things I value and give away. For that reason I've created a [patreon
+page](https://patreon.com/venam).
+
+If this thing works out, it would be a sort of passive income which
+would allow me to push more of the stuffs I already do.
+
+The drawback is that, unlike what I expected, the fee of transfer
+is higher. It amounts to ~$16 per transaction with payoneer as the
+gateway. But it's not that much of an issue as long as I transfer once
+every few months.
+
+It's still something great that I'm looking forward to.
+
+Thanks again to the people who support me, be it monetary or not.
+
+### Nixers ###
+
+![nixers]({{site.baseurl}}/assets/forums.png)
+
+_Language:Community_  
+
+_Explanation_: The nixers community is going well.
+
+We might have a lower post count and activities on the forums but the
+ones we have are excellent.
+
+These days I'm trying to bring suprising topics that everyone can
+tackle. I want  to make it more vibrant. This has arguable effects...
+
+On a side note, I still don't have access to the domain name and I am
+waiting for it to expire so that I can transfer it.
+
+This poses certain issues such as the newsletter emails considered as
+spam by some providers. I hope to fix that as soon as we get the domain.
+
+We would also be able to open a mail service.
+
+On the topic of communities, I keep wondering about the balance between
+the number of dreamers and acters, when some are thrilled by changes
+and others aren't, etc..
+
+These are a couple of links that have helped me clear my mind:
+
+* [Geeks, Mops, and Sociopaths](https://meaningness.com/geeks-mops-sociopaths)
+* [Group Work](https://venam.nixers.net/blog/programming/2015/09/25/group-work.html)
+* [Intentional Communities](https://aeon.co/essays/like-start-ups-most-intentional-communities-fail-why)
+* [Product Life Cycle Management](https://en.wikipedia.org/wiki/Product_life-cycle_management_%28marketing%29)
+* [Isaiah's job](https://mises.org/library/isaiahs-job)
+
+-----
+
+### Now ###
+
+I'm happy with the direction my life is taking, I'll keep going on the
+same track, iterating, polishing, incrementing.
+
+However I remain open for changes.
+
+Spring is coming and life is springing from everywhere.
+
+Today I started cleaning up the garden, I'll soon plant stuffs like
+last year.
+
+As usual...  
+If you want something done, no one’s gonna do it for you, use your
+own hands.
+
+And let’s go for a beer together sometime, or just chill.
