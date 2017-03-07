@@ -140,12 +140,16 @@ The answers are irrelevant, non sensible. The parts we're removing
 interact with one another, they are the vibrations of the instruments in a
 symphony.
 
+Or more like particles in a cloud.
+
 It's frightening at first to realize that the musicians of our music hall
 aren't directly chosen by us. Our brains can't handle this amount of
 interdependencies.
 
 Furthermore, we can't choose our own thoughts: We cannot think of an idea
 before it emerges in our head.
+
+And at the same time we truly do!
 
 We're tackling the domain of free will.  
 We could go down the blank slate hole, but we wouldn't get out with an
@@ -174,9 +178,26 @@ To take this a step further, this essence can live on after death.
 Others remember your path, not in an analogous way and maybe not in a direct
 way, but as a movement in a stream.
 
+The essence is us and not ours at the same time.
+
 We are new movements, new notes.
 Our existence doesn't make sense without the environment.  
-You are your environment, the environment is you.
+You are your environment, the environment is you.  
+But you are also you and the environment itself.
+
+
+> So, what is going on here? The world is not objectively divisible into
+> separate objects. Boundaries are, roughly, perceptual illusions, created
+> by our brains. Moreover, which boundaries we see depends on what we are
+> doing—on our purposes.
+> 
+> However, boundaries are not just arbitrary human creations. The world
+> is immensely diverse. Some bits of it stick together much more than
+> other bits. Some bits connect with each other in many ways besides just
+> stickiness. The world is, in other words, patterned as well as nebulous.
+> 
+> Therefore, objects, boundaries, and connections are co-created by
+> ourselves and the world in dynamic interaction.
 
 
 ### Spirituality
@@ -185,15 +206,18 @@ You are your environment, the environment is you.
 I am not following any religion.  
 God is not a concept that I find convincing, it's a social construct.
 
-Existentialism makes people believe and do all sorts of things.  
-However, what I'm proposing here is concrete and beautiful.
+Existentialism and eterinalism makes people believe and do all sorts
+of things. However, what I'm proposing here is concrete and beautiful.
 
 We are above physicality, we are metadata and exist only as concepts, in the
 same realm as mathematics - at least our essence is.
 
+And there is no definition to this essence.
+
 We are the connections that happen within a timeline of streams of connections.
 
 This is spirituality.  
+Though without spirits and nebulous.  
 There's no need for religion.
 
 Grasping the concepts and ideas, the understanding and awakening to a world
@@ -202,12 +226,20 @@ beyond physical, is deeply heart shaking.
 We have social connections with one another, but what should we make of
 other kinds of connections - Connections that happen without thoughts.
 
+Connection we control but at the same time don't.
+
 When we stop interacting, stop processing... When we meditate.  
 Being rather than doing.
 
 The universe mirrors itself in us, it reflects on its own endeavour.
 
+Are we still?
+
 What does it mean to live and to die.
+
+There are boundaries and at the same time aren't.
+
+We're only left with a nebulous answer.
 
 
 ### ...
@@ -236,3 +268,12 @@ What are we...
 
 
 </pre>
+
+* [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus)
+* [Mereological Essentialism](https://en.wikipedia.org/wiki/Mereological_essentialism)
+* [Essentialism](https://en.wikipedia.org/wiki/Essentialism)
+* [Self](https://meaningness.com/self)
+* [Boundaries, Objects, Connections](https://meaningness.com/boundaries-objects-connections)
+* [Neither objective, nor subjective](https://meaningness.com/neither-objective-nor-subjective)
+* [Identity](https://en.wikipedia.org/wiki/Identity_(philosophy))
+* [Wheel of fortune](https://meaningness.com/wheel-of-fortune)
