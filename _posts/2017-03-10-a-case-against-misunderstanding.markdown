@@ -40,6 +40,9 @@ From make belief to salacious thinking, all of those fall into the same
 category: Individuals who are afraid of vagueness, that need a system
 as a stronghold to their values, and a group to reinforce them.
 
+They abuse valid scientific studies and morph them into monstruous
+allegations.
+
 Let's take the case of _"all women are like that"_. It is a strict system
 built around the presumption that all women act in the exact same manner.
 
@@ -56,17 +59,41 @@ follow the scriptures.
 There's nothing in any evolutionary psychology studies that ostentatiously
 put forward anything close to _"all women are like that"_.
 
+There is, on the contrary, some patterns indeed, but only as vague
+blue prints.
+
+We do have biases, insofar as generalisation is concerned, this is not the
+issue, the issue is with the cherry picking and contorted declarations.
+
 It's probable that they only perceive the section of truth that suits
-them, discarding the rest into the abyss.
+them, discarding the rest into the abyss, and amplifying what asserts
+what they believe _ought_ to be the truth, what follows the direction
+that pleases them.
 
 The situation with all the other cretinous ideas I mention is symmetrical.
 
-Some of those sit on opposite end of the spectrum but share the same
+Some of those sit on opposite ends of the spectrum but share the same
 criteria: they are extreme distorted world views.
 
-It is ironic that an extreme idea always needs another extreme idea
-on the other side of the spectrum to balance it and start an arms race
-against it.
+What one side picks or discard from an evolutionary study almost always
+has other studies clarifying it.
+
+There needs to be an understanding that those studies complete and join
+with each others and that real life is more ambiguous than studies. Many
+factors join and branch out to form our behavior.
+
+For instance, there is a saying in behavioral genetic that no trait is
+100% heritable, but that heritability is caused by many genes of small
+effects and is a coin toss away from influencing behavior.
+
+However, unlike the farcical ideas we mentioned, those "influenced
+behaviors" are *not unidirectional*, they intertwine and complete each
+others. They are nebulous.
+
+Now to put that in perspective with the extreme stances.
+
+It is ironic that an extreme idea always needs another extreme idea on the
+other side of the spectrum to balance and start an arms race against it.
 
 The hilarity lies in the fact that the persons who join one end may think
 they are reducing the effect of the other end while it's the opposite:
