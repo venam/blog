@@ -114,15 +114,17 @@ of combinations.
 
 -----
 
+[Exactitudes](http://www.exactitudes.com/index.php?/series/overview/)  
 [How do people get new ideas](https://www.technologyreview.com/s/531911/isaac-asimov-asks-how-do-people-get-new-ideas/)
 [Connecting Things](https://hackernoon.com/connecting-things-3b9f5f79e134#.gblpw2qgk)  
 [The Millenial Whoop](http://qz.com/767812/millennial-whoop/)  
 [Everything is a remix](http://www.youtube.com/watch?v=coGpmA4saEk)  
 [Everything is a remix website](http://everythingisaremix.info/)  
-[You thought you were special](http://andyouthoughtyouwerespecial.ml/)  
+[You thought you were special](http://andyouthoughtyouwerespecial.tk/)  
 [The century of the self](https://en.wikipedia.org/wiki/The_Century_Of_The_Self)  
 [Connections](https://en.wikipedia.org/wiki/Connections_(TV_series))  
 [James Burke](https://en.wikipedia.org/wiki/James_Burke_(science_historian))  
-[Focused and Diffused Thinking](https://youtu.be/WTr12dK2Se0)
+[Focused and Diffused Thinking](https://youtu.be/WTr12dK2Se0)  
+[Are.Na](https://www.are.na/)  
 
 -----
