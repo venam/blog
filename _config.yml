@@ -1,10 +1,10 @@
 # Site settings
 title: Venam's Blog
-email: patrick@iotek.org
+email: x7e1@psychology.wtf
 description: > # this means to ignore newlines until "baseurl:"
   A deliberate person's ideas and concepts
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://venam.nixers.net" # the base hostname & protocol for your site
+url: "https://venam.nixers.net" # the base hostname & protocol for your site
 github_username:  venam
 highlighter: rouge
 
