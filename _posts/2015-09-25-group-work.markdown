@@ -979,3 +979,4 @@ More information on those links:
 * [Game theory](https://en.wikipedia.org/wiki/Game_theory)
 * [Evolutionary psychology of parenting](https://en.wikipedia.org/wiki/Evolutionary_psychology_of_parenting)
 * [Evolutionary psychology](https://en.wikipedia.org/wiki/Evolutionary_psychology)
+* [Developing ethical, social, and cognitive competence](https://vividness.live/2015/10/12/developing-ethical-social-and-cognitive-competence/)
