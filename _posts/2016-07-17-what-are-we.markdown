@@ -272,6 +272,7 @@ What are we...
 * [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus)
 * [Mereological Essentialism](https://en.wikipedia.org/wiki/Mereological_essentialism)
 * [Essentialism](https://en.wikipedia.org/wiki/Essentialism)
+* [The Essence of Peopling](https://www.ribbonfarm.com/2015/04/08/the-essence-of-peopling/)  
 * [Self](https://meaningness.com/self)
 * [Boundaries, Objects, Connections](https://meaningness.com/boundaries-objects-connections)
 * [Neither objective, nor subjective](https://meaningness.com/neither-objective-nor-subjective)
