@@ -1,0 +1,819 @@
+---
+layout: post
+title:  "Licenses on Unix"
+date:   2017-06-04
+categories: unix
+podcast: 1
+podcast_mp3: 
+podcast_ogg: 
+---
+
+# Licenses on Unix #
+
+(Transcript of the [podcast](https://nixers.net/showthread.php?tid=2087))
+
+
+# Intro #
+
+
+The world of licenses is the legal world, a world where the literal
+meaning of words is important and where all the crevasses are exploited.
+
+I'm not a lawyer, nor have I studied laws, and whatever I say will be
+based on what I understood from my reading.
+
+In this episode we're going to do a small overview of the topic of
+licenses on Unix. But beware, a "small" overview in the legal world is
+quite heavy!
+
+
+## What's a license ##
+
+
+Let's first define what's a software license.
+
+From wikipedia:
+
+> A software license is a legal instrument (usually by way of contract law,
+> with or without printed material) governing the use or redistribution
+> of software.
+
+The software license can be distributed on paper or in digital form and
+usually contains rules granting or removing rights, imposing restrictions,
+that the users of the software should agree to or otherwise would commit
+copyright or license infringement. Licenses can also contain some lines
+about liability and responsibility from both party, the software provider
+and the users.
+
+In sum it's a contract.
+
+Legality falls under the laws of the country and so they might vary from
+one place to the other. All countries can have their own jurisdictions.
+
+For instance the Marshall Islands have 0 copyright laws.
+
+Beyond that, there are some international treaties that are signed by some
+countries to mutually respect copyrighted materials such as the treaty
+of the Berne convention and the World Intellectual Property Organization.
+
+Let's not discuss too much the legality and more about some interesting
+stories and stuffs related to Unix that you might fancy.
+
+
+## The first licenses used on Unix-like systems - History ##
+
+
+In the 50s till the 70s-80s it was common for computer programs to
+be shared with their source code, it was the norm. Everyone had the
+permission and the ability to modify the software for their specific
+usage.
+
+There were even organizations of users and suppliers that got formed
+around sharing the softwares such as SHARE and DECUS.
+
+This changed around the end of the 60s when the competition in the
+software world got tighter. Usually it was the hardware manufacturer that
+shipped the software with the hardware it was producing but independent
+software distributors started selling the software untied to the hardware.
+
+A court case filled in 1969, started in 1975, and finally dropped in 1982:
+US vs IBM, stated that bundling hardware with software was anticompetitive
+and brought monopoly to the marketplace (Tell that to the DRMs of today).
+
+And so some of the software industry of the 70s and early 80s began
+distributing binaries and proprietary packages - Taking measures to
+limit the copying and spreading of their softwares so that they could
+keep their marketplace.
+
+While the software is distributed this way, as binaries that is, it
+cannot be studied nor changed.
+
+Unix wise, before 1975, all the Research Unix that Bell Labs produced
+were for internal use only.
+
+It was only in 1975 that the first source license for UNIX V5 was sold
+to the University of Illinois Department of Computer Science, UIUC.
+
+This was a great move for the university of Illinois because they started
+working on implementing ARPANET on those Unix machines, creating the
+RFC 681, for NETWORK UNIX, with FTP and telnet clients. The first Unix
+later to included them was BSD.
+
+At the time, Bell Labs wanted to sell licenses but for non-university
+users it wanted to sell them at $20K which was very expensive.
+
+The V6 version of UNIX did turn that around and was the first commercially
+successful UNIX. It remained the most widely used version into the 80s.
+
+V7 superseded it later in 1978, but V6 still remained the most used.
+
+As we've said, at those time the source code was available to anyone
+who got the software, and so it was a great tool to teach in universities.
+
+The license they provided with the software didn't explicitly said
+anything special about sharing the source, licenses for softwares didn't
+mean much yet.
+
+One of the university who got hold of UNIX V5 in 1974 was the university
+of Berkely. Now you might wonder, "that's before 1975", yes it is, because
+no license was sold to Berkeley, at least not yet. It all happened because
+a teacher named Bob Fabry was teaching a course about OS principles and
+took UNIX as an example. It was more like an informal notice written by
+the developers themselves.
+
+One year later, Ken Thompson, one of the creator of UNIX, visited the
+university and helped install UNIX V6 on the machines they had.
+
+Some students got quite found of the system and began improving it and
+adding softwares they liked. Bill Joy was one of those students.
+
+Because other universities became interested in the work they were
+doing with UNIX at Berkeley, in 1977, Bill Joy and friends compiled a
+distribution of all the addons over V6 and distributed it under the name
+BSD: Berkeley Software Distribution.
+
+Finally in 1980 the US established in its law that computer softwares were
+copyrightable. Before that softwares were not considered nor intellectual
+property nor copyrightable, they were open ideas for everyone.
+
+Actually, this process didn't really start in 1980 because in 1976 there
+were already copyright acts related to softwares it was just that they
+weren't all agreed on yet. Let's say it started in 1976 and got settled
+in 1980 because they wanted to make sure that softwares embodied an
+"author's original creation"
+
+So from this point onwards you could claim that a software was yours
+instead of distributing binaries or do nasty tricks to deter your users
+from sharing it. Now you have the laws behind you, at least in the US.
+
+In 1983, a hacker at the MIT AI lab, Richard Stallman was a bit frustrated
+with how the software industry and users were closing themselves. And
+so he announced a project called GNU, which aim was to release a free
+operating system. In 1985, he released the GNU Manifesto, which was an
+explanation of the GNU philosophy, the base definition of free software,
+and the "copyleft" ideas.
+
+But still in the 80s UNIX was the corporate norm, it was what
+organisations liked.
+
+And what do organisations do when something becomes popular, they try
+to regularize it.
+
+It needed regulations because everyone was customizing their own versions
+and brand of Unix-like system. It was creating too many rivalries and
+doing more harms than good.
+
+There were mainly two groups that appeared trying to do that:
+
+* In 1984 there was the X/Open Company, which was a consortium of several
+  European UNIX systems manufacturers. Their aim was to create a single
+  specifications for all UNIX. The members were big players.
+
+* In 1988 there was the OSF, Open Software Foundation, a not-for-profit
+  organization in the U.S. also to create open standard for implementing
+  UNIX systems.
+
+The two of them joined way later in 1996 to form the Open Group, with
+500 members. They hold a sort of public approved certificate saying what
+is UNIX and what isn't, the term is trademarked by them.
+
+Anything that has the term UNIX is licensed under their system to have
+this name, which comes with royalty fees.
+
+And this Open Group brand fee isn't cheap...
+
+To register your product to the trademark license you have to pay at least
+$2.5K plus a $1K annual fee and more payments for a bunch of other things.
+
+It's good to know that in 1997, the Open Group got hold of the
+responsibility of the X Window System too.
+
+Now back in time, in 1989, after all the legislation and standardisation
+happening, the guys at Berkeley were still distributing their softwares,
+the BSD, it had already reached version 4.3
+
+However, they were paying fees to AT&T, the parent company to the Bell
+lab, that got very expensive.
+
+Yep, mobile companies are all tycoons.
+
+Now if you remember the University of Illinois made the specs for Unix
+networking and it got implemented first in BSD. Many people requested
+this networking code without the hassle of licensing and so that's
+what the BSD did, they crafted a custom license - the BSD license -
+to distribute their Net/1 code.
+
+The BSD license is very permissive and allows the source code to be
+modified, reused and to be sold, which was perfect for the industry.
+
+In 1991, they got fed up with AT&T and rewrote all the standard Unix
+utilities under the BSD license so that they would not be tied to any
+copyright.
+
+They named it 386BSD.
+
+But you don't get away from a titan without a scar, AT&T sued them
+for infringing copyrighted material, they filled the lawsuit in 1992:
+USL v. BSDi.
+
+This dealt a blow to the BSD communities and slowed their development.
+
+BSD wasn't a good choice for corporates now.
+
+A year before that lawsuit, in 1991, a student named Linus Torvalds
+was working on a kernel named Linux, a UNIX clone, which he decided
+to release as free under the license Stallman created, the GPL - GNU
+General Public License. Together joined with the userland utilities that
+the GNU project had it created the GNU+Linux operating system.
+
+It had no ambiguity with the license and attracted the attention of
+volunteer programmers and spread because of the open community and sharing
+of ideas, much like the first days of Unix with university students.
+
+Then, one year after it had started, in 1993, the case USL v. BSDi lawsuit
+was settled out of court and the FreeBSD and NetBSD projects emerged.
+
+Once the BSD code base was released it got widely adopted as the base
+of many proprietary Unix variants, as it did before, all of that because
+of how easy and permissive the BSD license is with commercial use.
+
+Still today several operating systems choose to use softwares under
+the BSD license for the same reasons, macOS and iOS being two well
+known examples.
+
+In 1995, the Apache HTTP Server, commonly referred to as Apache, was
+released under the Apache License 1.0 which is also a permissive BSD-like
+license that allows commercial use.
+
+It was used to undergird the advent of the world wide web.
+
+In 1997, Eric Raymond published The Cathedral and the Bazaar, which was
+more or less putting into words what the hacker community loved about
+in the sharing of softwares.
+
+This book was one factor that incited Netscape to release their internet
+suite software under a free license. Which is why we have the whole
+Mozilla ecosystem today, and a key event that influenced others to
+release free and open source softwares after that.
+
+The Mozilla license is GPL compatible, very permissive but at the same
+time doesn't allow to change the software without sharing the source code,
+this is the idea of "copyleft" that the GNU project envisioned.
+
+In 2002 a company named Santa Cruz Operation, SCO, released the source
+code of some Ancient UNIX relicensed under a BSD license.
+
+SCO was the "first Unix company", founded in 1979 and filled bankruptcy
+in 2007, it used to port many UNIX softwares to many platforms.
+
+One fun use of that release was on the Nintentdo Game Boy Advance which
+was made to run V5 UNIX using a PDP-11 emulator.
+
+It is also a great way to learn about operating system theories.
+
+...And this is where we are now.
+
+You might be questioning yourself a lot about licenses.
+
+Just like BSD has relicensed itself, and SCO relicensed their UNIX,
+how is relicensing possible?  What do those licenses really mean?
+What are the ones used today?  What should I know?
+
+
+## Licenses today ##
+
+
+### First Thoughts ###
+
+
+According to the Free software foundation there are only two big
+categories of software licenses, they are either proprietary or free
+and open source.
+
+That's a very narrow view of the matter, a black and white fallacy,
+as we'll delve into later on.
+
+But for the moment let's just presume it is true.
+
+According to this entity's chosen distinction, the difference between a
+free and open source software and a proprietary one lies in the rights
+granted to the users.
+
+A free and open source license being one that allows both modifying and
+reusing the software, which as a premise implies that the source will
+be somehow available.
+
+Then, again according to their distinction, a proprietary software is
+everything else.
+
+But what about softwares without licenses, an unlicensed software.
+
+Is it outside of the copyright protection, is it in the public domain?  
+What if that software is an internal trade-secret software used inside
+the company?
+
+There are no correct answer to this, it depends first on the country
+and second on the court choice during the legal appeal.
+
+In sum: it's complicated.
+
+In the US, a software distributed without license is fully copyright
+protected and thus you can't legally use it until the right has been
+granted.
+
+That's as long as there is an owner to the software, which is usually
+before the copyright expires. Some countries like the United States have
+a limited lifetime for copyright. When the copyright or patent expires
+it falls under the public domain.
+
+A patent being a right to a certain type of invention, which is again
+a vague term. There are other legal mechanism too such as legislation
+and trademark.
+
+What about softwares distributed on Github without license, you may
+ask. Well, yes, beware, that this also applies here.
+
+Under most international treaties, such as the Berne convention, an
+author automatically obtains the exclusive copyright to anything they
+have written, even rights over derivative works.
+
+So remember to always add a license to your projects when pushing them.
+
+However it's also not as simple as that, someone using a software without
+license can win a court appeal and the copyright can be waived away. The
+legal border is thin because releasing anything without license is not
+like releasing with a license.
+
+The only true way to relinquish a software into the public domain is to
+do it explicitly via a license such as the CC0, creative common zero or
+the WTFPL, what the fuck public license.
+
+That way you're assured to have completely lost ownership, trademark,
+and patent to the software.
+
+You must be explicit about whatever you do so that you stay in accordance
+with the country's laws.
+
+
+### In a license ###
+
+
+So what's inside a license, what varies from one to the other?
+
+Licenses are contracts that or extend the legislation of the citizen
+of a certain country over the software or widen their rights over the
+software - rights that would otherwise be disallowed by default copyright.
+
+So yeah, you've got the base laws of the country and the license over it.
+
+Many licenses only enumerate those basics rights that the user already has
+under law. But keep in mind that the rights you have as a citizen cannot
+be taken away if they conflict with a license, that's simply not possible.
+
+Free software licenses are said to be more or less non-contractual
+extensions as they aren't an agreement between parties but that remains
+to be contested as they are still an agreement. We'll see later on in
+this podcast, someone has to be held accountable for infringement.
+
+For instance, citizens in the US that owns a software have the
+explicit right to use the software with a computer even if that software
+accidentally makes copy of itself. You are legally entitled to own copies
+of a software you own.
+
+There's also a first-sale doctrine in the US that grants middleman,
+resellers the right if they own something to resell or rent it even
+if they are copyrighted material as long as they own it, which is
+not the case with proprietary software. This is called "distribution
+right". However it's vague how it applies to digital goods as an item
+can be copied indefinitely.
+
+In the European Union the laws differ where a copyright holder cannot
+oppose the resale of a digitally sold software.
+
+Where that is more of a play-on-words is when an end-user isn't the owner
+of the software. That is the precise definition of a proprietary software,
+a software you are borrowing and not owning.
+
+The software technology might be patented for instance.
+
+The intellectual property rights remain with the entity that provided
+the software and thus a proprietary software doesn't give you the same
+right as a citizen as a software you own.
+
+In that case the user has to sign an EULA, end-user license agreement,
+with the digital good owner to be able to use it, otherwise without
+accepting the license the user may not be able to use the software at all.
+
+An EULA is yet another contract between the end-user and the licensor
+that establishes what rights the user has.
+
+Most of the time it is about liability, holding the software
+distributor non-liable for damage or the user liable for infringement,
+and restrictions, which can range from forbidding reverse engineering,
+benchmarking, to limiting the number of users and the number of devices
+the software can be used on, etc..
+
+Free softwares also have EULA that is part of the license, we'll see
+those in a bit.
+
+A nasty way of including the EULA is to do it in a shrink-wrap manner. The
+term "shrink-wrap" means that the EULA cannot be read before the product
+is actually bought. Which means that if the users don't accept the license
+they won't be able to use the software and would have paid for nothing.
+
+So what's in a license really?
+
+* The basic rights of your country
+* Who owns it
+* What rights and restrictions the end-user has such as modifying,
+  reselling, benchmarking, sharing it
+* Who is held liable
+* What responsibility the owner has
+* What responsibility the user has
+
+
+### The scale ###
+
+
+Depending on the way those previously mentioned liabilities, rights,
+and restrictions are set the license is said to be more open and free
+or less open and free.
+
+This is a better realistic approach than the mundane dichotomy the free
+software foundation discusses.
+
+There's actually a lot of nagging over the definition of what is truly
+"free software".
+
+The arguments are about those: how permissive the license is, the
+requirement for redistribution, if the license is copyleft/share-alike
+or not, if the license allows derivative work, if the license allows
+selling the software or using it for advertisement, etc..
+
+We often hear about "Free and open source software" which is a actually
+a vague umbrella term for softwares that provide liberty to their control
+and are open source.
+
+It's truly confusing because the distinction between open source and
+free software is nebulous, it's more philosophical than practical because
+they describe almost the same things.
+
+Depending on who defines them they might mean different things. It's a
+philosophical war and using "Free and open source software" doesn't make
+anyone cry and that is why it's used a majority of the time instead of
+simply "open source" or "free software".
+
+Some examples organizations and groups that put those definitions together
+are the free software foundation, FSF, the OSI, open source initiative,
+the Debian project, the BSD project, etc..
+
+They all have different guidelines and definitions for "free and open
+source" software licenses.
+
+But generically they all allow to use the code for any purpose, modify
+it, and redistribute it, which is normally forbidden by default copyright.
+
+What they also have in common is how they're perceived by the communities
+using it for how they decrease costs, increase security and stability,
+privacy, and control.
+
+Free and open source softwares often live surrounded by a community of
+contributors.
+
+Now let's talk about some of the philosophies.
+
+The Open Source Initiative is an organization that derives it's license
+norms from the Debian Free Software Guidelines.
+
+They hold a list of licenses that they "certify" open-source.
+
+Their definition is:
+
+> An open-source license is a type of license for computer software and
+> other products that allows the source code, blueprint or design to be
+> used, modified and/or shared under defined terms and conditions.
+
+Most of the other popular free and open source licenses are approved as
+open source, for instance:
+
+* Apache License 2.0
+* BSD 3-Clause "New" or "Revised" license
+* BSD 2-Clause "Simplified" or "FreeBSD" license
+* GNU General Public License (GPL)
+* GNU Library or "Lesser" General Public License (LGPL)
+* MIT license
+* Mozilla Public License 2.0
+* Common Development and Distribution License
+* Eclipse Public License
+
+On the side of the FSF, which also holds a list of licenses agreeing to
+their views, they perceive everything that isn't in their definition of
+free software as an unfair shadow of what they are trying to achieve by
+bringing liberty in the software world.
+
+They define free softwares in terms of liberty and not price.
+
+For them liberty is based around community sharing and respect of
+individuals, which lies, in practicality, inside licenses as the concept
+of copyleft aka share-alike.
+
+A copyleft is an additional clauses that requires users who modify the
+code to also redistribute the modifications under the same license as
+the original software.
+
+This way it protects all derivative works from drifting and losing the
+original permissions and be used in proprietary programs.
+
+Now what about the BSD side.
+
+The BSD camp has yet another position on licensing.
+
+They despise copyleft licenses and dismiss them as overly complicated
+and restrictive.
+
+It is true that copyleft licenses has an insane amount of clauses in their
+licenses compared to the usual 4 that you find in the BSD license family.
+
+The BSD license is simple and permissive, it's simply about acknowledging
+that there was an original author and to keep this license so that the
+author is credited for his or her work.
+
+Some even consider the term "permissive license" is synonym with anything
+that is a BSD license.
+
+The BSD license family is liked because it can be use in proprietary
+softwares, as we've mentioned before.
+
+The supporters of the BSD license argue that it's more free than copyleft
+licenses because it grants the right to do anything with the source as
+long as there is attribution to the authors.
+
+But then according to this definition the public domain is more free
+than the BSD license.
+
+In the end it's all philosophy.
+
+
+### License compatibility ###
+
+
+Because the BSD license only requires you to give credits to the authors
+without imposing any limitation on the usage it can be used in proprietary
+softwares, as we mentioned before.
+
+That means the license can be modified by adding new clauses to it as
+long as they don't conflict with the previous clauses.
+
+For instance MATLAB is based on MathWorks which is distributed under the
+BSD license but has an extra clause limiting it's usage to the proprietary
+MATLAB which renders all contributions useless outside of MATLAB.
+
+BSD licensed code can also be included in copylefted softwares by added
+the clauses related to copyleft. That's what we refer to as compatible
+licenses.
+
+The FSF indeed has the BSD license under its list of licenses that are
+considered free.
+
+But it doesn't work the other way around, code under GPL cannot be
+relicensed under a BSD license without the consent of the copyright
+holders.
+
+For this reason the BSD camp avoids at all cost to include anything
+under the GPL license in their distribution. They've recently switched
+from GCC to the Clang/LLVM compiler.
+
+Another reason is that GPLv3 includes new clauses about patent and
+trademark which some individuals try to avoid. Some stay with the
+softwares under the v2 some switch to the BSD licenses.
+
+Several major FOSS projects like the Linux kernel, MySQL, BusyBox Blender,
+VLC media player decided against adopting the GPLv3.
+
+According to some stats, which are contested, between the 90s and 2000s,
+during the dotcom bubble, the GPLv2 was the most widely used license
+with a 42.5% usage rate.
+
+In 2015 according the same company who made the first stats accompanied
+by Github this time said that it's now the MIT license that is the most
+used and GPLv2 being second.
+
+Other stats from Fedora in 2016 shows that the most used licenses in their
+packages are under the GPL license, and second place the MIT license.
+
+Those stats shows that depending on where they are used some licenses
+are more favored than others.
+
+
+## Some odd questions ##
+
+
+Let's answer some odd questions.
+
+
+- Can an open source software be used for commercial purposes?
+
+Sure as long as the license doesn't limit you for what you want to do
+commercially. But beware that commercial is not equal to proprietary
+some licenses don't allow you to place extra restrictions on the user.
+
+- Can I call my program "Open Source" or "Free Software" or "X"?
+
+It's probably better to avoid that if your license isn't listed as an
+approved on that organization or group website. You have the right to
+call it whatever you want but that would confuse people too much.
+
+That applies even if you have just changed a few words or added one
+clause, any small change implies it's now a different license.
+
+- Can I use the code that a minor releases as open source?
+
+This falls back to the laws of the country related to liability and
+copyright. In a lot of countries the copyright is usually transferred to
+the legal parents who will sign and handle everything, just like with
+the parents of child stars. So when using the software of a minor you
+are actually dealing with his or her parents.
+
+- Can I have many licenses on a single software?
+
+What it's referring to is called multi-licensing and the answer is yes
+but that depends.
+
+Multi-licensing is the practice of distributing a software under two or
+more different set of terms and conditions.
+
+If someone wants to use the software they can choose whichever license
+pleases them.
+
+Where it becomes tricky is when that license is permissive and allows
+adding terms to it.
+
+The original distributor is then not allowed to include the changes of
+a contributor that changed the license until all the original licenses
+are compatible and not contradictory with the original one.
+
+The GPL goes a long way with that not allowing code under GPLv3 to be
+used with code under GPLv2 is it doesn't include the "any later version"
+statement for instance.
+
+Multi-licensing is common in scenario where a free software company wants
+to make business, they release a software under a free license and another
+license which allows to create proprietary softwares but has royalty fees.
+
+This is a sort of business model of companies that use free softwares
+and want to remain the single-vendor of it.
+
+There are many examples of multi-licensed softwares, MySQL, FreeType
+are good ones.
+
+- Can I swap the license along the way?
+
+The short answer is yes, but again that depends.
+
+If you own *all* the code then you can re-release the software under
+any license you want. That includes suddenly making a software under
+GPL into a proprietary one.
+
+The problem that arises is when you include patches, fixes, and parts
+of code you don't own into your _first released free_ software.
+
+Now if you can prove those contributions are benign/not-significant
+and that the free and open source license discussed or didn't discuss
+the topic of contributions then you might be able to prove the code is
+still all yours, the original author.
+
+Otherwise, you will have to contact the other contributors so that they
+relinquish their software to you, a legal agreement so that they give
+you ownership of the code they wrote.
+
+That's why in some communities, like the FreeBSD and OpenBSD camps and
+also the Linux kernel, copyright assignment is considered bad taste so
+there's none.
+
+What if someone still uses the prior free and open version?
+
+Then this person is still able to make changes to the software as they
+wish, they are able to use it just like the prior license implied,
+the new license doesn't apply to the old one.
+
+That is one of the reason sometimes projects get forked.
+
+A good recent example is Oracle that now owns MySQL and so the community
+forked it as the MariaDB project.
+
+
+## Legal Battles ##
+
+
+There are many examples of legal battle fought over free and open source
+licenses. Free software licenses have indeed been tested in court and
+their validity hasn't been contested.
+
+BusyBox is one interesting example.
+
+Busybox is a wrapper of many core utilities that is under the GPL.
+
+> In 2007 the Software Freedom Law Center (SFLC) announced it has filed the
+> first ever U.S. copyright infringement lawsuit based on the violation
+> of the GPL on behalf of its clients, two of the original developers
+> of BusyBox, against MoonSoon Multimedia Inc.
+
+This arose because MoonSoon Multimedia publicly said that they were using
+BusyBox but were not releasing the source code of it to comply with GPL
+copyleft clauses.
+
+The case was settled and BusyBox won, making MoonSoon Multimedia pay fees
+and release the related source code. This was the first time compliance
+with GPL was brought to court.
+
+
+## Tips and tricks ##
+
+
+Let's give out some tips to choose the right license.
+
+
+There are websites which make it easy to search amongst licenses and
+understand their terms without having to read all the crevasses in
+them. However, like all summaries they don't go into all the details.
+
+Checkout: [tldrlegal](https://tldrlegal.com/) and
+[choosealicense](https://choosealicense.com).
+
+There's also a tool called [fossa](http://fossa.io/) which helps keep
+track of what licenses you are using so that you comply with them.
+
+
+# Conclusion #
+
+
+Legality is a deep subject.
+
+There are two books in the show notes that go into more details:  
+"Understanding Open Source and Free Software Licensing"
+
+Which is a freely available book I haven't read but skimmed through. It
+goes over all the different licenses and discusses their ins and outs.
+
+The second one, also free, is "Fundamentals of software licensing".
+
+This podcast was truly insightful for me, it answered a lot of questions
+I had and I hope it did for you too.
+
+Cheers.
+
+------
+
+* <https://en.wikipedia.org/wiki/Software_license>
+* <http://itlaw.wikia.com/wiki/Computer_Software_Copyright_Act_of_1980>
+* <https://en.wikipedia.org/wiki/List_of_countries%27_copyright_lengths>
+* <https://en.wikipedia.org/wiki/International_copyright_treaties>
+* <https://en.wikipedia.org/wiki/Category:Copyright_law_by_country>
+* <http://www.historyofinformation.com/expanded.php?id=1157>
+* <https://en.wikipedia.org/wiki/Version_6_Unix>
+* <https://en.wikipedia.org/wiki/Ancient_UNIX>
+* <http://www.ece.ubc.ca/~gillies/mail/dbgillies_ken_thompson.txt>
+* <http://minnie.tuhs.org/cgi-bin/utree.pl?file=V6>
+* <https://web.archive.org/web/20090219220353/http://www.tuhs.org/Archive/Caldera-license.pdf>
+* <https://en.wikipedia.org/wiki/End-user_license_agreement>
+* <https://en.wikipedia.org/wiki/File:Software_Categories_expanded.svg>
+* <https://en.wikipedia.org/wiki/First-sale_doctrine>
+* <https://en.wikipedia.org/wiki/Proprietary_software>
+* <https://en.wikipedia.org/wiki/Open_source_software_license>
+* <http://www.openacs.org/about/licensing/open-source-licensing>
+* <https://opensource.org/licenses>
+* <https://en.wikipedia.org/wiki/BSD_licenses>
+* <https://en.wikipedia.org/wiki/Creative_Commons_license>
+* <https://en.wikipedia.org/wiki/Derivative_work>
+* <https://en.wikipedia.org/wiki/Share-alike>
+* <https://www.gnu.org/licenses/>
+* <https://www.gnu.org/licenses/gpl-faq.en.html>
+* <http://www.rosenlaw.com/lj16.htm>
+* <https://cr.yp.to/publicdomain.html>
+* <http://www.rosenlaw.com/lj16.htm>
+* <https://cr.yp.to/publicdomain.html>
+* <https://en.wikipedia.org/wiki/Public_domain_software>
+* <http://stackoverflow.com/questions/5521080/can-i-use-the-code-in-a-github-project-which-does-not-have-a-license-specified>
+* <https://en.wikipedia.org/wiki/World_Intellectual_Property_Organization>
+* <https://torquemag.io/2013/03/busybox/>
+* <https://busybox.net/license.html>
+* <https://lwn.net/Articles/478258/>
+* <https://en.wikipedia.org/wiki/Free_software#Business_model>
+* <https://en.wikipedia.org/wiki/Free_software_license>
+* <https://en.wikipedia.org/wiki/Free_Software_Foundation>
+* <https://en.wikipedia.org/wiki/Free_and_open-source_software>
+* <https://en.wikipedia.org/wiki/Business_models_for_open-source_software>
+* <http://www.opengroup.org/openbrand/Brandfees.htm>
+* <https://www.techdirt.com/articles/20100306/1734078452.shtml>
+* <https://en.wikipedia.org/wiki/Multi-licensing>
+* <https://en.wikipedia.org/wiki/GPL_linking_exception>
+* <https://en.wikipedia.org/wiki/GNU_General_Public_License#Compatibility_and_multi-licensing>
+* <http://softwareengineering.stackexchange.com/questions/55326/can-you-change-a-license-once-you-pick-one>
+* <http://softwareengineering.stackexchange.com/questions/264702/software-license-change-after-version-change>
+* <https://www.quora.com/Can-you-take-an-open-source-software-modify-it-and-sell-it-if-the-license-is-GNU-GPL-or-MIT>
+* <https://tldrlegal.com/>
+* <https://choosealicense.com/>
+* <http://fossa.io/>
+
+* "Understanding Open Source and Free Software Licensing"  <http://www.oreilly.com/openbook/osfreesoft/book/index.html>
+* "Fundamentals of software licensing"  <http://euro.ecom.cmu.edu/program/law/08-732/Transactions/Fundamentals.pdf>

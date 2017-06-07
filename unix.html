@@ -5,19 +5,25 @@ layout: default
 
 <!-- home content -->
 <div class="home">
+
+
   <ul class="post-list">
 	<!-- start list posts -->
-
         <div style="text-align:center;">
-                <a href="{{ site.baseurl }}/unix.html">Press For Unix Articles Only</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                <a href="{{ site.baseurl }}/index.html">Press For Disabling Unix Only</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
         </div>
+
     {% for post in site.posts %}
+        {% for category in post.categories %}
+        {% if category == "unix" %}
       <li>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         <span class="post-meta post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
       </li>
+        {% endif %}
+        {% endfor %}
     {% endfor %}
 	<!-- end list posts -->
   </ul>

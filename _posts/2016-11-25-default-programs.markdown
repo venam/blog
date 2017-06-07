@@ -3,6 +3,7 @@ layout: post
 title:  "Default Unix Programs"
 date:   2016-11-25
 categories: unix
+podcast: 1
 podcast_mp3: http://podcast.nixers.net/feed/download.php?filename=nixers-podcast-2016-09-251.mp3
 podcast_ogg: https://raw.githubusercontent.com/nixers-projects/podcast/ogg/nixers-podcast-2016-09-25.ogg
 ---

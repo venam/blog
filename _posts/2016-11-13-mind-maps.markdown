@@ -3,6 +3,7 @@ layout: post
 title:  "Mind Map Creators On Unix"
 date:   2016-11-13
 categories: unix
+podcast: 1
 ---
 
 

@@ -1,0 +1,598 @@
+---
+layout: post
+title:  "Ricing"
+date:   2017-06-04
+categories: unix
+podcast: 1
+podcast_mp3: 
+podcast_ogg: 
+---
+
+
+# Unix Ricing #
+
+(Transcript of the [podcast](https://nixers.net/showthread.php?tid=2050))
+
+Get the power back! - or so they say
+
+# Intro #
+
+We've had an episode about display servers and libraries and then we
+had another episode about window managers and desktop environments,
+and so the next logical step is to do one about ricing and customization.
+
+This is what we're going to do today in the company of xero, neeasade,
+and halfwit.
+
+xero: I'm xero, I hangout on the nixers forums, I'm an OP on the IRC,
+I also do some text arts, and other stuffs you might know me from,
+I post screenshots all over the place wether you want to see them or not.
+
+neeasade: Neeasade here, been on the nixers forums for a few years and
+Rice a bit as well.
+
+halfwit: Alright, I'm halfwit.
+
+So ricing, what's the deal about? What's the fuss about?
+
+That's what we're going to discuss.
+
+
+# How do you define ricing #
+
+There aren't many definitions around the internet about ricing truly
+means and what it implies. It's a sort of vague term.
+
+But here's what some have to say...
+
+For example on /rice/, on the infinite (8chan), it will describe it as
+"the art of making your desktop or phone look pretty by installing
+softwares or modifying configuration files".
+
+So what do our speakers have to say about this?
+
+neeasade: I'd say rice is about control, ultimately, and that relaxing
+feeling of knowing that you can edit the visual and programmatic aspects
+of your system to your liking. Exerting that amount of control that you
+can have is relaxing.
+
+xero: Rice is that vibe!  You see a wallpaper that you really like or
+you see a colorscheme or even sometimes one individual color and then
+you have that ability to tweak aspects of the way you interact with your
+computer to fit that *vibe* you're thinking of. So if you're doing a dark
+grey scheme you would theme every component of your system to meet and
+join together in that visual style. Ricing is tweaking your environment
+to feel a certain way and _necessarily_ look and act that way too.
+
+
+# History (traceback) #
+
+This truly sounds poetic but is there a history behind the term rice,
+can we trace it back?
+
+When did we truly start using it in the computing world.
+Is it related to eating or growing rice?
+Or is it related to the car customization culture in Japan?
+
+xero: That ricing car culture. Ricing was a term that they used for
+when you would sup up and asian type of car. It was like a derogatory
+term with rice. The ability to sup up a machine and put after-market
+parts on your car to make it run better and be more efficient. It's this
+one to one comparison because that's what you're doing to your computer:
+You're installing those after-market components to make it run differently
+and potentially be more optimized or more streamlined, or at least just
+tweaked to the desire of the person who is in control. I don't know if
+it's true or not, I like the flip to it now where people are now using
+the term "beaning", and "ricing" has now become about the visual style
+while beaning is about tweaking your workflow and your underlying stuff
+to try to optimize it more than visuals... But I don't know if that's
+true or not.
+
+neeasade: Completely agree! You hit on it being a sort of derogatory
+term, it was adopted in a kind of cheeky manner. "Haha yeah, totally,
+ricer over here!"
+
+xero: I also wonder how much of that was derogatory to early screenshot
+culture. I've been a wordy person online and I think that I saw more
+screenshots of old computers from Japanese people specifically before I
+saw American or Western culture online but I don't necessarily know if
+_our_ term rice has anything to do with it.
+
+venam: I don't know if the term rice was used the most, why would someone
+make the comparison "You're ricing your desktop like you're ricing your
+car", and neither where it exactly appeared, but what's strange is that
+it took off - It took off as a sort of meme. Historically we can say
+that customizzing, not ricing, was there for a long time - as long as
+Unix probably existed. Customizing your environment has existed for a
+long time.
+
+halfwit: If you look at something like Winapp from the Windows days, we
+would have custom skins for that all the time. To me that was probably
+where it really first started. You have those cool custom skins and it
+looks crazy good. It kinda took off from there, I guess.
+
+venam: We mentioned ricing, then beaning, and there's another term
+"milking". So how do you define those 3 terms, are there any differences,
+and where did they come from. I think beaning was probably "invented"
+on nixers.net.
+
+xero: Yes, that was totally a jmbi word. It was in that one screenshot he
+did where all the wallpapers had that orangy-brownish kind of color. He
+had 3 black terminals and one of them had "lolcat" text in big letters
+that said "BEANS" because everyone was talking about the rice meme. It
+was an inside joke.
+
+venam: How I personally see it: Ricing would be more visual, beaning
+woul be more about workflow, and milking would be about low level
+"milking the machine", taking whatever resources you can from it.
+
+neeasade: Personally I dismiss the use of the terms that attribute them
+to levels of rice, system level rice vs visuals/aesthetic ricing. For
+me that's all ricing, whatever.
+
+venam: Let's go back on jmbi's story, the one where just mentioning
+beaning in a screenshot to make it take off. It shows how any random
+screenshot or any event on the internet can spur some new ideas and new
+memetics/movements. It's very interesting to think about.
+
+xero: In the rice sub-culture, specifically, it takes a lot of taste, or
+not - weight. Any one screenshot that is really good and really popular,
+a thousand people will mimic that setup and do something similar, or
+just straight up take that configuration from that person and use it on
+their machine. Because they can! That person gave it away for that exact
+reason, they wanted someone else to have it. When you go to /r/unixporn
+in January and it's all i3 posts, then you go in February and it's all
+xfce posts, then it's all 2bwm or windows utility. We get trends in our
+scene just like there are trends in the music scene, and other types
+of life. One screenshot being really powerful and influence all those
+people that's that person capturing that magic of rice. They really did
+make a super cool, super aesthetically pleasing setup that inspires so
+many other people.
+
+
+# The misconceptions and non-misconceptions #
+
+So rice does indeed have a vague definition more anchored in social
+movements than in standards wiki pages.
+
+Now let's tackle the misconceptions and non-misconceptions about rice
+in general.
+
+Is it just a peackock challenge.
+Is it all just show off?
+Will people tell you to install gentoo?
+The "oh I'm going so fast changing those compile flags" meme.
+Will you look like a 1337 hacker ricing?
+Does changing your wallpaper and icons make you a real ricer?
+
+neeasade: I think when people make fun of Gentoo it's like when people
+think of Arch users "Oh man you made it through the default install"
+because if you haven't ever dealt with partitioning or if you've only
+ever been guided by a graphical installer initially then the first time
+you do that you feel like "oh I've just done something foreign and it
+feels difficult so I better go post about it". Then enough people did
+that and it became a meme. That's where it went from there.
+
+halfwit: It's almost like a rite of passage for some people. It's their
+first point of pride, which might not be interesting, aesthetically as
+a rice, but it's their first crack at it. They just want to share.
+
+venam: Talking about the rite of passage, one thing that is not a
+misconception is that just changing your wallpaper and icons doesn't make
+you a ricer. That's not a misconception, it's a thing in the movement.
+
+xero: That's not a misconception, that IS a fact! If there's one thing
+that bugs me the MOST is the first screenshot post on /r/unixporn or
+screenshot threads, maybe I'm a jerk, but I like to downvote those post as
+a point of pride. When you look at a screenshot where you can tell that
+the person worked at least a day trying to get every single component
+of their system to look the same and then you have another person that
+installs the operating system, hanges the wallpaper, and maybe if you're
+lucky, changed their icon theme or installed the wallpaper of another
+operating system unto theirs. That stuff makes me mad. It's definitely
+excitement like halfwit said. People themselves aren't doing it in a
+mean spirit, they're not trying to negate the things that are the good
+parts of the sub-culture but they're just so excited because they were
+finally able to try and do something. They want to be a part of something
+bigger than themselves.
+
+neeasade: "Thou shall learn through the downvote."
+
+venam: The non-misconception is that if your desktop is too blend,
+if it's too flat, if it's too "non-special", then it doesn't enter the
+category of ricing.
+
+xero: If you want to be technical then yes, but I think the act of
+tweaking and changing stuffs *is* rice. When a person is going through
+steps to try and get to that point, maybe it won't be a good rice, maybe
+it is, "baby's first rice" as they say, but it's not a _quality_ rice.
+
+halfwit: The issue for me is that when you go on something like
+/r/unixporn and you look at all of the high voted posts all of a
+sudden there's just that old boring baby's first rice and it's nothing
+interesting. It doesn't really contribute to the community growing or
+changing as a whole.
+
+# The why you rice #
+
+Ok, so you better build a system where every part is nicely fitting with
+the one next to it to be considered a true ricer.
+
+But why would you do that, why spend the time customizing everything.
+
+Why do you rice?
+What is the reason behind your ricing?
+And that I think may depend on how and what you perceive rice to be defined as.
+
+neeasade: I think mine mostly matches up with my definition which was
+about exerting that amount of control over your system. That's why I
+rice, to have a relaxing feeling and working towards the goal, which is
+usually a visual goal but not necessarily, it's also about high focus,
+let's make all the elements consistent in a certain way to I can that
+one consistent screenshot and "BAM look hey guys, here's my goal and
+I did it all, it's not completely gross but it's _my_ kind of gross,
+my shell scripting". It's all wrapped up together.
+
+xero: I remember my first personal computer was an Apple II GS, it
+didn't have a harddrive so you had to boot it from a floppy and there
+was a command prompt where you only typed 2 commands ever to mount the
+floppy drive and to run whatever program was on it. It had the most
+heinous blue background with this white text on top of it and I always
+really wanted to change those colors and I strived to figure out how. My
+early formative years of trying to learn stuffs about computers was about
+trying to change the way they looked more than anything practical. When
+I started using Windows computers later I used hex editors and all types
+of homemade tools to try and rip apart DLLs and application files to
+change the colors and images. I had a totally hacked up version of Mirc,
+different images for the icons, and all the GUI was black. 'Cause my
+type of rice is black'on'black or shades of grey. As I moved to Linux,
+things were designed and setup for you to be able to tweak them the way
+you want to. You didn't have to break your computer to try to make it
+look the way you want to. That's when I really fell in love with modern
+Unix based systems, a lot of things were designed for you to come in
+and edit them and change them.
+
+neeasade: Yes, you can just open an editor and change stuffs without
+worrying it won't boot the next day.
+
+xero: So it definitely started with my desire to have things my way
+but I don't think that's the reason that I keep ricing, I've already
+achieved that goal.I keep ricing because I keep getting inspired by
+seeing life. You look at a painting and you see a movie, sometimes you
+get inspired to create something from something else that you've seen. In
+my recent screenshot, I've seen someone else the same day that had a
+nature-kind wooden background with 3 of 6 colors of the major palette
+that were beautiful. So I took those 3 colors and changed the other 3
+and made my own better palette that matched a different wallpaper also
+nature inspired. Then I made a whole theme inspired by someone else's. I
+keep ricing because I get inspired...and I get bored with the way certain
+things are, certain window managers work, or I get too comfy sometimes
+in a setup, then I need to shake things up. On nixers we have community
+that just tries to get people involved in doing stuffs and I like to do
+those challenges. There was a last one where I challenged everybody to
+make a monochrome colorscheme. So yeah, I keep ricing and keeping other
+people to rice because it's fun doing it. It's a cool way to show your
+indiviuality and at the same time to have a group dynamic while doing it.
+
+halfwit: For me it was along the same lines. I wanted that absolute
+control over everything to a point where I'm a little bit anal about it
+(baby crying in the background - definitely no control over that). The
+workflow, of let's say a default i3 always felt cludgy to me and the
+aesthetic wasn't quite exactly what I wanted so I started looking,
+searhing, and finding all these thumbs I could tweak and within a month
+or two I just felt limited. I started looking into other things, and
+other things, and ended up on dwm for a while, from there I found window
+managing utilities, and I've gone completely crazy.
+
+venam: What's special about Unix is that you can put parts together
+and jam them into a pipeline or if it's visual you can make them
+work together. So that's the best things, the freedom is my main
+reason. Putting parts together is very interesting it's like playing
+Lego, you can get creative with them by finding which parts go with
+which. Which then later leads to an increase in productivity. The _main_
+big, my main reason is about going away from expectations, going away
+from the boring old things. I hate being limited.
+
+halfwit: It's fun that you talk about the pipeline and how composable
+everything is, it's a part that I also absolutely love. That flexibility
+to combine these things in novel and interesting ways.
+
+neeasade: Talking about Legos I thought it's really good when someone
+makes a modular and flexible Lego, it's fantastic. About the inspiration
+part of xero, it is also a source of drive for me when I see nice color
+themes or different aesthetic or styles. There's a guy that posted a
+bevel bar setup, his panel, windows, etc.. were trying to bevel. And
+that day I wanted a bevel desktop. Then I sat all day trying to send my
+desktop back into the 80s.
+
+
+venam: The modularity part is very cool.
+
+
+# The how do you rice #
+
+We talked a bit about the why.
+Now here comes the how?
+How do you rice, where do you check for resources?
+Are there steps you usually go through?
+Some cool tips you want to give to other ricers.
+
+Here's one tip that I personally want to mention and it's about
+consistency, everything in a rice should be consistent.
+
+So please choose the applications that go the best together. That's why
+you should avoid using different widget libraries for your graphical
+programs.
+
+xero: RTFM, read the manual that's step number 1 in ricing and in
+using computers in general. If you don't know how the application
+works how do you expect yourself to use it properly. It's like the Lego
+pieces, if you don't know how each tools in the pipeline are supposed
+to work together how do you expect to be able to put them together
+to work correctly. Research how things work and are supposed to work
+before you can figure out how you can make a chain of multiple of them
+work together. For ricing specifically, a lot of the time I look for
+examples. If the author of the tool gives a config file of their own
+it's the first thing I look at before the manpage. If it's a new tool
+I've seen from a screenshot then the first configuration I'll try will
+be the one of the person that made that screenshot for that tool I
+haven't seen before. A lot of the time I check the config file before
+even reading the manpage but reading the manpage shows you other options
+that undoubtedly aren't in that config file because nobody hits or rarely
+have every single option in one file.
+
+neeasade: Agree, the rice channel compiles a list of resources where
+at the top it's written "how do you do this" and the first thing is
+"google it". Figure out how to read the manual and make sure you're
+comfortable and go from there.
+
+xero: That's true if you want to get support for anything. If you join
+the IRC channel of any project and you ask them a question about the
+configuration of their software they expect you to have done your footwork
+research first and to know the specificities. Or else they're gonna tell
+you to RTFM before to even try to talk to you. That's not always true,
+not everyone is super mean, but in a lot of cases they do expect you
+to have done at least some efforts on your own before asking for help,
+and I respect that.
+
+neeasade: This definitely affect the quality of feedback you receive
+from questions and their perception of how far you've done research on
+your own. If it's "Oh my first place to ask was here" then you may not
+get a warm welcome.
+
+venam: Let's put things back in perspective. If someone doesn't
+know anything about ricing I don't think they'll go directly to
+the configuration, I think they'll first need to get somewhere to
+get inspired. There are a lot of those places such as /r/unixporn or
+8chan/rice or nixers.net. Then after getting inspired you have the "How
+do I do this thing" moment. Then comes the time to learn how things work,
+you get acquainted with your surrounding, you modify settings step by
+step. Little by little and then reuse and recycle, get inspired and
+restart. That's the whole cycle of things.
+
+halfwit: Exactly, a lot of things are about playing with the little knobs
+and finding out what did what. Eventually you end up on something that
+you like.
+
+venam: Also, at some point you may want to list the things, a list of
+actions/configurations/changes you want to apply on your system. There
+are a bunch of wikis that do that, listing resources about the shells,
+the window managers, the colors, the fonts, etc.. It helps get ideas
+about whatever you could possibly do.
+
+xero: That comes out of your perception of how you are artistically
+crafting your operating system, it comes with your level of knowledge
+about the system that you're using. If you're going to install an OS
+that has a full desktop environment from the start like Ubuntu or Linux
+Mint it's different then when you install a linear system that doesn't
+anything other than the base where you're going to have to install Xorg
+and install the window manager, etc.. Component by component. A more
+baseline system like a Debian net install or an Arch Linux type. I started
+with a setup where you had a system that already existed and to change
+your window manager was to replace a large component of a system that
+already existed. It was good in the formative years but now that I already
+know the window manager and tooling that I want to use to create my own I
+don't have to install a lot of other unecessary window managers. At least
+for the time when I'm focused on one compared to another one. That makes
+my system smaller and leaner and now I understand every component and
+there's low maintenance level. You only have the things installed that
+you actually actively use. I don't install things I don't need otherwise
+it becomes cruft, it becomes bloat, as we say in the chat rooms. Then
+the first task in ricing is to decide what components you want your
+system to have and then to configure them. Inspirationg being a big
+part of that decision, seeing how different things work through videos
+and screenshots. That's the fun and exciting part of ricing, to want to
+try new things. You then get shown the linuxbbq cream live cd that has
+76 window managers pre-installed and configured and it blows your mind.
+
+venam: Definitely starting from scratch is a good tip for new users. Do
+you have other tips other than "don't freak out if you think you broke
+it or that you're missing stuff".
+
+xero: Step 1 is about understanding, as said before. Know exactly
+what you're changing. You should be able to undo those changes you've
+made and "unbreak" your system. If you keep good backups and you
+destroy your computer you should be able to recreate it and continue
+from where your backup was before. A lot of people are really scared
+about the possibility of breaking something so it keeps them away from
+taking risks, they'd rather be safe. You're never gonna succeed in and
+you're never gonna make bonds in life if you always play it safe. I
+originally started with virtual machines, booting an OS in virtualbox
+or another partition. Partitioning makes it more easy to replace one of
+the pieces. If there's one partition with photos, videos, mp3, documents,
+etc.. then the OS partition can get blown up a 100x and you'll still have
+those important files that you don't want to loose if your computer gets
+messed up. Proper planning with disaster recovery, backups, segregating
+what files are where, and understanding what you're doing are steps that
+can help take risks and possibly get some gains. You can even continue
+on that step even further and reach that zen of you having no personal
+files on your system. You can boot today, boot it tomorrow and it can be
+it's own unique beautiful snow flake every single time. To do that you'd
+have to completely segregate your digital life from the computer. To have
+a USB drive that holds your small amount of file, or to have a VPS that
+you would connect to or mount within your own machine. Your computer
+itself can become transient. I have a lot of friends that are starting
+to live with Tails where everytime they boot their operating system
+it's completely run from a ramdisk. Everytime they boot it's started
+over. And they built a layer on top of that where once they boot they
+apply their layer that sets up their customizations that are autonomous
+from the operating system.
+
+
+# The extreme cases and stories #
+
+Perfect segway to the extreme cases of ricing stories.
+
+We got some nice tips, now let's discuss our favorite extreme cases in
+the world of ricing be them positive or negative. The ones that inspire
+us in a good way or in a bad way.
+
+neeasade: It's been entertaining to watch z3bra's path from ricing on
+desktop to system level ricing, to custom containers, to writing a
+package manager, to writing a whole bunch of C utilities. It's fun to
+check in on him from time to time and see what he's up to lately.
+
+halfwit: I'm always reminded of that one guy who did absolutely everything
+in a framebuffer. He had a pdf viewer, a web browsers, and everything,
+it's not the most beautiful rice but it certainly fits that.
+
+venam: My personal favorite is vain. vain is that dude who wrote his own
+window manager, his own terminal emulator, his own bar, his own shell, he
+did everything from 0 to the end. It's all his, nothing is not customized.
+
+xero: It's hard to pick the most extreme examples. I used to love hearing
+tales about vimrc files where they had over 2K lines in one config file
+for one tool. The text editor has become its own sentient being. So
+many config in a single file, you've gone beyond the level of ricing to
+almost writing a new tool on top of your tool. Another extreme is the
+stuffs you could see on the gdesktop threads before they got banned with
+all the creepy lolicoon stuffs. I feel like every single window doesn't
+have to have an anime character in it. Maybe it does and maybe I don't
+understand their state of mind. People can take that stuff to the extreme,
+using the exact same element on everthing that you have in your OS. The
+same shows and anime characters in every single window, from web browser,
+to terminal, the corner of your pdf viewer, that takes it to the extreme.
+
+neeasade: As they say "no wifu no lifu".
+
+venam: Let's go to the other side of the spectrum the extreme negative
+cases. My personal one is the beginner ricer, the one where they "want
+to go full minimalist" and then you find out that they installed two
+components of two different desktop environments. Second example is
+about beginners that follow step by step processes tutorials, the kind
+of articles "7 easy steps to follow", and then come on IRC to cry about
+the broken part of their system.
+
+neeasade: "Hey guys I'm new to this I just installed Arch and Numix icons,
+isn't that the best thing ever? I know it is, thanks!"
+
+xero: I want to virtual bitch slap those people! 15 downvotes in one
+click! In ONE time, drop the guillotine on that stuff.
+
+neeasade: I got a creepy rice story. I did see a screenshot where
+someone had made an RMS (Richard Stallman) emulator chatbot and they
+were asking it about their day and stuffs. It was posted on Github at
+some point. Part of what was feature was the ascii art that brought up
+the face of Stallman in the terminal to reply to your queries.
+
+xero: I'm all for ascii art... but man, creepy Richard Stallman ascii
+art talking to you I think I remember seeing that too.
+
+
+# Now what? #
+
+Let's move to the now what.
+What's the current state of ricing, where do you see it going.
+what are the trends we currently see today?
+
+neeasade: The current trend that I see a lot is about people writing
+their own theming system. It's been happening for a while in the past
+couple months. It has increased in frequency. Template systems where you
+can rotate themes, and they all vary in flexibility and what you can do
+with it. It's intersting to see how people can customize their system,
+be it template, or compile, or meta insertion mechanism.
+
+xero: You're the trendsetter. You were one of the first person I saw
+working on a project like that. I have to admit I love seeing the butthurt
+anger between people's choice of programming languages or template system
+in those setups too. And then people create counter projects where they
+take almost the exact same schema and just changing what the backend is.
+
+halfwit: I find that we've been going towards a lot of tools that do
+smaller things such as wm utilites for example. It seems like it's going
+towards programs themselves being modular and controllable.
+
+xero: It's the Unix philosophy, man! Everything should do one thing and
+do it well without worrying about the rest of the pipeline or before. It
+only focuses on its one purpose in life to be exactly and the best
+version of that.
+
+neeasade: From a desktop/WM perspective it's very useful. When you stumble
+upon some utility and you know you have the perfect use for this. "Thank
+you person who wrote this I'm gonna use it in my script over here".
+
+venam: There's definitely a trend for those small utilities that you can
+jam together. There's also a trend for removing the control out of the
+window manager and using a third party. There's a trend for auto-theme
+setters. Aestetically speaking we see a lot of minimalist interfaces or
+on the other side of the spectrum we get that flat-like UI.
+
+xero: Another trend is about custom sysinfo scripts. A little bit of
+ascii art plus statistics. More people are making their own custom one
+instead of using the classic screenfetch of archey.
+
+neeasade: Been pretty exciting to notice that.
+
+halfwit: I definitely look forward to what's coming next. A changing landscape.
+
+xero: I hope we're gonna keep going in a direction where new ideas
+arise and people are gonna try new things. Inventing new styles, new
+utilities and new ways to do things. Let's continue to progress forward
+instead of going stagnant and everybody just copying from each other and
+having cookie cutter screenshots. Let's have new and innovative ideas
+in the scene.
+
+venam: It's only on Unix that you can find the distinction between
+a dislay server and window manager and all the utilities plus the
+choices. It's only on Unix that we can innovate the human computer
+interface and interaction. I hope in the future we can find new ways
+other than stacking and tiling. Whatever novel way we can find.
+
+xero: Yeah, for each their own favorite type of interaction.
+
+halfwit: Cater the system to who you are rather than cave to the system.
+
+venam: That's a positive aspect of rice. That's what the community brings
+and it has some value.
+
+
+-----
+
+* Music
+
+<https://soundcloud.com/creativecommon/fly>
+
+-----
+
+* <https://rizonrice.github.io/resources>
+* <http://blog.micahcowell.com/blog/basics-of-ricing>
+* <https://fun.irq.dk/funroll-loops.org/>
+* <https://nixers.net/showthread.php?tid=1566>
+* <http://archive.is/a36v>
+* <https://github.com/thelostt/ricing>
+* <https://www.reddit.com/r/unixporn/wiki/index>
+* <https://github.com/nixers-projects/ricerous>
+* <https://wiki.installgentoo.com/index.php/GNU/Linux_ricing>
+* <http://help.unc.edu/help/unix-customizing-your-environment/>
+* <https://www.cs.odu.edu/~zeil/cs252/f16/Public/custom/>
+* <http://unix.stackexchange.com/questions/6628/what-customizations-have-you-done-on-your-shell-profile-to-increase-productivity>
+* <https://rizonrice.github.io/resources>
+* <http://blog.micahcowell.com/blog/basics-of-ricing>
+* <http://apcmag.com/create-totally-custom-linux-desktop.htm/>
+* <http://8ch.net/rice/>
+* <https://rizonrice.github.io/resources>
+* infinity chan
+* /g/rice creepy stories
+* <https://github.com/laserswald/backflip>
+* <https://p.iotek.org/d14>
+* <https://github.com/halfwit and https://github.com/ubqt-systems>

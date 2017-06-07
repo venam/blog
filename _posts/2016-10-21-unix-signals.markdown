@@ -3,6 +3,7 @@ layout: post
 title:  "Unix Signals"
 date:   2016-10-21
 categories: unix
+podcast: 1
 podcast_mp3: http://podcast.nixers.net/feed/download.php?filename=nixers-podcast-2016-10-181.mp3
 podcast_ogg: https://raw.githubusercontent.com/nixers-projects/podcast/ogg/nixers-podcast-2016-10-18.ogg
 ---

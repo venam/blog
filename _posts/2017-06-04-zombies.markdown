@@ -1,0 +1,296 @@
+---
+layout: post
+title:  "Zombies"
+date:   2017-06-04
+categories: unix
+podcast: 1
+podcast_mp3: 
+podcast_ogg: 
+---
+
+# Zombie Processes #
+
+(Transcript of the [podcast](https://nixers.net/showthread.php?tid=2091))
+
+
+# Intro #
+
+
+You check your processes and see some hanging around with a weird status
+and using no resources. You don't know if you should remove them or
+not. Then you try removing them and it doesn't work.
+
+In this episode we're going to discuss zombie processes.
+
+
+# What is it #
+
+
+A zombie process or, more precisely called a defunct process, is a
+process or thread, that has ceased to exist but that still appears in
+the process tree.
+
+On most Unix-like operating threads have their own process ID in the
+process tree.
+
+The process tree being a table structure the kernel uses to keep track
+of processes.
+
+And so a defunct process is merely an entry in that table, it doesn't
+hold up resources, there are no file descriptors tied to it, it only uses
+the memory necessary to hold the process structure inside the table which
+is a relatively large data structure that can be 1.7 KB on 32bit systems.
+
+For instance that structure is named `task_struct` in the Linux kernel
+and is held inside a doubly linked list whose root is the init processes'
+`task_struct`.
+
+So if you have a bunch of those useless zombie processes they would just
+clog the process tree.
+
+The real problem is not with the memory usage though, the issue is
+because there's a limit of entry for processes that can be held in the
+process tree, that is the size of the process ID number, and if there
+are ton of zombie processes they might run out.
+
+On Linux for instance that value on 32-bit platforms, 32768 is the
+maximum value, for on 64-bit systems it can be any value up to 2^22. You
+can configure this kernel parameter in: `/proc/sys/kernel/pid_max`
+
+You can take a look at this tree using the `pstree` command or the
+`ps` command.
+
+If you use `ps -el` , the -l to list the state of the process you can
+notice a Z for the state when it's a zombie.
+
+```
+3699 tty1     Z      0:00 [zombie.sh] <defunct>
+```
+
+What's that state?
+What does it mean for a process to cease to exist?
+And more importantly, why are those useless processes there?
+
+
+------
+
+The state of a process is a value stored in the structure we mentioned
+earlier, namely the one inside the process tree.
+
+A process can be in many different states that reflects what it's
+currently doing, switching from one to the other in a directed graph
+manner.
+
+For example a process can be in a running state, a stopped state,
+sleeping, dead, or defunct.
+
+The value we see when running `ps -l` is one of those.
+
+Being in a zombie state means that the process has finished execution
+but that the return status of the execution of that process is still
+there waiting for it to be taken by another process.
+
+A process finishes executing, has completed its job, when the exit system
+call is reached. The process should be in a "terminated state."
+
+But it hangs there waiting to be cleaned.
+
+So why is it waiting?
+
+Let's take a look at what happens when the `_exit` is reached in a
+POSIX system.
+
+There are two cases.
+
+
+The first one is when the parent of the process has set is `SA_NOCLDWAIT`
+flag or has set the action for the `SIGCHLD` signal to `SIG_IGN`.
+
+In that case the status info of the process is discarded, its lifetime end
+immediately, and if the parent process is blocked because it waiting for
+children and there's no more children then that function in the parent
+shall fail.
+
+The other case is when that `SA_NOCLDWAIT` flag isn't set in the parent
+and the `SIGCHLD` hasn't been set to `SIG_IGN` in the parent.
+
+The status info of the process is generated, the process is transformed
+into a zombie process so that the info stays available for the parent,
+once the parent or a thread in the parent has obtained that info via a
+`wait*` system call the lifetime of the process ends, and finally a
+`SIGCHLD` signal is sent to the parent.
+
+And from this we can understand that it's actually the parent that makes
+the zombie wait until it's able to fetch and acknowledged it has got
+the information it needs.
+
+When in that finished execution but waiting state the process is a zombie.
+
+Now you get why when you set the flag to not wait or ignore signals sent
+from children there's no zombie.
+
+Normally, well written programs will immediately wait for the children
+processes to read their status, and zombies won't stay zombies for a
+long time.
+
+But that's not always the case.
+
+If a parent doesn't call a wait-like system call the process will stay
+as defunct, and if this parent dies then the process becomes orphan
+which means it'll be re-parented to the PID 1, the init process. The
+init process periodically reaps such processes.
+
+Orphan processes are always adopted by the init process.
+
+Seeing a lot of zombie processes is probably and indicator that there
+might be a bug in the program.
+
+I say might because there's a weird case when a software may choose to
+not reap children on purpose so that they don't spawn another child with
+the same PID.
+
+That's not a too relevant nor common case as you could enable
+randomization of the PID generation on some Unix system, it's even
+enabled by default on some. And even so PID on Unix systems are usually
+allocated sequentially until it runs out of value and then restarts at
+zero and again increases.
+
+
+# Programmatically #
+
+
+So what are good programming practices to avoid zombies.
+
+You can set that `SA_NOCLDWAIT` as a flag to the `sigaction` on the
+parent process, which is the new version of the deprecated `signal`
+system call counterpart.
+
+You can go back to the podcast on signals for more info on that.
+
+The other one is to redirect `SIGCHLD` signals to `SIG_IGN` and ignore
+them.
+
+Let's just remember that this `SIGCHLD` is received whenever a child dies.
+
+We mentioned all that earlier.
+
+In the cases where you truly want to handle the children then you could
+call a wait-like system call inside the `SIGCHLD` signal handler, so
+whenever a child dies it's assured to be removed correctly from the
+process tree.
+
+In other cases, zombie may appear for a longer period of time because
+they'll be waited on periodically if you don't want it to be asynchronous
+inside the signal handler.
+
+Another trick, if you don't want to cleanup children nor wait for them
+is to make them grandchildren instead of children, that is fork() them
+twice, and then killing the child, which will make the grand-children
+is intentionally an orphan and will be inherited it to PID1/init, thus
+assured to be reaped later on and not stay zombie.
+
+
+# Cleaning Up #
+
+
+Ok, but what if you have those zombies, is there a way to clean them up?
+
+Those defunct processes don't respond to signals, and so you can't send
+them any to *nudge* them.
+
+You could check what is the parent of those defunct processes, if it's
+the init then you don't have to worry, you can wait a bit till they get
+cleaned automatically.
+
+On some Unix systems sending `SIGCHLD` to the init will directly clean
+all zombies under it.
+
+But what if it's not.
+
+You could try manually sending the `SIGCHLD` signal to the parent and let
+it handle the cleaning. However, it might not, it might have overridden
+that signal and might have other unwanted effects.
+
+Then if you don't need the parent running you could simply kill it so
+that the children get re-parented to init.
+
+The best way to get rid of children is then to reap them manually by
+forcing a wait.
+
+On Solaris there's the `preap(1)` command that will force the parent of
+the process to call `waitid`.
+
+On other systems there might be a `wait(1)` command which takes a pid
+and waits for it, isn't that handy?
+
+
+Overall, if those defunct processes persist all day then it's your choice,
+or you keep reaping them manually or you wake up and fix the buggy code.
+
+
+# Extending the metaphor - Some differences #
+
+
+It's hilarious that whenever someone discusses defunct/zombie processes
+they have to employ ton of metaphors.
+
+I've seen that everywhere while doing this research.
+
+I've heard of:
+
+"A naughty parent process"  
+"An irresponsible parent process"  
+"A negligent parent never call wait"  
+"You can’t kill a zombie, How can you kill something which is already dead?"  
+"Try to assassinate the zombie process"  
+"death certificate"  
+
+The metaphor is also joined with the orphan metaphor with terms like
+"adoption".
+
+Remember that metaphors are just tools to help people figure out how to
+navigate in the world, they aren't one-to-one relations.
+
+Maybe the name zombie was a bad choice because it implies that the
+processes are bad and that you should "Kill them all!" which is not
+the case.
+
+Zombies are ok.
+
+
+# Conclusion #
+
+
+This was a rather quick and simple episode for a fast, simple, but sometime
+confusing topic.
+
+Remember, zombies aren't bad once you get to know them.
+
+--------
+
+Music: <https://soundslikeanearful.bandcamp.com/track/freezing-tsunami>
+
+
+--------
+
+Refenreces:
+
+- <https://www-cdf.fnal.gov/offline/UNIX_Concepts/concepts.zombies.txt>
+- <https://en.wikipedia.org/wiki/Zombie_process>
+- <https://en.wikipedia.org/wiki/Process_state#Terminated>
+- <http://www.makelinux.net/books/lkd2/ch03lev1sec1>
+- <http://www.tldp.org/LDP/tlk/kernel/processes.html>
+- <http://man7.org/linux/man-pages/man2/waitpid.2.html>
+- <https://venam.nixers.net/blog/unix/2013/02/24/zombie-process.html>
+- <http://unix.stackexchange.com/questions/352781/background-zombie-daemon-and-without-ctty-are-these-concepts-connected>
+- <http://unix.stackexchange.com/questions/248843/can-a-zombie-have-orphans-will-the-orphan-children-be-disturbed-by-reaping-the>
+- <http://pubs.opengroup.org/onlinepubs/9699919799/functions/_exit.html>
+- <https://security.stackexchange.com/questions/88692/do-randomized-pids-bring-more-security>
+- <http://www.unix.com/man-page/OpenSolaris/1/preap/>
+- <http://www.faqs.org/faqs/unix-faq/faq/part3/section-13.html>
+- <http://linuxshellaccount.blogspot.com/2008/05/killing-zombie-processes-in-linux-and.html>
+- <http://yarchive.net/comp/zombie_process.html>
+- <https://www-cdf.fnal.gov/offline/UNIX_Concepts/concepts.zombies.txt>
+- <https://en.wikipedia.org/wiki/Orphan_process>
+- <http://www.informit.com/articles/article.aspx?p=397655&seqNum=6>
+

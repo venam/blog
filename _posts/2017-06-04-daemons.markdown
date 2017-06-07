@@ -1,0 +1,1121 @@
+---
+layout: post
+title:  "Daemons on Unix"
+date:   2017-06-04
+categories: unix
+podcast: 1
+podcast_mp3: 
+podcast_ogg: 
+---
+
+
+# Daemons on Unix #
+
+
+(Transcript of the [podcast](https://nixers.net/showthread.php?tid=2111))
+
+
+# Intro #
+
+
+You've certainly heard of daemons, those processes that lurk in the
+background and do what they're supposed to do.
+
+You might even have written and run programs that are daemons.
+
+Today we'll talk about them, those daemons ({day,dee}mon), what
+there is to know about their mechanism and details.
+
+A big generic overview of daemons on Unix.
+
+
+## What does Daemon mean, where does it come from ##
+
+
+Let's start with the history, etymology, and terminology.
+
+The where does it come from, what does it mean, why it's written this way.
+
+By now, if you've been using Unix for quite a while you should already
+know that daemons are not truly demons. You may even have made the
+distinction in your mind separating the two concepts.
+
+Some even use different pronunciations not to mix up the terms,
+{day,dee}mons
+
+However, this distinction doesn't really exist when it comes to the terms
+and history, daemon truly means demon, it's just an older alternative
+spelling of the word demon.
+
+Daemon are spirits/supernatural beings of the Greek mythology that
+go around doing their deeds in the shadows, overlooking the world or
+individuals, sometimes affecting them in good ways, sometimes in bad
+ways. They aren't biased, what they do is more or less objective in
+that regard.
+
+That's rather different than today's perception of demons as evil mean
+satanic spirits.
+
+Those daemons are always there, in the background, symbolizing the not
+visible, yet always present and working its will.
+
+But where did the metaphor come from?
+
+To put it bluntly, it was coined by the programmers of the MIT's project
+MAC, which ran the compatible time-sharing systems, which was one of the
+first time-sharing OS. It was the ancestor that inspired Multics, Unix,
+and ITS.
+
+The term was first used to refer to what was called a dragon, and then
+more generically used to refer to anything that acted like that dragon.
+
+A dragon being similar to what we call today daemon but in the difference
+that it is not invoked at all but instead is used by the system to
+perform secondary tasks.
+
+I couldn't find much info about dragon, so if anyone got more on that
+please add up resources when this gets released.
+
+Daemon was then used to refer to the more generic concept.
+
+The name daemon itself was inspired by Maxwell's demon, which is a
+physics philosophical experiment where an imaginary being interferes
+constantly in the background with the particles to make them behave in
+certain ways.
+
+This describes well today's use on Unix, a background process that does
+system chores.
+
+The first prototype of the daemon concept was a program called DAEMON
+that automatically made tape backups of the file system.
+
+After that some started rationalizing the name choice and built the
+backcronym Disk And Execution MONitor, a constructed phrase claimed to
+be the source but that really isn't.
+
+Today the concept of daemon is present in many areas under other names
+such as services, the concept isn't necessarily unique to Unix but it's
+most often related to it when you hear that name.
+
+Still it's hard not to equate demon with the satanic underworld definition
+when even the BSD mascot, beastie, makes fun of it.
+
+
+## Generic overview ##
+
+
+So that's where the name comes from but what's a generic overview of
+daemons, what do they really do, what's their job, what's their purpose,
+what's special about them.
+
+After much reading, I've compacted the definition of a daemon into
+the following:
+
+A daemon is a process in a multitasking OS that offers
+services/functionalities or does autonomous tasks, sometimes
+repetitive/periodic, sometimes in response to the occurrence of specific
+system events or conditions aka supervising the system, most of the time
+it's a long running process but not always, most of the time without
+interventions and independent of a user, and most of the time in an
+unnoticed unobtrusive way, aka in the background.
+
+So mix those and it gives you the recipe for a daemon.
+
+But what about the terms services and servers.
+
+They are subset of what we call daemons.
+
+Daemons are just a bit broader, they don't have to be services.
+
+A daemon can be a long-running background process that answers requests
+for services.
+
+So, a service, like the name implies, is a software that provides
+capabilities to other softwares.
+
+Services are typically automatically started at boot up, are long-lived,
+they have states that can be altered (running/not running), they have
+relationships and dependencies with other services, and they are usually
+critical components of a system and so are started during boot.
+
+Those services are managed by a daemon, the init process, the first
+process started on a system, the PID 1. It's job is to manage what runs at
+what time, to handle the dependencies, and regenerates them after crashing
+so that the system keeps running correctly. More on that topic later on.
+
+Some examples of such services can be the logging system, a database,
+or a network manager.
+
+Daemon can also act as middle man, as message passing systems to the
+kernel api/system calls which are services providing access to some
+lower level layer.
+
+You can see how services fit as subset of the daemon definition.
+
+A server is also a subset of the daemon definition.
+
+Simply said, servers are processes that are long-running and perform
+services based on requests that can be launched remotely from another
+machine.
+
+The obvious example here are a webserver, a mail server, or a secure
+shell server, sshd.
+
+Other examples of daemons include:
+
+* crond - time-based job scheduler
+* BIND - the Berkeley Internet Name Daemon
+* dhcpd - dynamically configure tcp/ip information for clients
+* syslogd - system logger collector
+* ntpd - network time protocol daemon
+* inetd - listend for network connection requests and launches daemons to handle them
+
+
+As you might have noticed a lot of those daemons end in 'd'.
+
+It's a tradition and convention, taken for the sake of clarity, that
+daemon names, when checked in the process tree, all have a trailing 'd'.
+
+This is just so that when you give processes a glance you can denote
+which is a daemon and which is not.
+
+
+## Foreground/Background process ##
+
+
+We said that daemons run as a background processes rather than being
+under the direct control of an interactive user, what does this imply?
+
+What does it mean to run in the background?
+
+Let's do a bit of explanations.
+
+There are, arguably, three cases where a process is considered a
+background daemon.
+
+The first one is when the process is started during boot time, usually
+by the init process, and thus is not attached to any terminal.
+
+The second one is when the process is invoked explicitly, on a terminal,
+and then detached from all terminals and ran in the background.
+
+The third case is more or less commonly said to be about "transforming
+a process into a daemon", even though it's not really. It consists of
+simply having the process in the process group attached to the terminal
+but running in the background.
+
+We'll dive into the details of every one of these categories later but
+first let's talk about processes in general.
+
+A process is an instance of a running program, it is managed by the
+kernel of the OS and is referred to by it's process ID.
+
+When looking from an interaction point of view there are only three types
+of processes: interactive - from CLI interaction, batch - from a pipeline,
+daemon which are the rest.
+
+Another way to perceive daemons is to see them as those repetitive
+administrative tasks that are fired by a scheduler from time to time. But
+maybe in that case it's the scheduler, such as cron that is the daemon
+and not the tasks themselves.
+
+Yet again, sometimes even the automated background tasks that are fired
+upon login can be said to be daemons.
+
+This depends on your perception.
+
+Now from a terminal process management point of view processes are either
+in the foreground or in the background.
+
+The foreground processes are the ones we interact with on a terminal, they
+get the stdin/stdout/sterr, they are the session leader of a terminal,
+and there can only be one session leader, one controlling process of a
+terminal at a time.
+
+When one process is the session leader all the other processes in the
+group are in the background and run by themselves instead of running
+from user inputs.
+
+The signals sent to the terminal are always sent to the process group
+which has it as a controlling terminal. The session leader catches it.
+
+With today's job control, that is the BSD style of job control,
+terminals send a STOP signal to background processes that try to write
+to a terminal, the SIGTTIN and SIGTTOU signals.
+
+```
+SIGTTIN   21,21,26    Stop    Terminal input for background process
+SIGTTOU   22,22,27    Stop    Terminal output for background process
+```
+
+This makes it a pain if you want to have long running processes in the
+background that might inadvertently write to a terminal and be stopped
+by mistake.
+
+For that reason, the background processes that want to "act" like
+daemons have to become immune/ignore those signals. Or you could possibly
+disable the feature in the terminal itself to not send that signal when
+a background process tries to write to its terminal.
+
+But that's not the start of the issue with having a "daemon" attached to
+a terminal like that. The biggest issue is that if the terminal process
+exits the wannabe daemon will be killed because it's still associated
+with it.
+
+In fact it's killed because it will receive the SIGHUP, hangup signal
+from the terminal, which the default action is to terminate the process.
+
+So one way to alleviate the pain, again, is to ignore that signal.
+
+The `nohup` command does just that, it's a wrapper to ignore SIGHUP.
+
+If stdout and stderr are connected to a terminal, it also redirects them
+to nohup.out
+
+But then the question is: What happens when the terminal process ends,
+when the parent of the wannabe daemon dies?
+
+Well, that's simple, when the parent of a process terminates it is
+assigned/adopted by the init process, PID 1, as parent by default.
+
+Now in this case it will have no controlling terminal and will run in
+the background as intended.
+
+That is one reason the daemons are started during the boot process,
+but not the only one, as we'll see later.
+
+So we're starting to understand the idea behind running daemons.
+
+It doesn't really lie in the association or disassociation from a
+terminal but more in the other criteria we talked about in the earlier
+section.
+
+However, as we've seen, it's not as simple to run processes with the
+intention of having them as daemons.
+
+It's not as simple when they're not session leaders, nor when they don't
+have a controlling terminal.
+
+How do you even communicate with daemons?
+
+This poses many problems, how does this all fall into place?
+
+This makes it hard to write a daemon and to manage them without missing
+edge cases and that is why some standards and good practices got built
+around daemons over the years.
+
+And that is what we're going to explore next.
+
+
+## Programming Wise ##
+
+
+Because of everything we've discussed in the previous section it is
+tricky to write a daemon. Fortunately, all you have to do is follow a
+set of rules and norms to get your daemon running correctly.
+
+You could possibly create a daemon using the technique we talked about
+earlier, namely forking a child process in the background and immediately
+exiting so that it is adopted by the init process.
+
+But that's not good enough you have to do other things so that you'll
+be sure it won't break.
+
+You can find a list of the series of steps all over the internet.
+
+Some "tips" can even be found in your man pages, checkout the man 7
+daemon page.
+
+Most of those recommendations are similar in some ways, and emerge from
+the requirements/demands of the service manager of that system, be it the
+init system or not, be it Apple MacOS X Daemon, SysV style init systems,
+"new-style" systemd, inetd, launchd, etc..
+
+So again, daemons are not really hard to write, on the contrary, they're
+easy to put together, what's tricky is to think of the edge cases,
+quirks, and side effects.
+
+Things that are usually taken care of when processes are running in an
+
+interactive session on a terminal but not when detached.
+
+For example, what we've talked about earlier, namely the process group,
+the user ID running the process, the input/output, etc.
+
+If the daemon is started at boot it has to manage those itself explicitly
+and if it's launched from within a login session then it needs to undo
+a lot of what has been set during the login sequence to ensure that the
+association with the calling environment is destroyed.
+
+In the best of the worlds the service manager or sometimes called
+super-server daemon, the process that manages the daemons, which usually
+launches them at boot and is also usually the init process, would handle
+those steps and perform the functions you need.
+
+That's just a nota-bene to say that the actual procedure doesn't have
+to be coded inside the daemon itself but can be external. Let's also
+note that for old style SysV daemons those steps are required during
+the initialization. Other init systems/service-manager might handle that
+for you, so be sure to checkout their documentation.
+
+So now, let's go through the usual criteria that are recommended to turn
+a process into a daemon, the order might vary according to different
+specs but the ideas are the same.
+
+
+### Criteria ###
+
+
+* Create background process
+
+
+The first step that needs to be taken care of is the one we talked about
+before, forking off the parent process of the daemon and let it terminate
+gracefully so that the soon-to-be daemon process run autonomously in
+the background.
+
+For those who don't know, forking is a system call that creates a child
+process that is a near copy of its parent. It's the only system call that
+returns two distinct values, the PID of the child for the parent that
+keeps running, and 0 for the child, in the case of errors it returns -1.
+
+In sum this step is about separating the daemon from its parent.
+
+
+* Becoming a session leader & group leader.
+
+On Unix every process has multiple identifiers attached to it, and each
+of those identifiers mean something different, usually a way to regroup
+related processes.
+
+You certainly know the PID, the process ID, a unique number associated
+to the process so that you can refer to it.
+
+There's also the parent ID, the ID of the process that started it.
+There's the group id which is the PID of the process group leader.
+There's the session ID, which is again, just the ID of the session leader.
+
+Processes in the same session have the same controlling terminal, processes
+in the same group also belong to the same session. But a session can
+have multiple process groups.
+
+To picture that, the shell is usually the session leader, it controls
+the terminal, and every pipeline executed is a process group, they run
+grouped with each other.
+
+Ok so we have a background process without a parent, or actually an
+orphan process inherited by the init process, but that process is still
+attached to the terminal itself and the process group associated to it
+because it has inherited it from the dead parent.
+
+In this case the daemon is still subject to receiving terminal generated
+signals and signals sent to the process group, remember for example SIGHUP
+which we talked about earlier. So it would be pretty bad. We also don't
+want to ignore those signals, as we said.
+
+It might also be a good idea to reset all the signal handlers to their
+default behavior because you might not know how the parent has changed
+them.
+
+We need to detach/disassociate ourselves, to create our own process group
+and become our own process leader, that means disassociating the daemon
+from any controlling terminals and having its own session.
+
+Under some systems the previous step, the fork step, is not mandatory
+and the detachment can be done directly, however on other systems it's
+mandatory because a process that is already a group leader cannot change
+its group and forking is an easy way to solve that. Forking is also a
+way to prevent the terminal from locking up making the shell believe
+the daemon has terminated.
+
+There are different system calls to do what we talked about, ioctl on
+some older system or setsid on newer that is for the associated session
+ID, and for the group we have setpgrp amongst others, which is not used
+along with setsid.
+
+So at this point if you looked at the process tree you should see that
+your daemon has no controlling terminal, that it's parent process ID is
+1, that its session ID is the same as its group id and the same as its
+own ID. It's its own session leader and group leader.
+
+
+* Fork again
+
+If you know a thing or two about process management, which we might
+discuss soon in another episode, you may know that being a session leader
+is the only way to potentially reacquire a terminal.
+
+We don't want that, we don't want the daemons to acquire any terminal,
+not because its bad but because we have a limited set of terminals
+and we're not gonna spare one for every daemon we have. Also, even in
+systems where we don't have that problem, where process gets attached
+to already acquired terminals, we don't want this because we don't even
+need a terminal for the daemons, it'll only create complications.
+
+Under some systems, like 4.2BSD, this is already taken care of because
+only processes with the group ID of zero can acquire a controlling
+terminal, and our daemon has a group ID equal to its process ID, as you
+may remember.
+
+But we have to take care of all systems and all cases.
+
+The easiest way to prevent the reacquisition of a terminal is to fork
+again and run the actual daemon in that child while, again, killing the
+parent. And because the parent is the process group leader it has to
+ignore SIGHUP because otherwise it'll forward SIGHUP to the child and
+kill it, since the parent is the session leader. This signal handling
+will also be inherited by the child.
+
+This has the final effect of having a daemon that has no controlling
+terminal, that is immune to signals from the tty driver, and cannot
+acquire a new terminal since it's not a process group leader, its PID
+is different than its PGID and SID.
+
+
+* Resetting the environment
+
+
+Alright, so those steps already should give us a nice daemon but there
+are other small things to take into consideration too.
+
+For example, it's a good idea to set the current working directory of
+the daemon to the root directory instead of the one inherited from the
+parent. Like that the process doesn't keep hold of any directory or
+resources under any mounted filesystem, allowing them to be unmounted
+at any time, and the root directory is always guaranteed to be there.
+
+A daemon also doesn't have any use for file descriptors and so it's also
+a good idea to close the ones that have been inherited by the parent
+or to redirect them to /dev/null, be them file descriptors to files or
+the standard ones stdin/stdout/stderr, anyway the daemons don't have a
+terminal. It'll prevent security issues too.
+
+It's also good to do that because sometimes the files related to the
+terminal settings are still opened, and when they are the terminal
+settings are not reset until the last process releases them.
+
+Listen to the episode about terminals to know more about terminal
+settings.
+
+Another attribute a daemon inherit from the parent is the umask, the
+file creation mask, it's also a good idea to set it to 0 to allow the
+permission masks to depend only on the daemon and not what the parent
+wanted it to be.
+
+You can listen to the podcast about bits and bytes, I've discussed about
+masks in it.
+
+You may also need to reset environment variables to sane settings that
+don't interfere with the daemon instead of using the ones from the parent.
+
+
+* Main loop
+
+
+Nice, and sweet, we should be settled now, we got our daemon running in
+its own environment.
+
+Now we can add whatever extra we want to add, be them related to the
+way we want to communicate with the daemon like logs and whatever else.
+
+Usually the main part, the payload, the core, of a daemon is a big loop,
+an infinite, while 1, loop that repeats the same tasks over and over
+again in some cases checking for conditions. It would've been better to
+call them "the myth of Sisyphus" instead of daemons.
+
+So let's summarize the steps you need to take care of before the actual
+daemon code:
+
+1. Create a background process, the parent of the daemon is PID 1.
+2. Become a session leader & group leader, GID == SID == PID.
+3. Fork again to detach and force it not to reacquire a terminal. (the
+   parent should ignore SIGHUP) PID != GID and PID != SID
+4. Reset the environment:
+        * Close all open file descriptors.
+        * Connect /dev/null to standard input, output, and error.
+        * Reset all signal handlers to their default.
+        * Reset the signal mask.
+        * Sanitize the environment variables.
+        * Reset the umask to 0.
+        * Change the current directory to the root directory.
+5. Actual daemon loop
+
+
+### Sample ###
+
+
+```
+
+/*
+ * daemonize.c
+ * This example daemonizes a process, writes a few log messages,
+ * sleeps 20 seconds and terminates afterwards.
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <syslog.h>
+
+static void skeleton_daemon()
+{
+    pid_t pid;
+
+    /* Fork off the parent process */
+    pid = fork();
+
+    /* An error occurred */
+    if (pid < 0)
+        exit(EXIT_FAILURE);
+
+    /* Success: Let the parent terminate */
+    if (pid > 0)
+        exit(EXIT_SUCCESS);
+
+    /* On success: The child process becomes session leader */
+    if (setsid() < 0)
+        exit(EXIT_FAILURE);
+
+    /* Catch, ignore and handle signals */
+    //TODO: Implement a working signal handler */
+    signal(SIGCHLD, SIG_IGN);
+    signal(SIGHUP, SIG_IGN);
+
+    /* Fork off for the second time*/
+    pid = fork();
+
+    /* An error occurred */
+    if (pid < 0)
+        exit(EXIT_FAILURE);
+
+    /* Success: Let the parent terminate */
+    if (pid > 0)
+        exit(EXIT_SUCCESS);
+
+    /* Set new file permissions */
+    umask(0);
+
+    /* Change the working directory to the root directory */
+    /* or another appropriated directory */
+    chdir("/");
+
+    /* Close all open file descriptors */
+    int x;
+    for (x = sysconf(_SC_OPEN_MAX); x>=0; x--)
+    {
+        close (x);
+    }
+
+    /* Open the log file */
+    openlog ("firstdaemon", LOG_PID, LOG_DAEMON);
+}
+int main()
+{
+    skeleton_daemon();
+
+    while (1)
+    {
+        //TODO: Insert daemon code here.
+        syslog (LOG_NOTICE, "First daemon started.");
+        sleep (20);
+        break;
+    }
+
+    syslog (LOG_NOTICE, "First daemon terminated.");
+    closelog();
+
+    return EXIT_SUCCESS;
+}
+```
+
+### When it is someone else that does the job ###
+
+
+As we said earlier, all those steps setting up the environment for
+a daemon can be taken care of by a third party, for example the init
+process.
+
+Still in those cases there are certain requirements that need to be met
+by the daemon, not only to be able to launch them but to supervise and
+control them also.
+
+Executing the steps we mentioned before may even interfere with how well
+all this functionality happens.
+
+Those new requirements are quite straight forward, they are usually the
+following but not limited to them.
+
+Two signals should be handled SIGTERM to exit cleanly the daemon and
+SIGHUP to reload the configuration files if it applies.
+
+The exit code from the main daemon process should reflect if there are
+errors and problems while executing the daemon.
+
+The daemon should be integrate correctly within the system, be it an init
+file of some sort or anything else. It also should rely on the system's
+functionality as much as possible instead of re-inventing them.
+
+If applicable the daemon should notify that system upon startup completion
+or status update via an interface provided by that system.
+
+And sometimes using the communication mechanism offered by that system,
+be it for inter-process communication or for logging.
+
+All and all, you'll have to refer to the system providing the daemon
+handling.
+
+
+### daemon (3) ###
+
+
+So those were a lot of steps we talked about earlier, isn't that a
+repetitive task, why not wrap it up?
+
+There's a function called daemon() that first appeared in 4.4BSD and
+that does the core of what we talked about earlier.
+
+Some disavow using it as it doesn't implement every single one of the
+steps, for example the ones about cleaning up the environment.
+
+However, that a nifty convenience routine that let you do in one line the
+whole detachment, running in the background, closing files, and changing
+directory parts. This is all really good if you want to throw in 2 min
+a daemon and don't want to bother re-implementing everything while not
+relying on a third party system.
+
+
+## Management ##
+
+
+There's the daemon, and it's running.
+
+Now how do you keep it running, how do you manage, supervise, and track
+it, and how do you interact with it.
+
+There are programs that we call service manager or super-server daemon,
+the ones we mentioned before, for instance launchd, systemd, Upstart,
+Service Management Facility, Android init, sysvinit, runit, OpenRC,
+supervisord, daemontools, etc..
+
+Most of those are also init systems, but regardless of that and the
+other features and functions offered by the init, what do those service
+managers have in common, what are some commonalities they offer.
+
+Let's check different features that could be present in them so that we
+can get the big idea of their role:
+
+- Start the daemons in a synchronized and deterministic manner according
+  to a configuration file or in an asynchronous and non-deterministic
+  manner according to cross-dependencies between daemons set in
+  configuration files or activated dynamically according to the needs.
+
+- With the above comes what we talked about earlier about daemon creation
+  but sometimes not necessarily all the steps. All of this also might
+  be configurable, for example you can control the environment variables
+  passed to the daemons from the service manager.
+
+- Control and monitor all the processes and services in the system.
+
+- Recover the system in case of errors or crashes, make it more
+  reliable. For example it can implement a configurable restart and
+  retry mechanisms depending on the daemon configuration.
+
+- Provide useful and detailed debug information in case of a crash:
+  Process details, registers dump and memory map.
+
+- Create a graphical representation of the system's processes.
+
+- An internal and centralized log mechanism implemented in it that can
+  be relied on by the daemon.
+
+- A centralized way to control the state of daemons, start, stop, and
+  monitor them.
+
+- An integrated inter-process communication protocol integrated inside
+  of it to control and notify daemons.
+
+
+This all sounds amazing, right? And it certainly is!
+
+Now how does the service manager do all those things, how does it know
+which daemon is where and its state.
+
+There are many approach to this problem.
+
+First of all, let's assume the daemon has implemented the criteria we
+mentioned earlier when we said it's a third party entity that starts it.
+
+Apart and additionally from those criteria, which if we want to sum
+them up are about handling SIGHUP and SIGTERM, returning the right exit
+code, and use the functionalities provided by that system instead of
+re-inventing its own.
+
+A way to approach it is to have the daemon not started completely in
+the background but to leave it as a child of the supervisor so that
+it will receive SIGCHLD when the daemon stops. The fork/exec approach,
+which is a rather direct management approach.
+
+Another way is to write the PID of the daemon in a file in a specific
+location, for example in /run/ or /var/run, and then have the supervisor
+poll or use something such as libnotify to assess the changes happening
+to the daemon. It's also a nice way to have only one instance of a daemon
+that can't allow to have more than one.
+
+Yet another way could be to notify the supervisor from the daemon process
+itself when its initialization is complete. Or when the parent of the
+sub-second-child exits during the daemon creation.
+
+The blocks are starting to fit into each others, now let's see what's up
+with the init system, why is it so special compared to the supervisor's
+roles we just mentioned.
+
+
+## Init & Runlevels ##
+
+
+The init is not so different than service managers, actually that's
+one of the functionality that an init system can have. The init system
+itself being a daemon that is automatically started by the kernel during
+the boot process `/sbin/init`, it's the first process.
+
+This isn't an episode about init systems so we'll keep it short.
+
+The real difference an init system has as a service manager over others
+lies in the fact that it's the first process to start on a Unix system,
+the PID 1.
+
+Whatever process it starts, then, will have it as parent, and as we
+said having the init system as parent is one of the criteria to run a
+daemon, so it can skip the forking step altogether. It's also nice to
+manage daemons from the init process because it's the process that will
+receive the SIGCHLD when one of it's children dies, namely the daemon,
+and thus is in a nice position to manage them.
+
+Because it is the first process it gives the leasure of being able to
+manipulate, start and stop daemons early on boot and on shutdown, because
+it's a process that cannot be killed you can rely on it to efficiently
+manage daemons.
+
+However that poses one problem we just vaguely mentioned before, the
+dependency and order in which those daemons are started.
+
+There are many schools of thought that take this approach differently.
+
+For instance, the original research UNIX init simply ran an initialization
+shell script in /etc/rc.
+
+Today we have two main categories, the synchronous ones and the
+asynchronous ones.
+
+Let's take the traditional and prevalent System V as an example of a
+synchronous one.
+
+A synchronous init system means that daemons are started sequentially,
+waiting for the previous one to finish before starting the next one,
+it follows a predetermined simple order, which may lead to delay during
+the boot.
+
+But daemons are not only started on boot, they can be started or stopped
+at different stages in time, at different machine states.
+
+To automate that, the SysV init style uses what is called a runlevel,
+which is a number representing the state the machine is currently in
+after boot. So for example there could be one for normal user mode,
+another for single-user mode, another for shutdown, another for booting
+maybe, another for graphical environment, etc..
+
+When switching from one runlevel to another the init process executes
+or stops the appropriate daemons that is tagged with the appropriate
+runlevel number.
+
+Those numbers usually go from 0 to 6 and their meanings vary depending
+on the implementation, there are only 3 of them that are considered
+"standard", otherwise the init refers to the /etc/inittab file which
+defines what each configured runlevel does in a given system.
+
+0. Halt
+1. Single user mode (also known as S or s)
+6. Reboot
+
+You can also manually change the runlevel using `telinit`.
+
+That's the generic idea behind a the synchronous service manager as init,
+it's quite simple.
+
+On the other side of the spectrum we have the asynchronous init systems
+that manages daemons in parallel, automatically handling dependencies
+between them.
+
+In those kind of init systems the daemons have to be configured to say
+what they depend upon so that the init can resolve that dependency. It
+might even choose to store the way it "rightly" handled that dependency
+so that it'll be able to use it without recomputing it on the next boot.
+
+This makes the booting process relatively faster but it doesn't stop
+there.
+
+When asynchronously handling daemons you may not even have to rely on
+things such as state of the machine or runlevels, you can do the daemon
+activation dynamically depending on multiple conditions and mechanisms
+at the same time.
+
+For example the bluetooth daemon can be automatically started when a
+bluetooth capable hardware is plugged in and stopped when plugged out.
+
+Those mechanisms range from the usual activation on boot, to socket-based
+trigger, to dbus-based activation, to device-based activation which
+rely on sysfs or udev or whatever, to path-based activation listening
+to filesystem changes, to timer-based activation, etc..
+
+And don't forget that you can mix those up for the same daemon.
+However this all comes at the cost of the init process being more complex
+and having more dependencies.
+
+
+## Things to care about when its a Daemon ##
+
+
+So the daemon is running...
+
+But it's not connected to a terminal, how does it communicate with the
+rest of the system and how does it know when to do things?
+
+The three common ways are event based notifications, inter-process
+communication, and logging.
+
+
+Let's start with notifications and events.
+
+There are many things that can be checked and looked at for notifications.
+
+For example you could poll, keep checking once in a while, the filesystem
+to see if some specific files `stat`us has changed and trigger actions
+in the daemon accordingly.
+
+Or instead of keeping redoing this maneuver over and over again you
+could rely on instant notification of changing using your operating
+system facilities such as epoll and inotify on Linux, or Kqueue on BSDs,
+or more generically a multi-platform abstraction such as libevent.
+
+Another example of notification of system changes could be about the
+hardwares connected to the machine. You could implement in your daemon a
+way to do actions based on device events. For that you'll have to rely
+on your operating system device manager, devd on FreeBSD, polling the
+sys/devfs maybe for new devices, or udev or uedev, or again your could
+use a multi-platform abstraction.
+
+You can listen to the podcast about input devices for more info on that.
+
+Let's move to the inter-process communication, the IPC techniques
+available for a daemon.
+
+Well, there are many, actually it could be anything that doesn't rely
+on a terminal, so forget about pipes, redirections, or filters.
+
+Let's mention a few.
+
+The simplest way but not necessarily the safest is to use temporary
+files. It works using the techniques we just mentioned about notification
+of changes to that file. The drawback is that it can lead to deadlock,
+you cannot know which process can access the file at what time.
+
+Another simple way but limited and also not the safest is about using
+signals. You probably only want to handle the SIGUSR1 and SIGUSR2 signals,
+so that only gives you two possible actions that you can do after
+receiving a signal, there's no data transfer and real communication. If
+you implement signal handling in a daemon be sure to document what
+it does.
+
+You can go back to the podcast about signals to know more about them.
+
+A more complex way but again limited, this time limited to the same
+machine, is the memory map, which maps a file into memory so that it can
+be shared across processes. It poses the same problems as a file on the
+filesystem though.
+
+The last IPC method I want to share is one that has many super categories
+above it, it's socket based IPC.
+
+Sockets are a bidirectional stream that works on the same machine
+(`AF_UNIX`) and over the network too (`AF_INET`).
+
+So you can simply receive any request from clients that would connect to
+your daemon, or your daemon could act as a client to a server somewhere
+else.
+
+There are layers above that, for instane, HTTP and XML-RPC.
+
+XML-RPC is an xml protocol that does remote procedure call, the most
+prevalent instance of this today is dbus. A remote procedure call simply
+means that you send a request so that a procedure will be executed
+remotely and the result will be returned to you.
+
+Many init system wrap daemons with a dbus interface around them,
+Upstart and systemd do that for instance. It sort of have become a
+defacto protocol.
+
+It was used as a replacement to similar systems such as CORBA and DCOP,
+which are truly horrible, and so dbus is clean compared to them.
+
+A simple example you can relate to would be the way you communicate with
+your notification daemon aka popups daemon aka poptarts daemon. You use
+the `notify-send` command which is simply a wrapper over dbus that will
+send an XML-RPC query to the dbus-daemon which will then notify whoever
+listens to that type of requests and get the result back. In our case
+it will be a notification request and our notification daemon will
+receive it.
+
+Example of something going over the wire:
+
+```Bash
+Method call sender=:1.1257 -> dest=:1.30 serial=7 path=/org/freedesktop/Notifications; interface=org.freedesktop.Notifications; member=Notify
+   string "notify-send"
+   uint32 0
+   string ""
+   string "hello"
+   string ""
+   array [
+   ]
+   array [
+      dict entry(
+         string "urgency"
+         variant             byte 1
+      )
+   ]
+   int32 -1
+method return sender=:1.30 -> dest=:1.1257 reply_serial=7
+   uint32 221
+```
+
+
+Always keep in mind that the simplest organization is the best when it
+does what it's supposed to do.
+
+What about logging?
+
+Logging is more generically a user nudge, a way to tell the user what
+is going on in the daemon, to be able to debug it as there's no other
+way to tell.
+
+This could be implemented, yet again, in any possible way.
+
+From sending and email to a user, to a POST on a remote server, to the
+usual syslog or any logging system and mechanisms.
+
+You can listen back to the episode about logs to get an idea of the
+possible options.
+
+
+# Conclusion
+
+
+So that's about it, that's everything I have to say about daemons.
+
+Maybe one last thing would be to make sure the daemon code is secure
+and fails gracefully, there's nothing more annoying than a daemon that
+keeps crashing for no apparent reasons.
+
+Your daemon should also do all the blahblahblah of the Unix philosophy,
+offer one service and do it well.
+
+Yeah, that's it!
+
+I hope it gave you a great deal of info about the ins and outs of daemons!
+
+As usual, if you have more info or things to mention or rectify about
+this podcast subject you can do this on the podcast extension thread.
+
+--------
+
+References:
+
+
+## What does Daemon mean, where does it come from ##
+
+* <http://catb.org/~esr/jargon/html/D/daemon.html>
+* <https://en.wikipedia.org/wiki/Compatible_Time-Sharing_System>
+* <https://en.wikipedia.org/wiki/Daemon_(computing)>
+* <https://kb.iu.edu/d/aiau>
+* <https://en.wikipedia.org/wiki/List_of_Unix_daemons>
+* <https://en.wikipedia.org/wiki/Super-server>
+* <https://wiki.debian.org/Daemon>
+* <https://www.techopedia.com/definition/3347/disk-and-execution-monitor-daemon>
+* <http://www.linfo.org/daemon.html>
+
+## Programming Wise - Foreground/Background process - forking - dissociating ##
+
+* <http://stackoverflow.com/questions/17954432/creating-a-daemon-in-linux>
+* <http://www.netzmafia.de/skripten/unix/linux-daemon-howto.html>
+* <https://stuporglue.org/writing-a-daemon-with-php/>
+* <http://www.danielhall.me/2010/01/writing-a-daemon-in-c/>
+* <http://www.enderunix.org/docs/eng/daemon.php>
+* <http://cjh.polyplex.org/software/daemon.pdf>
+* man 3 daemon
+* man 7 daemon
+
+## Management - process tracking - Keep running - crash recovery ##
+
+* <http://stackoverflow.com/questions/958249/whats-the-difference-between-nohup-and-a-daemon>
+* <https://en.wikipedia.org/wiki/Process_control_daemon>
+* <http://www.tutorialspoint.com/unix/unix-processes.htm>
+* <https://en.wikipedia.org/wiki/Process_management_(computing)>
+* <https://en.wikipedia.org/wiki/Supervisory_program>
+* <https://en.wikipedia.org/wiki/Service_Management_Facility>
+* <https://en.wikipedia.org/wiki/Operating_system_service_management>
+* <https://superuser.com/questions/454869/daemon-process-control-differences/454902>
+* <http://supervisord.org/>
+* <https://www.freedesktop.org/software/systemd/man/daemon.html>
+* <https://serversforhackers.com/monitoring-processes-with-supervisord>
+
+## Init & Runlevels & States ##
+
+* <https://en.wikipedia.org/wiki/Runlevel>
+* <https://en.wikipedia.org/wiki/Init>
+* <https://www.debian.org/doc/manuals/debian-reference/ch03.en.html>
+* <http://www.slackware.com/config/init.php>
+
+## Things to care about when its a Daemon ##
+
+### Notifications & Event based #
+
+* notify-send
+* <http://www.galago-project.org/specs/notification/0.9/notification-spec-0.9.txt>
+* <https://wiki.archlinux.org/index.php/Udev>
+* <https://en.wikipedia.org/wiki/Udev>
+* <https://www.usenix.org/legacy/events/usenix01/cfp/banga/banga_html/final2.html>
+* <https://www.infoq.com/articles/inotify-linux-file-system-event-monitoring>
+* <https://en.wikipedia.org/wiki/Kqueue>
+* <https://people.eecs.berkeley.edu/~sangjin/2012/12/21/epoll-vs-kqueue.html>
+* <https://en.wikipedia.org/wiki/Libevent>
+* <https://en.wikipedia.org/wiki/Libuv>
+* <https://en.wikipedia.org/wiki/Epoll>
+
+### Permission and files - security ##
+
+### IPC - signals ##
+
+* <http://stackoverflow.com/questions/13712337/linux-ipc-multiple-clients-with-daemon#16387216>
+* <https://en.wikipedia.org/wiki/D-Bus>
+* <https://dbus.freedesktop.org/doc/dbus-tutorial.html>
+* <https://dbus.freedesktop.org/doc/dbus-specification.html>
+* <http://www.catb.org/~esr/writings/taoup/html/ch07s02.html>
+* <https://en.wikipedia.org/wiki/Unix_signal>
+* <http://home.deib.polimi.it/barenghi/lib/exe/fetch.php?media=teaching:2015_signals_and_daemons.pdf>
+* <https://docs.freebsd.org/doc/5.4-RELEASE/usr/share/doc/handbook/basics-daemons.html>
+
+
+### Logging ##
+
+* man syslog
+* or anything else
+* Check the podcast about logs
+
+--------
+
+
+Music:  
+Internet People (2017) - SEAMLESS MUSIC  
+<https://www.jamendo.com/track/1436050/internet-people>
