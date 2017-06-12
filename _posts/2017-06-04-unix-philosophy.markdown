@@ -118,6 +118,13 @@ time sharing OS called Multics and he got sick of the complexity.
 
 A bold rebellious and exciting move.
 
+The Multics projects was also on a pinch, it was slowly but surely running
+out of money. This shows how money can affect strategic decisions. (It's
+quite amazing how this completely ignores that the "rebellious move"
+was (kind of) enforced by the cut of funding for Multics.
+
+(<https://www.bell-labs.com/usr/dmr/www/hist.html>)
+
 He started from scratch with his previous experience as knowledge, probably
 despising complexity and embrace simplicity and minimalism.
 
