@@ -1,0 +1,209 @@
+---
+layout: post
+title:  "July 2017 Projects"
+date:   2017-07-18
+categories: programming
+---
+
+
+It's been four months since [the last
+post](https://venam.nixers.net/blog/psychology/2017/03/06/projets-2017.html)
+about my personal projects and endeavours. These past months following,
+slowly but steadily, on the activities I had set the pace for previously.
+
+
+### Books ###
+
+_Language: literature_  
+_Explanation_: I've been reading quite a lot, more than I thought I did
+now that I glance back at the list.  
+
+- In Over our heads (The mental demands of modern society) - Robert Kegan
+- Sapiens - Yuval Noah Harari
+- The Language Instinct - Steven Pinker
+- The Richest Man in Babylon - George S. Clason
+- The Righteous Mind - Jonathan Haidt
+- The Mysterious Benedict Society - Trenton Lee Stewart
+- Beej's guide to C programming
+
+And more...
+
+My definitive recommendation in this list is "In Over our Heads". It's
+a mind blowing and captivating piece. Not a hard one to go through but
+a hard one to ponder about.
+
+On a side not, for those interested in manga, I've finally got myself
+to create a package version of my manga downloader.
+
+It's specifically for 64bit Linux:
+
+Check it [here](https://github.com/venam/MangaDL--CPP-GUI-Version-/releases/tag/v0.1-alpha).
+
+
+### June Events ###
+
+
+_Language: community_  
+_Explanation_: This year, similar to the last two years, we did some
+special events for June on [nixers.net](https://nixers.net).  
+
+Those consisted of:
+
+- A programming/projects week
+
+Where I've spent my time adding `multipart/alternative` to the newsletter
+sending script so that it allows both plain text and html versions.
+
+
+I've also start contributing to [thelostt ricing
+book](https://github.com/thelostt/ricing), which looks promising.
+
+- A music week
+
+I had plan to setup a music streaming service for nixers but we got
+bugged down on the license and legal issues.
+
+- A retro-ricing week
+
+The goal was to create a sort of "retro-style" desktop.
+This is what I came up with:
+
+![retro rice]({{site.baseurl}}/assets/scrots/23.png)
+
+- A week in the TTY
+
+This was the usual week in the TTY.
+
+- A monthly mini-scavenger hunt
+
+I spent some hours to come up with a good small mini-hunt for the
+community. This is what I came up with: It has some crypto, some
+Unix-specific thing, some small fun parts, etc..
+
+It's still online for those interested.
+
+
+### Crypto ###
+
+
+_Language: Maths_  
+_Explanation_: The last few weeks I had to deal with a lot of cryptography
+and certificate related tasks at my job. I've found it rather interesting
+and so I had to go deeper in the subject. I started consuming a lot
+of content related to cryptography. The math is a bit hard to refresh
+because it's been a long time but it's still fascinating.
+
+I've contributed to a [certificate verification
+lib](https://github.com/venam/trantor-certificate-verifier) in java
+and finally was able to learn how to use the openssl command line tool
+(and find its limitation concerning elliptical curves and regarding
+certificate name constraints extensions)
+
+
+### Podcast & Newsletter ###
+
+_Language: Unix_  
+_Explanation_: Amazing isn't it? The podcast and the newsletter have
+moved a long way since I've started with the ideas. They are now well
+polished and interesting.
+
+So far we've got 7 new episodes since the last time, four months ago. This
+isn't a lot but I didn't allocate enough time to focus on those.
+
+We now have 32 newsletter issues in total, that's 20 more than four
+months ago... And that's a lot of cool content to read and keep up with.
+
+Be sure to subscribe to the [newsletter](https://nixers.net/newsletter/).
+
+I've got hold of the nixers.net domain and so no more spam for the
+newsletter.
+
+I've also been wondering if I should push the content to a broader
+audience. I've started distributing some episodes on my blog in a more
+readable format. Maybe others will find value in those.
+
+
+### 2bwm ###
+
+_Language: C_  
+_Explanation_: Finally, I've started refactoring 2bwm!  
+
+The new version is in preparation in the [2bwm_refactor
+branch](https://github.com/venam/2bwm/tree/2bwm_refactor) on github.
+This new version will be more efficient by utilizing hashes instead of
+linked list, this will have the effect of a search of `O(1)`. It'll also
+have a cleaner code base, workspaces per monitors and much more.
+
+I'm hyped about this.
+
+
+### Psychology ###
+
+_Language: brains_  
+_Explanation_: I've been ingesting a lot of content and regurgitating
+(not really) it back in many online arguments. I feel like I'm learning
+every day about myself and others around me. I've posted a bunch of
+articles related to conversations I've had with individuals I care about:
+
+- [Cross Culture Frustration]({{site.baseurl}}/psychology/2017/07/05/culture-frustration.html)
+- [Why Deliberate Positive Illusion Is Important]({{site.baseurl}}/psychology/2017/05/23/deliberate-positive-illusion.html)
+- [A Case Against Misinterpretations]({{site.baseurl}}/psychology/2017/03/10/a-case-against-misunderstanding.html)
+
+I've also added a new cycle to my evolutionary psychology cycles/mind-maps
+list:
+
+- [The Mapping Of Social Coherence](https://psychology.wtf/social_coherence.php)
+
+
+### Ascii & Drawings ###
+
+
+_Language: art_  
+_Explanation_: I'm going down the abstract route now, even in ascii arts.
+
+
+![ab1]({{site.baseurl}}/assets/arts/small/art94.jpg)  
+![ab2]({{site.baseurl}}/assets/ascii/as39.png)  
+
+
+## Now ##
+
+
+This is a small update on my previous state.
+
+My experiment with donations on Patreon didn't go really well, only
+[tejr](https://sanctum.geek.nz/) is supporting me at the moment.
+
+The fees are of extensive, $25 per transfer which doesn't help either:  
+
+- 12% going to Patreon
+- $20 fix rate by Payoneer
+- $5 fix rate by the bank
+
+I'm still going to strive on that path.
+
+Now that I've got hold of the domain name nixers.net I'll work on setting
+up an encrypted mail server using public/private keys schemes and I'll
+share sub-domains with the members.
+
+I'll also be working on a context-like menu using xcb. I haven't found
+any that was satisfying enough. It's going to be small, lightweight,
+clean, support for xft, and good looking.
+
+I've got plans to continue contributing to the local guide map on gmaps
+but for that I'll have to repair my car A/C, which will take a while.
+
+Overall I'm still looking for passive income, my ideas at the moment
+are vaporous, they're give away for good will but I don't know if I can
+sustain that rhythms.
+
+I might start working on some freelance jobs that fit in my free time
+but for that I might have to give up on my hobbies, which is not very fun.
+
+Anyway, all is good, good is all!
+
+As usual...  
+If you want something done, no one’s gonna do it for you, use your own hands.
+
+And let’s go for a beer together sometime, or just chill.
+
