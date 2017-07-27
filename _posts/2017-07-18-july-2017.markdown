@@ -8,8 +8,9 @@ categories: programming
 
 It's been four months since [the last
 post](https://venam.nixers.net/blog/psychology/2017/03/06/projets-2017.html)
-about my personal projects and endeavours. These past months following,
-slowly but steadily, on the activities I had set the pace for previously.
+about my personal projects and endeavours. These past months I've been
+following, slowly but steadily, on the activities I had set the pace
+for previously.
 
 
 ### Books ###
