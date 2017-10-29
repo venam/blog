@@ -72,8 +72,8 @@ Globalism has regrouped all philosophies and everyone is free to make
 up their own version of what used to be a strict system that directs
 and orders all actions.
 
-In most societies, the individual is the now the generator of reality
-and meaning. A demand that makes us feel lost.
+In most societies, the individual is now the generator of reality and
+meaning. A demand that makes us feel lost.
 
 If we can't have an imposed system of beliefs then the effortless choice
 is to paint our system based on capitalism, hence the efficiency.
@@ -142,13 +142,13 @@ exercises.
 
 Nature has patterns yet those are ambiguous. Humans are biased to
 recognize patterns, even when there are none, memorize and repeat
-them. Learning is much more than that and school is stops here.
+them. Learning is much more than that and school stops here.
 
 We learn artificially easy problems, created by our teachers and bound
 by the set of formula that can be applied to solve them, more often by
 swapping some values.
 
-Those also are satisfying, as the number of buttons to press are limited,
+Those are also satisfying, as the number of buttons to press are limited,
 even though the insights and what is learned is narrow, we believe we're
 getting smarter.
 
