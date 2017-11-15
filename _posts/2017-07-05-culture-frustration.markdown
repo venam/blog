@@ -244,7 +244,7 @@ an in-place system to direct them.
 Modern societies moves the burden on the individuals and asks of them
 to provide the structure and system for themselves, it is not intrinsic.
 
-Some persons are more inclined to feel that they're home country is not
+Some persons are more inclined to feel that their home country is not
 apt at fulfilling their needs. Be it because we think it's not offering
 the support it should, or be it because we think it doesn't offer the
 liberty that we would like.
@@ -302,6 +302,7 @@ Cheers my fellow mind travelers!
 
 References:
 
+* [Kant about the Enlightment](http://www.columbia.edu/acis/ets/CCREAD/etscc/kant.html)
 * Let's Know Things - [Cultural Appropriation](http://letsknowthings.com/episode55/) - Colin Wright
 * In Over Our Heads - The mental Demands of Modern Life - Robert Kegan
 * The Righteous Mind - Jonathan Haidt
