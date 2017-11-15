@@ -302,7 +302,7 @@ Cheers my fellow mind travelers!
 
 References:
 
-* [Kant about the Enlightment](http://www.columbia.edu/acis/ets/CCREAD/etscc/kant.html)
+* [Kant about the Enlightenment](http://www.columbia.edu/acis/ets/CCREAD/etscc/kant.html)
 * Let's Know Things - [Cultural Appropriation](http://letsknowthings.com/episode55/) - Colin Wright
 * In Over Our Heads - The mental Demands of Modern Life - Robert Kegan
 * The Righteous Mind - Jonathan Haidt
