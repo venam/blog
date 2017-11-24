@@ -106,9 +106,10 @@ mercy and there's no worry.
 
 This is very satisfying.
 
-Similarly with cartoons, be it Bugs Bunny or Rick and Morty, the main
-characters magically get out of chaotic situations by molding their
-environment like invincible gods. No responsibilities, no worries.
+Similarly with cartoons, be it Bugs Bunny or Rick and Morty ([competency
+porn](http://www.telegraph.co.uk/men/thinking-man/10744879/Are-you-hooked-on-competence-porn.html)),
+the main characters magically get out of chaotic situations by molding
+their environment like invincible gods. No responsibilities, no worries.
 
 This is morbidly satisfying, pornography for the mind.
 
