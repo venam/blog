@@ -45,7 +45,6 @@ reading those:
 
 - Others in Mind - Philippe Rochat (Halfway)
 - Arrival/Story of Your Life -  Ted Chiang (Finished)
-- [Read the sequences](https://www.readthesequences.com) (Halfway)
 
 `Others in Mind` is a continuation on my reading list about developmental
 psychology, the previous book was `In Over Our Heads - The Mental Demands

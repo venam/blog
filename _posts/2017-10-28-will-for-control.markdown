@@ -180,4 +180,6 @@ More to read:
 * <https://meaningness.com/metablog/fake-insights>  
 * <https://meaningness.com/control>  
 * <https://namespace.obormot.net/Main/DontLetPlannedActionBindTooTightly>  
+* <http://www.columbia.edu/acis/ets/CCREAD/etscc/kant.html>  
+* <https://books.google.com.lb/books?id=1GyC-K9WJMkC&pg=PA156>  
 
