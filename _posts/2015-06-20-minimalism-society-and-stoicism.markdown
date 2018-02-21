@@ -334,43 +334,6 @@ When it's time to live the good life it's time to live the good life.
 Spend wisely!
 
 
-#### A note on instant gratification
-
-
-This paragraph is going to be two quotes.
-
-
-> He started lifting weights, to dress well and approach women.
-
-> He started concentrating on his career, personal goals, and has learned how to say no to people that get on his nerves.
-
-> The truth is:
-
-> He should have always been in shape
-
-> He should have cared about his appearance
-
-> Our generation feel they should be rewarded for just for tidying their room or leaving the house, turning off the video games or going for a walk...
-
->  When I see men married in these days and ages, I see them "Eating the bread of shame", they are just taller, fatter versions of themselves with all the supposed luxury and privileges of a settled life.
-
-> They have no rites of passage, no trial by ordeal, no cause greater than themselves and professionally sit at places earning pensions that look increasingly like it won't matter by the time they will come to claim it.
-
-> We were warriors by birth, years of brutal exertion, bravery and commitment was the price of feeling entitled to old age in front of the fire and getting fat. Now we are a generation of spiritually and physically fat and old men at age 20 wondering what this nagging feeling at the back of our collective heads is.
-
-> You haven't done anything. We haven't done anything. Short of military service or a committed effort to travelling what could you tell your grandchildren that they'd care for? What have you done to deserve being a family elder, someone to listen to, what have you seen or done that was in anyway remarkable?
-
-> I ask myself this as much and find myself lacking.
-
-> What will I tell my grandchildren?
-
-> What will you tell your grandchildren - what will you have done?
-
-
-
->"We’re the middle children of history, man. No purpose or place. We have no Great War. No Great Depression. Our Great War’s a spiritual war… our Great Depression is our lives. We’ve all been raised on television to believe that one day we’d all be millionaires, and movie gods, and rock stars. But we won’t. And we’re slowly learning that fact. And we’re very, very pissed off."
-
-
 # Conclusion
 
 

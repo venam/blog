@@ -253,6 +253,10 @@ What are we...
   
 
 
+_Update_: You can read another one of my article "Scale and arguments"
+to understand a bit more about my point of view about consciousness,
+the self, and the differentiation.
+
 
 
   

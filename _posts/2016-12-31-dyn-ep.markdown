@@ -2,7 +2,7 @@
 layout: post
 title:  "Dynamic Evolutionary Psychology Project"
 date:   2016-12-31
-categories: psychology
+categories: programming
 ---
 
 Hello fellow readers,  

@@ -84,6 +84,7 @@ article {
 	font-size: 1.4em;
 	color: #404040;
 	font-family: "Raleway", sans-serif;
+	text-rendering: optimizeLegibility;
 }
 
 .email {
