@@ -1,0 +1,226 @@
+---
+layout: post
+title:  "Less ties with a machine"
+date:   2018-04-17
+categories: unix
+---
+
+(Transcript of the [podcast](https://nixers.net/showthread.php?tid=2051))
+
+
+## Less ties with a machine ##
+
+Let's say you've been using a machine for a year or two and over time you
+gradually become more attached and dependent on it. This is a situation
+I've found myself into more than once and it is quite annoying, it's
+straining for the brain. I've been through it the past few days and it
+and I kept wondering about the ways I could make it less of a pain.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Imagine if today you suddenly lost
+access to your current work machine, what would you do? This all rotates
+around the concept of having "less ties", "less worries", "better or
+lighter workflow". And there are no exact step-by-step guide to reach
+this, only nebulous and vague ideas that rotate around it. However,
+checking some of them might make it less straining on the brain, less
+of a burden, for possible future changes.
+
+So we're going to discuss how we can have less ties with a machine,
+how to be more relaxed with our workflow, machine, and operating system.
+
+I guess the best way, first way I can think of, to have nothing as a
+burden would be to have no machine to begin with. To be not tied with a
+machine at all. Let's say to boot from a USB or live distribution. You're
+completely untied in that case. Or what about using a thin client. Those
+are all less straining because you can't necessarily make long lasting
+changes on live distros for instance.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  But other than live distros you
+could also have persistent pendrive, live distro that run entirely on
+the ram but that can keep persistent data on the USB itself. On the other
+side to do that you'll have to deal with the disadvantage of having slower
+boot time, because of the media type, be it CD/DVD or USB. More than that
+you could do a full installation of a distribution on the USB drive but
+the disadvantage is that USB are sort of small and not supported for all
+fs. To counter that you could install the distro on a portable hard disk,
+those are pretty cheap Nowadays. A full install on a hard disk, no ties
+to a real machine. But the real disadvantage now is that usually a lot
+of binaries are architecture dependent (x86 x96_64 powerpc, etc..) so
+you're not truly machine dependent because you'll have to install all
+sort of architectures and libraries so that it's supported everywhere.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  So this is an overview of how to
+lighten up your setup by not having a machine at all.
+
+Did you run your daily backup, do you even have backups. Do you have
+backups and know how to deploy them back again. What's the role of having
+backups on a desktop. Ok, I mean... What are you going to backup? That's
+the big question we discussed in the episode about backing up and
+deploying: What to backup, how to backup, and how to deploy it.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Backups themselves are a great way
+to remove a burden from your life, you have to run them because you never
+know when your data is going to be on fire. You have to keep redundancy,
+consistent, with all your important files. You have to make sure that
+what you care about is duplicated there, that it's safe. But if at the
+moment you are a hoarder, stacking up files everywhere on your system,
+then what's the goal of a backup if it's a copy of everything. How are
+you going to set everything again after you lost the first machine. If
+you can't make sense of what you have in the first place then backups
+are junk. It's true they are duplicates but those duplicates are useless.
+
+This is an extract from an article I've written called "Keeping track
+of your things":  
+"""
+What some us of tend to forget is that to make a workflow smooth you
+don’t especially need to know your tools by heart but you have to
+reach a point where your tools will guide you.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You might argue that as a Unix
+user you want full power over your machine but this is not what
+this is about. No one, except the masochist, would want to work on a
+system by forcing his intentions into it. As a developer, sys-admin,
+Unix enthusiast, you dream of those days where everything goes smooth,
+where you’re happy to have chosen Unix because it suits you best.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The smoothness comes from the fact
+that your environment evolved and morphed to your needs and is now
+capable of helping you get on track when you get lost. Enough of the
+sentimental talk, let’s get into how you reach such state.
+
+Apart from knowing the basics of your system and how to use the programs
+themselves the biggest part of a enjoyable and sweet workflow is one
+that can acts as your second memory.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By second memory I mean an extension
+of your thoughts, thinking, and physical brain memory. (resident memory
+but for human)
+
+Let’s start with a simple exercise, for those of you that have been on
+Unix for more than a year. Close your eyes and remember the last time
+you had to work on a machine that wasn't yours, what were the things
+that annoyed you the most?  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Was it the window manager itself? Was
+it that it was missing the tools you usually work with? Was it because
+it just didn't seem to be responsive to your needs? Or was it because
+you were lost on that system?
+
+The hard truth is that the only reason it was annoying to work on
+that other machine was because you were lost, it wasn't your home,
+you didn't know how to handle things that weren't in your mundane
+daily flow.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; What makes a flow so intuitive.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My guess is that it’s all about
+the way you inserted your thoughts in the environment in the first
+place. People keep track of things, that’s what information technology
+is all about.
+
+Let’s list all the places where I keep my memories as a personal example:
+
+* A todo list
+* Commands
+* Browser Bookmarks/Opened Tabs
+* Program Launchers
+* Conky/Wallpaper
+* Shell History/Aliases/Functions
+* File Manager Bookmarks/Soft Linking
+
+Exercise number two: List the top of your memory-helpers on your current
+machine. Now think back to that time when you used that foreign machine,
+if you could have the equivalent of those memory-helpers on that box
+would you still feel the same way?  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No, there’s nothing wrong with
+having your machine helping you remember things. No, it doesn't make
+you machine dependent, on the opposite, it helps considerably. My bet is
+that you’re already doing all that I mentioned unconsciously. Though
+it would be a bad idea to start doing that if you haven’t grasp the
+basics and are heavily reliant on your little fake memory.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The last step is to make those
+actions concious. If you know that your shell history has helped you
+why not take it to the next level and have a side program handle that
+history for you.
+
+Keep it between machines synchronized.  
+Keep track of your things.
+"""
+
+It's satisfying to know about the things that help you use your machine
+as an extension of your mind. But where do draw the line, to stop taking
+things from the machine or from memory. Creating in the meanwhile mental
+clutter and visual clutter on the machine.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  That's where the concept of
+minimalism comes into play. We've amply discussed that topic quite a
+bit in a podcast with this topic before, you can go back to that. There
+are many aspects around this topic, simple living which conflates with
+minimalism in the world of computing and minimalism in the world of art
+and digital minimalism. Simple living would be simplifying one's own
+lifestyle. Minimalism in computing refers to hardware and software design
+that goes to the core of the value of what you're using. Minimalism in
+art is about using as less material as possible, as less visual bloat
+as possible while still conveying the message. There's an article I've
+recently linked in the newsletter by Cal Newport on digital minimalism
+and I think the things he mentions in the article encompass the message
+I want to convey here. He splits the value you can give something in the
+digital world into three categories. Those categories are very subjective,
+you can associate them to whatever you personal think is appropriate for
+yourself. Those categories are: the core value, the minor value, and the
+invented value. The core value is for any technology that majorly impact
+your life, something you can't live without. A minor value is something
+that provides some moderate benefits while being a positive part of your
+life. And an invented value is, like the obvious name, is something that
+gives an invented value, it solves a problem that the technology itself
+brings to light/into your life. Those values themselves, again, are very
+subjective you can associate the tech you want with what value you want,
+but all in all it's important to talk about minimalism when discussing
+the topic of less ties. To have less ties you have to minimize. When
+you have less things you are able to foc  us more to keep track of your
+things more and realize truly what you need.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  And while you are doing this backups
+do make sense. What else can you do to keep track of your things and to
+keep them in order.
+
+So maybe you really know what you want from the get go. Maybe you  
+have that small space in your mind to keep track of whatever you have
+installed on your system at the moment. However most probably you don't,
+you don't keep track of everything and that's where some softwares come
+to the rescue. For example you could use one to help you manage dot
+files, like gnu stow which works by having a repository (farm) holding
+your dot files and it managing them, keeping them in order, in sync,
+etc.. Or you could have a software to give you a list of whatever you
+have installed, somewhat like a tutorial. For example ricerous that we
+built at nixers. You could also use softwares to sync machines together
+like rsync and others. Or you could probably keep a simple text file
+with a list of softwares you have installed, or even hook it with your
+package manager so that it's in sync with the current packages, whenever
+you install a package it will append it to this list. What I want to say
+is that there are a bunch of ways that can help you leverage the burden
+on your mind to keep track of what is on your machine and how coherent
+it is without necessarily it being a hassle.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  But I think this management part
+comes after the minimalism step, after cleaning up, when you already
+know what you want install and knowing how your system works. Maybe
+you have to mess up your machine at least once, to learn, and then go
+through this process.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  So overall use those softwares if
+you're not able to keep order yourself.
+
+There are some good practices that can help you have less ties with
+a machine while still being productive. One of them is to not have
+configurations installed for all users, as in installed globally in /etc/
+or /usr/local... So that means having everything in your home, having
+a transportable home. Having something that is reproducible. Having a
+well ordered tidy home directory is really important when it comes to
+having less ties with a machine. If you want you can glance at a thread
+we had on the forums about creating nice home directory trees. It could
+inspire you. Overall what I found what help was to have at least a
+binary directory with executables in it, so it's appended to the path,
+some documents directory, some media, some source code, whatever suits
+your needs. You just need to keep up with it, and not hoarder.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  A well ordered home directory is
+a transportable home directory.
+
+Let's continue with the good practices, another thing would be to have
+a reproducible, scriptable, deployable home directory, which would have
+everything in it. It's sort of the mix up between the dot file keepers,
+the setup stepbystep keeper, and the portable home directory, along with
+the script that sets everything up, config in the home, creating the
+symlink where they need to be, install the packages, etc.. Once it's
+setup it's setup, that's it. It's a good way to have less ties because
+it means copying your home and running the script will reproduce your
+system, workflow, minimal stuffs, and core value. I think this is the
+epitome of whatever having less ties with a machine means.
+
+With that we can conclude this podcast.
+

@@ -134,7 +134,7 @@ And I've started a new series on flying insects, here are some examples:
 
 ![beetle]({{site.baseurl}}/assets/ascii/as44.png)
 
-I'll post them in my [ascii art](./asciiart.html) section in the next
+I'll post them in my [ascii art]({{site.baseurl}}/asciiart.html) section in the next
 few weeks.
 
 

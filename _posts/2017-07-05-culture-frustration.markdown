@@ -308,3 +308,66 @@ References:
 * Others in Mind - Social Origins of Self-Consciousness - Philippe Rochat
 * The Righteous Mind - Jonathan Haidt
 * Beau Lotto: "Deviate" | Talks at Google
+
+------
+
+## Addendum ##
+
+Here's a metaphoric reply I left to someone that was feeling such cultural
+frustration, it might be more meaningful than this whole post.
+
+Suffocation comes from a feeling of being repressed, imprisoned, limited.
+The reason for that might be that you feel you've reached the end of a
+road where you see no other alternative paths, at least paths that you
+don't see you can fit into. I can relate to that, it's uneasy and painful.
+
+You want to run away from this road to one that you've seen is already
+paved and well maintained.
+
+However that other road requires from you, to be able to navigate
+it, a new mode of transportation, maybe something you are not used
+to. Something that requires way more from you then you require from
+the road itself. It's high speed traffic. It might be as frightening as
+staying in the prison-state-of-mind.
+
+When you have easy alleys here, though unmaintained, it's roads that
+you walk on foot, a lot of the time avoiding potholes. It feels weird
+and hard to navigate the narrow and potholed infrastructures using a
+mode of transportation suited for the high speed traffic. You might
+feel limited and even crushed, looked at by everyone as the weirdo who
+doesn't accommodate. You might even feel pressured to just give up what
+you think defines who you are, the way you move in the world.
+
+It's the same way in reverse, you can't walk on foot on the big
+infrastructures provided for high speed traffic. The burden is all on
+you, no one is going to stop to have a discussion about which path you
+should take, you're on your own to decide your destiny. You might feel
+alone when everyone is in their vehicle going their way, past you, not
+giving a glance. At least it might be what you think from the perspective
+of the one on foot.
+
+Think about that, maybe this metaphor is far fetched but it's as close
+a feeling I could come up with. I have no clue where you stand and I'm
+not here to judge. However you have to realize that your suffocation
+comes from a discrepancy between how you perceive the world should be
+and how it is.
+
+Your prison is your own vision. You don't have to picture the environment
+as a road imposed on you, that you have to move on and with. Roads are
+there for a reason, it doesn't mean you should feel pressured by what's
+happening on them nor that you should want the road to change for your
+own way of progressing.
+
+What is required from the road is required by the most number of persons
+using it.
+
+They are there to use, not for them to be imposed on you, nor to make
+you feel imprisoned. They are there for you to make the most use of
+them. What you see as non-functional has some functionalities you might
+not see at the moment and I'm not going to give a lecture on that, you
+probably don't want to hear that. What you want to hear is that there
+are high speed roads alongside the alleys, and yes there are, everywhere,
+you just have to find them and the people on them.. And there are alleys
+next to high speed roads, so if you feel like you can't keep up with
+the pace you can take refuge in them.
+
