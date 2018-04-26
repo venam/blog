@@ -80,9 +80,10 @@ what to draw on the screen and let the user interact with them.
 
 With that in mind we can define what each software is.
 
-X11, Wayland, and Mir are implementations of display servers.
-Xlib and XCB are libraries implementing the client-side  of the X11 display
-server protocol.
+The X server, Wayland compositors, and Mir are implementations of display
+servers.  Xlib and XCB are libraries implementing the client-side  of
+the Xserver/X Windowing system display server protocol (speaking the
+X11 protocl).
 
 > At the bottom level of the X client library stack are Xlib and XCB, two
 > helper libraries (really sets of libraries) that provide API for talking
@@ -110,13 +111,16 @@ Now what are the big differences, why are there many of those?
 What are the advantages of one against the other.
 
 
-### X11 or X or also called X window system is a display server or "graphical
-server", as we've said.
+### X11 or X or also called X window system
+
+The X server is a display server or "graphical server", as we've said.
 So what's particular about it.
 
 It's the oldest display manager that is still alive today.
 All its predecessors are deprecated.
 The first versions were made in 1984 at MIT.
+
+_NB_: This is what we call X server implementation.
 
 X provides a framework for drawing and moving windows on the screen and
 also, and it's important to note, interact with the mouse, touchscreens,
@@ -160,12 +164,15 @@ on the same host.
 
 Now let's go into a bit more details about the architecture.
 
-Clients connect to the X server.
-The X server communicated and interface with the OS kernel to get events from
-the hardware, the keyboards, mouse, etc.. (evdev) and to tell the screen what
-to display.
-The window manager communicate with the X server to manipulate windows, it's
-always the X server that moves the windows.
+_NB_: This is what we call the X Window System, the networked display
+system.
+
+* Clients connect to the X server using the X11 protocol.
+* The X server communicated and interface with the OS kernel to get events from
+  the hardware, the keyboards, mouse, etc.. (evdev) and to tell the screen what
+  to display.
+* The window manager communicate with the X server to manipulate windows, it's
+  always the X server that moves the windows.
 
 Now this is pretty much straight forward but the big thing to remember here
 is that the communication between X and the hardware isn't direct, it goes
@@ -188,6 +195,9 @@ Now what's the deal with Wayland?
 Wayland: Wayland is a protocol. It essentially is a standardized way in
 which a compositor (the thing that draws the windows, handles the input,
 etc) can speak to individual programs, and vice-versa.
+
+_NB_: You can think about it like another architecture, similar to the
+X Window System.
 
 There are many implementation of that protocol and they are called Wayland
 compositor.
