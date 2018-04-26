@@ -1,9 +1,13 @@
 @font-face {
-	font-family: 'Aller';
-	src: url('../assets/fonts/Aller.eot?') format('eot'), 
-	     url('../assets/fonts/Aller.woff') format('woff'), 
-	     url('../assets/fonts/Aller.ttf')  format('truetype'),
-	     url('../assets/fonts/Aller.svg#Aller') format('svg');
+        font-family: 'Aller';
+        src: url('../assets/fonts/hinted-subset-Aller.eot');
+        src: url('../assets/fonts/hinted-subset-Aller.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/hinted-subset-Aller.woff2') format('woff2'),
+        url('../assets/fonts/hinted-subset-Aller.woff') format('woff'),
+        url('../assets/fonts/hinted-subset-Aller.ttf') format('truetype'),
+        url('../assets/fonts/hinted-subset-Aller.svg#Aller') format('svg');
+        font-weight: normal;
+        font-style: normal;
 }
 
 @font-face{
