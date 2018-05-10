@@ -72,11 +72,19 @@ Let's go through the boring wiki definition:
 
 
 As a simple definition the display server is the layer that sits between
-the kernel and the graphical interface.
+the kernel (or any display output) and the graphical interface.
 The kernel communicate with the hardware through the drivers for the specific
 graphic cards.
 The window manager communicates with the display server and tells it how and
 what to draw on the screen and let the user interact with them.
+
+_NB_: The display output doesn't have to be the limited to the kernel,
+it is in most cases though, a display server could output to almost
+anything. For example it can output in a window, as with the software
+Xephyr (<https://freedesktop.org/wiki/Software/Xephyr/>).
+
+![display server]({{site.baseurl}}/assets/display_server.png)
+
 
 With that in mind we can define what each software is.
 
@@ -543,6 +551,8 @@ you know what to use in what situation.
 
 
 --(Show Notes)--  
+[Writing WM](https://seasonofcode.com/posts/how-x-window-managers-work-and-how-to-write-one-part-i)  
+[Xplain](https://magcius.github.io/xplain/article/x-basics.html)  
 [Display Server](https://en.wikipedia.org/wiki/Display_server)  
 [X Window System](https://en.wikipedia.org/wiki/X_Window_System)  
 [Xlib](https://en.wikipedia.org/wiki/Xlib)  

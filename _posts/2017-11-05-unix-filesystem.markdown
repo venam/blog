@@ -61,6 +61,8 @@ Data storage is whatever mean that is used to store information on
 a medium that can contain that body of data and that offers a way to
 search for that information back.
 
+![data storage]({{site.baseurl}}/assets/data_storage/data_storage.png)
+
 The data storage medium we'll focus on will be the long term physical
 storage devices, like hard disks, and not the virtual ones that only
 exist in memory or networked ones.
@@ -140,6 +142,8 @@ that behavior."
 As you can see, those are blocks fitting into one another. Keep them in
 mind all along as we're going to dive into everyone of them one by one.
 
+![architecture overview]({{site.baseurl}}/assets/data_storage/overview.png)
+
 
 # Lowest level - Hardware & limitation #
 
@@ -162,6 +166,9 @@ Those sectors are addressable, that means they can be pointed and found
 by reading and writing at their specific offset, this makes searching
 and writing information more efficient.
 
+
+![sector]({{site.baseurl}}/assets/data_storage/sector.png)
+
 A lot of the logic, abstractions, and file placement optimization done
 at higher levels (optimizing seek time for example) are and were made
 with the assumption that we are interacting with a hard disk. So it's
@@ -178,6 +185,8 @@ also divided into smaller parts that are all the same size called sectors.
 This is the sector that we've talked about when it's applied to the hard
 disk case.
 
+![hard disk structure]({{site.baseurl}}/assets/data_storage/hard_disk_structure.png)
+
 If you know the right head, the right track, and the right sector then
 you can pinpoint the data you want. However most of today's hard disk
 have this abstracted and map sectors globally, so you can point directly
@@ -188,6 +197,8 @@ or optical disks, not only hdd.
 This is called LBA, Logical Block Addressing which is in contrast with
 CHS, cylinder-head-sector addressing. LBA addresses can be translated
 back and forth to CHS.
+
+![chs vs lba]({{site.baseurl}}/assets/data_storage/chs_lba.gif)
 
 So when data is stored on the hard disk it's usually stored on a bunch
 of sectors and whatever space is left on the sector is left as is,

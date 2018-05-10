@@ -7,7 +7,7 @@ categories: programming
 
 
 Five months have past since [my last
-post](./programming/2017/07/18/july-2017.html) about personal projects
+post]({{site.baseurl}}/programming/2017/07/18/july-2017.html) about personal projects
 and endeavours but it feels like I've been stagnating for much longer.
 
 

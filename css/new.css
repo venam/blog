@@ -85,7 +85,7 @@ nav, #logo_content {
 }
 
 p {
-	margin-bottom: 3ex;
+	margin-bottom: 1.7ex;
 }
 
 article {
@@ -175,17 +175,14 @@ nav ul li a:hover {
 	text-shadow: 1px 1px 2px #121212;
 }
 
-#logo:hover {
-	color: #82b1a3;
+#logo:hover, #logo_white, .colored, a {
+	color: #437d62;
 }
 
 #logo:hover #logo_white {
 	color: #d6d6d6;
 }
 
-#logo_white, .colored {
-	color: #82b1a3;
-}
 
 #subtitle {
 	display: inline;
@@ -229,7 +226,6 @@ footer {
 }
 
 a {
-	color: #82b1a3;
 	text-decoration: none;
 }
 
@@ -282,6 +278,21 @@ blockquote {
 
 .hidden {
 	display: none;
+}
+
+code {
+	word-break: normal;
+	overflow: auto;
+	word-wrap: break-word;
+	max-width: 100%;
+	display: block;
+	text-align: left;
+	font-family: monaco, monospace;
+	font-size: 1.3ex;
+	letter-spacing: -0.05em;
+	padding: 0.05em;
+	margin: 0.05em;
+	line-height: 100% !important;
 }
 
 @media (max-width: 475px) {

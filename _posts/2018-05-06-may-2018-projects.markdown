@@ -1,0 +1,205 @@
+---
+layout: post
+title: "May 2018 Project List"
+date: 2018-05-06
+categories: programming
+---
+
+
+Five months have past since [my last
+post]({{site.baseurl}}/programming/2017/12/05/december-projects.html) about personal
+projects.
+
+
+### Books & Podcasts ###
+
+_Language: brains_  
+_Explanation_: This is probably what I've done the most in the past month:
+reading and listening to podcasts.
+
+#### Books ####
+
+![Camus]({{site.baseurl}}/assets/etranger.jpg)
+
+* _L'étranger - Albert Camus_  
+This was a quick 2 days read. An insightful critic of nihilism.
+* _Philosophie minute - Marcus Weeks_  
+This is my daily quick memo read.
+* _Others in Mind: Social Origins of Self-Consciousness - Philippe Rochat_  
+I was already halfway through this one in my previous post. It's a epic
+read about the researches that go into the development of the self and
+how there are many different types and levels of being into the world.
+* _Immunity to change: How to overcome it and unlock the potential in yourself and your organization - Robert Kegan & Lisa Laskow Lahey_  
+In continuation with my series on behavioral change, this book was a nice
+addition. It discusses practical techniques to reach change as adults,
+a topic that is rarely discussed.
+* _The Black swan - Nassim Nicholas Taleb_  
+I didn't know what to expect when starting this book. I don't regret
+going through it, there are so many new ways of interpreting events and
+probabilities I haven't thought about before.
+* _A short history of nearly everything Bill Bryson_  
+This one I'm a quarter into. I'm not great in physics and this is an
+absolutely tasty start into the subject. At the same time I'm sparingly
+watching the well known "Cosmos" series to complement.
+* _[What Every Programmer Should Know About Memory](https://www.akkadia.org/drepper/cpumemory.pdf) - Ulrich Drepper_  
+Apart from the countless technical articles and papers I've read for the
+weekly newsletter, I'd like to mention a single one that I would recommend
+more than anything. It was the hardest research paper to go through.
+
+Moreover, I finally got my university alumni access card and so I have
+access to the research papers there.
+
+
+#### Podcasts ####
+
+
+Since the last post I've added quite a bunch of new podcast in my feed.
+
+Some series related to history.
+* [A History of the world in a 100 objects](https://en.wikipedia.org/wiki/A_History_of_the_World_in_100_Objects) [All]  
+* [The Rhine](https://history-podcasts.com/rhinecast) [All]  
+I'm done with those two and started with the next two though I didn't
+really like them.  
+* [The ancient history](https://history-podcasts.com/the-ancient-world) [Started]  
+* [The history of china](https://thehistoryofchina.wordpress.com/) [Started]  
+
+Others are about philosophy.
+* [Philosophy bites](http://philosophybites.com/) [All]  
+* [Oxford Philosophy course](http://www.openculture.com/2018/03/oxfords-free-introduction-to-philosophy-stream-41-lectures.html) [All]  
+
+And the rest about new opinions and ideas.
+* [Modern Love](https://www.npr.org/podcasts/469516571/modern-love) [All]  
+* [The Intercept](https://theintercept.com/podcasts/) [Started]  
+* [All in the mind](http://www.abc.net.au/radionational/programs/allinthemind/) [Most]  
+* [CMV podcast](https://changemyview.net/podcast/) [Most]  
+* [The psychology podcast](https://scottbarrykaufman.com/podcast/) [Most]  
+
+
+### Learning from scratch ###
+
+
+_Language: C_  
+_Explanation_: I've worked on two small projects to get acquainted with
+some technologies and concepts I could only hear about and not have any
+practical use for.  
+&nbsp;&nbsp;&nbsp;&nbsp; One is about file system
+and the other about CPU caching algorithms.  For the first one I've
+implemented a small part of a FAT12 file system, you can find it
+[here](https://github.com/venam/FAT12). As for the second one I've done
+a mini cpu cache simulation using a simple algorithm, you can find it
+[here](https://github.com/venam/cache-simulation/).  
+&nbsp;&nbsp;&nbsp;&nbsp; Overall those projects gave me
+some good insights.
+
+
+### Making the web better ###
+
+
+_Language: internet tech_  
+_Explanation_: I've revived an old project about stopping ads.
+
+I've fixed the [AUR
+package](https://aur.archlinux.org/packages/adsuck/), fetched my [old
+list](https://github.com/venam/adsuck-hosts-experimentation) and added
+some new hosts and here we go.
+
+I've also updated this blog to make it more friendly and faster.
+
+* I removed all analytics. I already know who the readers of my blogs
+are and so it has done its job.
+* I ditched disqus and instead started using [isso](https://posativ.org/isso/)
+* I stopped using google fonts and removed unused glyphs to make them smaller.
+* I arrange the vertical alignment of some posts. Made the text justified
+and more.
+* I rechecked the color contrast on the blog to make it friendly.
+* I made sure the page was accessible at 200% zoom level.
+
+
+### Ascii Art ###
+
+
+![cuelebre]({{site.baseurl}}/assets/ascii/as55.png)
+
+_Language: art_  
+_Explanation_: In the release pack of impure
+[67](http://pc.textmod.es/pack/impure67/) and
+[68](http://pc.textmod.es/pack/impure68/) I've published two new series
+of ascii. In 67 I've released the insect series and in 68 the dragon
+series. For the dragon one I wanted to focus on folklore.  
+&nbsp;&nbsp;&nbsp;&nbsp; You can always find them all in my [ascii
+art]({{site.baseurl}}/asciiart.html) section.
+
+### Fonts ###
+
+
+_Language: C_  
+_Explanation_: This is my current focus. After the podcast about [the font
+stack on unix]({{site.baseurl}}/unix/2017/06/04/fonts-on-unix.html)
+and the one about [X11 and
+others]({{site.baseurl}}/unix/2016/10/25/x11-blah-blah.html) I kept
+wondering if I couldn't fill the gap of documentation and fonts for xcb
+and generally X graphic programming.  
+&nbsp;&nbsp;&nbsp;&nbsp;And so I started with the aim of
+bringing Xft-like capabilities to XCB. You can find it on Github:
+<https://github.com/venam/fonts-for-xcb>. I'm making some really
+good progress linking both fontconfig, freetype2, Xrender, and xcb
+together. Although I'm finding more and more intricate difficulties
+like choosing if I want to add a shaping engine or not and if I want to
+include a font as fallback to come along the library.  
+&nbsp;&nbsp;&nbsp;&nbsp;So far so good, I'm able to display the font I
+still have to link the pieces together. I'm planning after that on posting
+more articles and projects related to this topic to fill the gap, though
+I'm also lacking knowledge. This will be an excellent learning experience.
+
+
+### Scavenger Hunt, Podcast & Newsletter ###
+
+
+_Language: Unix_  
+_Explanation_: I'm still pushing stuffs for the community
+of nixers! We had one [new scavenger hunt for the new
+year](https://nixers.net/showthread.php?tid=2183) which was quite fun. It
+included intriguing technical things that mixed both the world of hacking
+and Unix. From filtering inside big process lists, to learning about
+weird C features, to setting up client side certificates, querying DNS,
+analyzing font files, digging inside object files, mounting broken file
+systems, and much more.  
+&nbsp;&nbsp;&nbsp;&nbsp;You can also find the solutions
+of all the previous scavenger hunts in this thread:
+<https://nixers.net/showthread.php?tid=2184>.
+
+As far as the podcast goes I only released one new
+episode entitled [Tools, glue, scripts, and automation on
+Unix](https://nixers.net/showthread.php?tid=2191). In it I wanted to go
+over some of the oldest Unix tools and what was the ideas and stories
+behind them.
+
+The newsletter now has 198 subscribers reading it every week and
+73 issues published as of this post. You can find the archives
+[here](https://newsletter.nixers.net/entries.php). It is turning into
+a resourceful page full of amazing links.
+
+
+## Now ##
+
+So now what?  
+I'm posting this on the 6th May 2018, election day in Lebanon. With a
+bit of hope for the future I think the country will move forward. I'm
+taking next week off to refresh on everything and spend time working
+on projects I care about, think more, write more, and simply just relax.  
+&nbsp;&nbsp;&nbsp;&nbsp; I'm in the process of adding illustrations to
+a lot of my technical posts so that they become approachable. I also want to
+write an explanation of what I've been doing related to the font
+project, sum it up in an article so that it's, again, approachable. I
+have been thinking and hunted by the idea of leaving information for
+others, of passing on the flame. Kudos if you're doing that yourself in
+your field of expertise - you don't have to be an expert even to share
+what you've learned.
+
+This is it!
+
+As usual... If you want something done, no one's gonna do it for you,
+use your own hands.  
+&nbsp;&nbsp;&nbsp;&nbsp; And let's go for a beer together sometime,
+or just chill.
+
