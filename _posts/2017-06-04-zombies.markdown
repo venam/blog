@@ -45,8 +45,25 @@ For instance that structure is named `task_struct` in the Linux kernel
 and is held inside a doubly linked list whose root is the init processes'
 `task_struct`.
 
+The linking between processes is done in the structure using the following
+attributes:
+
+```
+// the actual parent that was forked
+struct task_struct *real_parent;
+// the parent that will receive a signal (SIGCHLD) when the child exits,
+// you'll see in a bit what this means
+struct task_struct *parent;
+// a linked list with all the children of this process
+struct list_head children;
+// a pointer to the parent's children list
+struct list_head sibling;
+```
+
+
 So if you have a bunch of those useless zombie processes they would just
 clog the process tree.
+
 
 The real problem is not with the memory usage though, the issue is
 because there's a limit of entry for processes that can be held in the
@@ -72,7 +89,8 @@ What does it mean for a process to cease to exist?
 And more importantly, why are those useless processes there?
 
 
-------
+![process tree]({{site.baseurl}}/assets/zombies/process_tree.png)
+
 
 The state of a process is a value stored in the structure we mentioned
 earlier, namely the one inside the process tree.
@@ -94,6 +112,24 @@ A process finishes executing, has completed its job, when the exit system
 call is reached. The process should be in a "terminated state."
 
 But it hangs there waiting to be cleaned.
+
+![Process life cycle](http://slideplayer.com/slide/3155725/11/images/61/UNIX+Process+State+Transition+Diagram.jpg)
+_The process life cycle transition diagram (courtesy of [William Stallings](http://slideplayer.com/slide/3155725/))._
+
+For example the `task_struct`, from earlier, in the Linux kernel has
+the following `state` attribute:
+
+```
+volatile long state;    /* -1 unrunnable, 0 runnable, >0 stopped */
+
+// which can take any of the following values
+#define TASK_RUNNING            0
+#define TASK_INTERRUPTIBLE      1
+#define TASK_UNINTERRUPTIBLE    2
+#define TASK_ZOMBIE             4
+#define TASK_STOPPED            8
+#define TASK_EXCLUSIVE          32
+```
 
 So why is it waiting?
 
@@ -128,6 +164,8 @@ When in that finished execution but waiting state the process is a zombie.
 
 Now you get why when you set the flag to not wait or ignore signals sent
 from children there's no zombie.
+
+![process exit]({{site.baseurl}}/assets/zombies/process_exit.png)
 
 Normally, well written programs will immediately wait for the children
 processes to read their status, and zombies won't stay zombies for a
@@ -280,6 +318,7 @@ Refenreces:
 - <https://en.wikipedia.org/wiki/Process_state#Terminated>
 - <http://www.makelinux.net/books/lkd2/ch03lev1sec1>
 - <http://www.tldp.org/LDP/tlk/kernel/processes.html>
+- <http://www.tldp.org/LDP/lki/lki-2.html>
 - <http://man7.org/linux/man-pages/man2/waitpid.2.html>
 - <https://venam.nixers.net/blog/unix/2013/02/24/zombie-process.html>
 - <http://unix.stackexchange.com/questions/352781/background-zombie-daemon-and-without-ctty-are-these-concepts-connected>

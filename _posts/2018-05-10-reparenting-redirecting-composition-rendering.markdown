@@ -63,7 +63,7 @@ is that a window is an actual window that can be mapped on the screen,
 with attributes and that can have atoms, receive events, etc.. The
 pixmap is only a surface to draw on, hold in memory but never directly
 on the screen. To be drawn on the screen a pixmap has to be copied
-unto a window, think about it like a stamp that can be reuse.  
+unto a window, think about it like a stamp that can be reused.  
 &nbsp;&nbsp;&nbsp;&nbsp; As far as the differences in drawing mechanism
 goes, when we draw on the pixmap we draw on specifically allocated memory
 buffer for it, each pixmap creates its own buffer/its own surface. When we

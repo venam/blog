@@ -285,14 +285,14 @@ code {
 	overflow: auto;
 	word-wrap: break-word;
 	max-width: 100%;
-	display: block;
+	display: inline-block;
 	text-align: left;
 	font-family: monaco, monospace;
 	font-size: 1.3ex;
 	letter-spacing: -0.05em;
 	padding: 0.05em;
 	margin: 0.05em;
-	line-height: 100% !important;
+	line-height: 108% !important;
 }
 
 @media (max-width: 475px) {

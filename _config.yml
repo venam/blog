@@ -2,7 +2,7 @@
 title: Venam's Blog
 email: x7e1@psychology.wtf
 description: > # this means to ignore newlines until "baseurl:"
-  A deliberate person tackling the world as a system of interconnected ideas and concepts. Most articles are about unix, psychology, and phylosophy.
+  A deliberate person tackling the world as a system of interconnected ideas and concepts. Most articles are about unix, psychology, and philosophy.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://venam.nixers.net" # the base hostname & protocol for your site
 github_username:  venam

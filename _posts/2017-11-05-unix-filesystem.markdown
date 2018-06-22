@@ -11,6 +11,8 @@ podcast_ogg:
 
 # Data Storage on Unix & Filesystems #
 
+<https://nixers.net/showthread.php?tid=2164>
+
 
 ### Table of content ###
 
@@ -264,6 +266,8 @@ use the BIOS, which means SCSI and ATA are the main way of interacting
 with the storage devices and that there are specific drivers understanding
 how to do that.
 
+![connectors]({{site.baseurl}}/assets/data_storage/connectors.png)
+
 Let's note here that most direct access devices are equipped with read
 and/or write caches parameters. Remember that.
 
@@ -357,6 +361,8 @@ Reduced cable size, faster speed, reliability, among others.
 SATA is the defacto today for consumer devices such as desktop and
 laptops, 99% of the market share as reported in 2008.
 
+![sas vs sata]({{site.baseurl}}/assets/data_storage/sas_vs_sata.jpg)
+
 So both ATA-like and SCSI-like interfaces sound very similar, they both
 more or less do the same job, have direct memory access, feature command
 queuing, have swappable connectors to allow to hot-plug the drives when
@@ -387,6 +393,8 @@ devices other than hard disks.
 
 So ok, that was a long overview of the hard disk world.
 
+![SCSI & ATA]({{site.baseurl}}/assets/data_storage/SCSI_ATA.png)
+
 Now how do we access those on Unix, are there commands to configure,
 set the hardward cache, etc.. and get info about those drives.
 
@@ -407,6 +415,10 @@ So, here are some:
 * `dmidecode`
 * `biosdecode`
 * etc..
+
+_NB_: SCSI can also work over the network over a protocol called
+[iSCSI](https://en.wikipedia.org/wiki/ISCSI).
+
 
 
 ## The Drivers ##
@@ -474,6 +486,11 @@ numbers 8 and 65 through 71, etc..
 There are more precise things in the devfs subsystem `/dev/scsi` and
 you can get more details about the SCSIs by checking `/proc/scsi`.
 
+_NB_: We call the endpoint that initiate the SCSI session a [SCSI
+initiator](https://en.wikipedia.org/wiki/SCSI_initiator_and_target)
+and it connects to a [SCSI
+target](https://en.wikipedia.org/wiki/LIO_(SCSI_target)).
+
 
 That's enough about Linux, now what about BSDs?
 
@@ -521,6 +538,8 @@ the same as a filesystem block as we'll see later, but is a different
 cache than the filesystem cache.
 
 This layer has some queuing and scheduling put in place too.
+
+![block layer]({{site.baseurl}}/assets/data_storage/block_layer.png)
 
 However there are a lot of criticism about it.
 
@@ -602,6 +621,8 @@ storage space, this can be many disks or a single disk, and a partition
 are the separate consecutive sectors that are part of those volumes or
 the physical disk.
 
+![volumes and partitions]({{site.baseurl}}/assets/data_storage/volumes_and_partitions.png)
+
 You can have 3 partitions in one volume and that volume spanning over
 2 disks.
 
@@ -670,15 +691,19 @@ disks in chunks.
 * RAID 5 does the same as RAID 3 but alternating the parity check from
   one disk to another.
 
-The mapping of the devices in `/dev` changes according to what we've
+![device mapper]({{site.baseurl}}/assets/data_storage/device_mapper.png)
+
+The mapping of the devices in /dev changes according to what we've
 discussed, apart from the SCSI and SATA we mentioned earlier.
 
-It adds volumes and partitions to the mix.
+It adds volumes and partitions to the mix. (Though device mapper wrappers,
+virtual block devices, are mapped separately, for example on Linux in
+/dev/mapper/whatevermappingname)
 
 On Linux partitions are represented by additional numbers added.
 
-For example, the first SCSI disk is `/dev/sda` and the first partition
-on it `/dev/sda1`, second partition `/dev/sda2`.
+For example, the first SCSI disk is /dev/sda and the first partition
+on it /dev/sda1, second partition /dev/sda2.
 
 That is regardless if it's a partition on an an extended partition like
 GPT or one of the 4 main partitions.
