@@ -1,0 +1,508 @@
+---
+layout: post
+title:  "Xft but for XCB"
+date:   2018-09-02
+categories: unix
+---
+
+
+In this post I'm going to go over "fonts for xcb" a mini-project I've
+been working on recently and I'll documents the parts that are not
+usually found online.
+
+XCB, the X C Binding, is a client library that offers a set of C functions
+to interact with the X graphical server in a lightweight minimal way. You
+can refer to this [older post](/blog/unix/2016/10/25/x11-blah-blah.html)
+to understand more about what this library is about. XCB is getting
+popular in the niche world of small graphical utilities and window manager
+however it doesn't offer everything. One thing in particular it doesn't
+offer is a facility for pretty font handling.
+
+There are many reasons for this, first not many are interested in XCB
+in itself, Xlib (The older easier synchronous X client side library)
+is much easier to handle. Second of all, XCB is hardly documented and
+thus has a big barrier of entry. Third of all, it's missing wrapper
+functions that were present in Xlib. And fourth of all, Wayland is on
+its way (though long way) to make X deprecated.
+
+That is why I've made the
+[font-for-xcb](https://github.com/venam/fonts-for-xcb) project, to
+document my process and offer a base for others that are interested in
+learning about fonts, rendering, and XCB.
+
+Enough talk, let's got through the process needed to implement good font
+rendering with xcb.
+
+You probably need to review what was discussed in this posts [Fonts
+on Unix](/blog/unix/2017/06/04/fonts-on-unix.html) as its a direct
+application of the knowledge from there.
+
+> The people that truly understand the full font stack can be counted
+> on one’s hand, I’d like to salute those true heroes.
+
+The steps can be divided into the following:  
+
+* Fontconfig for font selection and configuration
+* Freetype for font rasterization
+* Xrender for rendering
+* Extra - Font fallback
+* Wrappers for merging things together in an easy library
+
+
+### Fontconfig for font selection and configuration ###
+
+To begin you have to select a font and how that font is going to be
+displayed. The best way to do that is to rely on the fontconfig library,
+which is probably already present on your machine. You know this is the
+case when you issue the command `fc-match "some font name"`.
+
+The reference for developers is found
+[here](https://www.freedesktop.org/software/fontconfig/fontconfig-devel/)
+however it isn't explaining but rather simply laying down the function
+names and data structures within the library.
+
+The crux of the functionality lies within building a "search
+pattern" and matching using this pattern. A "search pattern" is
+composed of whatever font properties you are looking for, those are
+not limited to font names but can be anything from font weight to
+font family name, to what characters should be present in the font
+character set. You can find the list of possible font properties
+[here](https://www.freedesktop.org/software/fontconfig/fontconfig-devel/x19.html#AEN27).
+
+The possibilities with fontconfig are not limited to search but everything
+related to fonts and fonts sets listing, getting the properties in the
+font matched, manipulating the structures related to fonts like characters
+in different encoding such as utf8, utf16, and Ucs4, and much more.
+
+The easiest way to do the search is to match the font from a
+string that will be interpreted automatically by fontconfig as all
+the parameters that need to be found in the result of the search. If
+you've ever used Xft this is the same search string in a form similar to:  
+
+`<families>-<point sizes>:<name1>=<values1>:<name2>=<values2>...`
+
+This is documented in the user page for fontconfig
+[here](https://www.freedesktop.org/software/fontconfig/fontconfig-user.html#AEN36).
+To do that you have to convert the font query from a string to an actual
+usable pattern.
+
+
+```
+    // initialize the fontconfig library
+    FcInit();
+    FcChar8 *fontquery = "times:pixelsize=20";
+    FcPattern *fc_finding_pattern = FcNameParse(fontquery);
+```
+
+As you can see
+[FcNameParse](https://www.freedesktop.org/software/fontconfig/fontconfig-devel/fcnameparse.html)
+isn't documented in the reference. `fc_finding_pattern` will contain the
+pattern that we can use to do the matching later on. So the next step is
+to use that pattern to match a font, however it's a good idea, sometimes,
+to let fontconfig fill some default configuration is has for things we
+haven't set yet in the search. We do that using `FcDefaultSubstitute`
+and passing it the pattern. There's also a substitution to fill system
+configuration values set for the kind of pattern, a FcMatchPattern.
+
+```
+    FcBool status;
+    FcDefaultSubstitute(fc_finding_pattern);
+    status = FcConfigSubstitute(NULL, fc_finding_pattern, FcMatchPattern);
+    if (status == FcFalse) {
+        fprintf(stderr, "could not perform config font substitution");
+    }
+```
+
+So how do we know what it's actually filling in the pattern? There's a
+function offered by fontconfig to do exactly that.
+
+```
+    FcPatternPrint(fc_finding_pattern);
+```
+
+The last step after creating the pattern is the actual matching.
+
+```
+    FcResult result;
+    FcPattern *pat_output = FcFontMatch(NULL, fc_finding_pattern, &result);
+
+    FcPatternDestroy(fc_finding_pattern);
+    if (result == FcResultMatch) {
+        FcValue fc_file;
+        FcPatternGet(pat_output, FC_FILE, 0, &fc_file);
+        printf("found the font in the file: %s\n", (const char *)fc_file.u.s);
+    } else if (result == FcResultNoMatch) {
+        fprintf(stderr, "there wasn't a match");
+    } else {
+        fprintf(stderr, "the match wasn't as good as it should be");
+    }
+```
+
+The result will also be stored in a pattern structure and whatever is not
+needed anymore should be cleaned using fontconfig built-in functions such
+as `FcPatternDestroy`. You may ask what is the difference if the result
+is stored in a pattern but the search is also a pattern. What differs
+is that the real values of the font properties will be filled and usable
+now. Properties such as `file` which is "The filename holding the font"
+for example.
+
+Let's be aware that some values returned or filled from a fontconfig
+function may not need to be cleaned as they are pointers to other values
+found inside living structures and not newly allocated values. For
+instance, when issuing FcPatternGet for the `fc_file` in the example
+above we don't need to free the variable.
+
+And so we've found our font, now how to load and use the glyphs in it?
+
+
+### Freetype for font rasterization ###
+
+We have a match and its properties, we should now load the font
+content itself so that we can use the glyphs in it. That is what
+we call rasterizing, converting from a mathematical definition
+(here the font file) to actual bitmap/pixel representation. This
+is done with the [Freetype](https://www.freetype.org/) library. To
+start with Freetype it's good to read their [Glyph Conventions
+page](https://www.freetype.org/freetype2/docs/glyphs/index.html). It
+explains things such as the difference between a face and a font family,
+what are the metrics used in fonts, kerning, and much more.
+
+```
+    // (1)
+    FT_Library library;
+    FT_Init_FreeType(&library);
+
+    // (2)
+    FcValue fc_file, fc_index;
+    result = FcPatternGet(pat_output, FC_FILE, 0, &fc_file);
+    if (result != FcResultMatch) {
+        fprintf(stderr, "font has not file location");
+    }
+    result = FcPatternGet(pat_output, FC_INDEX, 0, &fc_index);
+    if (result != FcResultMatch) {
+        fprintf(stderr, "font has no index, using 0 by default");
+        fc_index.type = FcTypeInteger;
+        fc_index.u.i = 0;
+    }
+
+    // (3)
+    FT_Face face;
+    FT_New_Face(
+            library,
+            (const char *) fc_file.u.s,
+            fc_index.u.i,
+            &face);
+```
+
+Loading a face happens in 3 steps. (1) The freetype library needs to be
+loaded if not already. (2) The value for the font file location and the
+face index within that font file needs to be extracted from the fontconfig
+pattern match of earlier. (3) Finally the loading of the face happens with
+`FT_New_Face`.
+
+Much more options can be set on the face later on after it has been
+loaded. Glyph modifications such as slants for italic, pixel or point
+size change, etc..
+
+Let's say we have some text we want to write, we have loaded a face,
+and we want to get the glyph for every characters in that text. Every
+glyph in a face has an index and we use that index to fetch the glyph.
+
+```
+    char *text = "hello world";
+
+    int glyph_index = FT_Get_Char_Index(
+        face,
+        text[0]);
+    if (glyph_index == 0) {
+        fprintf(stderr, "The character 'h' doesn't have a glyph in this face");
+    }
+
+    FT_Select_Charmap(face, ft_encoding_unicode);
+    FT_Load_Glyph(face, glyph_index, FT_LOAD_RENDER | FT_LOAD_FORCE_AUTOHINT);
+
+    FT_Bitmap *bitmap = &face->glyph->bitmap;
+```
+
+The `FT_Load_Glyph` function renders/rasterizes the glyph and
+make the bitmap object of type `FT_Bitmap` point to it. In fact
+`face->glyph->bitmap` will always point to the latest rasterized glyph.
+
+We have the bits/pixels form of the character we want to display on the
+screen but what if there are many of them, how would we know the space
+to add between every characters. There are fonts that are horizontal,
+others that are vertical, some with ligature, and other much fancier
+features. Unfortunately this isn't something that is provided by
+Freetype, those last features are part of what we refer to as a font
+shaping engine such as HarfBuzz. However, for simple cases like ours,
+the distance between glyphs can be queried from the "advance", which is a
+glyph metric that you get when loading the font via Freetype representing
+how much you need to move forward in x or y position.
+
+```
+    FT_Vector glyph_advance;
+    glyph_advance.x = face->glyph->advance.x/64;
+    glyph_advance.y = face->glyph->advance.y/64;
+```
+
+The division by 64 is out of scope of this article,
+it is related to typographic metrics. You can check [this
+page](https://www.freetype.org/freetype2/docs/glyphs/glyphs-3.html#section-3)
+for more information.
+
+
+### Xrender for rendering ###
+
+Alright, thus far we haven't mentioned xcb at all but in this section
+we will. We have loaded our glyph from its glyph index within the font
+file into an `FT_Bitmap` structure, that means we have its representation
+rasterized, its pixel form, now how do we get this unto the screen.
+
+To do that we have to yet again tackle another topic
+called "digital image composition" which is the base for
+rendering within the X window system. The documenttion
+on this one is also scarce, all theoretical. Those
+two pages are the base of the concept: "[The X Rendering
+Extension](https://www.x.org/releases/current/doc/renderproto/renderproto.txt)"
+and "[Design and Implementation of the X Rendering
+Extension](https://keithp.com/~keithp/talks/usenix2001/xrender/)".
+Rendering was also discussed in one of the previous
+posts called [Drawables, Regions, Shapes, Types of
+WM, Reparenting, Compositing, Redirecting, Unredirecting,
+Rendering](/blog/unix/2018/05/10/reparenting-redirecting-composition-rendering.html).
+It's a good idea to review that last post to get a better general
+knowledge of rendering.
+
+Digital image composition, or what we call here "rendering" is about
+taking the pixels we've got from somewhere (glyph) and mix them up with
+other pixels from somewhere else (on a pixmap). There are
+many rendering engines as was said in the previous post so we'll limit
+ourselves to discussing the XRender engine.
+
+All rendering engine, Xrender included, offer basic pixel
+operations that come from a paper by Porter and Duff in 1984
+called the "Porter-Duff compositing model", also known as [alpha
+compositing](https://en.wikipedia.org/wiki/Alpha_compositing). The cool
+and maybe intimidating name asides those operations are quite simple,
+they are bitwise operation done on the two pixels given as input. Things
+such as binary Xor and Add are certainly there, plus operations such as
+Src or Dst which will only take one side of the inputs (the source or
+the destination). There are plenty of others like reversing the pixels,
+or merging them, or taking the minimum or the maximum values.
+
+To use that rendering concept within XCB you can rely on the XRender
+library or use an external one like OpenGL. Let's limit ourselves
+to XRender.
+
+```
+	#include <xcb/render.h>
+	#include <xcb/xcb_renderutil.h>
+```
+
+The world of xcb introduces the concept of "picture" to join together
+the rendering operation with the canvas/pixmap it's drawing to.
+
+```
+	xcb_render_picture_t picture;
+	// c being the xcb_connection_t
+	picture = xcb_generate_id(c);
+```
+
+Like other things within the X windowing system, pictures are objects
+with unique identifiers.
+
+```
+	// (1)
+	uint32_t values[2];
+	values[0] = XCB_RENDER_POLY_MODE_IMPRECISE;
+	values[1] = XCB_RENDER_POLY_EDGE_SMOOTH;
+
+
+	// (2)
+	xcb_render_pictforminfo_t *fmt;
+	const xcb_render_query_pict_formats_reply_t *fmt_rep =
+	xcb_render_util_query_formats(c);
+
+	fmt = xcb_render_util_find_standard_format(
+		fmt_rep,
+		XCB_PICT_STANDARD_RGB_24
+	);
+
+
+	// (3)
+	cookie = xcb_render_create_picture_checked(c,
+		picture, // pid
+		pmap, // drawable
+		fmt->id, // format
+		XCB_RENDER_CP_POLY_MODE|XCB_RENDER_CP_POLY_EDGE,
+		values); // make it smooth
+```
+
+To create a picture, attaching both rendering/composition to a drawable
+such as a pixmap, you need at least two things: A mode of rendering
+(how precise does the merging happens) and a picture format (the depth
+and pixel format of the picture).
+
+The picture could be used to do any composition operations and the
+result will appear on the drawable. Specifically in our case to draw
+glyphs xcb provides a helper data structure to hold a set of glyphs and
+draw text that has characters within that glyph set, this is called the
+`xcb_render_glyphset_t`.
+
+```
+	const xcb_render_query_pict_formats_reply_t *fmt_rep =
+		xcb_render_util_query_formats(c);
+
+	xcb_render_pictforminfo_t *fmt_a8 = xcb_render_util_find_standard_format(
+		fmt_rep,
+		XCB_PICT_STANDARD_A_8
+	);
+
+	xcb_render_glyphset_t gs = xcb_generate_id(c);
+	xcb_render_create_glyph_set(c, gs, fmt_a8->id);
+```
+
+As with the picture the glyphset being a composition object needs to have
+a format. To add a glyph of the `FT_Bitmap` type to the glyphset we have
+to fill an `xcb_render_glyphinfo_t`, which is a translation between the
+glyph type inside FreeType and the ones within XCB.
+
+
+```
+	// the glyphinfo we want to convert from FreeType to XCB
+	xcb_render_glyphinfo_t ginfo;
+
+	// the basic information
+	ginfo.x = -face->glyph->bitmap_left;
+	ginfo.y = face->glyph->bitmap_top;
+	ginfo.width = bitmap->width;
+	ginfo.height = bitmap->rows;
+	ginfo.x_off = glyph_advance.x;
+	ginfo.y_off = glyph_advance.y;
+
+
+	// the charcode that will be associated with that glyph in the set
+	gid = charcode;
+
+	// copying the pixels from the FreeType glyph
+	int stride = (ginfo.width+3)&~3;
+	uint8_t *tmpbitmap = calloc(sizeof(uint8_t),stride*ginfo.height);
+	int y;
+	for (y = 0; y < ginfo.height; y++)
+		memcpy(tmpbitmap+y*stride, bitmap->buffer+y*ginfo.width, ginfo.width);
+
+	// finally adding it to the xcb_render_glyphset_t gs
+	xcb_render_add_glyphs_checked(c,
+		gs, 1, &gid, &ginfo, stride*ginfo.height, tmpbitmap);
+```
+
+Until now we've discovered these things in this section:  
+* What composition operations are
+* What a "picture" structure is and how it links drawables to the operations
+* How a glyphset structure can be used to store glyphs converted from
+  Freetype format to something xcb understands in its composition library
+
+The next step is to take those glyphs and use them to draw some text. To
+do that we are also going to require the aid of some helper functions.
+
+```
+	// we now have a text stream - a bunch of glyphs basically
+	xcb_render_util_composite_text_stream_t *ts =
+		xcb_render_util_composite_text_stream(
+				gs, // the glyphset
+				text.length, 0);
+
+	// prepare the text at a certain positions in the stream
+	xcb_render_util_glyphs_32(ts, x, y, text.length, text.str);
+
+	// finally render using the repeated pen color on the picture
+	// (which is related to the pixmap)
+	xcb_render_util_composite_text(
+		c, // connection
+		XCB_RENDER_PICT_OP_OVER, //op
+		fg_pen, // src
+		picture, // dst
+		0, // fmt
+		0, // src x
+		0, // src y
+		ts); // txt stream
+```
+
+That helper function is the `xcb_render_util_composite_text` which
+executes a composition operation `OVER` (draws over without any merging)
+from a picture containing some simple color (`fg_pen` is a 1x1 pixel
+colored pictured) to the final picture destination we want (the one that
+has the drawable on it). This function requires a text stream object,
+which can be created from the glyphset we've built beforehand and from
+some text we want to write.
+
+This is what happens in the `xcb_render_util_glyphs_32` call, the
+glyphset that was already loaded in the text stream is asked to load
+the characters from a string (`text.str` in this case). The `_32`
+prepending the function indicates that this text is in Ucs4 format,
+there are also `_16` postfix for UTF-16 and `_8` for UTF-8 format. The
+text conversion functions can found in the fontconfig library, as
+mentioned before, so we don't have to worry about those. ([String
+utilities](https://www.freedesktop.org/software/fontconfig/fontconfig-devel/x103.html#AEN5067))
+
+
+And that's it, at this point we'll have our characters drawn on the
+drawable using whatever font we wanted!
+
+...Also don't forget to clean up afterwards.
+
+```
+	xcb_render_util_composite_text_free(ts);
+	xcb_render_free_picture(c, picture);
+	xcb_render_free_picture(c, fg_pen);
+	xcb_render_util_disconnect(c);
+```
+
+
+### Extra - Font fallback ###
+
+There's the edge case of font fallback we haven't mentioned. What if you
+load a font with FreeType and when the time comes to get the glyph index
+of that character you can't find it (glyph_index == 0). That character
+won't be drawn on the screen or it'll be drawn with the default box that
+shows non-support.
+
+The way to handle that is to let the user of the function pass a list of
+search patterns and switch to the next font in the list when fontconfig
+says that the font doesn't have the character needed to be drawn.
+
+
+### Wrappers for merging things together in an easy library ###
+
+All that's left is to wrap everything nicely in an easy to use wrapper
+tying everything together.
+
+
+## Conclusion ##
+
+The process can be summarized by this list:  
+
+* Fontconfig
+  - Build a search query for fontconfig
+  - Let fontconfig substitute within that pattern to fill the default query parameters
+  - Match the font using fontconfig
+* Freetype
+  - Load the face
+  - Fetch the glyph_index for the character needed
+  - Get the bitmap related
+  - Get the advance in x and y position
+* Rendering
+  - Create a picture linking composition to drawable
+  - Create a glyphset to contain the glyph information
+  - Convert the glyph information from the bitmap Freetype format to XCB format
+  - Create a text stream using the glyphset to facilitate drawing
+  - Tell the text stream to draw some specific text
+  - Composite the stream on the picture
+
+Again the implementation can be found at the
+[font-for-xcb](https://github.com/venam/fonts-for-xcb) project, it's
+not perfect but it can be used as an example for later work and reference.
+
+Let's hope this is going to help understand how the fonts are drawn on
+the X window system and Unix. Cheers!
+

@@ -113,7 +113,7 @@ call is reached. The process should be in a "terminated state."
 
 But it hangs there waiting to be cleaned.
 
-![Process life cycle](http://slideplayer.com/slide/3155725/11/images/61/UNIX+Process+State+Transition+Diagram.jpg)
+![Process life cycle](https://slideplayer.com/slide/3155725/11/images/61/UNIX+Process+State+Transition+Diagram.jpg)
 _The process life cycle transition diagram (courtesy of [William Stallings](http://slideplayer.com/slide/3155725/))._
 
 For example the `task_struct`, from earlier, in the Linux kernel has

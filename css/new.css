@@ -10,25 +10,6 @@
         font-style: normal;
 }
 
-@font-face{
-	font-family:"Deja Vu Sans";
-	src:url("../assets/fonts/DejaVuSans.ttf") format("truetype");
-}
-
-/* raleway-300 - latin */
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../assets/fonts/raleway-v12-latin-300.eot'); /* IE9 Compat Modes */
-  src: local('Raleway Light'), local('Raleway-Light'),
-       url('../assets/fonts/raleway-v12-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/raleway-v12-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../assets/fonts/raleway-v12-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('../assets/fonts/raleway-v12-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../assets/fonts/raleway-v12-latin-300.svg#Raleway') format('svg'); /* Legacy iOS */
-}
-
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -39,8 +20,8 @@ body {
 	background: #FFFFFF;
 	line-height: 1.5;
 	color: #212121;
-	font-family: "Raleway", "DejaVu Sans", 'sans-serif';
-	font-weight: 100;
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+	font-weight: 350;
 	font-size: 1em;
 	word-wrap: break-word;
 }
@@ -92,9 +73,13 @@ article {
 	margin-top: 4em;
 	font-size: 1.4em;
 	color: #404040;
-	font-family: "Raleway", sans-serif;
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 	text-rendering: optimizeLegibility;
 	text-align:justify;
+	padding-left: 1em;
+	padding-right: 1em;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
 }
 
 .email {
@@ -126,7 +111,7 @@ article {
 }
 
 .content {
-	font-weight: 100;
+	font-weight: 350;
 }
 
 nav ul {
@@ -232,7 +217,7 @@ a {
 .title {
 	display: block;
 	margin-top: 2ex;
-	font-family: "DejaVu Sans";
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 	font-weight: 100;
 	font-size: 30px;
 }

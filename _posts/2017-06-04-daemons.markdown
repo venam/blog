@@ -100,6 +100,7 @@ most often related to it when you hear that name.
 Still it's hard not to equate demon with the satanic underworld definition
 when even the BSD mascot, beastie, makes fun of it.
 
+![process tree]({{site.baseurl}}/assets/daemon/daemon_history.png)
 
 ## Generic overview ##
 

@@ -19,7 +19,7 @@ of the hype around knowing how other people workflows look like.
 Not so long ago we had a thread regrouping a [compilation of workflows](http://nixers.net/showthread.php?tid=1606). It was quite entertaining.
 
 
-What some us of tend to forget is that to make a workflow smooth you don't
+What some of us tend to forget is that to make a workflow smooth you don't
 especially need to know your tools by heart but you have to reach a point where
 your tools will guide you.
 
